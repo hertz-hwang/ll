@@ -1,0 +1,13 @@
+patch:
+  #schema/name: 💎琉璃·三定
+  embeded_cands/+:
+    first_format: "³💎 ${Stash} »${候選}« [${Code}]${Comment}"
+
+  ascii_composer/switch_key/+:
+    # 左Shift上屏编码  右Shift上屏候选
+    Shift_L: commit_code
+    Shift_R: commit_text
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear

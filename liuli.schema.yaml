@@ -1,0 +1,298 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: liuli
+  name: 💎·琉璃
+  version: v202512042128
+  author:
+    - 宇浩
+    - 阿吉
+    - forFudan
+    - 王牌饼干
+    - 荒
+  description: |
+    琉璃(七三顶)，意为“美玉”，象征纯净与美好。Rime输入法的这款“琉璃”方案，旨在为用户提供一种清晰、优雅且高效的中文输入体验。
+    它融合了现代输入法的先进技术与传统汉字文化的精髓，力求在输入速度与准确性之间达到最佳平衡。
+    无论是日常交流还是专业写作，琉璃方案都能助您轻松表达思想，畅游文字的海洋。  ——By DeepSeek
+  dependencies:
+    # 拼音, 用于反查
+    - liuli.pinyin
+    # 基础码表
+    - liuli.base
+    # 全码词库
+    - liuli.words
+    # 符號碼表
+    - liuli.symbols
+
+switches:
+  - options: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ]
+    states: [ 注解关, 注解一, 注解二, 注解三, 注解四 ]
+    reset: 0
+  - name: single_char
+    states: [ 智能, 纯单 ]
+    reset: 0
+  - options: [ full.word, full.char, full.off ]
+    states: [ 字词, 全单, 三码 ]
+    reset: 0
+  - name: embeded_cands
+    states: [ 普通, 嵌入 ]
+    reset: 1
+  - name: completion
+    states: [ 简洁, 预测 ]
+    reset: 0
+  - options: [ charset.all, charset.freqly ]
+    states: [ 全字集, 仅常用字 ]
+    reset: 0
+  - name: ivd_map
+    states: [ NoIVD, IVD ]
+    reset: 0
+  - name: ascii_mode
+    states: [ 汉字, 西文 ]
+    reset: 0
+  - name: ascii_punct
+    states: [ '，。', '，．' ]
+    reset: 0
+  - name: full_shape
+    states: [ 半, 全 ]
+    reset: 0
+
+engine:
+  processors:
+    - lua_processor@*liuli.core_processor@ll
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+  translators:
+    - punct_translator
+    # 符號翻譯器
+    - table_translator@symbols
+    # 上次上屏历史
+    - history_translator@history
+    # 反查
+    - reverse_lookup_translator@rev_pinyin
+    # 主翻译器
+    - lua_translator@*liuli.core_translator@ll
+  filters:
+    - simplifier
+    # 候选去重
+    - uniquifier
+    # 反查拆分提示
+    - simplifier@rev_div
+    # 拆分提示
+    - simplifier@division.lv1
+    - simplifier@division.lv2
+    - simplifier@division.lv3
+    - simplifier@division.lv4
+    - simplifier@ivd_map
+    # 嵌入候选
+    - lua_filter@*liuli.embeded_cands@embeded_cands
+
+speller:
+  alphabet: "qwertyuiopasdfghjklzxcvbnm /`|.:"
+  initials: "qwertyuiopasdfghjklzxcvbnm/`"
+  auto_select: true
+  auto_select_unique_candidate: true
+  algebra:
+
+# 重复上次上屏
+history:
+  input: '`'
+  size: 1
+  initial_quality: 1
+
+# 部件拆分提示
+division.lv1:
+  __include: rev_div
+  option_name: division.lv1
+  comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($1)/
+    - xform/.*\(([^()]*)\)$/($1)/
+    - xlit/\{\}/\⟨\⟩/
+  tags: [ abc, rev_pinyin ]
+
+# 拆分編碼提示
+division.lv2:
+  __include: rev_div
+  option_name: division.lv2
+  comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($2)/
+    - xform/.*\(([^()]*)\)$/($1)/
+  tags: [ abc, rev_pinyin ]
+
+# 讀音提示
+division.lv3:
+  __include: rev_div
+  option_name: division.lv3
+  comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($3)/
+    - xform/.*\(([^()]*)\)$/($1)/
+    - xlit/_/,/
+  tags: [ abc, rev_pinyin ]
+
+# 字集提示
+division.lv4:
+  __include: rev_div
+  option_name: division.lv4
+  comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($4)/
+    - xform/.*\(([^()]*)\)$/($1)/
+  tags: [ abc, rev_pinyin ]
+
+# 部件拆分及編碼提示, 反查时顯示
+rev_div:
+  option_name: division.off
+  opencc_config: liuli_div.json
+  tips: all
+  show_in_comment: true
+  comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($1·$2)/
+    - xlit/\{\}/\⟨\⟩/
+  tags: [ rev_pinyin ]
+
+# 拼音反查
+rev_pinyin:
+  tag: rev_pinyin
+  prefix: "`"
+  dictionary: liuli.pinyin
+  preedit_format:
+    - xform/^`//
+  comment_format:
+    - "xform/^/(/"
+    - "xform/$/)/"
+
+ivd_map:
+  option_name: ivd_map
+  opencc_config: moji_map.json
+  tags: [ grave ]
+
+# 符號翻譯器
+symbols:
+  tag: symbols
+  prefix: "/"
+  dictionary: liuli.symbols
+  prism: liuli.symbols
+  enable_user_dict: false
+  preedit_format:
+    - xform|^/||
+
+ll:
+  funckeys:
+    # under linux, cat /usr/include/X11/keysymdef.h
+    # or visit: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/include/X11/keysymdef.h
+    # frequently used:
+    # - functional keys: escape: 0xff1b; return: 0xff0d; tabular: 0xff09;
+    # - ascii characters: space: 0x20; semicolon: 0x3b; slash: 0x2f; grave: 0x60 「': 0x27」;
+    macro: [ 0x2f ]      # 以這些字符開頭, 則認爲是宏調用
+    primary: [ 0x20 ]    # 首要簡碼鍵
+    secondary: [ 0x3b ]  # 次要簡碼鍵
+    tertiary: []         # 次次簡碼鍵
+    fullci: [ 0xff09 ]   # 碼長爲四時, 輸入此串上屏首選
+    break: [ 0xff09 ]    # 打斷施法
+    repeat: [ 0x60 ]     # 重複上屏
+    clearact: [ 0xff0d ] # 清除活動編碼
+  mappers:
+    # 常用字過濾器
+    - option_name: charset.freqly
+      expr: return require("liuli.custom").freq_filter()
+  macros:
+    help:
+      - { type: tip, name: ❖配置中心 }
+      - { type: switch, name: single_char, states: [ □智能, ■纯单 ] }
+      - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词, ☐☑全单, ☐☐三码 ] }
+      - { type: switch, name: embeded_cands, states: [ ☐嵌入, ☑嵌入 ] }
+      - { type: switch, name: completion, states: [ □简洁, ■补全 ] }
+      - { type: radio, names: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ], states: [ ☐☐☐☐注解, ☑☐☐☐注解, ☐☑☐☐注解, ☐☐☑☐注解, ☐☐☐☑注解 ] }
+    date:
+      - { type: eval, name: ☀日期, expr: return os.date("%Y%m%d") }
+      - { type: eval, name: ☀日期(分隔), expr: return os.date("%Y-%m-%d") }
+      - { type: eval, name: ⛅年月日, expr: return os.date("%Y年%m月%d日") }
+    time:
+      - { type: eval, name: Ⓣ时间, expr: return os.date("%Y%m%d%H%M") }
+      - { type: eval, name: ⌚时间(分隔), expr: return os.date("%H:%M:%S") }
+      - { type: eval, name: ⏰时分秒, expr: return os.date("%H时%M分%S秒") }
+      - { type: eval, name: Ⓢ时间戳, expr: return tostring(os.time()) }
+    div:
+      - type: radio
+        names: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ]
+        states: [ ☐☐☐☐无注解, ☑☐☐☐拆分提示, ☐☑☐☐编码提示, ☐☐☑☐显示拼音, ☐☐☐☑显示字集 ]
+    embed:
+      - { type: switch, name: embeded_cands, states: [ ☐嵌入编码, ☑嵌入候选 ] }
+    full:
+      - type: radio
+        names: [ full.word, full.char, full.off ]
+        states: [ "☑☑四码字词: 显示所有候选", "☐☑四码全单: 隐藏词语候选", "☐☐仅三码: 隐藏四码候选" ]
+    smart:
+      - { type: switch, name: single_char, states: [ □智能组词, ■纯单模式 ] }
+    comp:
+      - type: switch
+        name: completion
+        states: [ "□简洁模式: 不显示编码预测结果", "■自动补全: 显示编码预测结果" ]
+    charset:
+      - type: radio
+        names: [ charset.all, charset.freqly ]
+        states: [ "□全CJK字集: 无过滤", "■常用字集: 过滤非常用字" ]
+    ivd:
+      - type: switch
+        name: ivd_map
+        states: [ "异字选择器: 停用", "异体字选择器: 启用" ]
+
+# 嵌入候選的顯示配置
+# 默認顯示效果爲:
+# 💎 琉 »璃« [kmt] ~篱² ~籓³
+embeded_cands:
+  index_indicators: [ ¹, ², ³, ⁴, ⁵, ⁶, ⁷, ⁸, ⁹, ⁰ ]       # 嵌入候選的序號顯示格式
+  first_format: "${Stash}[${候選}${Seq}]${Code}${Comment}" # 首選的渲染格式
+  next_format: "${Stash}${候選}${Seq}${Comment}"           # 非首選的渲染格式
+  separator: " "                                           # 候選之間的分隔符
+  stash_placeholder: "~"                                   # 非首選的延遲串占位符, 支持 ${Stash} 變量
+
+# 标点
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  bindings:
+    # 空格清空错码
+    - { when: has_menu, accept: space, send: space }
+    - { when: composing, accept: space, send: Escape }
+    # 减号、等号翻页
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    # 选重
+    - {when: has_menu, accept: semicolon, send: 2}
+    - {when: has_menu, accept: apostrophe, send: 3}
+    - { when: has_menu, accept: 9, send: 2 }
+    - { when: has_menu, accept: 8, send: 3 }
+    - { when: has_menu, accept: 7, send: 4 }
+    - { when: has_menu, accept: 6, send: 5 }
+    # 拆分提示
+    - { when: has_menu, accept: "/", toggle: division.off }
+    # 字集切換
+    - { when: has_menu, accept: "0", toggle: charset.all }
+    # 内嵌候選開關
+    - { when: always, accept: "Control+Shift+E", toggle: embeded_cands }
+    # 中英文标点
+    - {when: always, accept: Control+period, toggle: ascii_punct}
+
+recognizer:
+  patterns:
+    # 特殊符號
+    symbols: "^/([0-9]0?|[A-Za-z]+)$"
+    # 拼音反查模式
+    rev_pinyin: "^`[a-z]+$"
+    # 單獨反引號
+    grave: "^`$"
+
+menu:
+  page_size: 3

@@ -1,0 +1,16 @@
+# Rime dictionary: ym.extended
+# encoding: utf-8
+
+---
+name: liuli42
+version: v202512121827
+sort: original
+import_tables:
+  - liuli_1_code
+  - liuli
+  - liuli.wordsll
+columns:
+  - text
+  - code
+...
+

@@ -1,0 +1,197 @@
+patch:
+  #schema/name: 💎琉璃·延迟顶
+  schema/dependencies/+:
+  # 當一個開關滿足以下条件時, 其變化值會記憶在 *user.yaml* 中:
+  # 1. 該開關項的 *reset* 字段置空: 字段不存在或不指定值.
+  # 2. 該開關項寫在 *default.yaml* (*default.custom.yaml*) 的 `switcher/save_options` 列表中,
+  #   例如在 *default.custom.yaml* 中寫入: `patch/switcher/save_options: [ single_char, embeded_cands ]`.
+  # 3. 開關項的變動是通過 *方案選單* 或 `zhelp` 操作的; 也就是説如果通過快捷鍵操作, 就不會記憶值.
+  switches/@0/reset: 0 # 注解: 關·一·二·三·四
+  switches/@1/reset: 0 # 智能組詞·純單模式
+  switches/@2/reset: 0 # 四碼字詞·四碼全單·僅三碼
+  switches/@3/reset: 1 # 普通模式·嵌入編碼
+  switches/@4/reset: 0 # 簡潔模式·編碼預測
+  switches/@5/reset: 0 # 不過濾·僅常用字
+  switches/@6/reset: 0 # 無IVD聯想·IVD聯想
+  switches/@7/reset: 0 # 中文模式·ASCII模式
+  switches/@8/reset: 0 # 中文標點·西文標點
+  switches/@9/reset: 0 # 半角·全角
+  switches/+:
+  key_binder/bindings/+:
+  ascii_composer/switch_key/+:
+    # 左Shift上屏编码  右Shift上屏候选
+    Shift_L: commit_code
+    Shift_R: commit_text
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear
+  recognizer/patterns/+:
+    macro_calc: "^/calc(/[a-zA-Z0-9\\+\\-\\*\\(\\)\\^\\.%]*)*$"
+    macro_smart: "^/(addsmart|delsmart)(/[a-zA-Z0-9]*)*$"
+    macro_unicode: "^/uni(/[a-zA-Z0-9]*)*$"
+  punctuator/half_shape/+:
+    '<': '《'
+    '>': '》'
+    #'/': '/'
+    '\': '、'
+    '`': '`'
+    '~': '~'
+    '@': '@'
+    '#': '#'
+    '%': '%'
+    '$': '¥'
+    '*': '*'
+    '=': '='
+    '[': '「'
+    ']': '」'
+    '{': '『'
+    '}': '』'
+  editor/bindings/+:
+    # 回车清空编码
+    Return: cancel
+  rev_div/comment_format:
+    - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($2)/
+    - xform/\)\(/,/
+  # 自定義功能鍵
+  ll/funckeys/+:
+    clearact/+: [ 0xff1b ]
+    tertiary/+: [ 0x27 ]
+  # 自定義宏
+  # 先为宏命名, 如 *mymacro*, 则將其添加到 *macros* 下,
+  # 再在 *mymacro* 下添加若干候選宏, 每個候選宏都需指定一個 *type*.
+  # 当前支持的宏類型:
+  # *tip*:    {type: tip,    name: display,     text: commit},                     其中 *text* 为可選項.
+  # *switch*: {type: switch, name: switch_name, states: [off_display,on_display]}, 類似 *schema/switches*.
+  # *radio*:  {type: radio,  names: [s1,s2,s3], states: [d1,d2,d3]},               類似 *schema/switches* 之 *options*.
+  # *shell*:  {type: shell,  name: display,     cmd: shell_cmd,   text: true},     選中时執行 *shell_cmd* 命令, *text* 可選, 設为 true 時收集並提交命令輸出. 可選的額外參數 *hijack* 爲 true 時, 攔截所有 *ascii* 輸入, 主要是數字鍵.
+  # *eval*:   {type: eval,   name: display,     expr: "local a='bar'; return a"},  其中 *name* 为可選項, *expr* 必須是個 *return* 語句, 蓋 *lua* 將以 "function() <expr> end" 方式組裝函數並調用.
+  # 例:
+  # macros:
+  #   mymacro:
+  #     - type: tip
+  #       name: 僅提示
+  #     - type: tip
+  #       name: 快捷短語
+  #       text: 這是短語内容
+  #     - type: switch
+  #       name: ascii_mode
+  #       states: [ 漢字, 英文 ]
+  #     - type: shell
+  #       name: 執行shell命令
+  #       cmd: /bin/sh -c "date >/tmp/date.txt"
+  #     - type: eval
+  #       expr: return tostring(os.time())
+  ll/macros/+:
+    #repo:
+    #  - type: tip
+    #    name: 訪問倉庫
+    #  - type: shell
+    #    name: ⚛琉璃
+    #    cmd: url="https://github.com/hertz-hwang/wf-smll" &&
+    #      type open && open "${url}" ||
+    #      type xdg-open && xdg-open "${url}" ||
+    #      echo "${url}"
+    quick:
+      - type: tip
+        name: 快捷短語
+      - type: tip
+        name: ☎邮箱
+        text: hertz.hwang@88.com
+      - type: tip
+        name: ☏QQ群
+        text: "1012245282"
+      - type: shell
+        name: 💎琉璃
+        cmd: url="https://hertz-hwang.github.io/hao/gen-liuli.html" &&
+          type open && open "${url}" ||
+          type xdg-open && xdg-open "${url}" ||
+          echo "${url}"
+    calc:
+      # lua 對象示例, 返回一個 {
+      #   peek = function(self, args) ... end -> string, -- 當 name 爲空時, 候選攔顯示此值
+      #   eval = function(self, args) ... end -> string, -- 當按下空格或選重鍵後, 上屏此值
+      # } 對象
+      # 簡易計算器
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").easy_calc()
+    smart/+:
+      - type: eval
+        name: ⇪词典载入
+        expr: return LlCore.word_trie:load_dict() or ""
+      - type: eval
+        name: ⌫清空
+        expr: return LlCore.word_trie:clear_dict() or ""
+      - type: eval
+        name: ↪导出
+        expr: return require("liuli.custom").export_smart()
+      - type: eval
+        name: ↩导入
+        expr: return require("liuli.custom").import_smart()
+    addsmart:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").add_smart()
+    delsmart:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").del_smart()
+    uni:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").unicode()
+    dist:
+      - type: eval
+        expr: return require("liuli.custom").librime_version()
+      - type: eval
+        expr: return require("liuli.custom").librime_dist_info()
+  # 自定義捷徑
+  # 在有輸入框的條件下, 按 `Ctrl` 組合鍵觸發
+  ll/accel/+:
+    # ctrl-k 嵌入編碼截圖
+    # 僅支持 linux-wayland 和 mac 環境
+    # linux-wayland: 依賴 pango 和 wl-clipboard
+    # mac: 依賴 pango 和 impbcopy
+    - key: 0x6b
+      type: eval
+      expr: return require("liuli.custom").capture_embeded()
+    # ctrl-0 上屏嵌入編碼
+    - key: 0x30
+      type: eval
+      expr: return require("liuli.custom").commit_embeded()
+  menu/page_size: 5 # Change number of candidates
+  # style/layout/margin_x: -1 # Hide candidates bar
+  # style/horizontal: true
+  # style/inline_preedit: false
+  embeded_cands/+:
+    first_format: "💎 ${Stash} »${候選}« [${Code}]${Comment}"
+    #first_format: "💎 ${Stash}⦗${候選}⦘[${Code}]${Comment}"
+    #first_format: "💎 ${Stash}👉${候選}👈⦗${Code}⦘${Comment}"
+    #first_format: "${Stash} ${候選}⦗${Code}⦘${Comment}"
+  # 解注释以下内容, 并复制rime.lua, 以兼容旧版librime-lua
+  # engine/processors:
+  #   - lua_processor@liuli_core_processor@ll
+  #   - ascii_composer
+  #   - recognizer
+  #   - key_binder
+  #   - speller
+  #   - punctuator
+  #   - selector
+  #   - navigator
+  #   - express_editor
+  # engine/translators:
+  #   - punct_translator
+  #   - table_translator@symbols
+  #   - history_translator@history
+  #   - reverse_lookup_translator@rev_pinyin
+  #   - lua_translator@liuli_core_translator@ll
+  # engine/filters:
+  #   - simplifier
+  #   - uniquifier
+  #   - simplifier@rev_div
+  #   - simplifier@division.lv1
+  #   - simplifier@division.lv2
+  #   - simplifier@division.lv3
+  #   - simplifier@division.lv4
+  #   - lua_filter@liuli_embeded_cands@embeded_cands

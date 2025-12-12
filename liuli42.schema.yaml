@@ -1,0 +1,164 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: liuli42
+  name: 四二顶·琉璃
+  version: beta
+  author:
+    - 荒
+  description: |
+    💎琉璃·四二顶，极简字集
+  dependencies:
+    - liuli.pinyin
+
+switches:
+  - name: popping_method
+    states: [ 四二, 五二 ]
+  - name: embeded_cands
+    states: [ ☐嵌入, ☑嵌入 ]
+    reset: 0
+  - name: ascii_mode
+    reset: 0
+    states: [中, 英]
+  - name: full_shape
+    reset: 0
+    states: [半, 全]
+  - name: zh_s2t
+    reset: 0
+    states: [简, 繁]
+
+engine:
+  processors:
+    - ascii_composer
+    - lua_processor@*lutai.key_binder
+    - key_binder
+    - lua_processor@*liuli.popping
+    - recognizer
+    - lua_processor@*c42.encoder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@extra
+    - affix_segmentor@wildcard
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator@pinyin
+    - history_translator
+    - lua_translator@*liuli.stats
+  filters:
+    - lua_filter@*c42.assist
+    - simplifier@zh_s2t
+    - reverse_lookup_filter@reverse_lookup
+    - lua_filter@*c42.predictor
+    - lua_filter@*liuli.embeded_cands@embeded_cands
+    - lua_filter@*c42.select_comment
+    - lua_filter@*c42.assembly
+    - uniquifier
+
+speller:
+  alphabet: "abcdefghjiklmnopqrstuvwxyz;"
+  initials: "abcdefghijklmnopqrstuvwxyz;"
+  auto_select: true
+  auto_select_pattern: ^;\w+$
+  algebra:
+    - xform/\d$/$1/
+  popping:
+    - when_not: popping_method
+      match: "[a-z][a-z][a-z]"
+      accept: "[a-z]"
+      prefix: 2
+    - when: popping_method
+      match: "[a-z][a-z][a-z][a-z]"
+      accept: "[a-z]"
+      prefix: 2
+
+translator:
+  dictionary: liuli42
+  enable_sentence: false
+  enable_user_dict: false
+  enable_completion: false
+  enable_encoder: false
+
+extra:
+  tag: extra
+  prefix: "`"
+  tips: "〔反查〕"
+
+pinyin:
+  tag: extra
+  dictionary: liuli.pinyin
+  enable_user_dict: false
+  initial_quality: 1
+
+reverse_lookup:
+  dictionary: liuli42
+  overwrite_comment: true
+  comment_format:
+    - "xform/~//"
+    - xform/\d//
+  tags: [extra]
+
+history:
+  tag: history
+  input: "z"
+  size: 3
+  initial_quality: -1
+
+zh_s2t:
+  opencc_config: s2t.json
+  option_name: zh_s2t
+
+# 嵌入候選的顯示配置
+# 默認顯示效果爲:
+# 💎 琉 »璃« [kmt] ~篱² ~籓³
+embeded_cands:
+  index_indicators: [ ¹, ², ³, ⁴, ⁵, ⁶, ⁷, ⁸, ⁹, ⁰ ]       # 嵌入候選的序號顯示格式
+  first_format: "${Stash}[${候選}${Seq}]${Code}${Comment}" # 首選的渲染格式
+  next_format: "${Stash}${候選}${Seq}${Comment}"           # 非首選的渲染格式
+  separator: " "                                           # 候選之間的分隔符
+  stash_placeholder: "~"                                   # 非首選的延遲串占位符, 支持 ${Stash} 變量
+
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  #  import_preset: default
+  bindings:
+    - match: "^[qwertyuiopasdfghjklzxcvbnm]{1}$"
+      accept: "/"
+      send_sequence: "{space}"
+    - match: "^[qwertyuiopasdfghjklzxcvbnm]{3}$"
+      accept: "/"
+      send_sequence: "{Home}{Right}{Right}{space}{space}"
+    - match: "^[qwertyuiopasdfghjklzxcvbnm]{1}$"
+      accept: "Tab"
+      send_sequence: "2"
+    - match: "^[qwertyuiopasdfghjklzxcvbnm]{3}$"
+      accept: "Tab"
+      send_sequence: "{Home}{Right}{Right}{space}2"
+    - { when: has_menu, accept: space, send: space }                          # 有候选时空格选中
+    - { when: composing, accept: space, send: Escape }                        # 无候选(空码）时空格清屏编码
+    - { when: paging, accept: minus, send: Page_Up }                          # ※ 减号翻䈎用
+    - { when: has_menu, accept: equal, send: Page_Down }                      # ※ 等号翻䈎用
+    - { when: has_menu, accept: semicolon, send: KP_2 }
+    #- { when: has_menu, accept: apostrophe, send: KP_3 }
+    - { when: has_menu, accept: 9, send: KP_2 }
+    - { when: has_menu, accept: 8, send: KP_3 }
+    - { when: has_menu, accept: 7, send: KP_4 }
+    - { when: has_menu, accept: 6, send: KP_5 }
+
+recognizer:
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    history: '^z$'
+    extra: '^`[a-z]*$'
