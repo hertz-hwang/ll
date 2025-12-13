@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512132242
+version: v202512132245
 sort: original
 import_tables:
 columns:
@@ -7331,7 +7331,7 @@ columns:
 竘	jnw	0
 胣	jnx	1
 腌	jnz	1238
-帝	jo1	19376	jo1
+旁	jo1	8225	jo1
 胴	joa	38
 腪	job	0
 遆	jod	1
@@ -7353,13 +7353,13 @@ columns:
 鬾	joi	0
 誉	jok	10139
 歒	jok	0
-旁	jol	8225
 魍	jol	78
+旁	jol	10	jo1
 胝	jom	57
 胦	jon	1
 啇	joo	1
 啻	jop	53
-帝	jos	10	jo1
+帝	jos	19376
 腚	jot	42
 妻	jou	11827
 孌	jou	0

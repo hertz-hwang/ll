@@ -3,7 +3,7 @@
 
 ---
 name: liuli
-version: v202512132242
+version: v202512132245
 sort: original
 columns:
   - text
@@ -2572,15 +2572,15 @@ columns:
 腹	jns1
 朐	jnw1
 腌	jnz1
-帝	jo1
+旁	jo1
 胴	joa1
 肘	jof1
 肿	jog1
 脓	joh1
 肢	joi1
 誉	jok1
-旁	jol1
-魍	jol2
+魍	jol1
+旁	jol2
 胝	jom1
 啻	jop1
 帝	jos1
