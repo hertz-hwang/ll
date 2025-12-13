@@ -29,13 +29,13 @@ style:
   color_scheme_dark: hertz_llama_light #purity_hertz #_alpha #purity_of_form_custom #hertz_llama_dark
 
   # #候选字体
-  font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1"
+  font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
   font_point: 20 #主字体字号
   # #滤镜内容字体
-  comment_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1"
+  comment_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
   comment_font_point: 12 # 滤镜内容字号
   # #候选前编号标志字体
-  label_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1"
+  label_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
   label_font_point: 18 #候选前编号标志字号
 
   corner_radius: 8
