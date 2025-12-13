@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.full"
-version: v202512132212
+version: v202512132242
 sort: original
 columns:
   - text
@@ -240,8 +240,6 @@ columns:
 𰽱	aczl
 羛	aczs
 𦍜	aczs
-斗	ad11
-⽃	ad11
 镮	adah
 𦏖	adah
 钾	adal
@@ -258,6 +256,8 @@ columns:
 𡰡	adcp
 𠄛	adcs
 𡯫	adda
+斗	addd
+⽃	addd
 𦎔	addi
 𡯱	addy
 𡰛	addy
@@ -370,12 +370,12 @@ columns:
 𫕿	adyx
 𤿑	adzs
 𪎔	adzv
-先	ae11
 𠔬	aeaa
 𳇴	aeck
 链	aedf
 𨑷	aedf
 𨒒	aedf
+先	aeee
 䍻	aeel
 𰾼	aeel
 𠒣	aefe
@@ -425,8 +425,6 @@ columns:
 𦏰	aeyl
 𬭉	aeyl
 𦏪	aeyo
-亼	af11
-亽	af11
 羧	afas
 𮸏	afas
 𦍝	afcp
@@ -439,6 +437,8 @@ columns:
 𰽗	afeo
 𰾋	afep
 𠔭	affc
+亽	afff
+亼	afff
 铥	affi
 𰭜	affm
 𦎅	affs
@@ -574,7 +574,6 @@ columns:
 盛	agyz
 𰾩	agyz
 叓	agzn
-甫	ah11
 𰽜	ahal
 𠻁	ahba
 𬭼	ahbd
@@ -594,6 +593,7 @@ columns:
 羗	ahfi
 𦍡	ahfs
 𨝙	ahhe
+甫	ahhh
 䘉	ahhh
 䗞	ahhk
 𧏼	ahhk
@@ -668,8 +668,6 @@ columns:
 镶	ahyx
 𦙖	ahzk
 䏌	ahzy
-万	ai11
-𘬲	ai11
 𨙠	aiad
 𨣹	aiaf
 𨤈	aiaf
@@ -702,6 +700,8 @@ columns:
 䍬	aihs
 齹	aihx
 𲹆	aihz
+万	aiii
+𘬲	aiii
 㼯	aiij
 𠎛	aiis
 𧡍	aiiu
@@ -753,7 +753,6 @@ columns:
 𰾉	aiyc
 𫨽	aizn
 㿷	aizs
-乌	aj11
 𭤞	ajad
 𫣛	ajaj
 事	ajak
@@ -774,6 +773,7 @@ columns:
 𰢍	ajgv
 铦	ajil
 𪞊	ajip
+乌	ajjj
 𬙶	ajjs
 𬭖	ajjs
 𰙎	ajkc
@@ -811,10 +811,6 @@ columns:
 钎	ajyl
 𫥲	ajzl
 𠞧	ajzv
-天	ak11
-烏	ak11
-𘬩	ak11
-𠮛	ak11
 𫓯	akal
 𦍨	akan
 㰫	akce
@@ -846,6 +842,10 @@ columns:
 羫	akiv
 锩	akjf
 𮷼	akjl
+天	akkk
+烏	akkk
+𘬩	akkk
+𠮛	akkk
 𳇱	akkv
 𪞈	akly
 𭀷	akml
@@ -881,10 +881,6 @@ columns:
 𬭆	akyq
 𲈈	akzc
 𳇮	akzs
-钅	al11
-太	al11
-⻐	al11
-𘭷	al11
 䥿	alai
 𰾆	alal
 𨌅	albm
@@ -923,6 +919,10 @@ columns:
 𰽞	aljf
 旉	aljh
 钫	aljl
+太	alll
+钅	alll
+⻐	alll
+𘭷	alll
 𪎬	alml
 𲥧	alnh
 𧨁	alok
@@ -959,7 +959,6 @@ columns:
 锰	alyz
 钣	alzn
 𲠒	alzv
-友	am11
 𰾥	amak
 𰾞	amas
 𮙘	amax
@@ -989,6 +988,7 @@ columns:
 羨	amkc
 䍪	amks
 𩑱	amld
+友	ammm
 𣁻	amof
 𦎆	amof
 𫔐	amoi
@@ -1009,10 +1009,6 @@ columns:
 镫	amxn
 盋	amyz
 𬭛	amzs
-亾	an11
-予	an11
-兦	an11
-𠄔	an11
 𡗣	anak
 钉	anal
 𘰩	anay
@@ -1059,6 +1055,10 @@ columns:
 𘰪	anms
 𮊣	anms
 𦎡	annc
+亾	annn
+予	annn
+兦	annn
+𠄔	annn
 𦫧	anns
 𩞁	annv
 𦏮	annw
@@ -1357,8 +1357,8 @@ columns:
 𬙽	arpm
 𬱱	arpm
 𡆃	arpp
-锆	arpr
 善	arpr
+锆	arpr
 𠟤	arpr
 𱋯	arpr
 𭌠	arpu
@@ -1391,11 +1391,6 @@ columns:
 𠑱	arwu
 锤	aryl
 𮸖	arzy
-羊	as11
-⺶	as11
-⺷	as11
-⽺	as11
-𦍌	as11
 𪂟	asad
 𲈆	asal
 𮸀	asba
@@ -1448,6 +1443,11 @@ columns:
 𳇫	asra
 𠜑	asrj
 𳇩	asrj
+羊	asss
+⺶	asss
+⺷	asss
+⽺	asss
+𦍌	asss
 𢃃	assu
 𮸟	assu
 𰀌	asuk
@@ -1535,8 +1535,6 @@ columns:
 钿	atyl
 𡘒	atyl
 𪎟	atyv
-主	au11
-𘱔	au11
 𬭟	auak
 铒	aual
 𦗕	auav
@@ -1569,6 +1567,8 @@ columns:
 𮸙	autu
 𦏌	auui
 鿔	auur
+主	auuu
+𘱔	auuu
 𦏤	auuu
 𣀯	auvj
 𦎰	auvs
@@ -1585,7 +1585,6 @@ columns:
 镊	auzg
 黀	auzn
 𲹈	auzn
-麻	av11
 锅	aval
 𰺧	avce
 锌	avcl
@@ -1622,9 +1621,9 @@ columns:
 𦏆	avss
 𨱇	avul
 𭞑	avvi
+麻	avvv
 𨱃	avwl
 𦍳	avws
-且	aw11
 铰	awal
 𫮻	awck
 铉	awcp
@@ -1691,6 +1690,7 @@ columns:
 𬭽	awul
 铽	awvi
 锠	awwr
+且	awww
 𰟗	awwx
 𦏭	awxa
 𦏫	awxg
@@ -1772,9 +1772,6 @@ columns:
 𲎔	axyq
 𲈙	axzc
 𪴴	axzk
-八	ay11
-⼋	ay11
-𘰨	ay11
 𫿵	ayad
 𰿊	ayas
 镇	ayay
@@ -1867,6 +1864,9 @@ columns:
 靡	ayxv
 𬙲	ayyc
 𢌑	ayyq
+八	ayyy
+⼋	ayyy
+𘰨	ayyy
 𥁇	ayzd
 盙	ayzh
 𲈦	ayzi
@@ -3076,7 +3076,6 @@ columns:
 䡼	beyo
 𧲙	beyo
 𲞁	beyv
-鼻	bf11
 𳎘	bfai
 𨌈	bfam
 𲄗	bfam
@@ -3127,6 +3126,7 @@ columns:
 𡼊	bffc
 𡽭	bffc
 𳄎	bffc
+鼻	bfff
 𡼶	bffg
 𫡧	bffi
 𬺴	bffk
@@ -3787,10 +3787,6 @@ columns:
 𰎋	bhzn
 青	bhzp
 ⻘	bhzp
-丂	bi11
-鱼	bi11
-⻥	bi11
-𘮌	bi11
 𬹰	biaf
 𬶜	biai
 㟝	bian
@@ -3846,6 +3842,10 @@ columns:
 𡻓	biia
 𱛞	biid
 𡶿	biig
+鱼	biii
+丂	biii
+⻥	biii
+𘮌	biii
 𨋷	biiv
 𪩜	bijd
 鲫	bijf
@@ -3886,8 +3886,8 @@ columns:
 𭯄	biof
 𮙨	biof
 䑁	bioh
-覺	bioi
 㽇	bioi
+覺	bioi
 鱟	biok
 𭭗	biok
 學	biol
@@ -4137,10 +4137,6 @@ columns:
 𨋁	bjzn
 㓞	bjzp
 𭃌	bjzp
-水	bk11
-氺	bk11
-⺢	bk11
-⽔	bk11
 𪖢	bkaf
 鲑	bkai
 𫵽	bkak
@@ -4209,6 +4205,10 @@ columns:
 𡺴	bkjw
 𡸔	bkka
 㠌	bkkc
+水	bkkk
+氺	bkkk
+⺢	bkkk
+⽔	bkkk
 𡷄	bkks
 𡵷	bkkx
 𨌻	bklc
@@ -4286,7 +4286,6 @@ columns:
 𡼿	bkzj
 𮱦	bkzn
 𡿠	bkzo
-曷	bl11
 輍	blam
 峪	blan
 𭖦	blan
@@ -4429,6 +4428,7 @@ columns:
 𰌮	bllc
 𱦻	bllf
 𡹽	bllh
+曷	blll
 𗉔	bllm
 𨌝	bllm
 𡼀	bllv
@@ -4542,39 +4542,6 @@ columns:
 𱇖	blzn
 𢃻	blzs
 𭗕	blzz
-乙	bm11
-乛	bm11
-⺂	bm11
-⺄	bm11
-⼄	bm11
-⾞	bm11
-㇁	bm11
-㇅	bm11
-㇆	bm11
-㇇	bm11
-㇈	bm11
-㇊	bm11
-㇋	bm11
-㇌	bm11
-㇍	bm11
-㇎	bm11
-㇕	bm11
-㇖	bm11
-㇘	bm11
-㇠	bm11
-㇡	bm11
-㇢	bm11
-㇤	bm11
-車	bm11
-𘠃	bm11
-𘠄	bm11
-𘠅	bm11
-𘲶	bm11
-𠃌	bm11
-𠃍	bm11
-𠄎	bm11
-𪛙	bm11
-𲏐	bm11
 𲝲	bmak
 嵕	bmas
 嵏	bmas
@@ -4690,6 +4657,39 @@ columns:
 𧳒	bmly
 𳂗	bmly
 𡻔	bmmi
+乙	bmmm
+乛	bmmm
+⺂	bmmm
+⺄	bmmm
+⼄	bmmm
+⾞	bmmm
+㇁	bmmm
+㇅	bmmm
+㇆	bmmm
+㇇	bmmm
+㇈	bmmm
+㇊	bmmm
+㇋	bmmm
+㇌	bmmm
+㇍	bmmm
+㇎	bmmm
+㇕	bmmm
+㇖	bmmm
+㇘	bmmm
+㇠	bmmm
+㇡	bmmm
+㇢	bmmm
+㇤	bmmm
+車	bmmm
+𘠃	bmmm
+𘠄	bmmm
+𘠅	bmmm
+𘲶	bmmm
+𠃌	bmmm
+𠃍	bmmm
+𠄎	bmmm
+𪛙	bmmm
+𲏐	bmmm
 巊	bmmo
 𡾸	bmmo
 𮮩	bmmo
@@ -4784,9 +4784,6 @@ columns:
 𡼃	bmzo
 𭽴	bmzs
 𩾆	bmzy
-山	bn11
-⼭	bn11
-𘮝	bn11
 𳎑	bnai
 𘲹	bnam
 𨊡	bnam
@@ -4882,6 +4879,9 @@ columns:
 𧰫	bnms
 𪖓	bnms
 𭖃	bnms
+山	bnnn
+⼭	bnnn
+𘮝	bnnn
 𧳾	bnns
 𧴀	bnol
 𲞎	bnos
@@ -5173,11 +5173,6 @@ columns:
 𨋸	bozm
 峡	bozn
 𧱊	bozn
-丯	bp11
-丰	bp11
-龶	bp11
-𘡡	bp11
-𘭝	bp11
 㟕	bpad
 𪡲	bpak
 𘥄	bpam
@@ -5290,6 +5285,11 @@ columns:
 𘟕	bpoy
 𗳅	bpph
 𗴀	bpph
+丰	bppp
+丯	bppp
+龶	bppp
+𘡡	bppp
+𘭝	bppp
 𨎂	bppr
 𱜆	bppr
 𳄅	bppr
@@ -5378,10 +5378,6 @@ columns:
 𰎐	bpzk
 𮝇	bpzn
 𰹕	bpzp
-臼	bq11
-⺽	bq11
-⾅	bq11
-𦥑	bq11
 嵅	bqak
 輱	bqak
 𬹎	bqap
@@ -5682,9 +5678,13 @@ columns:
 𬹯	bqqi
 𪚶	bqqn
 𪩎	bqqo
+臼	bqqq
+⺽	bqqq
 ⻱	bqqq
+⾅	bqqq
 ⿔	bqqq
 龜	bqqq
+𦥑	bqqq
 𪚦	bqqq
 翙	bqqu
 𰕙	bqqv
@@ -6106,7 +6106,6 @@ columns:
 𫲜	bszp
 𡺡	bszy
 𡺦	bszy
-屯	bt11
 嵙	btad
 𱛶	btau
 㟻	btbn
@@ -6245,6 +6244,7 @@ columns:
 𡿜	bttc
 𨏑	bttm
 𣂫	bttn
+屯	bttt
 轠	bttt
 𡾊	bttt
 𡾋	bttt
@@ -7106,15 +7106,6 @@ columns:
 𪨾	bxzn
 𬶙	bxzn
 𰹘	bxzn
-豸	by11
-乑	by11
-豕	by11
-⾗	by11
-⾘	by11
-𧰧	by11
-𧰨	by11
-𬺷	by11
-𬺻	by11
 𭗸	byaa
 𰥅	byae
 巔	byal
@@ -7237,6 +7228,15 @@ columns:
 𱎇	byxm
 豣	byyc
 𡾡	byyw
+豸	byyy
+豕	byyy
+乑	byyy
+⾗	byyy
+⾘	byyy
+𧰧	byyy
+𧰨	byyy
+𬺷	byyy
+𬺻	byyy
 益	byzk
 泴	byzk
 𤿣	byzs
@@ -7485,8 +7485,8 @@ columns:
 䋬	cagi
 𡍞	cagi
 𭜙	cagi
-絾	cagw
 城	cagw
+絾	cagw
 墭	cagy
 𪾓	cagy
 𢒏	cahd
@@ -7867,8 +7867,6 @@ columns:
 𡔘	cbzm
 𤓴	cbzn
 𦇳	cbzx
-卵	cc11
-𠂋	cc11
 𦁪	ccac
 𭎩	ccac
 𮕡	ccac
@@ -7898,7 +7896,9 @@ columns:
 壕	ccby
 𦄘	ccby
 𱺇	ccby
+卵	cccc
 㙓	cccc
+𠂋	cccc
 𢇏	cccc
 𦆩	cccc
 𦇇	cccc
@@ -8206,12 +8206,6 @@ columns:
 𰯵	cczv
 𡎽	cczy
 𡏪	cczy
-彡	cd11
-⺀	cd11
-⼺	cd11
-𘡂	cd11
-𘬀	cd11
-𰀪	cd11
 𭳃	cdaa
 繯	cdah
 𡑡	cdah
@@ -8252,8 +8246,14 @@ columns:
 纅	cdcy
 𭏧	cdcy
 𮉁	cdcy
+彡	cddd
+⺀	cddd
+⼺	cddd
+𘡂	cddd
+𘬀	cddd
 𡔙	cddd
 𨙋	cddd
+𰀪	cddd
 𦂸	cddf
 𡌗	cddi
 𦀸	cddi
@@ -9018,14 +9018,6 @@ columns:
 𡋗	cgyv
 𦁌	cgyv
 𡏖	cgyz
-爪	ch11
-爫	ch11
-⺤	ch11
-⺥	ch11
-⽖	ch11
-乊	ch11
-𫜵	ch11
-𱬴	ch11
 𫭟	chak
 𲅍	chan
 𦄣	chap
@@ -9081,9 +9073,17 @@ columns:
 逺	chhd
 𨙧	chhd
 𭏩	chhf
+爪	chhh
+爫	chhh
+⺤	chhh
+⺥	chhh
+⽖	chhh
+乊	chhh
 𧕒	chhh
 𧖁	chhh
 𩫲	chhh
+𫜵	chhh
+𱬴	chhh
 𧑉	chhk
 𧓚	chhk
 𧕔	chhk
@@ -9220,8 +9220,6 @@ columns:
 膏	chzi
 𪱝	chzj
 𣶀	chzt
-高	ci11
-⾼	ci11
 𢮏	ciaj
 培	ciak
 䋨	ciap
@@ -9264,6 +9262,8 @@ columns:
 縃	cihz
 𡏧	ciia
 𤕤	ciia
+高	ciii
+⾼	ciii
 𤔸	ciio
 𦃵	ciiv
 𱖳	ciiv
@@ -9348,10 +9348,6 @@ columns:
 堔	ciyq
 𫃢	ciyq
 𱬻	ciyq
-手	cj11
-氶	cj11
-龵	cj11
-⼿	cj11
 爭	cjah
 𠃃	cjah
 𪤔	cjah
@@ -9410,6 +9406,10 @@ columns:
 𦧗	cjiv
 𦂹	cjjf
 𩙷	cjjf
+手	cjjj
+氶	cjjj
+⼿	cjjj
+龵	cjjj
 堋	cjjs
 綳	cjjs
 𥾞	cjjz
@@ -9520,9 +9520,6 @@ columns:
 糿	cjzp
 㓜	cjzp
 𮕝	cjzu
-土	ck11
-⼟	ck11
-𘭔	ck11
 𡋣	ckak
 絓	ckap
 𦇫	ckas
@@ -9598,6 +9595,9 @@ columns:
 𱘗	ckjz
 𩺈	ckkf
 𤔹	ckkg
+土	ckkk
+⼟	ckkk
+𘭔	ckkk
 𪺚	ckkk
 𦆄	ckkl
 𡒬	ckkt
@@ -10048,8 +10048,6 @@ columns:
 𫨿	clzn
 𭇸	clzp
 𡐯	clzs
-开	cm11
-𘬰	cm11
 𡎝	cmak
 𲸆	cmak
 緵	cmas
@@ -10113,6 +10111,8 @@ columns:
 𦁀	cmlp
 費	cmlz
 𤔼	cmmd
+开	cmmm
+𘬰	cmmm
 纓	cmmo
 𡓫	cmmo
 爯	cmnh
@@ -10394,7 +10394,6 @@ columns:
 𫃧	cnzf
 𬽛	cnzm
 𤓶	cnzn
-兵	co11
 𣁷	coad
 𠆀	coae
 垌	coak
@@ -10619,6 +10618,7 @@ columns:
 𱠡	cony
 𦁿	coob
 𡊢	coof
+兵	cooo
 𬗴	coop
 𰳩	coou
 𠆊	copa
@@ -10692,14 +10692,6 @@ columns:
 𠭖	cozn
 𤔀	cozn
 𧧞	cozn
-糸	cp11
-幺	cp11
-糹	cp11
-⺓	cp11
-⺯	cp11
-⼳	cp11
-⽷	cp11
-𘳍	cp11
 𪯬	cpad
 埡	cpak
 𫭜	cpak
@@ -10808,6 +10800,14 @@ columns:
 𬴦	cppk
 𬴤	cppn
 𲜢	cppo
+糸	cppp
+幺	cppp
+⺓	cppp
+⺯	cppp
+⼳	cppp
+⽷	cppp
+糹	cppp
+𘳍	cppp
 𱗜	cppr
 𬴣	cppt
 𬴠	cppu
@@ -12195,8 +12195,6 @@ columns:
 𦤏	ctyv
 𦃯	ctzs
 𲙜	ctzs
-血	cu11
-⾎	cu11
 𪣌	cuak
 𮰦	cuak
 䋙	cuap
@@ -12290,6 +12288,8 @@ columns:
 鹞	cuuc
 𡑂	cuui
 𦅏	cuui
+血	cuuu
+⾎	cuuu
 䌰	cuuu
 𡓳	cuuu
 𲢌	cuvj
@@ -12322,8 +12322,6 @@ columns:
 𪺐	cuzn
 𰇂	cuzn
 𲙔	cuzn
-自	cv11
-⾃	cv11
 𫺽	cvaj
 埚	cvak
 𥿹	cvap
@@ -12407,6 +12405,8 @@ columns:
 𦃳	cvvi
 𱗨	cvvi
 𪬤	cvvl
+自	cvvv
+⾃	cvvv
 坬	cvwk
 𮕟	cvwu
 𠒸	cvyf
@@ -12898,7 +12898,6 @@ columns:
 𧹞	cxzs
 𢠱	cxzv
 𬋯	cxzz
-井	cy11
 䌴	cyas
 填	cyay
 縝	cyay
@@ -13030,6 +13029,7 @@ columns:
 𰊨	cyyq
 𲀙	cyyq
 𲸕	cyyq
+井	cyyy
 𡍜	cyzk
 𮤇	cyzk
 㿼	cyzm
@@ -13037,8 +13037,6 @@ columns:
 𪤐	cyzs
 𱲆	cyzs
 温	cyzt
-弗	cz11
-𠂔	cz11
 𫃼	czad
 繌	czas
 𭏊	czas
@@ -13187,8 +13185,8 @@ columns:
 𥿡	czys
 𱖷	czyv
 𦂋	czyy
-綴	czzg
 㙍	czzg
+綴	czzg
 𦀁	czzg
 𠅡	czzk
 𥾤	czzn
@@ -13199,7 +13197,9 @@ columns:
 𪤌	czzy
 𮉗	czzy
 𮪼	czzy
-甲	da11
+弗	czzz
+𠂔	czzz
+甲	daaa
 𡬃	daaa
 𱆑	daag
 𫹃	daai
@@ -13661,10 +13661,6 @@ columns:
 𱻆	dcys
 宑	dcyx
 氟	dczm
-四	dd11
-罒	dd11
-⺫	dd11
-⺲	dd11
 𰩑	ddaa
 𣁺	ddad
 𤾍	ddad
@@ -13721,6 +13717,10 @@ columns:
 皨	dddc
 𥧬	dddc
 𪋻	dddc
+四	dddd
+罒	dddd
+⺫	dddd
+⺲	dddd
 𤳵	dddd
 𦋹	dddd
 𫛘	dddd
@@ -14161,13 +14161,13 @@ columns:
 𥥦	ddzx
 𥦃	ddzy
 弜	ddzz
-原	de11
 𱚒	deao
 𫴤	debq
 𫴧	decc
 𤽖	decd
 𪂊	dedy
 𦌻	deed
+原	deee
 𦌔	deel
 𬷚	defd
 𡩊	defh
@@ -14274,10 +14274,6 @@ columns:
 𪋶	deyo
 𬸾	deyo
 𲸽	dezn
-辶	df11
-⻌	df11
-⻍	df11
-⻎	df11
 鵔	dfas
 𢏤	dfas
 𤽭	dfas
@@ -14307,6 +14303,10 @@ columns:
 𬐞	dfey
 𦥺	dffb
 𦌀	dffc
+辶	dfff
+⻌	dfff
+⻍	dfff
+⻎	dfff
 𩱥	dffg
 𨭧	dffl
 𭿐	dffm
@@ -14488,7 +14488,6 @@ columns:
 𢎸	dfzj
 𦊂	dfzj
 𭽘	dfzl
-𳑳	dg11
 𢂤	dgam
 𳐵	dgbo
 𬈄	dgcb
@@ -14520,6 +14519,7 @@ columns:
 𦌋	dggc
 𡪣	dggg
 𣰗	dggg
+𳑳	dggg
 𧛦	dggh
 𢎱	dggl
 𣬪	dggo
@@ -14627,9 +14627,6 @@ columns:
 盄	dgyz
 𥽐	dgzc
 𭚭	dgzy
-白	dh11
-⽩	dh11
-𘯕	dh11
 𬙕	dhad
 𤼿	dhah
 𱚚	dhap
@@ -14669,6 +14666,9 @@ columns:
 𣁓	dhfw
 𮱟	dhfx
 𡪁	dhgp
+白	dhhh
+⽩	dhhh
+𘯕	dhhh
 𧔃	dhhh
 𢏾	dhhi
 𧔞	dhhk
@@ -14775,10 +14775,6 @@ columns:
 𦚋	dhzd
 𪊒	dhzo
 𡧓	dhzx
-儿	di11
-⼉	di11
-𖿲	di11
-𘯦	di11
 𱥫	diam
 㝛	dias
 𰍀	diau
@@ -14840,6 +14836,10 @@ columns:
 𣪾	diif
 𣫟	diif
 𢥜	diig
+儿	diii
+⼉	diii
+𖿲	diii
+𘯦	diii
 𡫮	diil
 𡫟	diin
 𠾉	diio
@@ -14932,7 +14932,6 @@ columns:
 𣗰	diyq
 𣛊	diyq
 𭓭	diyq
-分	dj11
 𪇫	djad
 𠜞	djaw
 𪀴	djaw
@@ -14970,6 +14969,7 @@ columns:
 𬛥	djin
 𭓯	djix
 羉	djjd
+分	djjj
 𥅫	djjj
 𧪔	djjo
 𧭿	djjo
@@ -15026,7 +15026,6 @@ columns:
 𭓧	djzn
 𪽣	djzt
 𫴋	djzt
-亲	dk11
 罣	dkad
 𪊧	dkao
 𲨮	dkas
@@ -15088,8 +15087,8 @@ columns:
 𭷍	dkhh
 𧚡	dkhi
 𧛲	dkhi
-歜	dkhk
 蜀	dkhk
+歜	dkhk
 䫳	dkhl
 𢻧	dkho
 劅	dkhr
@@ -15110,6 +15109,7 @@ columns:
 𦌸	dkkc
 𬐑	dkkd
 𪫅	dkkf
+亲	dkkk
 𫳽	dkkk
 𭔟	dkkm
 𦉶	dkld
@@ -15217,7 +15217,6 @@ columns:
 監	dkyz
 𮭀	dkzc
 𭶡	dkzx
-居	dl11
 𪊿	dlao
 𭓖	dlas
 𪁴	dlaw
@@ -15287,6 +15286,7 @@ columns:
 𲟘	dlkx
 𧯉	dlla
 𩔜	dlld
+居	dlll
 𦉾	dlmd
 𧶼	dlml
 𱚂	dlmv
@@ -15364,8 +15364,6 @@ columns:
 𭏳	dlzc
 皈	dlzn
 𪠮	dlzn
-气	dm11
-⽓	dm11
 𱰣	dmah
 𳐺	dmak
 䍟	dmas
@@ -15422,6 +15420,8 @@ columns:
 𧶶	dmlz
 𫸳	dmlz
 𡬔	dmml
+气	dmmm
+⽓	dmmm
 𪈤	dmmo
 𭒲	dmmo
 𠔱	dmmr
@@ -15483,9 +15483,6 @@ columns:
 𫦇	dmzh
 弢	dmzn
 𬥬	dmzw
-臣	dn11
-⾂	dn11
-𰃦	dn11
 𦉬	dnad
 𭽆	dnah
 𫴩	dnam
@@ -15594,6 +15591,9 @@ columns:
 㝌	dnms
 𲰲	dnnc
 𫳠	dnne
+臣	dnnn
+⾂	dnnn
+𰃦	dnnn
 𩞇	dnno
 𫳫	dnob
 𡬺	dnof
@@ -15681,8 +15681,6 @@ columns:
 罨	dnzf
 𫳑	dnzf
 𭽢	dnzz
-鹿	do11
-⿅	do11
 𢏕	doak
 𬷍	doak
 罟	dobd
@@ -15781,6 +15779,8 @@ columns:
 𡨌	doog
 𤽛	dooh
 𰴴	dook
+鹿	dooo
+⿅	dooo
 𫳣	dooo
 𫴪	dooo
 𭓬	doox
@@ -16229,7 +16229,6 @@ columns:
 𪊯	drys
 𢏴	dryz
 𰤪	drzs
-多	ds11
 𡩍	dsag
 𡧸	dsbn
 𡨛	dsbp
@@ -16307,6 +16306,7 @@ columns:
 𭐾	dspy
 𰏝	dsqp
 罚	dsrj
+多	dsss
 𡪒	dsst
 帛	dsuh
 𢁥	dsuj
@@ -16507,8 +16507,6 @@ columns:
 𪪿	duzn
 𫸵	duzn
 𱚔	duzx
-邑	dv11
-⾢	dv11
 𬙤	dvah
 𪊳	dvao
 𩱰	dvbg
@@ -16626,6 +16624,8 @@ columns:
 𡩉	dvuw
 𡨃	dvux
 𫺮	dvvi
+邑	dvvv
+⾢	dvvv
 𠕫	dvvv
 寙	dvvw
 𦋯	dvvw
@@ -16666,8 +16666,6 @@ columns:
 𬐽	dvyz
 㝕	dvzn
 𬐌	dvzs
-鳥	dw11
-⿃	dw11
 皎	dwah
 𪁉	dwaw
 㝔	dwax
@@ -16805,6 +16803,8 @@ columns:
 𨈏	dwwn
 𢐢	dwwq
 𦊸	dwwr
+⿃	dwww
+鳥	dwww
 𪧝	dwwx
 𪫄	dwwz
 𭛈	dwxa
@@ -16835,8 +16835,6 @@ columns:
 𱚐	dwzn
 麡	dwzp
 䍤	dwzp
-宀	dx11
-⼧	dx11
 𡺶	dxab
 𪧦	dxab
 𬈡	dxab
@@ -16989,6 +16987,8 @@ columns:
 𦋺	dxxr
 𩤩	dxxt
 𭛆	dxxw
+宀	dxxx
+⼧	dxxx
 麜	dxyq
 𢏼	dxyq
 𣱣	dxyq
@@ -17128,10 +17128,6 @@ columns:
 𭽾	dyzh
 盆	dyzj
 𫳓	dyzn
-弓	dz11
-⼸	dz11
-𢎗	dz11
-𢎜	dz11
 𱥭	dzbh
 𤽺	dzbk
 𱚌	dzbk
@@ -17295,6 +17291,10 @@ columns:
 𫴁	dzzr
 𤿳	dzzs
 𡪧	dzzy
+弓	dzzz
+⼸	dzzz
+𢎗	dzzz
+𢎜	dzzz
 𮧼	eaah
 𭔽	eaao
 𫕄	eaay
@@ -17875,8 +17875,6 @@ columns:
 𬰁	eeyr
 𮥡	eeyv
 𥁥	eeyz
-行	ef11
-⾏	ef11
 𨻅	efab
 𡍵	efac
 黼	efah
@@ -17903,6 +17901,8 @@ columns:
 𬯘	effc
 𮈖	effc
 𱡸	effc
+行	efff
+⾏	efff
 䨶	effh
 𧘆	effh
 𨹶	effh
@@ -18001,7 +18001,6 @@ columns:
 𨸧	efzj
 𪯽	efzn
 𰺕	efzn
-兔	eg11
 𲡎	egac
 𧓤	egah
 𢧇	egas
@@ -18031,6 +18030,7 @@ columns:
 𥅰	egfm
 𩅞	egfu
 𩃆	egfz
+兔	eggg
 𮥪	eggu
 䧖	eggw
 𧗸	eggw
@@ -18404,7 +18404,6 @@ columns:
 𩂯	eiyq
 𰘡	eiyq
 𩇒	eiyx
-业	ej11
 𲉏	ejar
 𩆇	ejbh
 𳉹	ejbk
@@ -18434,6 +18433,7 @@ columns:
 𳉺	ejiy
 䬠	ejjf
 𩙴	ejjf
+业	ejjj
 𠦢	ejjj
 𨼖	ejjj
 𩄳	ejjk
@@ -18496,7 +18496,6 @@ columns:
 𬨃	ejzn
 𭃄	ejzo
 𨸓	ejzr
-已	ek11
 街	ekaf
 𨹐	ekak
 𱀋	ekar
@@ -18542,6 +18541,7 @@ columns:
 𠧋	ekjg
 旃	ekjz
 𬀤	ekkf
+已	ekkk
 䥅	ekkl
 𨹋	ekks
 𠦐	ekkx
@@ -18735,7 +18735,6 @@ columns:
 𡋴	elzc
 阪	elzn
 𰹺	elzn
-员	em11
 𮦫	emah
 𩅿	emao
 𨺡	emas
@@ -18814,6 +18813,7 @@ columns:
 𩅅	emly
 𮦛	emmb
 𬰃	emmk
+员	emmm
 𩆩	emmo
 𫋱	emmo
 𮥳	emmo
@@ -18903,8 +18903,6 @@ columns:
 𩅵	emzr
 𮥅	emzr
 𢖨	emzs
-己	en11
-⼰	en11
 䦺	enar
 𩁷	enar
 𩅱	enav
@@ -18963,6 +18961,8 @@ columns:
 辌	enlp
 𨼧	enlp
 𳊀	enlp
+己	ennn
+⼰	ennn
 𮥮	enos
 𳈮	enox
 𩅽	enpj
@@ -19006,13 +19006,6 @@ columns:
 𦜽	enzf
 𨺍	enzf
 𩃗	enzf
-十	eo11
-⼗	eo11
-𘠎	eo11
-𘬶	eo11
-𠂇	eo11
-𬂛	eo11
-𬺰	eo11
 𰆀	eoaa
 𰆂	eoaa
 𪤟	eoac
@@ -19114,6 +19107,13 @@ columns:
 𱂪	eonm
 𲊄	eonp
 𳊁	eooj
+十	eooo
+⼗	eooo
+𘠎	eooo
+𘬶	eooo
+𠂇	eooo
+𬂛	eooo
+𬺰	eooo
 䨫	eoor
 𳉪	eoot
 𩂰	eopr
@@ -19155,8 +19155,6 @@ columns:
 𣣙	eoyk
 𣐁	eoyq
 陕	eozr
-车	ep11
-⻋	ep11
 𲉸	epad
 𳉛	epap
 𳉲	epas
@@ -19210,6 +19208,8 @@ columns:
 𲎵	eppi
 𨻟	eppj
 𠁗	eppn
+车	eppp
+⻋	eppp
 𩇇	eppp
 𨻓	eppr
 𨺑	epqf
@@ -19365,12 +19365,6 @@ columns:
 𨽧	eqyw
 𨼙	eqyy
 𰺣	eqzw
-阝	er11
-雨	er11
-⻏	er11
-⻖	er11
-⻗	er11
-⾬	er11
 𰚊	eraf
 𱳬	erap
 雼	erar
@@ -19424,6 +19418,12 @@ columns:
 𩄡	erqx
 𨽨	errg
 𨽳	errh
+阝	errr
+雨	errr
+⻏	errr
+⻖	errr
+⻗	errr
+⾬	errr
 𣄠	errr
 𰺢	errr
 𨼐	errw
@@ -19538,7 +19538,6 @@ columns:
 𲞱	eszg
 𨽭	eszl
 𩂳	eszr
-未	et11
 𨻞	etap
 𲉾	etau
 𱁗	etay
@@ -19631,6 +19630,7 @@ columns:
 𱁘	etso
 𱁪	ettc
 㽌	etti
+未	ettt
 靁	ettt
 𫐙	ettt
 𩄞	ettu
@@ -19664,8 +19664,6 @@ columns:
 䧃	etyr
 𱁤	etzf
 𫕏	etzh
-肉	eu11
-⾁	eu11
 辏	euak
 𫔾	euar
 阸	eubm
@@ -19749,6 +19747,8 @@ columns:
 𱀹	euuh
 𨼏	euui
 𰺚	euui
+肉	euuu
+⾁	euuu
 𨽦	euuu
 𩅶	euuu
 𮥯	euuu
@@ -19873,8 +19873,6 @@ columns:
 𭦖	evwr
 隲	evxt
 𢆐	evyc
-巳	ew11
-⺒	ew11
 𱀤	ewao
 较	ewap
 𨹍	ewar
@@ -19987,6 +19985,8 @@ columns:
 𰛕	ewwj
 𠠰	ewwr
 𠐱	ewws
+巳	ewww
+⺒	ewww
 𨼗	ewww
 𩅟	ewww
 𱁫	ewww
@@ -20137,8 +20137,6 @@ columns:
 盔	exyz
 𣃳	exzn
 𩁿	exzr
-斉	ey11
-齐	ey11
 𳉞	eyaf
 𩃶	eyam
 衠	eyay
@@ -20286,11 +20284,12 @@ columns:
 𩆻	eyxt
 𨼝	eyyq
 𮦖	eyyv
+斉	eyyy
+齐	eyyy
 𩅣	eyyy
 𩅐	eyzf
 𮦗	eyzr
 𱌘	eyzy
-𭤨	ez11
 墬	ezbc
 䧘	ezby
 𩄖	ezby
@@ -20311,8 +20310,8 @@ columns:
 𫏕	ezih
 𰼻	ezil
 𮦅	ezir
-陉	eziv
 轻	eziv
+陉	eziv
 𩄶	ezkc
 辗	ezkd
 𰺞	ezll
@@ -20362,9 +20361,10 @@ columns:
 𥀙	ezzs
 𨻗	ezzy
 𬨑	ezzy
-身	fa11
-⾝	fa11
-㐆	fa11
+𭤨	ezzz
+身	faaa
+⾝	faaa
+㐆	faaa
 𭚎	faaa
 𧷫	faam
 𨤆	faam
@@ -20868,8 +20868,6 @@ columns:
 𪤘	fcyy
 𨠓	fczd
 䀟	fczm
-酉	fd11
-⾣	fd11
 𭿜	fdaa
 䁵	fdah
 𫸁	fdah
@@ -20890,6 +20888,8 @@ columns:
 𭿳	fdcw
 䁻	fdcy
 䤕	fdcy
+酉	fddd
+⾣	fddd
 𲅚	fddf
 𠑺	fddi
 𥆒	fddi
@@ -21878,12 +21878,6 @@ columns:
 䏍	fhzi
 𘣚	fhzk
 𱭆	fhzo
-厶	fi11
-广	fi11
-⼛	fi11
-⼴	fi11
-𘡈	fi11
-𘳌	fi11
 醅	fiad
 𥇁	fiau
 𮙛	fiby
@@ -21920,6 +21914,12 @@ columns:
 𬑈	fihm
 𥄰	fiht
 醑	fihz
+厶	fiii
+广	fiii
+⼛	fiii
+⼴	fiii
+𘡈	fiii
+𘳌	fiii
 𢊓	fiiw
 𨠛	fijd
 𪪗	fijf
@@ -22169,13 +22169,6 @@ columns:
 𬺳	fjzk
 𨈞	fjzn
 𱝏	fjzo
-一	fk11
-⼀	fk11
-⽬	fk11
-㇀	fk11
-㇐	fk11
-𘠀	fk11
-𘬁	fk11
 眭	fkam
 𮠤	fkan
 𠦱	fkaq
@@ -22282,6 +22275,13 @@ columns:
 𨈝	fkja
 睠	fkjf
 𪿄	fkjz
+一	fkkk
+⼀	fkkk
+⽬	fkkk
+㇀	fkkk
+㇐	fkkk
+𘠀	fkkk
+𘬁	fkkk
 𲄰	fkkt
 𨣭	fkkv
 𠘲	fkkx
@@ -22389,7 +22389,6 @@ columns:
 躹	fkzc
 𮠽	fkzk
 𰼇	fkzn
-你	fl11
 𳅗	flad
 𲲟	flai
 䀰	flam
@@ -22456,6 +22455,7 @@ columns:
 𩓎	flld
 𩕅	flld
 𨣣	flli
+你	flll
 𭑡	flls
 𨣋	fllw
 𬪶	flmf
@@ -22539,8 +22539,6 @@ columns:
 眅	flzn
 𢇪	flzn
 𰸺	flzn
-目	fm11
-𘯂	fm11
 睽	fmak
 䤆	fmak
 䁓	fmas
@@ -22600,6 +22598,8 @@ columns:
 𥈰	fmli
 𥆘	fmlm
 𨥣	fmlu
+目	fmmm
+𘯂	fmmm
 廮	fmmo
 𥌽	fmmo
 𨈭	fmna
@@ -22649,9 +22649,6 @@ columns:
 𥅢	fmzn
 𭁥	fmzn
 𰏻	fmzs
-殳	fn11
-⽎	fn11
-㡀	fn11
 酊	fnad
 庁	fnai
 亍	fnak
@@ -22758,6 +22755,9 @@ columns:
 𨢁	fnnd
 𫷸	fnni
 𠫻	fnnm
+殳	fnnn
+⽎	fnnn
+㡀	fnnn
 𡢜	fnno
 𱳎	fnno
 𢊔	fnob
@@ -22847,7 +22847,6 @@ columns:
 𢇽	fnzn
 𱳖	fnzp
 𲲳	fnzz
-夭	fo11
 酮	foak
 眮	foak
 𢈉	foak
@@ -23112,6 +23111,7 @@ columns:
 𘔓	foom
 𘔔	foom
 𘔚	foom
+夭	fooo
 𘔗	fooo
 𘔝	fooo
 𘔒	fooq
@@ -23559,7 +23559,6 @@ columns:
 𪪏	fpzk
 𪾦	fpzk
 𗵅	fpzy
-首	fq11
 醎	fqak
 䁍	fqak
 𨣝	fqav
@@ -23670,6 +23669,7 @@ columns:
 𢈒	fqqi
 𲆬	fqqj
 𫷾	fqqo
+首	fqqq
 䁳	fqrq
 𫷯	fqsc
 鶊	fqsd
@@ -24197,8 +24197,6 @@ columns:
 𤰓	ftyk
 𰢴	ftyk
 𨡇	ftyz
-壬	fu11
-𡈼	fu11
 䣵	fuad
 𭿅	fuak
 眲	fuam
@@ -24300,6 +24298,8 @@ columns:
 𥋃	fuui
 𨉿	fuui
 𨢾	fuui
+壬	fuuu
+𡈼	fuuu
 𥍉	fuuu
 𨊞	fuuu
 𫒅	fuuz
@@ -24821,8 +24821,6 @@ columns:
 𢇵	fxzn
 𱝄	fxzn
 𳅐	fxzn
-韦	fy11
-⻙	fy11
 𲣿	fyad
 瞋	fyay
 矙	fybv
@@ -24960,6 +24958,8 @@ columns:
 䤂	fyyq
 𥇱	fyyq
 𥊺	fyyq
+韦	fyyy
+⻙	fyyy
 矚	fzbh
 䤙	fzbh
 𨣰	fzbh
@@ -25183,11 +25183,11 @@ columns:
 愴	gazp
 𣯙	gazp
 𭞶	gazr
-侖	gb11
 𢘜	gbak
 𬴴	gbak
 𗁢	gbao
 懙	gbba
+侖	gbbb
 𢚭	gbbk
 𢚇	gbbp
 𢟩	gbbq
@@ -25486,7 +25486,6 @@ columns:
 怫	gczi
 𭜖	gczi
 𭯗	gczo
-今	gd11
 懁	gdah
 𡕅	gdah
 𢘉	gdai
@@ -25512,6 +25511,7 @@ columns:
 𣱀	gdcw
 㦡	gdcy
 㒪	gddb
+今	gddd
 𮊀	gddd
 𬩯	gddf
 怬	gddi
@@ -26109,11 +26109,6 @@ columns:
 㥺	ggyz
 𥂊	ggyz
 𢘦	ggzn
-里	gh11
-⾥	gh11
-㐄	gh11
-𘲐	gh11
-𫝀	gh11
 怄	ghai
 𱞘	ghal
 𢟦	ghap
@@ -26203,8 +26198,13 @@ columns:
 𗁤	ghgv
 𢡠	ghgw
 𰸍	ghhb
+里	ghhh
+⾥	ghhh
+㐄	ghhh
+𘲐	ghhh
 𢥞	ghhh
 𧖓	ghhh
+𫝀	ghhh
 𱟈	ghhh
 𬹚	ghhk
 𢦃	ghhy
@@ -26298,11 +26298,6 @@ columns:
 𪵗	ghzo
 𦡨	ghzs
 𣞰	ghzy
-忄	gi11
-亏	gi11
-⺖	gi11
-⺗	gi11
-㣺	gi11
 𣯒	giaa
 㥉	giai
 毰	giao
@@ -26336,6 +26331,11 @@ columns:
 𢀗	gihu
 㥠	gihz
 𫑒	giid
+忄	giii
+亏	giii
+⺖	giii
+⺗	giii
+㣺	giii
 𢟈	giiv
 𤬰	gijd
 𱞈	giji
@@ -26522,7 +26522,6 @@ columns:
 𪐛	gjzp
 𱎲	gjzs
 𲒨	gjzu
-去	gk11
 㤬	gkai
 𩰳	gkan
 𢥌	gkas
@@ -26597,6 +26596,7 @@ columns:
 𭜗	gkji
 𢥆	gkjz
 𣰳	gkjz
+去	gkkk
 𪼈	gkkk
 𪬻	gkkq
 𱟕	gkkq
@@ -26680,8 +26680,6 @@ columns:
 𠓰	gkzg
 𭆪	gkzn
 𣯲	gkzo
-林	gl11
-𣏟	gl11
 𲠎	glac
 𪫹	glai
 𭑓	glal
@@ -26750,6 +26748,8 @@ columns:
 𢦕	glkx
 𩓐	glld
 傘	glle
+林	glll
+𣏟	glll
 𠨉	gllp
 𠑋	gllq
 𢡽	gllw
@@ -26930,7 +26930,6 @@ columns:
 恼	gmzi
 忷	gmzi
 𢙪	gmzo
-鬲	gn11
 𠬕	gnah
 𠬖	gnah
 忊	gnai
@@ -27010,6 +27009,7 @@ columns:
 𮱿	gnms
 𢤿	gnmv
 𩚜	gnnd
+鬲	gnnn
 𫻳	gnog
 𭯟	gnos
 𢡓	gnox
@@ -27070,10 +27070,6 @@ columns:
 黤	gnzf
 㤿	gnzf
 𢤯	gnzf
-毛	go11
-⽑	go11
-𘠗	go11
-𠆢	go11
 𢙩	goai
 恫	goak
 𮹑	goak
@@ -27134,6 +27130,10 @@ columns:
 怏	gonf
 𰑌	gonf
 𲠦	gonm
+毛	gooo
+⽑	gooo
+𘠗	gooo
+𠆢	gooo
 𫱒	goou
 𢞙	gopc
 𢘾	gopr
@@ -27184,17 +27184,6 @@ columns:
 𗁘	gozo
 𣜺	gozs
 𡕏	gozy
-丨	gp11
-黒	gp11
-亅	gp11
-黑	gp11
-⼁	gp11
-⼅	gp11
-⿊	gp11
-㇑	gp11
-㇚	gp11
-𘠁	gp11
-𘮔	gp11
 𲠂	gpab
 𭟻	gpaf
 𢛟	gpai
@@ -27310,6 +27299,17 @@ columns:
 𧕱	gpoh
 𤛉	gpor
 𲠳	gppn
+丨	gppp
+黒	gppp
+黑	gppp
+亅	gppp
+⼁	gppp
+⼅	gppp
+⿊	gppp
+㇑	gppp
+㇚	gppp
+𘠁	gppp
+𘮔	gppp
 𠸱	gppt
 𲨐	gppx
 悼	gpqf
@@ -27865,7 +27865,6 @@ columns:
 𪠩	gtzn
 𱑷	gtzn
 𢜢	gtzs
-束	gu11
 𢙘	guai
 𣭞	guao
 㥭	gubk
@@ -27929,6 +27928,7 @@ columns:
 𪒆	gutu
 𢡼	guui
 𣰃	guui
+束	guuu
 懾	guuu
 𢥳	guuu
 𣰼	guuu
@@ -28032,9 +28032,6 @@ columns:
 𩐎	gvyf
 𪑽	gvyq
 𰑊	gvzn
-戈	gw11
-⼽	gw11
-𭠍	gw11
 恔	gwai
 𢟞	gwai
 𭞛	gwas
@@ -28167,6 +28164,9 @@ columns:
 𱟚	gwwo
 𢛽	gwwr
 𣮑	gwwr
+戈	gwww
+⼽	gwww
+𭠍	gwww
 𢥠	gwwz
 𣯴	gwxe
 𪒌	gwxh
@@ -28553,9 +28553,9 @@ columns:
 𢘎	gzzn
 𪝶	gzzs
 𪭃	gzzy
-丄	ha11
-区	ha11
-𘮜	ha11
+丄	haaa
+区	haaa
+𘮜	haaa
 䂎	haam
 躦	haam
 躜	haaq
@@ -28680,10 +28680,6 @@ columns:
 蹌	hazp
 𥎄	hazp
 𱭟	hazp
-足	hb11
-⻊	hb11
-⾜	hb11
-𧾷	hb11
 𨆶	hbah
 𧉠	hbak
 𭭟	hbak
@@ -28691,6 +28687,10 @@ columns:
 𮕓	hbao
 𫏨	hbas
 𥎗	hbba
+足	hbbb
+⻊	hbbb
+⾜	hbbb
+𧾷	hbbb
 𮔷	hbbq
 𲀒	hbbq
 𤕘	hbbs
@@ -29320,8 +29320,6 @@ columns:
 𨇴	hbzj
 𤕗	hbzn
 𨀱	hbzn
-矛	hc11
-⽭	hc11
 踛	hcac
 𧌉	hcac
 蟽	hcad
@@ -29341,6 +29339,8 @@ columns:
 蠔	hcby
 𧑄	hcby
 𫏢	hcby
+矛	hccc
+⽭	hccc
 𨅣	hccc
 𨇵	hccd
 𰐨	hccd
@@ -29587,8 +29587,6 @@ columns:
 𧉸	hczk
 𩐚	hczr
 𲭄	hczs
-丷	hd11
-𘫳	hd11
 𧿵	hdab
 𱿹	hdae
 蠉	hdah
@@ -29619,6 +29617,8 @@ columns:
 躒	hdcy
 𧔉	hdcy
 𧏏	hdda
+丷	hddd
+𘫳	hddd
 𧑲	hddd
 𪯣	hddf
 𲾓	hddk
@@ -29818,7 +29818,6 @@ columns:
 𧒠	hdzv
 𬦵	hdzx
 𫋟	hdzy
-来	he11
 𨡡	heaf
 𨆷	heao
 𧎲	heas
@@ -29833,6 +29832,7 @@ columns:
 𲾭	hedf
 𨃿	heec
 𰳜	heec
+来	heee
 𲿵	heeh
 䠣	heel
 蟤	heel
@@ -29956,9 +29956,6 @@ columns:
 𧕅	heyo
 𤖥	heys
 𮔻	heyv
-文	hf11
-⽂	hf11
-𘱒	hf11
 𤖑	hfah
 𫊾	hfak
 踆	hfas
@@ -29991,6 +29988,9 @@ columns:
 𤗲	hffc
 𧑁	hffc
 𮜒	hffc
+文	hfff
+⽂	hfff
+𘱒	hfff
 𧑫	hffg
 𨅶	hffg
 䠁	hffh
@@ -30156,7 +30156,6 @@ columns:
 𧿟	hfzj
 踱	hfzn
 𮔦	hfzn
-习	hg11
 踚	hgbb
 𘕫	hgbb
 𘕬	hgbb
@@ -30196,6 +30195,7 @@ columns:
 𗎻	hgfl
 𣥫	hgfw
 𗔿	hgfy
+习	hggg
 𳃤	hggg
 𘮠	hggp
 𫢊	hggp
@@ -30672,11 +30672,6 @@ columns:
 肯	hhzl
 𗄓	hhzl
 𲾏	hhzn
-衣	hi11
-⾐	hi11
-𘯝	hi11
-𧘇	hi11
-𰀠	hi11
 踣	hiab
 𬠗	hiak
 𧍇	hiaq
@@ -30718,6 +30713,11 @@ columns:
 𤖳	hihw
 蝑	hihz
 𫏚	hiia
+衣	hiii
+⾐	hiii
+𘯝	hiii
+𧘇	hiii
+𰀠	hiii
 瓯	hija
 𨀄	hijb
 蝍	hijf
@@ -30957,10 +30957,6 @@ columns:
 虭	hjzk
 䟦	hjzn
 𠛈	hjzz
-虫	hk11
-⾍	hk11
-𘯊	hk11
-𠀐	hk11
 跬	hkab
 𮛻	hkah
 蛙	hkak
@@ -31037,6 +31033,10 @@ columns:
 蚒	hkjk
 𨅁	hkjk
 𲿮	hkkb
+虫	hkkk
+⾍	hkkk
+𘯊	hkkk
+𠀐	hkkk
 𧑜	hkkl
 𧒓	hkkl
 𨆙	hkkl
@@ -31127,11 +31127,6 @@ columns:
 𫋋	hkyz
 踘	hkzc
 䗇	hkzc
-止	hl11
-龰	hl11
-⽌	hl11
-𣥂	hl11
-𱤻	hl11
 𨁖	hlab
 蛎	hlai
 䘱	hlai
@@ -31248,6 +31243,11 @@ columns:
 𮮽	hllh
 𲾔	hlli
 𮍹	hllj
+止	hlll
+⽌	hlll
+龰	hlll
+𣥂	hlll
+𱤻	hlll
 𭉵	hllp
 𥎼	hllv
 𥎏	hllw
@@ -32365,8 +32365,6 @@ columns:
 𬧛	hqzh
 𨈉	hqzs
 躏	hqzw
-音	hr11
-⾳	hr11
 跖	hrab
 𲄃	hrah
 䖨	hrak
@@ -32469,6 +32467,8 @@ columns:
 𧌼	hrrj
 𬦶	hrrj
 𦒕	hrrq
+音	hrrr
+⾳	hrrr
 𨇒	hrrr
 𥎑	hrrw
 𨅔	hrrw
@@ -32550,8 +32550,8 @@ columns:
 𰳑	hsch
 𱬽	hsch
 𳃣	hscj
-螳	hsck
 蹚	hsck
+螳	hsck
 𰳇	hsck
 絛	hscp
 𢟅	hscv
@@ -32697,12 +32697,6 @@ columns:
 𨅨	hsyq
 𭪠	hsyq
 𭞝	hsyv
-二	ht11
-⼆	ht11
-𘠊	ht11
-𠄞	ht11
-𠄟	ht11
-𠄠	ht11
 蝌	htad
 兽	htak
 𠉀	htak
@@ -32911,7 +32905,13 @@ columns:
 躓	httm
 𧓳	httm
 𤖣	http
+二	httt
+⼆	httt
 蠝	httt
+𘠊	httt
+𠄞	httt
+𠄟	httt
+𠄠	httt
 蹓	htty
 䗜	htty
 𮔹	htuo
@@ -32940,32 +32940,6 @@ columns:
 𤱇	htyz
 𤕱	htzn
 𤖰	htzn
-乚	hu11
-⺃	hu11
-㇂	hu11
-㇃	hu11
-㇄	hu11
-㇉	hu11
-㇗	hu11
-㇙	hu11
-㇛	hu11
-㇜	hu11
-㇞	hu11
-㇟	hu11
-㇥	hu11
-𘠆	hu11
-𘠇	hu11
-𘠉	hu11
-𘯧	hu11
-𘳀	hu11
-𘳋	hu11
-𠃉	hu11
-𠃊	hu11
-𠃋	hu11
-𠃑	hu11
-𠄌	hu11
-𡿨	hu11
-𬼂	hu11
 𬦮	huab
 斊	huaf
 牖	huah
@@ -33004,8 +32978,8 @@ columns:
 𢧐	hugg
 𬠷	hugh
 𰸮	hugh
-蛸	hugk
 冁	hugk
+蛸	hugk
 单	hugp
 𫛴	hugu
 𬹤	hugw
@@ -33081,8 +33055,34 @@ columns:
 𧑮	huui
 𨅲	huui
 𧎺	huur
+乚	huuu
+⺃	huuu
+㇂	huuu
+㇃	huuu
+㇄	huuu
+㇉	huuu
+㇗	huuu
+㇙	huuu
+㇛	huuu
+㇜	huuu
+㇞	huuu
+㇟	huuu
+㇥	huuu
 躡	huuu
+𘠆	huuu
+𘠇	huuu
+𘠉	huuu
+𘯧	huuu
+𘳀	huuu
+𘳋	huuu
+𠃉	huuu
+𠃊	huuu
+𠃋	huuu
+𠃑	huuu
+𠄌	huuu
+𡿨	huuu
 𧕩	huuu
+𬼂	huuu
 𫋦	huuz
 踻	huvb
 𨀩	huvb
@@ -33307,14 +33307,6 @@ columns:
 𲈿	hvzi
 𱭝	hvzn
 𢥭	hvzs
-爿	hw11
-丬	hw11
-片	hw11
-⺦	hw11
-⽙	hw11
-⽚	hw11
-𘠵	hw11
-𘡶	hw11
 跤	hwab
 𲆊	hwad
 𤗱	hwah
@@ -33465,6 +33457,14 @@ columns:
 䗉	hwwr
 𮛤	hwwr
 𲀍	hwwr
+爿	hwww
+片	hwww
+丬	hwww
+⺦	hwww
+⽙	hwww
+⽚	hwww
+𘠵	hwww
+𘡶	hwww
 𧕟	hwwz
 𨇯	hwwz
 蹕	hwxe
@@ -33494,7 +33494,6 @@ columns:
 躋	hwzp
 𧕚	hwzt
 𨈂	hwzz
-酋	hx11
 𧐝	hxad
 𮯁	hxad
 𫜦	hxah
@@ -33884,9 +33883,9 @@ columns:
 齛	hxxh
 𫋥	hxxh
 䶔	hxxi
-齒	hxxl
 ⿒	hxxl
 䗊	hxxl
+齒	hxxl
 𠄰	hxxl
 𨁹	hxxl
 𥎞	hxxm
@@ -33902,6 +33901,7 @@ columns:
 𮪘	hxxt
 齰	hxxw
 𨅕	hxxw
+酋	hxxx
 𧓌	hxxx
 蠑	hxxy
 齫	hxxy
@@ -34097,12 +34097,6 @@ columns:
 𨳌	hyzt
 𨳏	hyzt
 𩑇	hyzz
-冃	hz11
-父	hz11
-⺝	hz11
-⽗	hz11
-𘡹	hz11
-𘮹	hz11
 𫋢	hzad
 𫏝	hzaw
 𮜠	hzaw
@@ -34262,7 +34256,13 @@ columns:
 𤖒	hzzy
 𧏠	hzzy
 𬧉	hzzy
-咅	ia11
+父	hzzz
+冃	hzzz
+⺝	hzzz
+⽗	hzzz
+𘡹	hzzz
+𘮹	hzzz
+咅	iaaa
 儹	iaam
 𨳄	iaam
 𰃆	iaaq
@@ -34541,8 +34541,6 @@ columns:
 㒨	ibze
 𠑗	ibze
 𠑎	ibzx
-民	ic11
-⺠	ic11
 㒓	icad
 𮪿	icad
 𩠷	icaf
@@ -34586,6 +34584,8 @@ columns:
 𩭐	icby
 𩭢	icby
 𰃈	iccb
+民	iccc
+⺠	iccc
 𨱶	icch
 𩬐	icch
 𰂆	icch
@@ -35118,7 +35118,6 @@ columns:
 𱆀	iczw
 𩮧	iczy
 𲌞	iczy
-凡	id11
 𰫶	idac
 𫤇	idad
 儇	idah
@@ -35140,6 +35139,7 @@ columns:
 𦤮	idcr
 儸	idcw
 𭀅	idcy
+凡	iddd
 㝸	iddi
 𬾐	iddi
 𠋪	iddn
@@ -35313,8 +35313,6 @@ columns:
 𢎣	idzu
 𰁣	idzu
 𠐊	idzx
-介	ie11
-㓁	ie11
 𠏮	ieao
 𪝷	iebd
 㒏	iecd
@@ -35326,6 +35324,8 @@ columns:
 𫣜	iedv
 𰂹	iedz
 𠐯	ieed
+介	ieee
+㓁	ieee
 𩙇	ieeh
 僎	ieel
 値	iefh
@@ -35408,10 +35408,6 @@ columns:
 侪	ieyu
 㑪	ieyu
 𠎉	ieyv
-疋	if11
-⺪	if11
-⽦	if11
-𤴔	if11
 𱃁	ifal
 㑓	ifam
 𭏓	ifam
@@ -35435,6 +35431,10 @@ columns:
 㒍	iffc
 𰿕	iffc
 䣸	iffd
+疋	ifff
+⺪	ifff
+⽦	ifff
+𤴔	ifff
 𨲱	iffg
 𠌿	iffh
 𬽷	iffi
@@ -35610,12 +35610,6 @@ columns:
 伟	ifyu
 仾	ifzj
 𠉷	ifzs
-小	ig11
-⺌	ig11
-⼩	ig11
-𘡌	ig11
-𘮦	ig11
-𡭔	ig11
 𰀿	igbm
 佡	igbn
 倫	igbu
@@ -35633,6 +35627,12 @@ columns:
 𨱿	igeo
 𨠰	igfd
 𠋧	igfu
+小	iggg
+⺌	iggg
+⼩	iggg
+𘡌	iggg
+𘮦	iggg
+𡭔	iggg
 𬽨	iggp
 俴	iggw
 𠋖	ighd
@@ -35719,8 +35719,6 @@ columns:
 𣑡	igyq
 侩	igyv
 𪝙	igyz
-平	ih11
-𘬋	ih11
 伛	ihau
 𲃕	ihbg
 𗇇	ihbq
@@ -35749,6 +35747,8 @@ columns:
 伩	ihfu
 𰂶	ihgh
 𣥋	ihhf
+平	ihhh
+𘬋	ihhh
 𬿨	ihhh
 𰂮	ihhh
 𱃓	ihhh
@@ -35980,8 +35980,6 @@ columns:
 𩗆	iiyq
 𬐝	iiyz
 䊄	iizc
-瓦	ij11
-⽡	ij11
 肆	ijas
 侓	ijau
 𠑖	ijbj
@@ -36021,6 +36019,8 @@ columns:
 佸	ijiu
 𰂲	ijiu
 𠋉	ijjf
+瓦	ijjj
+⽡	ijjj
 𩗅	ijjj
 傡	ijjk
 倗	ijjs
@@ -36241,8 +36241,6 @@ columns:
 𠏅	ikzj
 𮯹	ikzn
 𱃈	ikzz
-風	il11
-⾵	il11
 𠌞	ilaa
 𨱳	ilam
 俗	ilau
@@ -36343,6 +36341,8 @@ columns:
 𢀩	illi
 𪼽	illi
 𩻢	illk
+⾵	illl
+風	illl
 𠊩	illl
 𡴬	illm
 𦆗	illm
@@ -36976,9 +36976,6 @@ columns:
 𠊟	ipzf
 𨱮	ipzn
 𬽹	ipzn
-爻	iq11
-⽘	iq11
-𬼆	iq11
 𠊭	iqak
 𲋆	iqak
 𬿯	iqav
@@ -37083,6 +37080,9 @@ columns:
 佲	iqpr
 𢆮	iqqd
 𱏆	iqqo
+爻	iqqq
+⽘	iqqq
+𬼆	iqqq
 侧	iqrj
 㓥	iqrj
 𫦁	iqrj
@@ -37258,12 +37258,6 @@ columns:
 𠊗	irzn
 𫝋	irzx
 𲐵	irzz
-五	is11
-镸	is11
-⻑	is11
-⻒	is11
-⾧	is11
-長	is11
 𨲼	isai
 𩗵	isal
 倘	isau
@@ -37339,7 +37333,13 @@ columns:
 𠮎	ispz
 𱏐	isqh
 𥑙	isra
+五	isss
+镸	isss
+⻑	isss
+⻒	isss
+⾧	isss
 䬅	isss
+長	isss
 𲑋	issu
 𤌈	istx
 俻	isty
@@ -37468,11 +37468,6 @@ columns:
 佃	ityu
 𭻓	ityx
 𡮌	itzs
-亻	iu11
-見	iu11
-⺅	iu11
-⾒	iu11
-𘠕	iu11
 佴	iuau
 傣	iubk
 𠌴	iubq
@@ -37548,7 +37543,12 @@ columns:
 𫣪	iutv
 𫤑	iutz
 𪝥	iuui
+亻	iuuu
+⺅	iuuu
+⾒	iuuu
 㒤	iuuu
+見	iuuu
+𘠕	iuuu
 𱃒	iuuu
 㤰	iuvi
 𢚨	iuvi
@@ -37569,9 +37569,6 @@ columns:
 𪞔	iuzn
 𮗕	iuzn
 𠏙	iuzu
-工	iv11
-⼯	iv11
-𘠫	iv11
 㑊	ivau
 𢟃	ivbm
 㟩	ivbn
@@ -37642,6 +37639,9 @@ columns:
 𨲦	ivuw
 愍	ivvi
 𪬒	ivvi
+工	ivvv
+⼯	ivvv
+𘠫	ivvv
 𮊏	ivvw
 𤬃	ivwa
 𪨃	ivwe
@@ -37832,8 +37832,6 @@ columns:
 𬿈	iwzn
 儕	iwzp
 𱎦	iwzr
-艮	ix11
-⾉	ix11
 𫣊	ixam
 𘂉	ixbb
 𘂍	ixbb
@@ -38017,6 +38015,8 @@ columns:
 𨲮	ixxs
 𠎝	ixxv
 僣	ixxw
+艮	ixxx
+⾉	ixxx
 飈	ixxx
 儝	ixxy
 𲰡	ixyo
@@ -38254,11 +38254,11 @@ columns:
 𨱣	izzn
 𠎪	izzp
 𤮒	izzp
-聿	ja11
-肀	ja11
-⺺	ja11
-⺻	ja11
-⾀	ja11
+聿	jaaa
+肀	jaaa
+⺺	jaaa
+⺻	jaaa
+⾀	jaaa
 臢	jaam
 𩵆	jaam
 臜	jaaq
@@ -38499,7 +38499,6 @@ columns:
 𮄷	jbyz
 𥀈	jbzs
 𦣁	jbzx
-两	jc11
 𦡯	jcad
 𣎖	jcao
 𢩑	jcas
@@ -38509,6 +38508,7 @@ columns:
 𦚝	jcbk
 𰗋	jcbq
 𰰈	jcby
+两	jccc
 𮭋	jccd
 𱯘	jccg
 𰮥	jcch
@@ -38610,8 +38610,6 @@ columns:
 𭀯	jczd
 胇	jczs
 胏	jczs
-鬼	jd11
-⿁	jd11
 𩲳	jdad
 𢩠	jdah
 𥩫	jdak
@@ -38634,6 +38632,8 @@ columns:
 𩵇	jdcw
 𲒣	jdcw
 䑈	jdcy
+鬼	jddd
+⿁	jddd
 𬂗	jddd
 𣍥	jddi
 竤	jdef
@@ -38771,13 +38771,13 @@ columns:
 䐿	jdzn
 𦜌	jdzn
 𭨧	jdzs
-是	je11
 𦡷	jeao
 𰅻	jeda
 𭩗	jedl
 𰯕	jedv
 𦢪	jeed
 𰯟	jeed
+是	jeee
 𥪹	jeeh
 𦠆	jeel
 𰯍	jeew
@@ -38851,15 +38851,6 @@ columns:
 脐	jeys
 𦜝	jeys
 𮌻	jeyv
-卩	jf11
-飞	jf11
-卪	jf11
-⺋	jf11
-⻜	jf11
-⼙	jf11
-㔾	jf11
-𭅲	jf11
-𰆊	jf11
 𭮴	jfaf
 𨊟	jfaj
 竧	jfak
@@ -38881,6 +38872,15 @@ columns:
 𧗙	jffc
 𩴑	jffc
 𬛓	jffc
+飞	jfff
+卩	jfff
+卪	jfff
+⺋	jfff
+⻜	jfff
+⼙	jfff
+㔾	jfff
+𭅲	jfff
+𰆊	jfff
 𦠨	jffg
 䇊	jffi
 𦣜	jffl
@@ -38988,8 +38988,6 @@ columns:
 𥫀	jfyg
 𮶔	jfys
 𦙁	jfzj
-玉	jg11
-⽟	jg11
 𭨺	jgak
 𦛾	jgbc
 𦧣	jgbi
@@ -39007,6 +39005,8 @@ columns:
 𣪔	jgfn
 𦞌	jgfu
 𦜷	jgfw
+玉	jggg
+⽟	jggg
 膬	jggg
 𭨦	jggp
 䏼	jggw
@@ -39256,8 +39256,6 @@ columns:
 𦚏	jhzk
 𬁹	jhzw
 𰮗	jhzx
-舌	ji11
-⾆	ji11
 䏽	jias
 䇇	jick
 腿	jidf
@@ -39277,6 +39275,8 @@ columns:
 𰩡	jiht
 𦟋	jiia
 𬛙	jiih
+舌	jiii
+⾆	jiii
 𤭀	jiij
 㼵	jije
 䐚	jijf
@@ -39346,8 +39346,6 @@ columns:
 𦜊	jiyq
 𰩣	jiyq
 𳌳	jiys
-龻	jj11
-䜌	jj11
 𳌷	jjad
 𮌸	jjah
 𦛌	jjas
@@ -39411,6 +39409,8 @@ columns:
 𦧵	jjji
 朤	jjjj
 飝	jjjj
+䜌	jjjj
+龻	jjjj
 𥫋	jjjj
 𦚰	jjjj
 𫁤	jjjk
@@ -39518,8 +39518,6 @@ columns:
 𪟂	jjzx
 𣔚	jjzy
 𠚪	jjzz
-立	jk11
-⽴	jk11
 𬚷	jkak
 𮄭	jkak
 𮌍	jkan
@@ -39579,6 +39577,8 @@ columns:
 𰯙	jkka
 鰧	jkkf
 𦠴	jkkg
+立	jkkk
+⽴	jkkk
 𥶯	jkkv
 𣎎	jklc
 𲺸	jkli
@@ -40270,12 +40270,6 @@ columns:
 𗕅	jozp
 𣍰	jozs
 𣎤	jozu
-兴	jp11
-⺍	jp11
-𘡍	jp11
-𘱾	jp11
-𭕄	jp11
-𰃮	jp11
 脵	jpak
 𦜖	jpas
 𦟰	jpaw
@@ -40338,6 +40332,12 @@ columns:
 衋	jppc
 𠧙	jppg
 𠃇	jppi
+兴	jppp
+⺍	jppp
+𘡍	jppp
+𘱾	jppp
+𭕄	jppp
+𰃮	jppp
 䀌	jppy
 竨	jpqf
 𦜰	jpqf
@@ -40561,7 +40561,6 @@ columns:
 𩵊	jqzs
 𠮒	jqzz
 𥫓	jqzz
-化	jr11
 䇉	jrak
 𰙑	jrak
 𪿝	jrap
@@ -40616,6 +40615,7 @@ columns:
 魐	jrqx
 𫇗	jrqx
 𰮩	jrro
+化	jrrr
 𥫌	jrrr
 𦠎	jrrr
 䐶	jrrw
@@ -40639,9 +40639,6 @@ columns:
 腄	jrys
 𥁾	jryz
 𲺝	jrzy
-円	js11
-月	js11
-⽉	js11
 𣎃	jsas
 胁	jsay
 膖	jsbd
@@ -40704,6 +40701,9 @@ columns:
 𮌯	jssh
 𫆟	jsso
 脇	jsss
+円	jsss
+月	jsss
+⽉	jsss
 𦡁	jsty
 𦟭	jsuh
 㡩	jsuj
@@ -40834,9 +40834,6 @@ columns:
 𲺷	jtzn
 𢡈	jtzv
 𱵰	jtzz
-戶	ju11
-戸	ju11
-⼾	ju11
 𩲽	juad
 𬴿	juad
 腠	juak
@@ -40900,6 +40897,9 @@ columns:
 𩴄	jute
 𲵮	jute
 𦠌	juui
+戸	juuu
+⼾	juuu
+戶	juuu
 𦣀	juuu
 𩪾	juvj
 𭣿	juvj
@@ -40925,7 +40925,6 @@ columns:
 𥪏	juzn
 𦝒	juzn
 𰖰	juzn
-刍	jv11
 脶	jvas
 𣫚	jvbf
 𮝕	jvbm
@@ -41004,6 +41003,7 @@ columns:
 𰄮	jvuz
 𢞀	jvvi
 𲠐	jvvk
+刍	jvvv
 𦠤	jvvv
 𦧔	jvwi
 𲺳	jvwi
@@ -41013,8 +41013,6 @@ columns:
 𣎧	jvxl
 𢎓	jvxw
 𰩢	jvzn
-出	jw11
-𘮢	jw11
 𡍴	jwac
 𩲻	jwad
 𰩤	jwak
@@ -41136,6 +41134,8 @@ columns:
 䶼	jwvi
 𣎱	jwwl
 𥫈	jwwl
+出	jwww
+𘮢	jwww
 魓	jwxe
 𣎦	jwxh
 𦡻	jwxk
@@ -41157,7 +41157,6 @@ columns:
 𪗊	jwzp
 𤿪	jwzs
 𩵃	jwzt
-占	jx11
 𣎫	jxbo
 𦡵	jxbv
 𦞢	jxby
@@ -41255,6 +41254,7 @@ columns:
 朥	jxxs
 𫁭	jxxs
 𦠛	jxxw
+占	jxxx
 𩴩	jxxx
 𰯚	jxxx
 𥃞	jxyb
@@ -41271,7 +41271,6 @@ columns:
 𭀸	jxzc
 𦛀	jxzn
 𦧦	jxzn
-千	jy11
 䐜	jyay
 𢆝	jyce
 肝	jycs
@@ -41354,12 +41353,10 @@ columns:
 𦜈	jyyq
 𦠯	jyyq
 𦧢	jyyq
+千	jyyy
 𦝋	jyzs
 𰤵	jyzy
 𥁀	jyzz
-刀	jz11
-⼑	jz11
-𘲡	jz11
 𦧽	jzbh
 𬺚	jzbh
 𮫫	jzbh
@@ -41488,7 +41485,10 @@ columns:
 𫧴	jzzg
 𦟓	jzzh
 𦟄	jzzy
-圭	ka11
+刀	jzzz
+⼑	jzzz
+𘲡	jzzz
+圭	kaaa
 𥳱	kaae
 𤫨	kaag
 𥷄	kaai
@@ -41661,7 +41661,6 @@ columns:
 瑲	kazp
 䱽	kazp
 篬	kazp
-龹	kb11
 𬩬	kbad
 笥	kbak
 𮫴	kbak
@@ -41672,6 +41671,7 @@ columns:
 鱮	kbba
 𤫌	kbba
 𥷔	kbba
+龹	kbbb
 𫂄	kbbm
 𱮵	kbbm
 篲	kbbq
@@ -41912,8 +41912,6 @@ columns:
 𭯵	kbzd
 𥶵	kbzf
 𩽯	kbzx
-欠	kc11
-⽋	kc11
 鯥	kcac
 𪻧	kcac
 㼀	kcad
@@ -41945,6 +41943,8 @@ columns:
 𩻴	kcby
 𬵵	kcby
 𥶍	kcca
+欠	kccc
+⽋	kccc
 𠙬	kcch
 𥯟	kccj
 篞	kcck
@@ -42488,8 +42488,6 @@ columns:
 𤤱	kdzn
 𥨩	kdzn
 𪼣	kdzn
-不	ke11
-不	ke11
 簙	keao
 𥵢	keao
 𩼷	keao
@@ -42507,6 +42505,8 @@ columns:
 瓍	keed
 𥶷	keed
 𥶻	keed
+不	keee
+不	keee
 䲊	keeh
 𥳔	keeh
 簨	keel
@@ -42676,8 +42676,6 @@ columns:
 𬎌	keyv
 𥷻	kezd
 𭺀	kezf
-魚	kf11
-⿂	kf11
 鯓	kfaf
 䆤	kfag
 鮻	kfas
@@ -42718,6 +42716,8 @@ columns:
 𤨵	kffc
 𥳮	kffc
 𱸕	kffc
+⿂	kfff
+魚	kfff
 𲵹	kfff
 𤩨	kffg
 𥳋	kffg
@@ -42968,9 +42968,6 @@ columns:
 𬵟	kfzn
 𠢁	kfzs
 𥲹	kfzw
-穴	kg11
-⽳	kg11
-𘱘	kg11
 鯩	kgbf
 䈁	kgbh
 𤦎	kgbs
@@ -43002,7 +42999,10 @@ columns:
 𱸪	kgfo
 䱴	kgfu
 𪈵	kggd
+穴	kggg
 竁	kggg
+⽳	kggg
+𘱘	kggg
 𥳈	kggg
 𠠀	kggr
 𫂧	kggu
@@ -43140,8 +43140,6 @@ columns:
 𤤏	kgzn
 𫩆	kgzn
 𥳁	kgzo
-竹	kh11
-⽵	kh11
 斟	khad
 𩙌	khad
 𲋋	khad
@@ -43209,6 +43207,8 @@ columns:
 戡	khgw
 𪼞	khgw
 𥦴	khha
+竹	khhh
+⽵	khhh
 𠤋	khhh
 𩻩	khhh
 𰢐	khhh
@@ -43298,8 +43298,8 @@ columns:
 𥧁	khpv
 𮴨	khpv
 𮆺	khpy
-篑	khqh
 鱥	khqh
+篑	khqh
 𪻺	khqh
 𳂬	khqh
 簑	khql
@@ -43629,7 +43629,6 @@ columns:
 簋	kiyz
 𥱚	kiyz
 𥭪	kizs
-丹	kj11
 𲰉	kjad
 𫙟	kjaf
 䈻	kjah
@@ -43694,6 +43693,7 @@ columns:
 筈	kjih
 𲓑	kjil
 𩹉	kjjf
+丹	kjjj
 𩷂	kjjj
 𲒼	kjjr
 㻚	kjjs
@@ -44120,12 +44120,6 @@ columns:
 𮴇	kkzn
 簸	kkzs
 𱯊	kkzs
-勹	kl11
-毋	kl11
-毌	kl11
-⼓	kl11
-⽏	kl11
-𣫬	kl11
 𩷝	klaf
 𤥫	klas
 𤨶	klbk
@@ -44228,6 +44222,12 @@ columns:
 𥱖	kllc
 𥴓	kllc
 𬎄	kllc
+毋	klll
+毌	klll
+勹	klll
+⼓	klll
+⽏	klll
+𣫬	klll
 𩹆	klll
 𩻶	kllw
 䰶	klmf
@@ -44506,8 +44506,8 @@ columns:
 玊	kmss
 𘯪	kmsx
 𤥥	kmsz
-篱	kmtk
 璃	kmtk
+篱	kmtk
 𬕙	kmtm
 䇵	kmtn
 𣃇	kmtn
@@ -44560,7 +44560,6 @@ columns:
 𮆟	kmzs
 𰡻	kmzs
 𩸦	kmzy
-申	kn11
 𥵱	knac
 𪇙	knad
 䰳	knaf
@@ -44707,6 +44706,7 @@ columns:
 䬩	knne
 篒	knnh
 𩾉	knnl
+申	knnn
 𳎀	knnn
 籂	knns
 𥵩	knns
@@ -45272,7 +45272,6 @@ columns:
 𰩲	kpzk
 𱒕	kpzn
 𤿘	kpzs
-内	kq11
 𪈁	kqad
 𤨳	kqah
 𬵦	kqah
@@ -45474,6 +45473,7 @@ columns:
 𤧌	kqqj
 𳋎	kqqn
 璎	kqqo
+内	kqqq
 𫤩	kqqy
 𲽮	kqqy
 𥲝	kqqz
@@ -45741,10 +45741,6 @@ columns:
 𱯂	krzc
 𲌻	krzg
 𳍣	krzy
-王	ks11
-⺩	ks11
-𘬄	ks11
-𤣩	ks11
 𬕒	ksah
 𲯡	ksas
 𱇃	ksaw
@@ -45847,7 +45843,11 @@ columns:
 𥶋	ksrt
 𨕦	kssd
 𠡶	ksso
+王	ksss
+⺩	ksss
 珕	ksss
+𘬄	ksss
+𤣩	ksss
 瑺	kssu
 𫙲	kssu
 𥭄	kstn
@@ -45883,7 +45883,6 @@ columns:
 𮴏	kszs
 𥯰	kszy
 𲯩	kszy
-其	kt11
 䈖	ktad
 䈸	ktad
 𭹭	ktas
@@ -46044,6 +46043,7 @@ columns:
 瓆	kttm
 𩽄	kttm
 𥳩	kttr
+其	kttt
 䉪	kttt
 瓃	kttt
 𰪡	kttt
@@ -46272,8 +46272,6 @@ columns:
 箃	kuzn
 鯫	kuzn
 𦕪	kuzn
-由	kv11
-𘯌	kv11
 𩷉	kvaf
 窝	kvag
 𥱴	kvah
@@ -46408,6 +46406,8 @@ columns:
 𭝜	kvvi
 𰪔	kvvj
 𥮁	kvvk
+由	kvvv
+𘯌	kvvv
 𥳝	kvvv
 窳	kvvw
 𥴉	kvvw
@@ -46677,14 +46677,6 @@ columns:
 鱭	kwzp
 𤿟	kwzs
 𥸌	kwzz
-几	kx11
-⺇	kx11
-⼏	kx11
-𘠓	kx11
-𘠔	kx11
-𘯥	kx11
-𠘧	kx11
-𠘨	kx11
 瑷	kxam
 𫂖	kxam
 𥭮	kxao
@@ -46915,6 +46907,14 @@ columns:
 簮	kxxw
 䲋	kxxw
 𲯶	kxxw
+几	kxxx
+⺇	kxxx
+⼏	kxxx
+𘠓	kxxx
+𘠔	kxxx
+𘯥	kxxx
+𠘧	kxxx
+𠘨	kxxx
 𲯿	kxxx
 𤪤	kxxy
 𤫎	kxxy
@@ -47349,8 +47349,8 @@ columns:
 𩺞	kzzy
 𪼏	kzzy
 𮬗	kzzy
-谷	la11
-⾕	la11
+谷	laaa
+⾕	laaa
 𨯡	laai
 鑽	laam
 缵	laaq
@@ -47468,17 +47468,17 @@ columns:
 𣄅	lazp
 𥏲	lazp
 𰦻	lazs
-丿	lb11
-⼃	lb11
-㇒	lb11
-㇓	lb11
-𘠂	lb11
 𰽏	lbah
 鉰	lbak
 鑮	lbao
 𪿐	lbar
 𣄣	lbba
 𨮔	lbba
+丿	lbbb
+⼃	lbbb
+㇒	lbbb
+㇓	lbbb
+𘠂	lbbb
 𗹣	lbbo
 𳆌	lbbp
 鏏	lbbq
@@ -47655,9 +47655,6 @@ columns:
 鎰	lbyz
 𨦎	lbzn
 𨰐	lbzx
-仌	lc11
-从	lc11
-𘰼	lc11
 錴	lcac
 鐽	lcad
 𠪼	lcai
@@ -47676,6 +47673,9 @@ columns:
 𡒪	lcby
 𨮙	lcby
 𱺮	lcby
+从	lccc
+仌	lccc
+𘰼	lccc
 𦀣	lccc
 𨩒	lccc
 䤯	lccd
@@ -47857,11 +47857,6 @@ columns:
 𰐕	lczq
 鉘	lczu
 𨥦	lczu
-了	ld11
-頁	ld11
-⾴	ld11
-𘲬	ld11
-𠄏	ld11
 𨰄	ldad
 𭒾	ldag
 缳	ldah
@@ -47906,6 +47901,11 @@ columns:
 鑠	ldcy
 𳇥	ldcy
 𨨁	lddc
+了	lddd
+⾴	lddd
+頁	lddd
+𘲬	lddd
+𠄏	lddd
 𮣱	lddd
 𫒮	lddf
 𳇜	lddh
@@ -48548,9 +48548,6 @@ columns:
 𠬡	lfzn
 𰚌	lfzn
 𨑄	lfzw
-子	lg11
-⼦	lg11
-𘲰	lg11
 𠪨	lgac
 𨞬	lgae
 𬤳	lgba
@@ -48596,6 +48593,9 @@ columns:
 㫅	lgfs
 𬘵	lgfu
 𪈇	lggd
+子	lggg
+⼦	lggg
+𘲰	lggg
 𧔢	lggh
 𨨤	lggk
 𣃘	lggp
@@ -48722,8 +48722,6 @@ columns:
 㕎	lgyz
 鎑	lgyz
 𨥻	lgzn
-入	lh11
-⼊	lh11
 𮔒	lhac
 𣦆	lhaq
 𬫖	lhaw
@@ -48790,6 +48788,8 @@ columns:
 𢦺	lhgw
 𮢿	lhgw
 𡦉	lhhf
+入	lhhh
+⼊	lhhh
 𗎩	lhhh
 𧔯	lhhh
 𧔻	lhhh
@@ -48937,9 +48937,6 @@ columns:
 𡖀	lhzs
 𰼢	lhzu
 𮕅	lhzz
-共	li11
-纟	li11
-⺰	li11
 錇	liau
 𨥿	libi
 銾	libk
@@ -48988,6 +48985,9 @@ columns:
 𨯑	lihv
 𮢦	lihz
 𲔀	liid
+共	liii
+纟	liii
+⺰	liii
 𤭏	lija
 𬎧	lijc
 𮢍	liji
@@ -49086,8 +49086,6 @@ columns:
 𫒢	liyc
 銝	liyq
 𨨥	liyq
-方	lj11
-⽅	lj11
 𬬖	ljad
 銉	ljau
 𦘗	ljav
@@ -49139,6 +49137,8 @@ columns:
 𨬥	ljiu
 𨯐	ljjc
 𨫎	ljjg
+方	ljjj
+⽅	ljjj
 𥩿	ljjk
 绷	ljjs
 錋	ljjs
@@ -49608,7 +49608,6 @@ columns:
 𣬆	llzn
 𥎮	llzn
 𨬜	llzs
-亡	lm11
 鍨	lmak
 𳇋	lmao
 鍐	lmas
@@ -49659,6 +49658,7 @@ columns:
 𠩠	lmls
 鋇	lmlu
 𮣅	lmml
+亡	lmmm
 𠫍	lmmm
 孾	lmmo
 𥐑	lmmo
@@ -50397,8 +50397,6 @@ columns:
 𢚣	lpzv
 焏	lpzx
 𤊅	lpzx
-比	lq11
-⽐	lq11
 缄	lqak
 鍼	lqak
 𧯃	lqak
@@ -50543,6 +50541,8 @@ columns:
 缨	lqqo
 𪧀	lqqo
 𨪓	lqqp
+比	lqqq
+⽐	lqqq
 𲤊	lqqu
 𨰑	lqqw
 𠧌	lqri
@@ -50613,7 +50613,6 @@ columns:
 𬫗	lqzm
 𰭁	lqzv
 𨨈	lqzz
-只	lr11
 𱬺	lrah
 鉐	lrau
 銬	lrbi
@@ -50727,6 +50726,7 @@ columns:
 𳆅	lrrj
 𨬿	lrrn
 𗏅	lrro
+只	lrrr
 鐕	lrrw
 𗏆	lrry
 𠓸	lrry
@@ -50760,11 +50760,6 @@ columns:
 厜	lrys
 錘	lryu
 𪠏	lrzs
-厂	ls11
-⺁	ls11
-⼚	ls11
-𘠋	ls11
-𠂆	ls11
 𤰍	lsaa
 绱	lsai
 𠪻	lsao
@@ -50867,6 +50862,11 @@ columns:
 𬼇	lssk
 𘱉	lsso
 𠠿	lsso
+厂	lsss
+⺁	lsss
+⼚	lsss
+𘠋	lsss
+𠂆	lsss
 𮡷	lsss
 鏛	lssu
 鐺	lsty
@@ -51076,9 +51076,6 @@ columns:
 𤱖	ltzb
 𠪍	ltzj
 𮡭	ltzn
-金	lu11
-釒	lu11
-⾦	lu11
 耸	luac
 𦔵	luah
 䌺	luai
@@ -51244,6 +51241,9 @@ columns:
 𡦘	luui
 鎶	luur
 𱳣	luur
+金	luuu
+⾦	luuu
+釒	luuu
 鑷	luuu
 ⻕	luvb
 𠂤	luvb
@@ -51280,9 +51280,6 @@ columns:
 𮉪	luzn
 𱑴	luzn
 𨭿	luzu
-矢	lv11
-⽮	lv11
-𘰌	lv11
 𮉨	lvai
 𫒚	lvau
 𬫚	lvau
@@ -51391,6 +51388,9 @@ columns:
 𰬗	lvui
 銶	lvuu
 㤵	lvvi
+矢	lvvv
+⽮	lvvv
+𘰌	lvvv
 𨫻	lvwf
 孤	lvwg
 𧯊	lvwi
@@ -51406,8 +51406,6 @@ columns:
 𳇚	lvyy
 𥂲	lvyz
 𲜇	lvzj
-见	lw11
-⻅	lw11
 𦻍	lwac
 𡥡	lwag
 绞	lwai
@@ -51581,6 +51579,8 @@ columns:
 𰬥	lwvi
 䤢	lwvu
 錩	lwwr
+见	lwww
+⻅	lwww
 𫓣	lwwx
 𨰚	lwwz
 𬬟	lwxb
@@ -52392,8 +52392,6 @@ columns:
 滄	mazp
 賶	mazp
 𲪈	mazr
-韋	mb11
-⾱	mb11
 𭲽	mbah
 泀	mbak
 𤪉	mbak
@@ -52404,6 +52402,8 @@ columns:
 𣷪	mbau
 𘱗	mbay
 㵰	mbba
+⾱	mbbb
+韋	mbbb
 𣾜	mbbb
 𤂚	mbbd
 渁	mbbk
@@ -52785,8 +52785,8 @@ columns:
 𪃽	mcld
 𱦓	mcld
 漷	mcle
-淳	mclg
 浮	mclg
+淳	mclg
 韕	mclg
 㳶	mclh
 𬈽	mcli
@@ -52890,11 +52890,6 @@ columns:
 𱱶	mczn
 𦛬	mczr
 𤄋	mczv
-凵	md11
-丩	md11
-⼐	md11
-𠂈	md11
-𠙴	md11
 㶎	mdad
 㳌	mdae
 𮳏	mdae
@@ -52936,7 +52931,12 @@ columns:
 𭳗	mdcx
 濼	mdcy
 𣷆	mddc
+凵	mddd
+丩	mddd
+⼐	mddd
 㵿	mddd
+𠂈	mddd
+𠙴	mddd
 泗	mdde
 𱦽	mddf
 𣿵	mddh
@@ -53220,12 +53220,6 @@ columns:
 涨	mdzx
 𭵺	mdzx
 𲪌	mdzy
-氵	me11
-癶	me11
-祭	me11
-⺡	me11
-⽨	me11
-𱼀	me11
 𤀾	meae
 𤃊	meae
 𱧺	meae
@@ -53249,6 +53243,12 @@ columns:
 𩎼	medy
 瀡	meed
 𤂿	meed
+氵	meee
+祭	meee
+癶	meee
+⺡	meee
+⽨	meee
+𱼀	meee
 𣾲	meef
 𣿂	meeh
 潠	meel
@@ -53401,8 +53401,8 @@ columns:
 洃	mexl
 𪸋	mext
 灀	mexu
-済	meye
 济	meye
+済	meye
 𤅷	meyl
 𣻚	meym
 𤅫	meym
@@ -53413,7 +53413,6 @@ columns:
 𤃍	meyx
 𭲬	mezr
 𤃳	mezt
-唐	mf11
 𱭕	mfam
 浚	mfas
 賐	mfas
@@ -53453,6 +53452,7 @@ columns:
 贂	mffc
 𣸫	mffc
 𣾯	mffc
+唐	mfff
 𣳵	mfff
 㵕	mffg
 㴉	mffh
@@ -53651,8 +53651,6 @@ columns:
 𧶴	mfzn
 𰆲	mfzn
 𪸁	mfzz
-页	mg11
-⻚	mg11
 𭱇	mgak
 𣼫	mgan
 𤃺	mgat
@@ -53688,6 +53686,8 @@ columns:
 𱩄	mgfm
 𮳊	mgfp
 𪶥	mgfu
+页	mggg
+⻚	mggg
 𣾽	mggg
 𲧨	mggm
 𬉰	mggp
@@ -54355,7 +54355,6 @@ columns:
 滝	mjzf
 𤁘	mjzo
 𲪞	mjzs
-末	mk11
 洼	mkae
 𱨵	mkal
 𤀨	mkar
@@ -54447,6 +54446,7 @@ columns:
 𲪨	mkke
 𩼪	mkkf
 𣾔	mkkg
+末	mkkk
 濏	mkkl
 潖	mkks
 㴏	mkks
@@ -54585,8 +54585,6 @@ columns:
 𣿡	mkzn
 𭳂	mkzp
 𰝗	mkzw
-貝	ml11
-⾙	ml11
 浴	mlae
 𪵱	mlai
 𱦗	mlam
@@ -54680,6 +54678,8 @@ columns:
 𬈮	mllc
 𰝇	mllc
 𰛶	mllg
+⾙	mlll
+貝	mlll
 𣹏	mlll
 𤅺	mlll
 鍙	mllu
@@ -55010,7 +55010,6 @@ columns:
 𡔷	mmzn
 𩎢	mmzn
 𱌌	mmzr
-冉	mn11
 𣷊	mnad
 𣿔	mnad
 汀	mnae
@@ -55133,6 +55132,7 @@ columns:
 𡘶	mnne
 𤅏	mnnj
 𱨈	mnnl
+冉	mnnn
 𭰌	mnnn
 𱨘	mnob
 𤀉	mnoe
@@ -56003,10 +56003,6 @@ columns:
 𮳙	mqzw
 𭶉	mqzx
 𤀚	mqzy
-专	mr11
-屮	mr11
-⼬	mr11
-䶹	mr11
 沰	mrae
 𭁒	mray
 𮀘	mraz
@@ -56108,6 +56104,10 @@ columns:
 𬇝	mrrj
 𤂯	mrrm
 𭲉	mrrn
+专	mrrr
+屮	mrrr
+⼬	mrrr
+䶹	mrrr
 贆	mrrr
 𣽼	mrrr
 𤂬	mrrr
@@ -56159,13 +56159,6 @@ columns:
 𱧎	mrzg
 𪷃	mrzi
 𬈋	mrzy
-丶	ms11
-乀	ms11
-乁	ms11
-⼂	ms11
-㇏	ms11
-㇔	ms11
-㇝	ms11
 淌	msae
 漨	msbd
 浲	msbp
@@ -56246,6 +56239,13 @@ columns:
 𣹩	mssh
 𭰄	msso
 𮙽	msso
+丶	msss
+乀	msss
+乁	msss
+⼂	msss
+㇏	msss
+㇔	msss
+㇝	msss
 𣴚	msss
 𣴗	mssu
 𣻸	mssu
@@ -56272,7 +56272,6 @@ columns:
 𮚒	mszc
 𮳅	msze
 溋	mszy
-壴	mt11
 𬈎	mtad
 𭱏	mtak
 𬉥	mtaq
@@ -56394,6 +56393,7 @@ columns:
 𧸲	mttm
 𭳸	mttr
 𱨳	mttr
+壴	mttt
 㵽	mttt
 溜	mtty
 澑	mtty
@@ -56545,7 +56545,6 @@ columns:
 㵵	muzb
 滠	muzg
 𭰮	muzn
-果	mv11
 𩎭	mvab
 涡	mvae
 洂	mvae
@@ -56674,6 +56673,7 @@ columns:
 𢡑	mvvi
 𲩲	mvvi
 𣴷	mvvm
+果	mvvv
 𣾫	mvvv
 𤂜	mvvv
 泒	mvwe
@@ -56696,7 +56696,6 @@ columns:
 𣷷	mvzn
 𰛓	mvzn
 𭰬	mvzy
-关	mw11
 𩎦	mwab
 洨	mwae
 賋	mwal
@@ -56819,6 +56818,7 @@ columns:
 𱪔	mwwl
 𧶧	mwwr
 𩎿	mwwr
+关	mwww
 𲪼	mwwz
 𪇶	mwxd
 𲫀	mwxd
@@ -57297,8 +57297,6 @@ columns:
 𤅨	myzz
 𤅯	myzz
 𩏏	myzz
-凶	mz11
-㐫	mz11
 𱨣	mzae
 𣺘	mzah
 𰜣	mzas
@@ -57506,10 +57504,12 @@ columns:
 𢂭	mzzs
 𣞙	mzzy
 𪶽	mzzy
-丁	na11
-⺈	na11
-𘬂	na11
-𠂊	na11
+凶	mzzz
+㐫	mzzz
+丁	naaa
+⺈	naaa
+𘬂	naaa
+𠂊	naaa
 禶	naam
 襸	naam
 饡	naam
@@ -57613,8 +57613,8 @@ columns:
 𦍲	nasr
 𤑏	natx
 𤑐	natx
-褔	naty
 福	naty
+褔	naty
 𩜰	naty
 𫯫	naty
 飳	naun
@@ -57660,7 +57660,6 @@ columns:
 𰤭	nazs
 𲲎	nazs
 𱻑	nazw
-草	nb11
 𳀴	nbab
 𩟢	nbah
 祠	nbak
@@ -57670,6 +57669,7 @@ columns:
 𮂣	nbao
 𘰆	nbay
 𧞏	nbba
+草	nbbb
 襷	nbbc
 𩟑	nbbi
 𫀕	nbbi
@@ -57699,8 +57699,8 @@ columns:
 䭀	nbed
 𲋔	nbeo
 𲋞	nbes
-饛	nbfb
 䙩	nbfb
+饛	nbfb
 𤯻	nbfb
 𧅭	nbfb
 𱋮	nbfb
@@ -57859,10 +57859,6 @@ columns:
 𧟒	nbzp
 𤿷	nbzs
 𧟈	nbzx
-生	nc11
-⽣	nc11
-𘰃	nc11
-𠂉	nc11
 𥚊	ncac
 𧞅	ncad
 𩞱	ncad
@@ -57879,6 +57875,10 @@ columns:
 𥛗	ncbq
 𲀾	ncbq
 𩜿	ncby
+生	nccc
+⽣	nccc
+𘰃	nccc
+𠂉	nccc
 𬲢	nccd
 𳄥	nccd
 𳏼	nccd
@@ -58008,7 +58008,6 @@ columns:
 𥘬	nczq
 𧙂	nczq
 𩝰	nczy
-之	nd11
 𩟁	ndah
 𮊆	ndam
 𩚲	ndan
@@ -58038,6 +58037,7 @@ columns:
 𧟌	ndcw
 𮂩	ndcw
 𩟧	ndcy
+之	nddd
 𣨆	nddi
 𩛨	nddi
 𫦘	nddj
@@ -58250,7 +58250,6 @@ columns:
 襖	ndzn
 𧘏	ndzq
 𧞫	ndzx
-曲	ne11
 襨	neao
 𩟡	neao
 𭐳	neay
@@ -58264,6 +58263,7 @@ columns:
 𨓜	nedf
 𲎑	nedf
 𬷖	nedw
+曲	neee
 𩚰	neee
 𧝍	neeh
 𩞢	neeh
@@ -58415,9 +58415,6 @@ columns:
 𳈒	nezi
 𥙈	nezn
 𤿯	nezs
-大	nf11
-⼤	nf11
-𘭶	nf11
 𡘪	nfaf
 𱵌	nfak
 裑	nfaq
@@ -58448,6 +58445,9 @@ columns:
 襂	nffc
 𩞀	nffc
 𨞜	nffe
+大	nfff
+⼤	nfff
+𘭶	nfff
 𣰋	nffg
 𩞼	nffg
 𭮄	nffi
@@ -59414,7 +59414,6 @@ columns:
 𧘺	nkzn
 𧝮	nkzv
 𬡱	nkzw
-京	nl11
 𨗧	nlad
 𪆻	nlad
 𢨕	nlag
@@ -59552,6 +59551,7 @@ columns:
 𫀖	nlld
 𨜫	nlle
 𣣡	nllk
+京	nlll
 𮋊	nllq
 矦	nllv
 𩛫	nllv
@@ -59755,12 +59755,6 @@ columns:
 𣧑	nmzr
 𪵂	nmzr
 𩜤	nmzs
-食	nn11
-飠	nn11
-⻞	nn11
-⻟	nn11
-⾷	nn11
-𩙿	nn11
 飣	nnan
 𲀤	nnaq
 𰙛	nnat
@@ -59852,6 +59846,12 @@ columns:
 㽓	nnnc
 𡘙	nnnf
 𰋉	nnnf
+食	nnnn
+⻞	nnnn
+⻟	nnnn
+⾷	nnnn
+飠	nnnn
+𩙿	nnnn
 飱	nnnr
 𩛈	nnnr
 𮲿	nnnt
@@ -60342,11 +60342,6 @@ columns:
 𭮈	npzn
 𰇝	npzn
 𤿠	npzs
-礻	nq11
-麦	nq11
-衤	nq11
-⺭	nq11
-⻂	nq11
 𧜿	nqah
 𧛡	nqak
 𩝈	nqak
@@ -60456,6 +60451,11 @@ columns:
 𮕿	nqpr
 餀	nqqi
 𬡟	nqqm
+麦	nqqq
+礻	nqqq
+衤	nqqq
+⺭	nqqq
+⻂	nqqq
 𠝢	nqrj
 𠟊	nqrj
 𮵛	nqrj
@@ -60511,9 +60511,6 @@ columns:
 䙮	nqyw
 𡚜	nqyw
 𣩣	nqyy
-歹	nr11
-歺	nr11
-⽍	nr11
 𥑦	nrac
 祏	nraq
 袥	nraq
@@ -60592,6 +60589,9 @@ columns:
 𩜚	nrrh
 鿞	nrri
 𱋧	nrri
+歹	nrrr
+歺	nrrr
+⽍	nrrr
 𩟬	nrrr
 𳁍	nrrr
 𤛈	nrrs
@@ -60814,7 +60814,6 @@ columns:
 𬜞	nsyx
 𱽉	nszc
 𲰫	nszc
-正	nt11
 𩜭	ntad
 禝	ntas
 𣨖	ntaw
@@ -60912,6 +60911,7 @@ columns:
 𱘲	ntso
 𱰘	ntso
 𧟕	nttf
+正	nttt
 𡚗	nttt
 𧞭	nttt
 餾	ntty
@@ -61083,7 +61083,6 @@ columns:
 㿴	nuzs
 𭽯	nuzs
 𳁦	nuzv
-合	nv11
 祸	nvaq
 𧙡	nvaq
 𩝺	nvco
@@ -61160,6 +61159,7 @@ columns:
 𣨋	nvtn
 𥙹	nvuq
 殏	nvur
+合	nvvv
 𡗷	nvwf
 𳋕	nvwk
 𩛃	nvwn
@@ -61169,7 +61169,6 @@ columns:
 奲	nvyg
 𭪕	nvyq
 𫨺	nvzn
-句	nw11
 𦺏	nwab
 餃	nwan
 䘨	nwaq
@@ -61299,6 +61298,7 @@ columns:
 裮	nwwr
 𡘐	nwwr
 𥚕	nwwr
+句	nwww
 𲅼	nwxd
 襅	nwxe
 饆	nwxe
@@ -61331,8 +61331,6 @@ columns:
 䭣	nwzp
 𧞓	nwzp
 𮂧	nwzt
-士	nx11
-⼠	nx11
 𧷗	nxam
 𧰚	nxay
 𮩂	nxay
@@ -61509,6 +61507,8 @@ columns:
 𦨅	nxxo
 𳋤	nxxs
 𩞲	nxxw
+士	nxxx
+⼠	nxxx
 𲴿	nxxy
 𲏸	nxyc
 祵	nxyq
@@ -61868,8 +61868,8 @@ columns:
 𠝎	nzzk
 褬	nzzy
 𥛋	nzzy
-耒	oa11
-⽾	oa11
+耒	oaaa
+⽾	oaaa
 𧮖	oaal
 㜺	oaam
 讚	oaam
@@ -62019,7 +62019,6 @@ columns:
 𬢱	oazn
 謒	oazp
 𪦔	oazp
-古	ob11
 㚸	obak
 詞	obak
 𮘥	obal
@@ -62027,6 +62026,7 @@ columns:
 𡠾	obav
 嬩	obba
 𠁹	obba
+古	obbb
 𡡺	obbb
 𡞄	obbi
 𱎐	obbm
@@ -62225,7 +62225,6 @@ columns:
 皸	obzs
 𧮏	obzt
 𡤚	obzx
-巨	oc11
 㛬	ocac
 𧬻	ocad
 𮘰	ocao
@@ -62238,6 +62237,7 @@ columns:
 𮋫	ocbs
 譹	ocby
 𱙰	ocby
+巨	occc
 𧨘	occd
 𭑾	occd
 𭅩	occe
@@ -62363,8 +62363,8 @@ columns:
 𩟨	ocpn
 𭊐	ocpn
 翢	ocpq
-姤	ocpr
 周	ocpr
+姤	ocpr
 絷	ocpr
 㓮	ocpr
 詬	ocpr
@@ -62451,13 +62451,6 @@ columns:
 𡛯	oczu
 𫍗	oczv
 𡡗	oczz
-冂	od11
-冖	od11
-⺆	od11
-⼌	od11
-⼍	od11
-𘠒	od11
-𘮭	od11
 𠒚	odad
 𧮅	odad
 嬛	odah
@@ -62496,6 +62489,13 @@ columns:
 㜰	odcy
 𧭥	odcy
 𡡨	odda
+冂	oddd
+冖	oddd
+⺆	oddd
+⼌	oddd
+⼍	oddd
+𘠒	oddd
+𘮭	oddd
 𨑻	oddf
 𫐦	oddf
 𮘛	oddg
@@ -62877,8 +62877,6 @@ columns:
 𩓔	oezl
 𠬸	oezn
 皲	oezs
-寸	of11
-⼨	of11
 𲐣	ofab
 𬢭	ofak
 𡜾	ofan
@@ -62904,6 +62902,8 @@ columns:
 𧬀	offc
 𦉭	offd
 𡠐	offe
+寸	offf
+⼨	offf
 𧫰	offh
 𧬮	offn
 𡢞	offo
@@ -63091,10 +63091,6 @@ columns:
 𧩧	ofzn
 𱏻	ofzn
 𘮰	ofzr
-中	og11
-僉	og11
-㑒	og11
-𘯉	og11
 耣	ogba
 𢀧	ogbc
 𱜙	ogbc
@@ -63125,14 +63121,18 @@ columns:
 㜝	ogfd
 𧫧	ogfd
 𪍢	ogfn
+中	oggg
+㑒	oggg
+僉	oggg
+𘯉	oggg
 㛋	oggi
 𬣎	oggk
 𧪶	oggl
 𱜝	oggm
 𪒍	oggp
 𡣒	oggu
-諓	oggw
 䴼	oggw
+諓	oggw
 𲛒	oggw
 𦓵	ogha
 𨃢	oghb
@@ -63239,9 +63239,6 @@ columns:
 𧦾	ogzn
 𫩎	ogzn
 𮌇	ogzn
-丸	oh11
-𘯽	oh11
-𠁽	oh11
 𘮟	ohad
 𠕠	ohag
 𧦅	ohak
@@ -63301,6 +63298,9 @@ columns:
 嬂	ohgw
 識	ohgw
 𠕲	ohhg
+丸	ohhh
+𘯽	ohhh
+𠁽	ohhh
 𡢋	ohhh
 𧬃	ohhh
 螶	ohhk
@@ -63422,8 +63422,6 @@ columns:
 肎	ohzd
 背	ohzw
 𲈥	ohzx
-支	oi11
-⽀	oi11
 䎧	oiaa
 𮘟	oiak
 䴺	oiao
@@ -63485,6 +63483,8 @@ columns:
 諝	oihz
 𦊞	oiic
 𠃾	oiih
+支	oiii
+⽀	oiii
 㼱	oiij
 𤮪	oiiq
 瓳	oijb
@@ -63765,9 +63765,6 @@ columns:
 𰋼	ojzn
 𭑪	ojzu
 𰄣	ojzw
-言	ok11
-訁	ok11
-⾔	ok11
 𦓯	okaa
 詿	okak
 𪦛	okan
@@ -63828,6 +63825,9 @@ columns:
 𡛓	okju
 𭭆	okkc
 𡡱	okkg
+言	okkk
+⾔	okkk
+訁	okkk
 𪥪	okkx
 𩑜	okld
 𧬚	okle
@@ -64451,10 +64451,6 @@ columns:
 𧭸	onzf
 㿮	onzs
 𫱼	onzz
-舛	oo11
-麥	oo11
-⾇	oo11
-⿆	oo11
 姛	ooak
 詷	ooak
 誄	ooak
@@ -64554,6 +64550,10 @@ columns:
 譶	oook
 𧭛	oook
 𡟗	ooon
+舛	oooo
+⾇	oooo
+⿆	oooo
+麥	oooo
 𧮦	oooo
 𲎐	oooo
 𡢹	ooos
@@ -65132,7 +65132,6 @@ columns:
 𡤄	oqyy
 𫰮	oqzk
 𳁳	oqzn
-执	or11
 𪞒	orad
 𧦳	orak
 㒺	oran
@@ -65262,6 +65261,7 @@ columns:
 𰌊	orrh
 𠜍	orrj
 𲁪	orrj
+执	orrr
 譖	orrw
 𡡖	orrw
 𗏶	orry
@@ -65417,7 +65417,6 @@ columns:
 𰌓	oszs
 娅	oszu
 𡟚	oszy
-定	ot11
 𪍎	otad
 謖	otas
 𦔎	otas
@@ -65511,6 +65510,7 @@ columns:
 𧮢	ottc
 㜱	ottm
 䜠	ottm
+定	ottt
 讄	ottt
 𪦮	ottt
 媹	otty
@@ -65536,14 +65536,6 @@ columns:
 𡜉	otyq
 㚼	otyu
 𠖢	otyv
-女	ou11
-⼥	ou11
-𘡃	ou11
-𘡅	ou11
-𘫺	ou11
-𘮐	ou11
-𘳓	ou11
-𠁁	ou11
 𦗼	ouag
 誀	ouak
 𧩻	ouak
@@ -65627,7 +65619,15 @@ columns:
 𧬐	ouui
 謌	ouur
 𡟵	ouur
+女	ouuu
+⼥	ouuu
 讘	ouuu
+𘡃	ouuu
+𘡅	ouuu
+𘫺	ouuu
+𘮐	ouuu
+𘳓	ouuu
+𠁁	ouuu
 𡤙	ouuu
 耜	ouva
 𠷏	ouvh
@@ -65653,7 +65653,6 @@ columns:
 娵	ouzn
 諏	ouzn
 𲛨	ouzo
-包	ov11
 𫡬	ovah
 𧧩	ovak
 娲	ovau
@@ -65735,6 +65734,7 @@ columns:
 𱙥	ovvi
 𧩇	ovvk
 𪍉	ovvm
+包	ovvv
 𲠧	ovvv
 㼍	ovwa
 㼋	ovwb
@@ -65746,7 +65746,6 @@ columns:
 𮙃	ovxt
 𠵁	ovyo
 𫑆	ovzd
-北	ow11
 詨	owak
 𣌩	owan
 姣	owau
@@ -65912,6 +65911,7 @@ columns:
 𫟝	owwh
 娼	owwr
 誯	owwr
+北	owww
 孇	owwz
 𡠚	owxe
 𧫤	owxe
@@ -65934,8 +65934,6 @@ columns:
 𰃨	owzn
 䜞	owzp
 𡣙	owzp
-氏	ox11
-⽒	ox11
 嫒	oxam
 𗬨	oxbo
 𬣍	oxbo
@@ -66120,7 +66118,9 @@ columns:
 𮘽	oxxv
 譛	oxxw
 𪍲	oxxw
+氏	oxxx
 爕	oxxx
+⽒	oxxx
 𧭓	oxxx
 嬫	oxxy
 燮	oxxz
@@ -66266,7 +66266,6 @@ columns:
 𥁈	oyzi
 𥁅	oyzu
 𰌋	oyzu
-夹	oz11
 𰌔	ozad
 𡠁	ozah
 𦋌	ozbd
@@ -66453,13 +66452,14 @@ columns:
 𧦀	ozzn
 𦔢	ozzw
 𡠏	ozzy
-丗	pa11
-卅	pa11
-亞	pa11
-𘡩	pa11
-𘡪	pa11
-𠀍	pa11
-𬻞	pa11
+夹	ozzz
+卅	paaa
+丗	paaa
+亞	paaa
+𘡩	paaa
+𘡪	paaa
+𠀍	paaa
+𬻞	paaa
 囋	paam
 𰉄	paaq
 𡄋	paaw
@@ -66896,7 +66896,6 @@ columns:
 𡂅	pbzs
 𢀏	pbzt
 𡄺	pbzx
-乡	pc11
 𠵕	pcac
 噠	pcad
 𨘈	pcad
@@ -66925,6 +66924,7 @@ columns:
 𰇦	pcbt
 嚎	pcby
 𪢊	pcby
+乡	pccc
 𡃺	pccd
 㗑	pccj
 嗘	pccn
@@ -67134,7 +67134,6 @@ columns:
 𡂎	pczb
 咈	pczr
 𠶊	pczs
-君	pd11
 𡄤	pdad
 噮	pdah
 𦌺	pdah
@@ -67168,6 +67167,7 @@ columns:
 𨞑	pdcr
 囉	pdcw
 嚛	pdcy
+君	pddd
 𠴀	pddf
 𨘂	pddf
 𫪼	pddf
@@ -67508,7 +67508,6 @@ columns:
 𫊢	peyt
 𭊤	peyv
 𭌇	pezo
-老	pf11
 𡀚	pfac
 𲗼	pfaq
 𠲳	pfar
@@ -67538,6 +67537,7 @@ columns:
 𠯊	pfeo
 𲕁	pfey
 嘇	pffc
+老	pfff
 𭌴	pfff
 𭋁	pffg
 𠴧	pffh
@@ -67713,9 +67713,6 @@ columns:
 𱲌	pfyz
 𠯞	pfzj
 喥	pfzn
-卜	pg11
-⺊	pg11
-⼘	pg11
 𱿖	pgam
 嘢	pgan
 𲕬	pgap
@@ -67749,6 +67746,9 @@ columns:
 𠗀	pggc
 𭌘	pggd
 𱟞	pggf
+卜	pggg
+⺊	pggg
+⼘	pggg
 𠽶	pggg
 𫻴	pggh
 𠵐	pggk
@@ -68092,7 +68092,6 @@ columns:
 㕮	phzr
 𭊱	phzs
 𪓕	phzw
-百	pi11
 𲖥	pial
 𭈓	piaq
 㖣	piar
@@ -68154,6 +68153,7 @@ columns:
 𱒊	piht
 𭉩	piia
 𱒗	piid
+百	piii
 𠼘	piip
 𠺱	piiv
 唧	pijf
@@ -68280,8 +68280,6 @@ columns:
 𭋨	piza
 𠳩	pizs
 𠿬	pizs
-辰	pj11
-⾠	pj11
 𦢱	pjai
 㖀	pjar
 𭊕	pjas
@@ -68319,6 +68317,8 @@ columns:
 咶	pjir
 𠲪	pjjf
 𫫁	pjjf
+辰	pjjj
+⾠	pjjj
 𭈒	pjjs
 𡂾	pjkb
 㕸	pjkr
@@ -69357,8 +69357,8 @@ columns:
 𠧯	posr
 𰏚	posr
 𠨌	post
-帯	posu
 带	posu
+帯	posu
 𢿝	posv
 𰑵	posv
 𗚗	potb
@@ -69663,8 +69663,8 @@ columns:
 𠶋	pqie
 𭉡	pqif
 噚	pqio
-呎	pqir
 史	pqir
+呎	pqir
 嗬	pqiu
 𠰱	pqjf
 𲗱	pqjf
@@ -69819,12 +69819,6 @@ columns:
 𪢠	pqzh
 𪎎	pqzp
 嘨	pqzr
-口	pr11
-⼝	pr11
-⼞	pr11
-〇	pr11
-㇣	pr11
-𘯏	pr11
 𠰴	prar
 𫫜	prbh
 𠱼	prbi
@@ -69935,6 +69929,12 @@ columns:
 𠽧	prrn
 𗜁	prro
 𘚏	prrq
+口	prrr
+⼝	prrr
+⼞	prrr
+〇	prrr
+㇣	prrr
+𘯏	prrr
 𡂳	prrr
 𠵮	prrs
 𘫬	prrv
@@ -69971,7 +69971,6 @@ columns:
 𱓘	przg
 𱴅	przp
 㗞	przs
-三	ps11
 𠶤	psar
 𧇇	psaw
 𧇈	psaw
@@ -70076,6 +70075,7 @@ columns:
 嗋	pssh
 𡀺	pssm
 𱒝	psso
+三	psss
 𠱿	psss
 𠼔	pssu
 噹	psty
@@ -70101,10 +70101,6 @@ columns:
 𧆤	pszn
 哑	pszr
 𰈏	pszy
-虍	pt11
-虎	pt11
-⾌	pt11
-𮓗	pt11
 嘝	ptad
 𠾟	ptau
 𭈕	ptau
@@ -70250,7 +70246,11 @@ columns:
 𡃊	ptsw
 𲘊	pttc
 𡂒	pttm
+虎	pttt
+虍	pttt
+⾌	pttt
 𭋖	pttt
+𮓗	pttt
 𠺕	ptty
 𱊎	ptuc
 𠿀	ptug
@@ -70440,13 +70440,6 @@ columns:
 𣍇	puzn
 𥀰	puzs
 巤	puzv
-巜	pv11
-川	pv11
-巛	pv11
-⼮	pv11
-𘠸	pv11
-𡿦	pv11
-𫶧	pv11
 唞	pvad
 𡀴	pvak
 㖞	pvar
@@ -70585,6 +70578,13 @@ columns:
 𱓽	pvvi
 𠳖	pvvk
 𠳕	pvvm
+川	pvvv
+巜	pvvv
+巛	pvvv
+⼮	pvvv
+𘠸	pvvv
+𡿦	pvvv
+𫶧	pvvv
 𲖀	pvwf
 𭉛	pvwi
 𮓮	pvwi
@@ -70610,7 +70610,6 @@ columns:
 𪢅	pvzr
 𠵿	pvzs
 𡅒	pvzs
-㐬	pw11
 𧇾	pwab
 𱖻	pwac
 𱔇	pwah
@@ -70763,6 +70762,7 @@ columns:
 𭉲	pwvj
 𠹂	pwvo
 唱	pwwr
+㐬	pwww
 嗶	pwxe
 嗮	pwxg
 𠨅	pwxh
@@ -70793,7 +70793,6 @@ columns:
 嚌	pwzp
 𲾈	pwzp
 𡄡	pwzt
-更	px11
 𮓬	pxab
 𰆅	pxak
 嗳	pxam
@@ -71034,6 +71033,7 @@ columns:
 𭍇	pxxt
 𫬨	pxxu
 𠾱	pxxw
+更	pxxx
 𡂋	pxxx
 㘇	pxxy
 𲗷	pxxy
@@ -71650,11 +71650,11 @@ columns:
 蒼	qazp
 𠠈	qazr
 𦼃	qazr
-戉	qb11
-戊	qb11
 𦭡	qbak
 藓	qbas
 藇	qbba
+戊	qbbb
+戉	qbbb
 𡖕	qbbb
 𦭍	qbbc
 𮒾	qbbc
@@ -72229,9 +72229,9 @@ columns:
 𲅑	qdfh
 迟	qdfi
 苰	qdfi
-贮	qdfk
 苎	qdfk
 薇	qdfk
+贮	qdfk
 藢	qdfk
 𮏳	qdfl
 𰺯	qdfl
@@ -72741,7 +72741,6 @@ columns:
 𦹖	qezc
 𲼖	qezn
 𮒧	qezo
-早	qf11
 𱾭	qfac
 𦯅	qfan
 荾	qfas
@@ -72777,6 +72776,7 @@ columns:
 蔘	qffc
 𮑙	qffc
 𦰲	qffe
+早	qfff
 𦼒	qffg
 蒑	qffn
 𦯩	qffs
@@ -73190,8 +73190,6 @@ columns:
 荟	qgyv
 𤯊	qgyy
 蓋	qgyz
-贝	qh11
-⻉	qh11
 𘱑	qhai
 𰰤	qhal
 蔉	qhap
@@ -73232,6 +73230,8 @@ columns:
 𧒨	qhhc
 𧀃	qhhe
 𫊛	qhhe
+贝	qhhh
+⻉	qhhh
 蕋	qhhh
 𧓿	qhhh
 𧔴	qhhh
@@ -73357,12 +73357,6 @@ columns:
 𫇫	qhzl
 𮎟	qhzl
 𰗄	qhzt
-乂	qi11
-乄	qi11
-尺	qi11
-㐅	qi11
-𘠘	qi11
-𘱌	qi11
 赔	qiah
 菩	qial
 𦺉	qiao
@@ -73424,6 +73418,12 @@ columns:
 𨝻	qiie
 𫼈	qiig
 𧏤	qiih
+乂	qiii
+尺	qiii
+乄	qiii
+㐅	qiii
+𘠘	qiii
+𘱌	qiii
 𫈳	qiii
 𠙛	qiik
 蒆	qiio
@@ -73578,11 +73578,6 @@ columns:
 𫈄	qiys
 𦮚	qiyv
 𦹧	qiyz
-彐	qj11
-⺕	qj11
-⼹	qj11
-𫜹	qj11
-𬺹	qj11
 𦼄	qjad
 𬞴	qjad
 𬞳	qjag
@@ -73661,7 +73656,12 @@ columns:
 𮐐	qjix
 𦐭	qjjf
 𦴧	qjjf
+彐	qjjj
 茘	qjjj
+⺕	qjjj
+⼹	qjjj
+𫜹	qjjj
+𬺹	qjjj
 𧄶	qjjl
 𩕕	qjjl
 蒯	qjjr
@@ -73797,7 +73797,6 @@ columns:
 𦭞	qjzn
 𮎭	qjzn
 𱘦	qjzy
-莫	qk11
 葡	qkah
 𮐢	qkah
 𰲀	qkak
@@ -73861,6 +73860,7 @@ columns:
 𫊒	qkka
 𮑁	qkkc
 䔷	qkkg
+莫	qkkk
 𧂖	qkkl
 𫗋	qkkl
 𮐥	qkkn
@@ -73954,20 +73954,6 @@ columns:
 𦼼	qkzn
 𮏋	qkzn
 𮑣	qkzs
-艹	ql11
-卝	ql11
-曰	ql11
-廾	ql11
-卄	ql11
-丱	ql11
-⺾	ql11
-⺿	ql11
-⻀	ql11
-⼶	ql11
-⽈	ql11
-𘠬	ql11
-𘭲	ql11
-𫡃	ql11
 𦱦	qlah
 𫈅	qlal
 葅	qlaw
@@ -74061,7 +74047,21 @@ columns:
 䔢	qllg
 𦱼	qllh
 𲼓	qllj
+艹	qlll
+曰	qlll
+卝	qlll
+廾	qlll
+卄	qlll
+丱	qlll
+⺾	qlll
+⺿	qlll
+⻀	qlll
+⼶	qlll
+⽈	qlll
+𘠬	qlll
+𘭲	qlll
 𧁤	qlll
+𫡃	qlll
 𲼜	qlll
 𦹬	qlln
 𦹑	qlmf
@@ -74161,7 +74161,6 @@ columns:
 𲽁	qlzo
 𧆀	qlzw
 𦴪	qlzy
-风	qm11
 𮑓	qmab
 𪆴	qmad
 𱽽	qmae
@@ -74325,6 +74324,7 @@ columns:
 𦳸	qmls
 𦷡	qmlv
 𧁛	qmlx
+风	qmmm
 𦴬	qmmm
 蘡	qmmo
 𦮙	qmmo
@@ -74469,8 +74469,6 @@ columns:
 𦿞	qmzv
 𲽘	qmzw
 𦰫	qmzy
-𦣝	qn11
-𦣞	qn11
 𮑑	qnah
 𮑱	qnah
 𩼥	qnak
@@ -74575,6 +74573,8 @@ columns:
 䓹	qnnl
 𧀫	qnnl
 薞	qnnn
+𦣝	qnnn
+𦣞	qnnn
 𧄮	qnnn
 𲽢	qnnn
 𱿆	qnnx
@@ -75621,7 +75621,6 @@ columns:
 𦰆	qsyz
 𱽛	qszl
 萾	qszy
-六	qt11
 萪	qtad
 蔛	qtad
 𦹞	qtae
@@ -75812,6 +75811,7 @@ columns:
 𲼏	qttn
 𦾎	qtto
 𦽧	qtts
+六	qttt
 藟	qttt
 𧁞	qttt
 𧆕	qttt
@@ -75868,8 +75868,6 @@ columns:
 𱽮	qtzi
 𲼎	qtzs
 𮒤	qtzv
-羽	qu11
-⽻	qu11
 𧗘	quac
 𦴺	quak
 茸	qual
@@ -75972,6 +75970,8 @@ columns:
 𦻙	quua
 𫉸	quuk
 䔅	quur
+羽	quuu
+⽻	quuu
 薛	quvc
 𫊎	quvc
 𪈟	quvd
@@ -76609,8 +76609,6 @@ columns:
 𧃮	qxzo
 𮒈	qxzs
 𢑯	qxzy
-夕	qy11
-⼣	qy11
 𧁒	qyab
 𦻶	qyad
 𮐡	qyah
@@ -76878,6 +76876,8 @@ columns:
 𰘞	qyyu
 𦱚	qyyv
 𦺀	qyyx
+夕	qyyy
+⼣	qyyy
 𧅟	qyyy
 𨶓	qyyy
 𰤸	qyyz
@@ -77003,8 +77003,8 @@ columns:
 𠟝	qzzr
 𥀘	qzzs
 𦶿	qzzy
-石	ra11
-⽯	ra11
+石	raaa
+⽯	raaa
 𦨶	raak
 礸	raam
 𠓕	raam
@@ -77418,9 +77418,6 @@ columns:
 𤟚	rbzn
 𤣜	rbzp
 𱴿	rbzz
-䒑	rc11
-𘡊	rc11
-𬺢	rc11
 𥓪	rcac
 𦜣	rcac
 㺚	rcad
@@ -77435,6 +77432,9 @@ columns:
 𦪳	rcby
 𱴽	rcby
 𡐜	rcbz
+䒑	rccc
+𘡊	rccc
+𬺢	rccc
 𲮗	rccc
 鶿	rccd
 鷀	rccd
@@ -77947,7 +77947,6 @@ columns:
 𲯉	rdzm
 礇	rdzn
 𥑩	rdzn
-敫	re11
 𮁂	reai
 𥗢	reak
 𦢂	rean
@@ -77965,6 +77964,7 @@ columns:
 𱴱	redv
 𫛀	redw
 𤢩	reed
+敫	reee
 𤛩	reeh
 𤡪	reeh
 𲴌	reel
@@ -78414,8 +78414,6 @@ columns:
 艔	rfzn
 𤚡	rfzn
 𰡠	rfzn
-舟	rg11
-⾈	rg11
 𤡒	rgan
 碖	rgba
 䑳	rgbg
@@ -78459,9 +78457,11 @@ columns:
 𗐴	rgfy
 𗐶	rgfy
 𗒨	rgfy
+舟	rggg
+⾈	rggg
 𥕹	rggg
-碊	rggw
 㹽	rggw
+碊	rggw
 𥓄	rgha
 𗓙	rghb
 𥗈	rghb
@@ -78588,10 +78588,6 @@ columns:
 磕	rgyz
 𤠡	rgyz
 𦚀	rgzn
-旡	rh11
-耂	rh11
-⺛	rh11
-⺹	rh11
 𥐰	rhaa
 𥒿	rhai
 𥕦	rhap
@@ -78689,6 +78685,10 @@ columns:
 𗒈	rhgx
 𘝟	rhgy
 𣯠	rhhg
+旡	rhhh
+耂	rhhh
+⺛	rhhh
+⺹	rhhh
 𥖋	rhhh
 𩇦	rhhh
 𧎆	rhhk
@@ -78856,8 +78856,6 @@ columns:
 𗔪	rhzl
 𗅿	rhzo
 𱽅	rhzs
-无	ri11
-⽆	ri11
 碚	riaa
 𦩜	riag
 𲻧	riaq
@@ -78890,6 +78888,8 @@ columns:
 𤘾	rihs
 𪙈	rihx
 𤟠	rihz
+无	riii
+⽆	riii
 砙	rija
 𤭂	rijg
 𰢢	riji
@@ -78969,12 +78969,6 @@ columns:
 㹯	riyq
 𱴑	riyq
 𲳐	riys
-刂	rj11
-⺉	rj11
-𘠐	rj11
-𘠚	rj11
-𘮖	rj11
-𬼀	rj11
 硉	rjaa
 亊	rjac
 𦨱	rjag
@@ -79010,7 +79004,13 @@ columns:
 𦨯	rjig
 狧	rjio
 𩙲	rjjf
+刂	rjjj
+⺉	rjjj
+𘠐	rjjj
+𘠚	rjjj
+𘮖	rjjj
 𥒢	rjjj
+𬼀	rjjj
 𠞳	rjjr
 硼	rjjs
 𱮄	rjjs
@@ -79098,8 +79098,6 @@ columns:
 𥐛	rjza
 舠	rjzg
 𦨕	rjzn
-卑	rk11
-⺼	rk11
 硅	rkaa
 𣄱	rkah
 𤞇	rkao
@@ -79216,6 +79214,8 @@ columns:
 䲍	rkkf
 𩷬	rkkf
 𬒠	rkkg
+卑	rkkk
+⺼	rkkk
 𦪵	rkkt
 𤘷	rkkx
 𘤥	rklb
@@ -79350,7 +79350,6 @@ columns:
 㹼	rkzc
 𥖚	rkzj
 𬜛	rkzs
-元	rl11
 硲	rlaa
 𮎐	rlag
 砺	rlai
@@ -79468,6 +79467,7 @@ columns:
 猻	rllc
 𥖌	rllc
 𦪮	rlli
+元	rlll
 𡦊	rlll
 𬆺	rllq
 𥖴	rllu
@@ -79583,7 +79583,6 @@ columns:
 𰦥	rlzn
 𗓔	rlzo
 𗑔	rlzz
-仑	rm11
 猤	rmak
 猣	rmas
 艐	rmas
@@ -79666,6 +79665,7 @@ columns:
 狽	rmlo
 㸽	rmls
 𭆯	rmlz
+仑	rmmm
 𤜉	rmmo
 𤣎	rmmo
 𤠥	rmmt
@@ -79721,8 +79721,6 @@ columns:
 𤘸	rmzn
 𨤑	rmzn
 𨤖	rmzs
-至	rn11
-⾄	rn11
 矴	rnaa
 𦨍	rnag
 𦒱	rnah
@@ -79816,6 +79814,8 @@ columns:
 𮵉	rnms
 𰡍	rnnf
 𫗍	rnnh
+至	rnnn
+⾄	rnnn
 𰦵	rnof
 𪿤	rnov
 𤣁	rnox
@@ -79886,10 +79886,6 @@ columns:
 𲮅	rnzy
 𦪫	rnzz
 𲴐	rnzz
-犬	ro11
-犭	ro11
-⺨	ro11
-⽝	ro11
 𥑶	roaa
 硐	roak
 狪	roak
@@ -80084,6 +80080,10 @@ columns:
 𮎁	rooh
 𣄳	rooi
 𘋸	room
+犬	rooo
+犭	rooo
+⺨	rooo
+⽝	rooo
 𲻦	roos
 𗑜	roox
 𘋵	roox
@@ -80902,12 +80902,6 @@ columns:
 𥂐	rryz
 𪿱	rryz
 𗑆	rrzo
-牛	rs11
-牜	rs11
-⺧	rs11
-⽜	rs11
-𘳂	rs11
-𠂒	rs11
 𥓡	rsaa
 𫉓	rsai
 𬜓	rsan
@@ -81027,6 +81021,12 @@ columns:
 𘋢	rsry
 𰦮	rsso
 𱭷	rsso
+牛	rsss
+牜	rsss
+⺧	rsss
+⽜	rsss
+𘳂	rsss
+𠂒	rsss
 𤙒	rsss
 𫿹	rstn
 礑	rsty
@@ -81254,9 +81254,6 @@ columns:
 𩇾	rtyx
 𗅏	rtyy
 𥓳	rtzs
-釆	ru11
-才	ru11
-⾤	ru11
 𰦳	ruaa
 𦥇	ruak
 𬌯	ruao
@@ -81349,6 +81346,9 @@ columns:
 𥕷	ruui
 𤜊	ruuo
 𤠙	ruur
+才	ruuu
+釆	ruuu
+⾤	ruuu
 𤣒	ruuu
 𮁖	ruuu
 碢	ruva
@@ -81841,7 +81841,6 @@ columns:
 𤢂	rxzc
 𤟗	rxzn
 𮁘	rxzz
-垂	ry11
 𤡌	ryai
 磌	ryay
 𤛇	ryay
@@ -81955,6 +81954,7 @@ columns:
 𭸘	ryyq
 𲳯	ryyq
 𱭳	ryys
+垂	ryyy
 盘	ryzg
 𪺿	ryzo
 𱲋	ryzo
@@ -82085,8 +82085,8 @@ columns:
 𱽆	rzzq
 磉	rzzy
 𮎗	rzzy
-尚	sa11
-龸	sa11
+尚	saaa
+龸	saaa
 𬤮	saaq
 𩉑	sacj
 𠡘	sack
@@ -82200,8 +82200,6 @@ columns:
 谥	sbyz
 𭄷	sbyz
 𢅽	sbzx
-讠	sc11
-⻈	sc11
 𦥴	scab
 𪩮	scas
 𰵰	scas
@@ -82215,6 +82213,8 @@ columns:
 𰵽	scbq
 𬤫	scby
 𱜸	scby
+讠	sccc
+⻈	sccc
 𬤬	scch
 𪩹	sccj
 𡰄	sccn
@@ -82292,7 +82292,6 @@ columns:
 㡪	sczs
 𢂀	sczu
 𢂍	sczu
-发	sd11
 𡭵	sdaa
 𲂆	sdac
 𫷉	sdae
@@ -82307,6 +82306,7 @@ columns:
 𢅾	sdcw
 𩉙	sdcw
 𠑳	sddb
+发	sddd
 𨔔	sddf
 𲆂	sddf
 𢂹	sddi
@@ -82389,18 +82389,18 @@ columns:
 𢎦	sdzk
 𬤡	sdzn
 𢁠	sdzu
-兀	se11
-尢	se11
-丌	se11
-⺎	se11
-⺐	se11
-⼪	se11
-兀	se11
-𘭴	se11
 𦚙	seck
 𢁋	secs
 𬣽	sedf
 𮞦	sedf
+兀	seee
+尢	seee
+丌	seee
+⺎	seee
+⺐	seee
+⼪	seee
+兀	seee
+𘭴	seee
 𰶇	seeh
 𬤥	seel
 𰅎	sefo
@@ -82434,10 +82434,6 @@ columns:
 𨾙	sewf
 诙	sexl
 㞀	sexl
-夬	sf11
-面	sf11
-⾯	sf11
-𘲒	sf11
 𩈥	sfas
 𰵯	sfas
 𢁲	sfdi
@@ -82448,6 +82444,10 @@ columns:
 𬣙	sfeo
 幓	sffc
 𩈼	sffc
+夬	sfff
+面	sfff
+⾯	sfff
+𘲒	sfff
 𥇠	sffm
 𬤧	sffn
 𩉗	sffw
@@ -82501,7 +82501,6 @@ columns:
 𢃅	sfyq
 帏	sfyu
 𬤏	sfzn
-兄	sg11
 诊	sgcd
 𢒃	sgcd
 𡓪	sgck
@@ -82515,6 +82514,7 @@ columns:
 䣣	sger
 𨚤	sger
 𢄅	sgfx
+兄	sggg
 帴	sggw
 谏	sghd
 𢃿	sghd
@@ -82565,8 +82565,6 @@ columns:
 𢄍	sgyz
 𬤒	sgyz
 𬾾	sgyz
-母	sh11
-⺟	sh11
 讴	shac
 𠑂	shai
 𘰽	shak
@@ -82594,6 +82592,8 @@ columns:
 𣁁	shfk
 𗎷	shgo
 幟	shgw
+母	shhh
+⺟	shhh
 𧔔	shhh
 蠠	shhk
 𧍸	shhk
@@ -82713,7 +82713,6 @@ columns:
 𡯣	sixe
 𬣢	sixi
 𬤂	siyq
-七	sj11
 𠊺	sjbk
 𰎊	sjbn
 𬤌	sjbq
@@ -82735,6 +82734,7 @@ columns:
 话	sjic
 𡯢	sjie
 𩈙	sjif
+七	sjjj
 𤚶	sjjr
 𡯖	sjlb
 𨥓	sjlu
@@ -82774,8 +82774,6 @@ columns:
 𰵋	sjyc
 切	sjzj
 𫥴	sjzl
-人	sk11
-⼈	sk11
 诖	skac
 𠈘	skak
 𢁧	skcu
@@ -82796,6 +82794,8 @@ columns:
 𢃐	skiv
 𢃩	skjf
 𬤃	skjf
+人	skkk
+⼈	skkk
 𢁞	sklb
 𩜒	skmi
 尥	skms
@@ -82825,7 +82825,6 @@ columns:
 𢁒	skxu
 𡯦	skyq
 𱲑	skyz
-巴	sl11
 𰶐	slak
 𢂲	slau
 𫿞	slbv
@@ -82858,6 +82857,7 @@ columns:
 𢁸	slju
 㠶	slkx
 𠙠	sllk
+巴	slll
 𲑏	slll
 𡙫	slln
 𢅥	slmo
@@ -82962,8 +82962,6 @@ columns:
 𱑾	smyz
 讻	smzc
 𬣥	smzn
-乃	sn11
-𘯴	sn11
 𱍙	snaa
 订	snac
 帄	snau
@@ -83002,6 +83000,8 @@ columns:
 幨	snlo
 𱜬	snlu
 𡯿	snml
+乃	snnn
+𘯴	snnn
 𰶍	snos
 诘	snpr
 𢅣	snpr
@@ -83038,9 +83038,6 @@ columns:
 𩈯	snzf
 𫍫	snzf
 𭘴	snzs
-力	so11
-⼒	so11
-𘲤	so11
 诔	soac
 𲞷	soae
 𠱩	soak
@@ -83084,6 +83081,9 @@ columns:
 诋	soms
 𰵗	sonf
 𬤔	sony
+力	sooo
+⼒	sooo
+𘲤	sooo
 诇	sopr
 𫷆	sorb
 𫍬	sorl
@@ -83103,11 +83103,6 @@ columns:
 𢁶	sozn
 𰵠	sozn
 𱜤	sozu
-夂	sp11
-夊	sp11
-⼡	sp11
-⼢	sp11
-𘯟	sp11
 𰂧	spac
 误	spak
 𫍹	spaw
@@ -83188,6 +83183,11 @@ columns:
 㰶	sppk
 𳍛	sppk
 𪩽	sppn
+夊	sppp
+夂	sppp
+⼡	sppp
+⼢	sppp
+𘯟	sppp
 咎	sppr
 㔔	sppr
 𢛃	sppv
@@ -83499,10 +83499,6 @@ columns:
 𭻍	styz
 𨙅	stzd
 𲓹	stzj
-巾	su11
-⼱	su11
-𘠼	su11
-𘯇	su11
 𦔴	suak
 𱉔	sucf
 𱉞	such
@@ -83537,6 +83533,10 @@ columns:
 𠋅	sute
 䜥	sutk
 𬤐	suur
+巾	suuu
+⼱	suuu
+𘠼	suuu
+𘯇	suuu
 尳	suve
 𡰅	suve
 𭘱	suvu
@@ -83822,7 +83822,6 @@ columns:
 𪾍	syzg
 盁	syzn
 𪩴	syzu
-亚	sz11
 𰶈	szbr
 𥸿	szcl
 𫂲	szcn
@@ -83884,6 +83883,7 @@ columns:
 𰵷	szzg
 𩈑	szzn
 𩈽	szzo
+亚	szzz
 穳	taam
 𲎫	taaq
 𥟭	taay
@@ -84341,8 +84341,8 @@ columns:
 𬼣	tcnf
 𪃝	tcod
 𲅪	tcod
-畤	tcof
 待	tcof
+畤	tcof
 㽟	tcof
 秲	tcof
 𗈘	tcoh
@@ -84584,9 +84584,6 @@ columns:
 𧢺	tdzj
 𤰯	tdzn
 𥝙	tdzu
-冊	te11
-册	te11
-𠕁	te11
 𫹤	tear
 㣸	tebn
 𗰏	tech
@@ -84595,6 +84592,9 @@ columns:
 𲟪	tedh
 徳	tedv
 德	tedv
+册	teee
+冊	teee
+𠕁	teee
 𧥒	teeg
 𰨓	teel
 𲵕	teel
@@ -84950,7 +84950,6 @@ columns:
 𮵠	tfyu
 𗕚	tfyy
 屔	tfzy
-龺	tg11
 斡	tgad
 𪐎	tgba
 䵚	tgbb
@@ -85057,6 +85056,7 @@ columns:
 𘦻	tgfo
 𗗒	tgfq
 𗗑	tgfx
+龺	tggg
 𡈹	tggl
 㲦	tggo
 㣤	tggw
@@ -85173,11 +85173,6 @@ columns:
 𗢗	tgyq
 𫞷	tgyv
 𱌻	tgyz
-示	th11
-⺬	th11
-⽰	th11
-𘠛	th11
-𱍐	th11
 𭻼	thad
 𘰀	thaq
 穟	thbd
@@ -85217,6 +85212,11 @@ columns:
 𗇹	thgx
 𢇌	thhc
 𢨡	thhg
+示	thhh
+⺬	thhh
+⽰	thhh
+𘠛	thhh
+𱍐	thhh
 𧊢	thhk
 徙	thhl
 徏	thhl
@@ -85294,7 +85294,6 @@ columns:
 𘦾	thzh
 胃	thzy
 𤱀	thzy
-戋	ti11
 𲟤	tiao
 稖	tiau
 觨	tibk
@@ -85316,6 +85315,7 @@ columns:
 𤱐	tify
 秤	tihu
 稰	tihz
+戋	tiii
 𮗩	tijj
 𰩂	tiko
 𢕇	tilh
@@ -85364,10 +85364,6 @@ columns:
 𘗻	tixx
 𘗼	tixx
 𥁝	tiyz
-叚	tj11
-角	tj11
-⻆	tj11
-⾓	tj11
 律	tjao
 𰐳	tjas
 𥞰	tjau
@@ -85414,6 +85410,10 @@ columns:
 秳	tjiu
 𬺄	tjiw
 𥣼	tjjd
+角	tjjj
+叚	tjjj
+⻆	tjjj
+⾓	tjjj
 𥞮	tjjj
 稝	tjjs
 𣎠	tjjs
@@ -85502,11 +85502,6 @@ columns:
 𮂺	tjzn
 𲲊	tjzs
 𰨛	tjzu
-下	tk11
-廴	tk11
-禸	tk11
-⼵	tk11
-⽱	tk11
 觟	tkaj
 徍	tkao
 𥟹	tkaq
@@ -85560,6 +85555,11 @@ columns:
 𥝳	tkju
 𤎇	tkjx
 𮱾	tkkg
+下	tkkk
+廴	tkkk
+禸	tkkk
+⼵	tkkk
+⽱	tkkk
 𘤺	tklb
 𥝢	tklb
 𥣥	tklb
@@ -85642,8 +85642,6 @@ columns:
 𮂵	tkys
 㽤	tkzc
 𮃌	tkzc
-龙	tl11
-⻰	tl11
 𧣳	tlaj
 𢓾	tlao
 𭻗	tlay
@@ -85740,6 +85738,8 @@ columns:
 𲱏	tlkz
 𡈍	tllc
 𥢤	tllc
+龙	tlll
+⻰	tlll
 𥝾	tlls
 𥝕	tlmu
 𪽥	tlmx
@@ -85820,8 +85820,6 @@ columns:
 畈	tlzn
 𢓉	tlzn
 𥡼	tlzu
-本	tm11
-𠥽	tm11
 𥟛	tmam
 稯	tmas
 㣭	tmas
@@ -85864,6 +85862,8 @@ columns:
 𧶝	tmlp
 𧵗	tmly
 𬱘	tmmg
+本	tmmm
+𠥽	tmmm
 𢖠	tmmo
 𢓒	tmno
 畘	tmny
@@ -85890,8 +85890,6 @@ columns:
 𬥔	tmys
 䊬	tmzc
 㿭	tmzs
-斤	tn11
-⽄	tn11
 𧢴	tnaj
 㣔	tnao
 𮋙	tnaq
@@ -85972,6 +85970,8 @@ columns:
 𩏑	tnmb
 畂	tnms
 𱵼	tnms
+斤	tnnn
+⽄	tnnn
 𩛁	tnnp
 徰	tnnt
 𬔂	tnnv
@@ -86042,9 +86042,6 @@ columns:
 𬓫	tnzf
 䅓	tnzn
 𥢽	tnzz
-彳	to11
-⼻	to11
-𘡁	to11
 秱	toak
 㣚	toak
 𲰽	toak
@@ -86235,6 +86232,9 @@ columns:
 㣨	toob
 𗰔	toob
 𘅦	tool
+彳	tooo
+⼻	tooo
+𘡁	tooo
 𗰥	tooq
 𘨪	toou
 𥞢	toou
@@ -86319,7 +86319,6 @@ columns:
 𘄯	toys
 𤱆	tozn
 𥞦	tozu
-卯	tp11
 𘦶	tpah
 𠨣	tpap
 稏	tpau
@@ -86368,6 +86367,7 @@ columns:
 𱶏	tpnc
 𗇽	tpob
 䅶	tpof
+卯	tppp
 𢓟	tppv
 𢔄	tpqf
 𤲤	tpqf
@@ -86424,8 +86424,6 @@ columns:
 𫧭	tpyy
 𩠒	tpzf
 𭛠	tpzn
-九	tq11
-𘯼	tq11
 𢕉	tqah
 𥠆	tqak
 𬺍	tqak
@@ -86497,6 +86495,8 @@ columns:
 𥠏	tqqb
 𥣨	tqqf
 𰨨	tqqj
+九	tqqq
+𘯼	tqqq
 𥤠	tqqq
 𪔁	tqqq
 𲒭	tqrj
@@ -87017,8 +87017,6 @@ columns:
 𫀪	ttyu
 畕	ttyy
 𥀓	ttzs
-禾	tu11
-⽲	tu11
 𥠬	tuak
 聋	tual
 𦔱	tuaq
@@ -87101,6 +87099,8 @@ columns:
 𧤛	tutu
 𤳜	tuui
 𥢠	tuui
+禾	tuuu
+⽲	tuuu
 𮂨	tuuu
 𧤐	tuvj
 𢔓	tuvl
@@ -87191,7 +87191,6 @@ columns:
 𭟜	tvyv
 𥹛	tvzc
 𥣿	tvzo
-齿	tw11
 𥞯	twae
 𩡋	twag
 𩡥	twai
@@ -87358,8 +87357,8 @@ columns:
 𣆇	twrh
 𠝲	twrj
 𳌂	twrm
-旭	twrq
 旮	twrq
+旭	twrq
 香	twru
 ⾹	twru
 馦	twrx
@@ -87402,6 +87401,7 @@ columns:
 𢔒	twwr
 𥞞	twwr
 𮩭	twws
+齿	twww
 馧	twwy
 𫘂	twwy
 𩡖	twxa
@@ -87583,8 +87583,6 @@ columns:
 𥠶	txyx
 𥢕	txzc
 𢔏	txzn
-田	ty11
-⽥	ty11
 稹	tyay
 㐤	tyay
 𱌺	tyay
@@ -87673,6 +87671,8 @@ columns:
 𲁞	tyyq
 𘫵	tyys
 𢝐	tyyv
+田	tyyy
+⽥	tyyy
 盏	tyzi
 盉	tyzu
 𰤷	tyzy
@@ -87765,8 +87765,8 @@ columns:
 𥟒	tzzg
 𧣸	tzzg
 𭛶	tzzg
-耳	ua11
-⽿	ua11
+耳	uaaa
+⽿	uaaa
 趲	uaam
 𩎈	uaam
 趱	uaaq
@@ -87850,12 +87850,12 @@ columns:
 𮧭	uayx
 𧽜	uazp
 𬚤	uazp
-㦮	ub11
-𢦍	ub11
-𢦑	ub11
 饲	ubak
 𩍿	ubao
 𧾚	ubba
+㦮	ubbb
+𢦍	ubbb
+𢦑	ubbb
 𫎷	ubbh
 𦖙	ubbi
 𧾳	ubbx
@@ -87995,8 +87995,6 @@ columns:
 𲋫	ubyz
 𦖚	ubzn
 𧾴	ubzx
-鸟	uc11
-⻦	uc11
 韃	ucad
 𧼔	ucas
 𩩡	ucas
@@ -88007,6 +88005,8 @@ columns:
 鞱	ucbq
 𦗌	ucbq
 𬳊	ucbq
+鸟	uccc
+⻦	uccc
 𦖅	ucch
 𩊲	ucch
 𨨾	uccl
@@ -88125,9 +88125,6 @@ columns:
 𩉽	ucze
 趀	uczs
 䞞	uczs
-户	ud11
-𘬑	ud11
-𡗗	ud11
 𲰹	udac
 𲺂	udad
 𩉾	udae
@@ -88152,6 +88149,9 @@ columns:
 𩎊	udcw
 䟏	udcy
 𦘈	udcy
+户	uddd
+𘬑	uddd
+𡗗	uddd
 𦖓	uddh
 𩩕	uddi
 𫆒	uddv
@@ -88293,8 +88293,6 @@ columns:
 𦗰	udzn
 𧼒	udzn
 𩨙	udzv
-革	ue11
-⾰	ue11
 𨻑	ueak
 𨽪	uebe
 𨽱	uebk
@@ -88310,6 +88308,8 @@ columns:
 𦗟	uedv
 𫛉	uedw
 𩪷	ueed
+革	ueee
+⾰	ueee
 𩪦	ueei
 馔	ueel
 𧾌	ueel
@@ -88406,8 +88406,6 @@ columns:
 鿤	ueyx
 𧽈	uezl
 𲃐	uezl
-用	uf11
-⽤	uf11
 馂	ufas
 䞭	ufas
 𧼅	ufas
@@ -88430,6 +88428,8 @@ columns:
 䟃	uffc
 𩌰	uffc
 𲹹	uffc
+用	ufff
+⽤	ufff
 𧾋	uffg
 𩍑	uffg
 𧾱	uffw
@@ -88528,7 +88528,6 @@ columns:
 𩉱	ufzj
 䩲	ufzn
 𩩮	ufzn
-肖	ug11
 䎾	ugba
 𫠽	ugbh
 𢩐	ugbn
@@ -88555,6 +88554,7 @@ columns:
 䁉	ugfm
 𦖎	uggd
 𭨎	uggf
+肖	uggg
 𦗨	uggg
 𲎖	uggp
 𦈻	uggw
@@ -88806,9 +88806,6 @@ columns:
 𢨰	uhzd
 肾	uhzx
 𮌈	uhzx
-而	ui11
-⽽	ui11
-𘬡	ui11
 鞛	uiae
 䍌	uiaq
 䞳	uias
@@ -88838,6 +88835,9 @@ columns:
 𳋪	uihz
 𮧘	uiid
 𨞟	uiie
+而	uiii
+⽽	uiii
+𘬡	uiii
 𤭬	uiij
 𧠪	uiiu
 𤭫	uije
@@ -89047,7 +89047,6 @@ columns:
 𭠅	ujzn
 𳂴	ujzs
 𪔹	ujzz
-景	uk11
 𮶒	ukaa
 鞋	ukae
 𦈰	ukaq
@@ -89092,6 +89091,7 @@ columns:
 𦕃	ukja
 𧼚	ukjf
 𩠉	ukjf
+景	ukkk
 𩍮	ukkt
 𳋆	uklh
 𲺀	uklv
@@ -89166,8 +89166,6 @@ columns:
 𡖁	ukzs
 𩌽	ukzs
 𠮑	ukzz
-卌	ul11
-𘣘	ul11
 𦖶	ulam
 𩊤	ulam
 䞱	ulas
@@ -89241,6 +89239,8 @@ columns:
 𦉖	ullc
 𡙹	ulle
 𭠈	ullj
+卌	ulll
+𘣘	ulll
 𧾀	ullw
 䍇	ulnd
 𪕄	ulof
@@ -89542,7 +89542,6 @@ columns:
 𱅰	unzf
 𫆄	unzh
 𦕔	unzk
-乍	uo11
 𩊗	uoak
 𩩅	uoak
 𪕙	uoak
@@ -89617,6 +89616,7 @@ columns:
 𮪧	uonf
 𱃵	uonf
 𲸳	uonf
+乍	uooo
 扃	uopr
 𦕾	uopr
 𧺸	uopr
@@ -89779,8 +89779,6 @@ columns:
 𩋈	upzh
 𮪱	upzh
 𬙎	upzk
-缶	uq11
-⽸	uq11
 𧽬	uqah
 𳃅	uqaj
 𩩴	uqak
@@ -89867,6 +89865,8 @@ columns:
 𱁻	uqqf
 𮩜	uqqi
 𧻫	uqqj
+缶	uqqq
+⽸	uqqq
 𲉕	uqqs
 𦗉	uqqv
 𭠋	uqqy
@@ -89910,7 +89910,6 @@ columns:
 𠡹	uqzs
 𭠊	uqzs
 𩋪	uqzy
-可	ur11
 䞠	uras
 鼫	uraz
 𦖺	urcc
@@ -89978,6 +89977,7 @@ columns:
 𫗱	urqx
 𠜺	urrj
 𧼤	urrj
+可	urrr
 趰	ursi
 𩍦	ursi
 𬚨	ursi
@@ -89995,8 +89995,6 @@ columns:
 䍋	uryq
 𣕇	uryq
 𩩞	uryv
-走	us11
-⾛	us11
 鞝	usae
 𩍲	usai
 趟	usas
@@ -90055,6 +90053,8 @@ columns:
 𪔻	uspz
 𠛯	usrj
 𪕦	ussm
+走	usss
+⾛	usss
 𧻒	usss
 𩊟	ussu
 𳑜	ustu
@@ -90185,8 +90185,6 @@ columns:
 𥉆	utzf
 𭆬	utzn
 𥛬	utzz
-饣	uu11
-⻠	uu11
 聑	uuaa
 𩊐	uuae
 饵	uuau
@@ -90281,6 +90279,8 @@ columns:
 𦓢	uuur
 𧾜	uuus
 𥤋	uuut
+饣	uuuu
+⻠	uuuu
 𮌀	uuuu
 𰀗	uuuu
 𣀳	uuuv
@@ -90314,14 +90314,6 @@ columns:
 趣	uuzn
 𩋄	uuzn
 𭊣	uuzs
-冎	uv11
-骨	uv11
-⻣	uv11
-⾻	uv11
-㠯	uv11
-咼	uv11
-𤕪	uv11
-𮍌	uv11
 𢟄	uvbc
 𣷙	uvbk
 𡹘	uvbn
@@ -90405,6 +90397,14 @@ columns:
 𫆈	uvua
 𧻱	uvus
 𲠊	uvvi
+骨	uvvv
+冎	uvvv
+⻣	uvvv
+⾻	uvvv
+㠯	uvvv
+咼	uvvv
+𤕪	uvvv
+𮍌	uvvv
 䩝	uvwe
 𰖫	uvwj
 晵	uvwr
@@ -90413,7 +90413,6 @@ columns:
 棨	uvyq
 𬃥	uvyq
 𮵺	uvzc
-旦	uw11
 𩊔	uwae
 䍊	uwaq
 𧻨	uwas
@@ -90545,6 +90544,7 @@ columns:
 𢾜	uwvj
 𧾉	uwwe
 𩩫	uwwr
+旦	uwww
 𢩤	uwwz
 鞸	uwxe
 䟆	uwxe
@@ -90564,7 +90564,6 @@ columns:
 鞰	uwyz
 𭾇	uwyz
 𧾙	uwzp
-上	ux11
 𩌕	uxaj
 𩊚	uxce
 𠶱	uxcr
@@ -90679,6 +90678,7 @@ columns:
 䟎	uxxm
 𩍴	uxxm
 𳃄	uxxs
+上	uxxx
 𩍊	uxyk
 𩋞	uxyq
 𩩥	uxyq
@@ -90758,8 +90758,6 @@ columns:
 𪾌	uyzr
 𩍳	uyzs
 监	uyzx
-鼠	uz11
-⿏	uz11
 𧼜	uzaq
 𡒍	uzbc
 𦈪	uzbc
@@ -90879,10 +90877,12 @@ columns:
 𩩟	uzzg
 𬳂	uzzg
 𣌛	uzzl
-亦	va11
-呙	va11
-𘱕	va11
-𰁜	va11
+鼠	uzzz
+⿏	uzzz
+亦	vaaa
+呙	vaaa
+𘱕	vaaa
+𰁜	vaaa
 攢	vaam
 𫼦	vaam
 攒	vaaq
@@ -91096,9 +91096,6 @@ columns:
 𰔉	vbyz
 𫽍	vbzn
 𢹰	vbzx
-辛	vc11
-⾟	vc11
-𨐋	vc11
 𢯅	vcac
 撻	vcad
 𢹗	vcad
@@ -91113,6 +91110,9 @@ columns:
 抝	vcbm
 搯	vcbq
 㩝	vcby
+辛	vccc
+⾟	vccc
+𨐋	vccc
 𲢰	vccc
 𢬹	vcch
 𢷖	vcch
@@ -91189,8 +91189,8 @@ columns:
 撧	vcns
 𢵰	vcnv
 𲢁	vcoc
-捋	vcof
 持	vcof
+捋	vcof
 𰔻	vcoh
 捠	vcol
 𢸗	vcop
@@ -91902,8 +91902,6 @@ columns:
 攘	vhyx
 𤬞	vhyx
 𦙼	vhzo
-心	vi11
-⼼	vi11
 掊	vial
 𪮈	viaq
 𲢤	viaq
@@ -91932,6 +91930,8 @@ columns:
 抨	vihl
 揟	vihz
 𰓘	viid
+心	viii
+⼼	viii
 揤	vijf
 𭠿	vijk
 㧚	vijl
@@ -91991,10 +91991,6 @@ columns:
 探	viyq
 𢫩	viyq
 𰓠	viyv
-攴	vj11
-攵	vj11
-⺙	vj11
-⽁	vj11
 𢷪	vjad
 𢳹	vjah
 𱠝	vjak
@@ -92040,6 +92036,10 @@ columns:
 䬡	vjjf
 𪮕	vjjf
 𭢄	vjjh
+攴	vjjj
+攵	vjjj
+⺙	vjjj
+⽁	vjjj
 𭠱	vjjj
 𢺈	vjjl
 掤	vjjs
@@ -92132,8 +92132,6 @@ columns:
 𢪩	vjzn
 𢺥	vjzn
 𠛳	vjzp
-及	vk11
-𘯶	vk11
 挂	vkal
 𭠝	vkan
 𢹛	vkas
@@ -92206,6 +92204,8 @@ columns:
 𢹈	vkjz
 𫾂	vkkg
 𢷙	vkki
+及	vkkk
+𘯶	vkkk
 𲢧	vkks
 𫾑	vkkt
 𢵀	vkkw
@@ -92305,11 +92305,6 @@ columns:
 𢴃	vkzm
 捜	vkzn
 𰔏	vkzz
-扌	vl11
-⺘	vl11
-𘠩	vl11
-𘠲	vl11
-𰀁	vl11
 𧍦	vlah
 𲡡	vlai
 𢭘	vlau
@@ -92404,6 +92399,11 @@ columns:
 搎	vllc
 𢴹	vllc
 𬱂	vlld
+扌	vlll
+⺘	vlll
+𘠩	vlll
+𘠲	vlll
+𰀁	vlll
 𢗺	vllm
 𢶛	vllq
 𢵄	vllw
@@ -92499,7 +92499,6 @@ columns:
 扳	vlzn
 𢫹	vlzn
 𰙥	vlzn
-少	vm11
 𢱓	vmae
 揆	vmak
 㨑	vmas
@@ -92560,6 +92559,7 @@ columns:
 𢆟	vmly
 𢴔	vmlz
 𢷎	vmme
+少	vmmm
 攖	vmmo
 𢹄	vmmy
 抩	vmnl
@@ -92615,7 +92615,6 @@ columns:
 𢬭	vmzo
 𫾀	vmzo
 𢯠	vmzs
-者	vn11
 𢰺	vnaa
 𲣃	vnah
 打	vnal
@@ -92692,6 +92691,7 @@ columns:
 𰓮	vnmk
 𫼖	vnms
 𰒾	vnna
+者	vnnn
 飺	vnno
 𢰼	vnnr
 𪭻	vnnt
@@ -92765,7 +92765,6 @@ columns:
 掩	vnzf
 𢮾	vnzy
 𢷂	vnzz
-此	vo11
 𦓫	voaj
 挏	voak
 𡭸	voak
@@ -92828,6 +92827,7 @@ columns:
 𢯐	voob
 𢬓	vool
 𫝾	vool
+此	vooo
 𢸛	voop
 𤬕	vopp
 𢬸	vopr
@@ -92871,7 +92871,6 @@ columns:
 挟	vozl
 𢫓	vozn
 𢭵	vozs
-亥	vp11
 𪭸	vpad
 掗	vpal
 摣	vpaw
@@ -92917,6 +92916,7 @@ columns:
 𰔇	vpos
 𢴮	vpou
 𢴫	vpov
+亥	vppp
 𢺪	vppp
 𠺃	vppr
 𲢉	vppr
@@ -92982,7 +92982,6 @@ columns:
 𫽨	vpzh
 𢫘	vpzk
 𭠘	vpzn
-半	vq11
 㨔	vqak
 𰺩	vqak
 𭠮	vqam
@@ -93099,6 +93098,7 @@ columns:
 𢬞	vqqj
 𭡷	vqqm
 撄	vqqo
+半	vqqq
 𫼤	vqrj
 𢯥	vqrl
 𢳠	vqrq
@@ -93250,7 +93250,6 @@ columns:
 𱠗	vrzg
 𰔓	vrzs
 𫽝	vrzy
-童	vs11
 𢮐	vsal
 𪟶	vsaq
 𢮡	vsas
@@ -93315,6 +93314,7 @@ columns:
 𱡓	vsrr
 搚	vssh
 拋	vsso
+童	vsss
 拹	vsss
 擋	vsty
 帟	vsua
@@ -93464,7 +93464,6 @@ columns:
 𰓟	vtyq
 㿱	vtzs
 𢯏	vtzs
-求	vu11
 𫽒	vuad
 揍	vuak
 挕	vual
@@ -93555,6 +93554,7 @@ columns:
 搸	vutu
 𭢛	vuui
 𲢇	vuur
+求	vuuu
 攝	vuuu
 𢷝	vuuv
 𢸶	vuuz
@@ -93662,8 +93662,6 @@ columns:
 𥂚	vvyz
 𢫇	vvzn
 𫽕	vvzn
-瓜	vw11
-⽠	vw11
 𢮚	vwak
 挍	vwal
 𢰐	vwao
@@ -93766,6 +93764,8 @@ columns:
 𢫾	vwwr
 𢮵	vwwr
 𢵃	vwwv
+瓜	vwww
+⽠	vwww
 㩳	vwwz
 𢳂	vwxe
 𲢊	vwxg
@@ -94128,7 +94128,7 @@ columns:
 𪮴	vzzp
 𢱺	vzzs
 搡	vzzy
-交	wa11
+交	waaa
 𭼸	waaf
 𰖽	waam
 𤷢	waay
@@ -94620,7 +94620,6 @@ columns:
 𧛙	wczh
 昲	wczr
 𤷵	wczs
-产	wd11
 癏	wdah
 𤵭	wdah
 𭦟	wdai
@@ -94651,6 +94650,7 @@ columns:
 𣋵	wdcy
 𤻲	wdcy
 𭦿	wdda
+产	wddd
 𣆿	wddi
 驷	wddm
 㿙	wddn
@@ -94844,8 +94844,6 @@ columns:
 𢿕	wdzv
 𢿜	wdzv
 𥀗	wdzz
-与	we11
-𘮍	we11
 𭦬	weaa
 㬣	weao
 𤻫	weao
@@ -94861,6 +94859,8 @@ columns:
 𭧗	wedo
 鶽	wedw
 𬷛	wedw
+与	weee
+𘮍	weee
 𰖮	weel
 𮷬	weer
 𣇣	wefh
@@ -94962,8 +94962,6 @@ columns:
 曇	weyv
 𣊯	weyv
 𣋔	wezf
-隹	wf11
-⾫	wf11
 𤶴	wfah
 𧘙	wfah
 𠗏	wfaj
@@ -95011,6 +95009,8 @@ columns:
 瘮	wffc
 𠗿	wffc
 𬽝	wffc
+隹	wfff
+⾫	wfff
 𤺑	wffg
 𤸾	wffh
 𮖠	wffh
@@ -95338,10 +95338,6 @@ columns:
 𤸱	wgyz
 𤼎	wgyz
 𬏴	wgzc
-公	wh11
-疒	wh11
-⽧	wh11
-𘰭	wh11
 驱	wham
 𣉚	whas
 𗇘	whbc
@@ -95423,6 +95419,10 @@ columns:
 𪙔	whgx
 𪚎	whgx
 𪗅	whgz
+公	whhh
+疒	whhh
+⽧	whhh
+𘰭	whhh
 𤺙	whhh
 𤼖	whhh
 𲀭	whhi
@@ -95531,7 +95531,6 @@ columns:
 𪱛	whzn
 𬂏	whzp
 臂	whzu
-黾	wi11
 㾦	wiah
 𧙰	wiah
 𠅚	wiaq
@@ -95572,6 +95571,7 @@ columns:
 𤸀	wihz
 𭂘	wihz
 𧝑	wiih
+黾	wiii
 𠅫	wiik
 𭺡	wija
 昻	wijf
@@ -95675,9 +95675,6 @@ columns:
 𠟘	wiyr
 𥁦	wiyz
 𮮺	wizf
-冫	wj11
-我	wj11
-⼎	wj11
 𧙦	wjah
 冿	wjaj
 𣊂	wjal
@@ -95727,6 +95724,9 @@ columns:
 𱢗	wjjf
 琞	wjjg
 𤼙	wjjh
+我	wjjj
+冫	wjjj
+⼎	wjjj
 痭	wjjs
 𮹊	wjjs
 𣇯	wjju
@@ -96059,9 +96059,6 @@ columns:
 盗	wkyz
 粢	wkzc
 痩	wkzn
-弋	wl11
-⼷	wl11
-𫠠	wl11
 𠗖	wlaj
 𲱘	wlak
 𣊳	wlax
@@ -96167,7 +96164,10 @@ columns:
 𳊶	wlld
 𲑅	wlle
 𭧮	wllh
+弋	wlll
+⼷	wlll
 𤸦	wlll
+𫠠	wlll
 𡣼	wllo
 𥏉	wllv
 𰐒	wllw
@@ -96260,9 +96260,6 @@ columns:
 昄	wlzn
 㽹	wlzn
 𫩇	wlzn
-马	wm11
-⻢	wm11
-𢎘	wm11
 暌	wmak
 骙	wmak
 𣉉	wmak
@@ -96328,6 +96325,9 @@ columns:
 𭯬	wmmg
 𭼹	wmmi
 𰖟	wmmi
+马	wmmm
+⻢	wmmm
+𢎘	wmmm
 𤼟	wmmm
 癭	wmmo
 𠾃	wmmp
@@ -96378,7 +96378,6 @@ columns:
 㫞	wmzn
 𤵟	wmzn
 𲱡	wmzs
-尹	wn11
 疔	wnah
 㓅	wnaj
 𣄿	wnar
@@ -96500,6 +96499,7 @@ columns:
 𤸤	wnnh
 飡	wnnj
 䬥	wnnl
+尹	wnnn
 𣈮	wnnr
 𣌐	wnoa
 𪧹	wnof
@@ -96823,7 +96823,6 @@ columns:
 𠟇	woyr
 𤸻	wozc
 𰣪	wozn
-象	wp11
 瘂	wpah
 𰖐	wpar
 㿏	wpas
@@ -96904,6 +96903,7 @@ columns:
 𭄧	wpos
 𥃐	wpoy
 𧚱	wpph
+象	wppp
 𬽅	wppr
 𱱡	wppr
 𲤔	wppr
@@ -97171,9 +97171,6 @@ columns:
 𣌓	wqyw
 𤼐	wqyw
 𬴐	wqyw
-日	wr11
-⽇	wr11
-𫩏	wr11
 㓈	wraj
 𪰒	wrar
 礕	wrau
@@ -97232,8 +97229,8 @@ columns:
 𗇎	wrof
 𤴻	wroh
 𳌖	wrom
-痸	wror
 㫼	wror
+痸	wror
 𣅤	wror
 𪰮	wror
 𭧙	wrpd
@@ -97245,7 +97242,10 @@ columns:
 㾾	wrqx
 𠗳	wrqx
 𲤲	wrqx
+日	wrrr
+⽇	wrrr
 𤻳	wrrr
+𫩏	wrrr
 㿊	wrrw
 𤵃	wrsh
 𤻞	wrsi
@@ -97556,7 +97556,6 @@ columns:
 亩	wtyw
 𠭇	wtzn
 𲤢	wtzs
-辟	wu11
 凑	wuak
 𣉅	wuak
 𱅋	wuam
@@ -97619,6 +97618,7 @@ columns:
 𣉛	wutn
 𣊵	wuui
 𰣻	wuur
+辟	wuuu
 𣌍	wuuu
 瘑	wuvh
 㾶	wuvh
@@ -97647,7 +97647,6 @@ columns:
 最	wuzn
 𭕁	wuzo
 𭞮	wuzv
-另	wv11
 𬏮	wvah
 䯄	wvam
 𬀳	wvar
@@ -97722,6 +97721,7 @@ columns:
 𤶩	wvuh
 𠗈	wvuj
 𤷹	wvvk
+另	wvvv
 𤺫	wvvv
 𬯴	wvwf
 㽿	wvwh
@@ -97732,9 +97732,6 @@ columns:
 㾹	wvyq
 𰕺	wvzn
 𣈓	wvzs
-亠	ww11
-⼇	ww11
-𘠙	ww11
 𤺁	wwag
 𤶀	wwah
 𱅐	wwam
@@ -97927,6 +97924,9 @@ columns:
 𤶓	wwwr
 𫦡	wwwr
 𬁬	wwwt
+亠	wwww
+⼇	wwww
+𘠙	wwww
 𣊫	wwww
 𣊭	wwww
 𪱈	wwww
@@ -98990,7 +98990,6 @@ columns:
 𗊩	xbzo
 𤒾	xbzx
 𩧙	xbzx
-各	xc11
 𧟯	xcab
 𩣱	xcac
 𪸷	xcac
@@ -99009,6 +99008,7 @@ columns:
 𩥅	xcbq
 𤌵	xcbs
 𤐶	xcby
+各	xccc
 𤋑	xccc
 𲫜	xccd
 𱄞	xcch
@@ -99150,7 +99150,6 @@ columns:
 𤔐	xczn
 𤊫	xczs
 𮩽	xczt
-甬	xd11
 圜	xdah
 𩦮	xdah
 𲬓	xdah
@@ -99178,6 +99177,7 @@ columns:
 𤓓	xdcw
 爍	xdcy
 𩧂	xdcy
+甬	xddd
 𰺴	xddf
 𭵡	xddr
 駟	xddt
@@ -99649,12 +99649,6 @@ columns:
 围	xfyt
 𪸒	xfzj
 𱫪	xfzn
-西	xg11
-覀	xg11
-襾	xg11
-⻃	xg11
-⻄	xg11
-⾑	xg11
 𤉫	xgak
 㷍	xgbl
 𗃙	xgbo
@@ -99680,6 +99674,12 @@ columns:
 𗃝	xgfp
 𗃗	xgfq
 𤘍	xgfw
+西	xggg
+覀	xggg
+襾	xggg
+⻃	xggg
+⻄	xggg
+⾑	xggg
 𱪧	xggp
 𩤊	xggw
 𪸶	xggw
@@ -99792,8 +99792,6 @@ columns:
 圔	xgyz
 𠥕	xgyz
 𤆿	xgzn
-牙	xh11
-⽛	xh11
 𦫒	xhai
 𘱰	xhal
 𬉼	xhal
@@ -99840,7 +99838,9 @@ columns:
 𣮠	xhgo
 𗃛	xhgv
 熾	xhgw
+牙	xhhh
 爞	xhhh
+⽛	xhhh
 𠥨	xhhh
 𤎠	xhhh
 𧓨	xhhh
@@ -99986,7 +99986,6 @@ columns:
 𪟬	xhzm
 𭽬	xhzs
 䭸	xhzt
-也	xi11
 焙	xial
 𤇤	xibi
 㶹	xibk
@@ -100017,6 +100016,7 @@ columns:
 駍	xiht
 𠁴	xiig
 𤕣	xiih
+也	xiii
 𱄡	xiio
 𱄵	xija
 㼧	xijd
@@ -100100,11 +100100,6 @@ columns:
 𤉾	xiyq
 𩤞	xiyq
 𩢇	xizn
-廿	xj11
-龷	xj11
-𘣗	xj11
-𘭣	xj11
-𠀎	xj11
 𤈠	xjal
 䮇	xjat
 𩦳	xjbh
@@ -100142,6 +100137,11 @@ columns:
 𡇜	xjit
 𰟢	xjiu
 騛	xjjf
+廿	xjjj
+龷	xjjj
+𘣗	xjjj
+𘭣	xjjj
+𠀎	xjjj
 𤌛	xjjj
 𩣒	xjjj
 焩	xjjs
@@ -100402,11 +100402,6 @@ columns:
 𤓃	xkyw
 𩣽	xkzc
 𮳡	xkzn
-灬	xl11
-火	xl11
-⺣	xl11
-⽕	xl11
-𘱪	xl11
 𤇃	xlai
 焀	xlal
 𩣥	xlat
@@ -100523,6 +100518,11 @@ columns:
 𤍣	xllc
 𩥜	xllh
 𩥨	xllh
+灬	xlll
+火	xlll
+⺣	xlll
+⽕	xlll
+𘱪	xlll
 𰄾	xllr
 𤈯	xlls
 𤍡	xlls
@@ -100603,13 +100603,6 @@ columns:
 𳌍	xlyz
 炍	xlzn
 𲋴	xlzn
-匚	xm11
-匸	xm11
-夫	xm11
-⼕	xm11
-⼖	xm11
-𘠈	xm11
-𠥓	xm11
 斠	xmad
 騤	xmak
 騣	xmas
@@ -100672,6 +100665,13 @@ columns:
 觏	xmlw
 𱂴	xmmg
 𭶘	xmml
+匚	xmmm
+夫	xmmm
+匸	xmmm
+⼕	xmmm
+⼖	xmmm
+𘠈	xmmm
+𠥓	xmmm
 𰰥	xmmr
 冓	xmnj
 𬊁	xmnl
@@ -100716,8 +100716,6 @@ columns:
 燈	xmxn
 𧰐	xmxn
 𤍝	xmzc
-豆	xn11
-⾖	xn11
 灯	xnal
 𪥃	xnam
 𰉑	xnas
@@ -100804,6 +100802,8 @@ columns:
 𮪖	xnna
 𤯠	xnnc
 𭷒	xnnh
+豆	xnnn
+⾖	xnnn
 𪯅	xnoi
 𱄶	xnoi
 𤎈	xnom
@@ -101033,7 +101033,6 @@ columns:
 𰞋	xozl
 𤆳	xozn
 𮩼	xozn
-妾	xp11
 𤐆	xpas
 𡈀	xpat
 𩤃	xpat
@@ -101142,6 +101141,7 @@ columns:
 𣋅	xpow
 𣂐	xppa
 𩦢	xppa
+妾	xppp
 駲	xppv
 𫭐	xppx
 𨕔	xpqd
@@ -101691,9 +101691,6 @@ columns:
 𭝾	xsyv
 𥁕	xsyz
 𩥾	xszl
-囗	xt11
-馬	xt11
-⾺	xt11
 𫘓	xtas
 𥜞	xtbb
 𤈓	xtbc
@@ -101827,6 +101824,9 @@ columns:
 𩧗	xtsx
 𭍫	xtth
 𩧄	xttm
+囗	xttt
+⾺	xttt
+馬	xttt
 熘	xtty
 䝀	xtty
 騮	xtty
@@ -101861,7 +101861,6 @@ columns:
 𰞗	xtyq
 𡇍	xtyt
 𠥌	xtzs
-相	xu11
 𤋷	xuak
 𪸥	xual
 駬	xuat
@@ -101936,6 +101935,7 @@ columns:
 𧠄	xuua
 𤏙	xuui
 𫧛	xuun
+相	xuuu
 㸎	xuuu
 䯀	xuuu
 𬋩	xuvb
@@ -102744,9 +102744,6 @@ columns:
 𨕉	xyzd
 𥁆	xyzh
 𬋪	xyzn
-𘠴	xz11
-𰀂	xz11
-𰀄	xz11
 𬳲	xzaa
 𱄜	xzbc
 𭴥	xzbf
@@ -102860,6 +102857,9 @@ columns:
 𳂃	xzzn
 䮣	xzzy
 𤌧	xzzy
+𘠴	xzzz
+𰀂	xzzz
+𰀄	xzzz
 𣞹	yaab
 𭭁	yaag
 𨷬	yaai
@@ -103192,10 +103192,6 @@ columns:
 𨵯	ybyz
 𨶂	ybyz
 𣠙	ybzx
-干	yc11
-⼲	yc11
-𘠨	yc11
-𘬃	yc11
 𣔭	ycac
 橽	ycad
 闥	ycad
@@ -103221,6 +103217,10 @@ columns:
 檺	ycby
 𬤾	ycby
 𱤘	ycby
+干	yccc
+⼲	yccc
+𘠨	yccc
+𘬃	yccc
 𢒡	yccd
 𨴸	yccd
 檵	ycch
@@ -103388,7 +103388,6 @@ columns:
 𣔡	yczs
 𠄴	yczv
 𫬽	yczy
-直	yd11
 𬄖	ydaa
 𣟳	ydad
 𬃫	ydae
@@ -103420,6 +103419,7 @@ columns:
 欏	ydcw
 櫟	ydcy
 𠒩	ydda
+直	yddd
 𣖐	yddf
 𣡐	yddp
 柶	yddq
@@ -103639,7 +103639,6 @@ columns:
 𣝣	ydzo
 杛	ydzq
 𩰦	ydzz
-奂	ye11
 𭋧	yeaa
 𣞧	yeab
 樄	yeai
@@ -103662,6 +103661,7 @@ columns:
 𨶘	yeec
 㰐	yeed
 𣟙	yeed
+奂	yeee
 𣗕	yeef
 椭	yeeh
 橢	yeeh
@@ -103792,7 +103792,6 @@ columns:
 橒	yeyv
 𭬋	yezf
 𰃕	yezf
-光	yf11
 𲦂	yfaq
 梭	yfas
 𨉖	yfaz
@@ -103813,6 +103812,7 @@ columns:
 杅	yfeo
 槮	yffc
 𣚎	yffc
+光	yfff
 𣚈	yffg
 𭀨	yffi
 𥈸	yffm
@@ -105427,8 +105427,6 @@ columns:
 𠸅	ynzn
 𪞆	ynzz
 𱤝	ynzz
-吅	yo11
-吕	yo11
 斝	yoad
 𠒽	yoai
 𪳚	yoai
@@ -105528,6 +105526,8 @@ columns:
 𮤊	yoof
 𨵓	yoog
 𧦸	yook
+吕	yooo
+吅	yooo
 䑝	yooo
 𪳱	yooo
 桝	yooq
@@ -105606,8 +105606,6 @@ columns:
 𫪠	yozk
 𭩯	yozn
 𬂩	yozq
-甘	yp11
-⽢	yp11
 椏	ypaq
 𣜘	ypas
 樝	ypaw
@@ -105684,6 +105682,8 @@ columns:
 𬃃	ypon
 𰘀	ypos
 𣚛	ypou
+甘	yppp
+⽢	yppp
 栦	yppv
 喌	yppv
 棹	ypqf
@@ -105762,12 +105762,6 @@ columns:
 匘	ypzh
 栌	ypzk
 𭬍	ypzo
-木	yq11
-朩	yq11
-⽊	yq11
-㝳	yq11
-𘭆	yq11
-𣎳	yq11
 㮱	yqae
 𬃾	yqag
 椷	yqak
@@ -105954,7 +105948,13 @@ columns:
 𣚉	yqqg
 𱣏	yqqi
 樱	yqqo
+木	yqqq
+朩	yqqq
+⽊	yqqq
+㝳	yqqq
 榋	yqqq
+𘭆	yqqq
+𣎳	yqqq
 𰿞	yqrj
 𱣐	yqrj
 𣙷	yqrq
@@ -106063,7 +106063,6 @@ columns:
 𲦿	yqzo
 𣞷	yqzv
 𱤔	yqzz
-𣎆	yr11
 𣚞	yrao
 柘	yraq
 𱣆	yraq
@@ -106158,6 +106157,7 @@ columns:
 𣠟	yrrg
 椡	yrrj
 㰁	yrrr
+𣎆	yrrr
 橬	yrrw
 𤑽	yrrx
 檷	yrsi
@@ -106202,10 +106202,6 @@ columns:
 𥂍	yryz
 𨵲	yryz
 𲦐	yrzz
-匕	ys11
-⼔	ys11
-𘠢	ys11
-𠤎	ys11
 𠒡	ysad
 𥊢	ysad
 㭻	ysaq
@@ -106284,7 +106280,11 @@ columns:
 𱣹	yspw
 𣕧	yspy
 𭩨	ysso
+匕	ysss
 栛	ysss
+⼔	ysss
+𘠢	ysss
+𠤎	ysss
 𭩳	ysss
 𣙟	yssu
 𰗠	yssu
@@ -106625,9 +106625,6 @@ columns:
 𳈁	yuzn
 𣜌	yuzq
 皶	yuzs
-云	yv11
-𠫓	yv11
-𠫔	yv11
 𣒌	yvaq
 𱣗	yvaq
 𢆨	yvca
@@ -106707,6 +106704,9 @@ columns:
 梂	yvuq
 𭫣	yvvj
 𬂸	yvvm
+云	yvvv
+𠫓	yvvv
+𠫔	yvvv
 𣛚	yvvv
 𪴒	yvvv
 㰑	yvvy
@@ -106915,8 +106915,6 @@ columns:
 𨵷	ywyz
 𪳑	ywzc
 櫅	ywzp
-非	yx11
-⾮	yx11
 𣙞	yxad
 𨶜	yxad
 𲦡	yxaf
@@ -107094,6 +107092,8 @@ columns:
 橯	yxxs
 𩣎	yxxt
 𣚽	yxxw
+非	yxxx
+⾮	yxxx
 𱤙	yxxx
 櫿	yxxy
 𠓐	yxxy
@@ -107305,12 +107305,6 @@ columns:
 𬐤	yyzx
 闁	yyzz
 𲈨	yyzz
-皿	yz11
-門	yz11
-⽫	yz11
-⾨	yz11
-⾾	yz11
-鬥	yz11
 𱤥	yzad
 𣕋	yzah
 𭏷	yzbc
@@ -107421,8 +107415,8 @@ columns:
 柅	yzys
 𣜖	yzza
 𢍫	yzzc
-棳	yzzg
 䦤	yzzg
+棳	yzzg
 𣑚	yzzg
 𣐺	yzzk
 𲦌	yzzk
@@ -107430,6 +107424,12 @@ columns:
 𣟗	yzzq
 𣜗	yzzs
 槡	yzzy
+皿	yzzz
+⽫	yzzz
+⾨	yzzz
+⾾	yzzz
+門	yzzz
+鬥	yzzz
 羼	zaaa
 𮟨	zaad
 𪟊	zaaj
@@ -107639,15 +107639,15 @@ columns:
 𠭣	zbzn
 𭰇	zbzn
 𤿴	zbzs
-米	zc11
-⽶	zc11
-𘱵	zc11
-𠂭	zc11
 㿹	zcad
 𪨡	zcah
 𥺙	zcas
 𢑛	zcbk
 𮇷	zcbq
+米	zccc
+⽶	zccc
+𘱵	zccc
+𠂭	zccc
 𥽖	zcch
 𥻺	zccn
 𠬾	zccp
@@ -107866,7 +107866,6 @@ columns:
 𲎊	zeyh
 𥾂	zeyl
 𬐺	zeyy
-电	zf11
 𰿰	zfai
 𡱥	zfas
 𦎨	zfas
@@ -107888,6 +107887,7 @@ columns:
 𮟿	zfer
 𥌙	zffb
 糝	zffc
+电	zfff
 𮇋	zffi
 𭕼	zffj
 𭮮	zffn
@@ -107996,7 +107996,6 @@ columns:
 𡳻	zfzf
 𬛭	zfzf
 𢍳	zfzq
-双	zg11
 𫯨	zgak
 𡲤	zgaw
 𡳳	zgaw
@@ -108028,6 +108027,7 @@ columns:
 𡳒	zgfm
 𱛂	zgfw
 𨘘	zggd
+双	zggg
 𡲨	zggk
 𲨎	zggo
 𪑐	zggp
@@ -108144,9 +108144,6 @@ columns:
 𫸡	zgzq
 𪯚	zgzv
 𡲋	zgzz
-囱	zh11
-囟	zh11
-卤	zh11
 𘲝	zhan
 𭕬	zhas
 𮇟	zhbc
@@ -108184,6 +108181,9 @@ columns:
 𱲀	zhgp
 𡱧	zhgt
 𭕝	zhhe
+囱	zhhh
+囟	zhhh
+卤	zhhh
 𫊫	zhhk
 𥹴	zhhl
 𪨏	zhhl
@@ -108285,8 +108285,6 @@ columns:
 𡲿	zhzl
 𮌳	zhzv
 𪠪	zhzz
-门	zi11
-⻔	zi11
 𮸦	ziai
 𱸴	zidc
 迳	zidf
@@ -108303,6 +108301,8 @@ columns:
 㞡	ziih
 𧖉	ziih
 𧖏	ziih
+门	ziii
+⻔	ziii
 𱰋	zijc
 𪠂	zijf
 𰢦	zijp
@@ -108340,9 +108340,6 @@ columns:
 𮇴	zixw
 𥺍	ziyc
 𡲝	zizl
-彑	zj11
-芒	zj11
-⺔	zj11
 𥹧	zjac
 𫵬	zjba
 㞚	zjbq
@@ -108358,6 +108355,9 @@ columns:
 𲀷	zjhi
 𥾃	zjhk
 𥽸	zjjc
+芒	zjjj
+彑	zjjj
+⺔	zjjj
 𮇧	zjjs
 𰿱	zjjs
 𱯢	zjjv
@@ -108410,11 +108410,6 @@ columns:
 𤿇	zjzs
 𠞪	zjzv
 𬖷	zjzw
-尸	zk11
-⼫	zk11
-𠁣	zk11
-𠃛	zk11
-𠃜	zk11
 闺	zkai
 𰆻	zkan
 𥺒	zkbi
@@ -108445,6 +108440,11 @@ columns:
 𠁈	zkjh
 𥼕	zkjk
 𣪍	zkkf
+尸	zkkk
+⼫	zkkk
+𠁣	zkkk
+𠃛	zkkk
+𠃜	zkkk
 𭂶	zkkp
 𩪔	zkku
 𮨔	zkld
@@ -108638,8 +108638,8 @@ columns:
 蚤	zmhk
 𨩹	zmil
 𮤳	zmiv
-阆	zmix
 粮	zmix
+阆	zmix
 阔	zmji
 𮇹	zmjy
 粖	zmkc
@@ -108695,10 +108695,6 @@ columns:
 𰍷	zmzk
 𲷂	zmzn
 𬻼	zmzw
-又	zn11
-龴	zn11
-⼜	zn11
-𘲛	zn11
 𥸧	znac
 𮤫	znai
 𡰨	znak
@@ -108735,6 +108731,10 @@ columns:
 𮇯	znnc
 䬤	znnk
 𲏄	znnm
+又	znnn
+⼜	znnn
+龴	znnn
+𘲛	znnn
 𲷑	znot
 𮇕	znpr
 𮸥	znpr
@@ -108887,7 +108887,6 @@ columns:
 𢑷	zoxs
 𥼨	zozc
 𬖗	zozn
-娄	zp11
 𥺼	zpac
 𡱻	zpak
 𡳆	zpaw
@@ -108929,6 +108928,7 @@ columns:
 𥻱	zpml
 𲲋	zpmv
 𱡡	zpov
+娄	zppp
 𬖧	zppz
 𣀱	zpqv
 𬖏	zprc
@@ -109035,10 +109035,6 @@ columns:
 𥻒	zqzc
 𰫖	zqzh
 𢻍	zqzo
-丅	zr11
-丆	zr11
-𘠌	zr11
-𘠍	zr11
 𫂹	zrac
 𥙳	zrah
 𰧑	zrav
@@ -109100,6 +109096,10 @@ columns:
 𥻧	zrqx
 𣪫	zrrf
 剭	zrrj
+丅	zrrr
+丆	zrrr
+𘠌	zrrr
+𘠍	zrrr
 糣	zrrw
 𤘩	zrsg
 𥘱	zrsg
@@ -109118,8 +109118,6 @@ columns:
 𡳥	zrwe
 𣒮	zryc
 𭕠	zryk
-皮	zs11
-⽪	zs11
 䊑	zsac
 𱹚	zsbd
 𥹾	zsbp
@@ -109154,6 +109152,8 @@ columns:
 刷	zsrj
 𠛚	zsrj
 𰆷	zsrj
+皮	zsss
+⽪	zsss
 𠮇	zsss
 𥺢	zsty
 𥼽	zsty
@@ -109325,7 +109325,6 @@ columns:
 𱹔	zuzg
 𡱾	zuzn
 𫃂	zuzn
-敖	zv11
 𬖛	zvac
 𫔱	zvai
 𮇞	zvcc
@@ -109390,6 +109389,7 @@ columns:
 𲷕	zvvi
 𭣧	zvvj
 𭕙	zvvl
+敖	zvvv
 𱰆	zvwp
 𰪱	zvzn
 𥹜	zwac
@@ -109473,9 +109473,6 @@ columns:
 𫜊	zwyz
 𥻬	zwzn
 𰫕	zwzp
-长	zx11
-⻓	zx11
-𘬷	zx11
 𣣻	zxak
 𩔞	zxal
 𮇳	zxam
@@ -109556,6 +109553,9 @@ columns:
 䊏	zxxl
 𡳉	zxxs
 𫃑	zxxs
+长	zxxx
+⻓	zxxx
+𘬷	zxxx
 𥽒	zxxy
 阃	zxyq
 𲷇	zxyq
