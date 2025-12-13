@@ -251,7 +251,7 @@ ll:
       - type: radio
         names: [ charset.all, charset.freqly ]
         states: [ "□全CJK字集: 无过滤", "■常用字集: 过滤非常用字" ]
-    emoji:
+    emo:
       - type: switch
         name: emoji
         states: [ "Emoji: 停用", "Emoji: 启用" ]
