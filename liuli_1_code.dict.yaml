@@ -3,7 +3,7 @@
 
 ---
 name: liuli_1_code
-version: v202512131657
+version: v202512132012
 sort: original
 columns:
   - text
@@ -52,7 +52,7 @@ columns:
 #----------一简----------#
 在	a1
 水	b1
-看	c1
+地	c1
 的	d1
 有	e1
 一	f1

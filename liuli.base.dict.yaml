@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512131657
+version: v202512132012
 sort: original
 import_tables:
 columns:
@@ -19,9 +19,9 @@ columns:
 水	b1	1000000	b1
 》	b2	100000	b2
 落	b3	50000	b3
-看	c1	1000000	c1
+地	c1	1000000	c1
 】	c2	100000	c2
-自己的	c3	50000	c3
+看	c3	50000	c3
 的	d1	1000000	d1
 、	d2	100000	d2
 的时候	d3	50000	d3
@@ -1789,7 +1789,7 @@ columns:
 墵	cey	0
 緕	cey	0
 繧	cey	0
-看	cf1	1000000	cf1
+看	cf1	50000	cf1
 爰	cfa	79
 垿	cfa	2
 壙	cfa	0
@@ -1819,7 +1819,7 @@ columns:
 埃	cfl	7038
 湯	cfl	0
 緉	cfl	0
-看	cfm	10	c1
+看	cfm	10	c3
 坄	cfn	0
 毃	cfn	0
 塮	cfo	0
@@ -2464,7 +2464,7 @@ columns:
 縄	cwz	8
 縵	cwz	0
 繓	cwz	0
-地	cx1	309376	cx1
+地	cx1	1000000	cx1
 墴	cxa	0
 垎	cxc	19
 堙	cxc	9
@@ -2482,7 +2482,7 @@ columns:
 螫	cxh	22
 紲	cxh	0
 赨	cxh	0
-地	cxi	10	cx1
+地	cxi	10	c1
 赥	cxk	0
 赤	cxl	4752
 烎	cxl	4
