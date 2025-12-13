@@ -1,403 +1,782 @@
-local schema_name = "💎琉璃"
-local software_name = rime_api.get_distribution_code_name() or ""
-local software_version = rime_api.get_distribution_version() or ""
--- 合并平台名称和版本信息
-local platform_info = software_name
-if software_version ~= "" then
-    platform_info = platform_info .. " " .. software_version
-end
+-- 卡壳时间门限(单位：s)，当上屏的字/词距离前一次上屏时间大于该门限时，该字/词被记录为生字/词组数据
+local boggleThd_s = 5
+-- 在提交修改时，记录的码长做 + codeLenOffset 处理；如果你每个字需要选字或者空格上屏，则此处的1即表示一个空格的码长
+local codeLenOffset = 1
+-- 如果你想在平均码长后加以说明，请在这里自定义你的说明内容，可以使用 \n 换行
+local avgCodeLenDesc = '〔含空格〕'
+-- 定义字词分布进度条填充字符，例如你可以使用 ▉/━/● 来表示
+local progressBarField_word = '▉'
+-- 定义字词分布进度条空白字符，例如你可以使用 ▁/┄/▓ 来表示
+local progressBarEmpty_word = '▁'
+-- 定义码长分布进度条填充字符，例如你可以使用 ▉/━/● 来表示
+local progressBarField_code = '▉'
+-- 定义码长分布进度条空白字符，例如你可以使用 ▁/┄/▓ 来表示
+local progressBarEmpty_code = '▁'
 
--- 初始化统计表
+-- 分配一个变量，用于字符串拼接
+local strTable = {}
+-- 分隔线
+local splitor = string.rep("─", 14)
+
+-- 下面的信息是自动获取的
+local software_name = rime_api.get_distribution_code_name()
+local software_version = rime_api.get_distribution_version()
+
+-- 一个数据结构体，用于处理平均速度统计临时数据
+avgSpdInfo = {logSts = 0,		-- 统计状态，0：未统计，1:正在统计，2:统计结束
+				startTime=0,	-- 如果正在记录，这里是开始的时间
+				clickTime = 0,	-- 上次按键时间，通过记录按键间隔，判断是否输入超时
+				commitTime=0,	-- 这是最近一次上屏的时间
+				gapThd=5,		-- 如果此次按键距离前一次按键的时间大于此门限值，则重新开始计时
+				count=0			-- 记录期间，上屏的字数
+				}
+
+-- 初始化统计表（若未加载）
 input_stats = input_stats or {
-    daily = {count = 0, length = 0, fastest = 0, ts = 0},
-    weekly = {count = 0, length = 0, fastest = 0, ts = 0},
-    monthly = {count = 0, length = 0, fastest = 0, ts = 0},
-    yearly = {count = 0, length = 0, fastest = 0, ts = 0},
-    lengths = {},
-    daily_max = 0,
-    recent = {}
+	daily = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+	weekly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+	monthly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+	yearly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+	daily_max = 0,
+	newWords = {}
 }
 
--- 时间计算函数
-local function get_time_ts(unit, now)
-    if unit == "day" then
-        return os.time{year=now.year, month=now.month, day=now.day, hour=0}
-    elseif unit == "week" then
-        local d = now.wday == 1 and 6 or (now.wday - 2)
-        return os.time{year=now.year, month=now.month, day=now.day - d, hour=0}
-    elseif unit == "month" then
-        return os.time{year=now.year, month=now.month, day=1, hour=0}
-    else -- year
-        return os.time{year=now.year, month=1, day=1, hour=0}
-    end
+-- 定义一个求和函数，用于求取一个table内的数字的和
+local function tableSum(tb)
+	local sum = 0
+	for i=1, #tb do
+		sum = sum + tb[i]
+	end
+	return sum
 end
 
--- 判断统计命令
-local function is_summary_command(text)
-    return text == "/rtj" or text == "/ztj" or text == "/ytj" or text == "/ntj" 
-        or text == "/tj" or text == "/tjql" or text == "/st" or text == "/en"
+-- 定义一个求和函数，用于求取一个table内尾部指定数量项的和
+local function tableTailSum(tb,n)
+	if type(tb) ~= "table" then return 0 end
+    local len = #tb
+	local n = tonumber(n) or 0  -- 非数字转 0
+	if n < 1 or len < 1 then return 0 end
+	
+	local sum = 0
+	local takeCount = math.min(n, len)
+	for i = 1, takeCount do
+        sum = sum + (tb[len - takeCount + i] or 0)
+    end
+	return sum
+end
+
+-- 根据传入的百分比，生成一个进度条
+local function progressBar_code(p)
+	if p >= 95.0 then return string.rep(progressBarField_code, 10) end
+	if p >= 85.0 then return string.rep(progressBarField_code, 9)..string.rep(progressBarEmpty_code, 1) end
+	if p >= 75.0 then return string.rep(progressBarField_code, 8)..string.rep(progressBarEmpty_code, 2) end
+	if p >= 65.0 then return string.rep(progressBarField_code, 7)..string.rep(progressBarEmpty_code, 3) end
+	if p >= 55.0 then return string.rep(progressBarField_code, 6)..string.rep(progressBarEmpty_code, 4) end
+	if p >= 45.0 then return string.rep(progressBarField_code, 5)..string.rep(progressBarEmpty_code, 5) end
+	if p >= 35.0 then return string.rep(progressBarField_code, 4)..string.rep(progressBarEmpty_code, 6) end
+	if p >= 25.0 then return string.rep(progressBarField_code, 3)..string.rep(progressBarEmpty_code, 7) end
+	if p >= 15.0 then return string.rep(progressBarField_code, 2)..string.rep(progressBarEmpty_code, 8) end
+	if p >= 5.0 then return string.rep(progressBarField_code, 1)..string.rep(progressBarEmpty_code, 9) end
+	return string.rep(progressBarEmpty_code, 10)
+end
+
+local function progressBar_word(p)
+	if p >= 95.0 then return string.rep(progressBarField_word, 10) end
+	if p >= 85.0 then return string.rep(progressBarField_word, 9)..string.rep(progressBarEmpty_word, 1) end
+	if p >= 75.0 then return string.rep(progressBarField_word, 8)..string.rep(progressBarEmpty_word, 2) end
+	if p >= 65.0 then return string.rep(progressBarField_word, 7)..string.rep(progressBarEmpty_word, 3) end
+	if p >= 55.0 then return string.rep(progressBarField_word, 6)..string.rep(progressBarEmpty_word, 4) end
+	if p >= 45.0 then return string.rep(progressBarField_word, 5)..string.rep(progressBarEmpty_word, 5) end
+	if p >= 35.0 then return string.rep(progressBarField_word, 4)..string.rep(progressBarEmpty_word, 6) end
+	if p >= 25.0 then return string.rep(progressBarField_word, 3)..string.rep(progressBarEmpty_word, 7) end
+	if p >= 15.0 then return string.rep(progressBarField_word, 2)..string.rep(progressBarEmpty_word, 8) end
+	if p >= 5.0 then return string.rep(progressBarField_word, 1)..string.rep(progressBarEmpty_word, 9) end
+	return string.rep(progressBarEmpty_word, 10)
+end
+
+-- 时间戳工具函数
+local function start_of_day(t)
+	return os.time{year=t.year, month=t.month, day=t.day, hour=0}
+end
+local function start_of_week(t)
+	local d = t.wday == 1 and 6 or (t.wday - 2)
+	return os.time{year=t.year, month=t.month, day=t.day - d, hour=0}
+end
+local function start_of_month(t)
+	return os.time{year=t.year, month=t.month, day=1, hour=0}
+end
+local function start_of_year(t)
+	return os.time{year=t.year, month=1, day=1, hour=0}
 end
 
 -- 更新统计数据
-local function update_stats(input_length)
-    local now = os.date("*t")
-    local now_ts = os.time(now)
+local function update_stats(input_length, codeLen, avgAvailable)
+	local now = os.date("*t")
+	local now_ts = os.time(now)
 
-    -- 一次性计算所有时间戳
-    local time_ts = {
-        day = get_time_ts("day", now),
-        week = get_time_ts("week", now),
-        month = get_time_ts("month", now),
-        year = get_time_ts("year", now)
-    }
+	local day_ts = start_of_day(now)
+	local week_ts = start_of_week(now)
+	local month_ts = start_of_month(now)
+	local year_ts = start_of_year(now)
 
-    -- 使用局部变量减少表查找
-    local daily = input_stats.daily
-    local weekly = input_stats.weekly
-    local monthly = input_stats.monthly
-    local yearly = input_stats.yearly
+	if input_stats.daily.ts ~= day_ts then
+		input_stats.daily = {count = 0, length = 0, fastest = 0, ts = day_ts, lengths = {}, codeLengths = {}, avgGaps={}, avgCnts={}}
+		input_stats.daily_max = 0
+	end
+	if input_stats.weekly.ts ~= week_ts then
+		input_stats.weekly = {count = 0, length = 0, fastest = 0, ts = week_ts, lengths = {}, codeLengths = {}, avgGaps={}, avgCnts={}}
+	end
+	if input_stats.monthly.ts ~= month_ts then
+		input_stats.monthly = {count = 0, length = 0, fastest = 0, ts = month_ts, lengths = {}, codeLengths = {}, avgGaps={}, avgCnts={}}
+	end
+	if input_stats.yearly.ts ~= year_ts then
+		input_stats.yearly = {count = 0, length = 0, fastest = 0, ts = year_ts, lengths = {}, codeLengths = {}, avgGaps={}, avgCnts={}}
+	end
+	
+	-- 更新平均分速统计数据
+	if 1 == avgAvailable then
+		local delt = avgSpdInfo.commitTime - avgSpdInfo.startTime
+		table.insert(input_stats.daily.avgGaps, delt)
+		table.insert(input_stats.weekly.avgGaps, delt)
+		table.insert(input_stats.monthly.avgGaps, delt)
+		table.insert(input_stats.yearly.avgGaps, delt)
+		table.insert(input_stats.daily.avgCnts, avgSpdInfo.count)
+		table.insert(input_stats.weekly.avgCnts, avgSpdInfo.count)
+		table.insert(input_stats.monthly.avgCnts, avgSpdInfo.count)
+		table.insert(input_stats.yearly.avgCnts, avgSpdInfo.count)
+		
+		-- 最后累计10s的提交数据，计算平均速度做为最大分速的参考
+		local latestGapsSum = 0
+		local latestCntsSum = 0
+		local latestSpd = 0
+		local len = #input_stats.daily.avgGaps
+		for i=0,len - 1 do
+			latestGapsSum = latestGapsSum + input_stats.daily.avgGaps[len - i]
+			latestCntsSum = latestCntsSum + input_stats.daily.avgCnts[len - i]
+			if latestGapsSum >= 10 then  -- 最后10s的平均速度做为瞬时速度
+				break
+			end
+		end
+		if latestGapsSum >= 10 then	-- 如果数据的时长小于10s，则不计算最大速度，避免瞬时偏差过大
+			latestSpd = latestCntsSum / latestGapsSum * 60
+			
+			-- 更新最大分速值
+			if latestSpd > input_stats.daily.fastest then input_stats.daily.fastest = latestSpd end
+			if latestSpd > input_stats.weekly.fastest then input_stats.weekly.fastest = latestSpd end
+			if latestSpd > input_stats.monthly.fastest then input_stats.monthly.fastest = latestSpd end
+			if latestSpd > input_stats.yearly.fastest then input_stats.yearly.fastest = latestSpd end
+		end
+	end
+	
+	-- 如果输入字/词长度小于1（即为空），则不做后续的处理
+	if input_length < 1 then return end
 
-    if daily.ts ~= time_ts.day then
-        daily.count, daily.length, daily.fastest = 0, 0, 0
-        daily.ts = time_ts.day
-        input_stats.daily_max = 0
-        input_stats.recent = {}
-    end
-    if weekly.ts ~= time_ts.week then
-        weekly.count, weekly.length, weekly.fastest = 0, 0, 0
-        weekly.ts = time_ts.week
-    end
-    if monthly.ts ~= time_ts.month then
-        monthly.count, monthly.length, monthly.fastest = 0, 0, 0
-        monthly.ts = time_ts.month
-    end
-    if yearly.ts ~= time_ts.year then
-        yearly.count, yearly.length, yearly.fastest = 0, 0, 0
-        yearly.ts = time_ts.year
-    end
+	-- 更新记录
+	local update = function(stat)
+		stat.count = stat.count + 1
+		stat.length = stat.length + input_length
+	end
+	update(input_stats.daily)
+	update(input_stats.weekly)
+	update(input_stats.monthly)
+	update(input_stats.yearly)
 
-    -- 更新统计记录
-    daily.count = daily.count + 1
-    daily.length = daily.length + input_length
-    weekly.count = weekly.count + 1
-    weekly.length = weekly.length + input_length
-    monthly.count = monthly.count + 1
-    monthly.length = monthly.length + input_length
-    yearly.count = yearly.count + 1
-    yearly.length = yearly.length + input_length
-
-    if input_length > input_stats.daily_max then
-        input_stats.daily_max = input_length
-    end
-
-    input_stats.lengths[input_length] = (input_stats.lengths[input_length] or 0) + 1
-
-    -- 最近一分钟统计
-    local ts = os.time()
-    local recent = input_stats.recent
-    table.insert(recent, {ts = ts, len = input_length})
-    
-    local threshold = ts - 60
-    local total = 0
-    local i = 1
-    
-    while i <= #recent do
-        if recent[i].ts >= threshold then
-            total = total + recent[i].len
-            i = i + 1
-        else
-            table.remove(recent, i)
-        end
-    end
-    
-    -- 更新最快记录
-    if total > daily.fastest then daily.fastest = total end
-    if total > weekly.fastest then weekly.fastest = total end
-    if total > monthly.fastest then monthly.fastest = total end
-    if total > yearly.fastest then yearly.fastest = total end
+	if input_length > input_stats.daily_max then
+		input_stats.daily_max = input_length
+	end
+	
+	-- 更新输入字/词组数据
+	input_stats.daily.lengths[input_length] = (input_stats.daily.lengths[input_length] or 0) + 1
+	input_stats.weekly.lengths[input_length] = (input_stats.weekly.lengths[input_length] or 0) + 1
+	input_stats.monthly.lengths[input_length] = (input_stats.monthly.lengths[input_length] or 0) + 1
+	input_stats.yearly.lengths[input_length] = (input_stats.yearly.lengths[input_length] or 0) + 1
+	
+	-- 更新输入码长数据
+	input_stats.daily.codeLengths[codeLen] = (input_stats.daily.codeLengths[codeLen] or 0) + 1
+	input_stats.weekly.codeLengths[codeLen] = (input_stats.weekly.codeLengths[codeLen] or 0) + 1
+	input_stats.monthly.codeLengths[codeLen] = (input_stats.monthly.codeLengths[codeLen] or 0) + 1
+	input_stats.yearly.codeLengths[codeLen] = (input_stats.yearly.codeLengths[codeLen] or 0) + 1
 end
 
--- 表序列化工具
+-- 表序列化工具（请自行根据实际添加到环境中）
 table.serialize = function(tbl)
-    local lines = {"{"}
-    for k, v in pairs(tbl) do
-        local key = (type(k) == "string") and ("[\"" .. k .. "\"]") or ("[" .. k .. "]")
-        local val
-        if type(v) == "table" then
-            val = table.serialize(v)
-        elseif type(v) == "string" then
-            val = '"' .. v .. '"'
-        else
-            val = tostring(v)
-        end
-        table.insert(lines, string.format("    %s = %s,", key, val))
-    end
-    table.insert(lines, "}")
-    return table.concat(lines, "\n")
+	local lines = {"{"}
+	for k, v in pairs(tbl) do
+		local key = (type(k) == "string") and ("[\"" .. k .. "\"]") or ("[" .. k .. "]")
+		local val
+		if type(v) == "table" then
+			val = table.serialize(v)
+		elseif type(v) == "string" then
+			val = '"' .. v .. '"'
+		else
+			val = tostring(v)
+		end
+		table.insert(lines, string.format("	%s = %s,", key, val))
+	end
+	table.insert(lines, "}")
+	return table.concat(lines, "\n")
 end
 
--- 保存统计到文件
-local function save_stats()
-    local path = rime_api.get_user_data_dir() .. "/lua/input_stats.lua"
-    local file = io.open(path, "w")
-    if not file then return end
-    file:write("input_stats = " .. table.serialize(input_stats) .. "\n")
-    file:close()
+-- 保存至文件
+local function save_stats(schema_id)
+	local path = rime_api.get_user_data_dir() .. "/lua/input_stats_"..schema_id..".lua"
+	local file = io.open(path, "w")
+	if not file then return end
+	file:write("input_stats = " .. table.serialize(input_stats) .. "\n")
+	file:close()
 end
 
--- 通用的统计格式化函数
-local function format_summary(period, stats, extra)
-    if stats.count == 0 then 
-        return string.format("※ %s没有任何记录。", period)
-    end
-    
-    local lines = {
-        string.format("◉ %s", period),
-        string.format("共上屏[%d]次", stats.count),
-        string.format("共输入[%d]字", stats.length),
-        string.format("最快一分钟输入了[%d]字", stats.fastest)
-    }
-    
-    if extra then
-        table.insert(lines, extra)
-    end
-    
-    return table.concat(lines, "\n")
-end
-
--- 日统计报告
+-- 显示函数（日统计）
 local function format_daily_summary()
-    return format_summary("今天", input_stats.daily)
+	local s = input_stats.daily
+	if s.count == 0 then return "※ 今天没有任何记录。" end
+	
+	-- 记录最大值
+	local fastest = s.fastest
+	
+	-- 统计各类输入组合的占比
+	local val1 = s.lengths[1] or 0  -- 防止索引不存在时报错，默认0
+	local val2 = (s.lengths[2] or 0) * 2
+	local val3 = 0
+	local total = 0		-- 总字数
+	for key, value in pairs(s.lengths) do
+		total = total + key * value  -- 累加所有值
+	end
+	if total == 0 then total = 1 end  -- 防止除以0报错
+	val3 = total - val1 - val2
+	local ratio1 = (val1 / total) * 100
+	local ratio2 = (val2 / total) * 100
+	local ratio3 = (val3 / total) * 100
+	
+	-- 统计码长的占比（分类为：频率最高的3种码长，和其它码长）
+	local codeTable_sorted = {}
+	local totalCodeLen = 0	-- 总码长
+	local totalCodeCnt = 0	-- 总码数
+	local codeTypeCnt = 0	-- 码长的种类数量
+	for k,v in pairs(s.codeLengths) do
+		totalCodeLen = totalCodeLen + v * k
+		totalCodeCnt = totalCodeCnt + v
+		codeTypeCnt = codeTypeCnt + 1
+		table.insert(codeTable_sorted, {clen=k,count=v})
+	end
+	table.sort(codeTable_sorted, function(a,b)
+		return a.count > b.count
+		end)
+	if totalCodeCnt == 0 then totalCodeCnt = 1 end	-- 防止除以0报错
+	local codeTableFirstN = {}
+	local ratioSumOfFirstN = 0
+	for i = 1, 3 do
+		if i <= codeTypeCnt then
+			codeTableFirstN[i] = {codeLen = codeTable_sorted[i].clen, ratio = codeTable_sorted[i].count / totalCodeCnt * 100}
+		else
+			codeTableFirstN[i] = {codeLen = 0, ratio=0}
+		end
+		ratioSumOfFirstN = ratioSumOfFirstN + codeTableFirstN[i].ratio
+	end
+	codeTableFirstN[4] = {codeLen = 0, ratio = 100 - ratioSumOfFirstN}
+	-- 计算平均码长
+	local avgCodeLen = totalCodeLen / total
+	
+	-- 计算平均分速
+	local avgV = tableSum(input_stats.daily.avgGaps)
+	if avgV > 1 then
+		avgV = tableSum(input_stats.daily.avgCnts) / avgV * 60
+		if avgV > fastest then fastest = avgV end
+	end
+	
+	strTable[1] = string.format('※ 日统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
+	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
+	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
+	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
+	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
+	if codeTableFirstN[1].ratio > 0 then
+		strTable[11] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[1].ratio), codeTableFirstN[1].codeLen, codeTableFirstN[1].ratio)
+	else
+		strTable[11] = ''
+	end
+	if codeTableFirstN[2].ratio > 0 then
+		strTable[12] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[2].ratio), codeTableFirstN[2].codeLen, codeTableFirstN[2].ratio)
+	else
+		strTable[12] = ''
+	end
+	if codeTableFirstN[3].ratio > 0 then
+		strTable[13] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[3].ratio), codeTableFirstN[3].codeLen, codeTableFirstN[3].ratio)
+	else
+		strTable[13] = ''
+	end
+	if codeTableFirstN[4].ratio > 0 then
+		strTable[14] = string.format('%s其它%.0f％', progressBar_code(codeTableFirstN[4].ratio), codeTableFirstN[4].ratio)
+	else
+		strTable[14] = ''
+	end
+
+	return table.concat(strTable, '\n')
 end
 
--- 周统计报告
+-- 显示函数（周统计）
 local function format_weekly_summary()
-    local extra = string.format("周内单日最多一次输入[%d]字", input_stats.daily_max)
-    return format_summary("本周", input_stats.weekly, extra)
+	local s = input_stats.weekly
+	if s.count == 0 then return "※ 本周没有任何记录。" end
+	
+	-- 记录最大值
+	local fastest = s.fastest
+	
+	-- 统计各类输入组合的占比
+	local val1 = s.lengths[1] or 0  -- 防止索引不存在时报错，默认0
+	local val2 = (s.lengths[2] or 0) * 2
+	local val3 = 0
+	local total = 0
+	for key, value in pairs(s.lengths) do
+		total = total + key * value  -- 累加所有值
+	end
+	if total == 0 then total = 1 end  -- 防止除以0报错
+	val3 = total - val1 - val2
+	local ratio1 = (val1 / total) * 100
+	local ratio2 = (val2 / total) * 100
+	local ratio3 = (val3 / total) * 100
+	
+	-- 统计码长的占比（分类为：频率最高的3种码长，和其它码长）
+	local codeTable_sorted = {}
+	local totalCodeLen = 0	-- 总码长
+	local totalCodeCnt = 0	-- 总码数
+	local codeTypeCnt = 0	-- 码长的种类数量
+	for k,v in pairs(s.codeLengths) do
+		totalCodeLen = totalCodeLen + v * k
+		totalCodeCnt = totalCodeCnt + v
+		codeTypeCnt = codeTypeCnt + 1
+		table.insert(codeTable_sorted, {clen=k,count=v})
+	end
+	table.sort(codeTable_sorted, function(a,b)
+		return a.count > b.count
+		end)
+	if totalCodeCnt == 0 then totalCodeCnt = 1 end	-- 防止除以0报错
+	local codeTableFirstN = {}
+	local ratioSumOfFirstN = 0
+	for i = 1, 3 do
+		if i <= codeTypeCnt then
+			codeTableFirstN[i] = {codeLen = codeTable_sorted[i].clen, ratio = codeTable_sorted[i].count / totalCodeCnt * 100}
+		else
+			codeTableFirstN[i] = {codeLen = 0, ratio=0}
+		end
+		ratioSumOfFirstN = ratioSumOfFirstN + codeTableFirstN[i].ratio
+	end
+	codeTableFirstN[4] = {codeLen = 0, ratio = 100 - ratioSumOfFirstN}
+	-- 计算平均码长
+	local avgCodeLen = totalCodeLen / total
+	
+	-- 计算平均分速
+	local avgV = tableSum(input_stats.weekly.avgGaps)
+	if avgV > 1 then
+		avgV = tableSum(input_stats.weekly.avgCnts) / avgV * 60
+		if avgV > fastest then fastest = avgV end
+	end
+	
+	strTable[1] = string.format('※ 周统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
+	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
+	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
+	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
+	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
+	if codeTableFirstN[1].ratio > 0 then
+		strTable[11] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[1].ratio), codeTableFirstN[1].codeLen, codeTableFirstN[1].ratio)
+	else
+		strTable[11] = ''
+	end
+	if codeTableFirstN[2].ratio > 0 then
+		strTable[12] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[2].ratio), codeTableFirstN[2].codeLen, codeTableFirstN[2].ratio)
+	else
+		strTable[12] = ''
+	end
+	if codeTableFirstN[3].ratio > 0 then
+		strTable[13] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[3].ratio), codeTableFirstN[3].codeLen, codeTableFirstN[3].ratio)
+	else
+		strTable[13] = ''
+	end
+	if codeTableFirstN[4].ratio > 0 then
+		strTable[14] = string.format('%s其它%.0f％', progressBar_code(codeTableFirstN[4].ratio), codeTableFirstN[4].ratio)
+	else
+		strTable[14] = ''
+	end
+	
+	return table.concat(strTable, '\n')
 end
 
--- 月统计报告
+-- 显示函数（月统计）
 local function format_monthly_summary()
-    return format_summary("本月", input_stats.monthly)
+	local s = input_stats.monthly
+	if s.count == 0 then return "※ 本月没有任何记录。" end
+	
+	-- 记录最大值
+	local fastest = s.fastest
+	
+	-- 统计各类输入组合的占比
+	local val1 = s.lengths[1] or 0  -- 防止索引不存在时报错，默认0
+	local val2 = (s.lengths[2] or 0) * 2
+	local val3 = 0
+	local total = 0
+	for key, value in pairs(s.lengths) do
+		total = total + key * value  -- 累加所有值
+	end
+	if total == 0 then total = 1 end  -- 防止除以0报错
+	val3 = total - val1 - val2
+	local ratio1 = (val1 / total) * 100
+	local ratio2 = (val2 / total) * 100
+	local ratio3 = (val3 / total) * 100
+	
+	-- 统计码长的占比（分类为：频率最高的3种码长，和其它码长）
+	local codeTable_sorted = {}
+	local totalCodeLen = 0	-- 总码长
+	local totalCodeCnt = 0	-- 总码数
+	local codeTypeCnt = 0	-- 码长的种类数量
+	for k,v in pairs(s.codeLengths) do
+		totalCodeLen = totalCodeLen + v * k
+		totalCodeCnt = totalCodeCnt + v
+		codeTypeCnt = codeTypeCnt + 1
+		table.insert(codeTable_sorted, {clen=k,count=v})
+	end
+	table.sort(codeTable_sorted, function(a,b)
+		return a.count > b.count
+		end)
+	if totalCodeCnt == 0 then totalCodeCnt = 1 end	-- 防止除以0报错
+	local codeTableFirstN = {}
+	local ratioSumOfFirstN = 0
+	for i = 1, 3 do
+		if i <= codeTypeCnt then
+			codeTableFirstN[i] = {codeLen = codeTable_sorted[i].clen, ratio = codeTable_sorted[i].count / totalCodeCnt * 100}
+		else
+			codeTableFirstN[i] = {codeLen = 0, ratio=0}
+		end
+		ratioSumOfFirstN = ratioSumOfFirstN + codeTableFirstN[i].ratio
+	end
+	codeTableFirstN[4] = {codeLen = 0, ratio = 100 - ratioSumOfFirstN}
+	-- 计算平均码长
+	local avgCodeLen = totalCodeLen / total
+	
+	-- 计算平均分速
+	local avgV = tableSum(input_stats.monthly.avgGaps)
+	if avgV > 1 then
+		avgV = tableSum(input_stats.monthly.avgCnts) / avgV * 60
+		if avgV > fastest then fastest = avgV end
+	end
+	
+	strTable[1] = string.format('※ 月统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
+	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
+	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
+	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
+	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
+	if codeTableFirstN[1].ratio > 0 then
+		strTable[11] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[1].ratio), codeTableFirstN[1].codeLen, codeTableFirstN[1].ratio)
+	else
+		strTable[11] = ''
+	end
+	if codeTableFirstN[2].ratio > 0 then
+		strTable[12] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[2].ratio), codeTableFirstN[2].codeLen, codeTableFirstN[2].ratio)
+	else
+		strTable[12] = ''
+	end
+	if codeTableFirstN[3].ratio > 0 then
+		strTable[13] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[3].ratio), codeTableFirstN[3].codeLen, codeTableFirstN[3].ratio)
+	else
+		strTable[13] = ''
+	end
+	if codeTableFirstN[4].ratio > 0 then
+		strTable[14] = string.format('%s其它%.0f％', progressBar_code(codeTableFirstN[4].ratio), codeTableFirstN[4].ratio)
+	else
+		strTable[14] = ''
+	end
+	
+	return table.concat(strTable, '\n')
 end
 
--- 年统计报告
+-- 显示函数（年统计）
 local function format_yearly_summary()
-    if input_stats.yearly.count == 0 then 
-        return "※ 本年没有任何记录。"
-    end
-    
-    local length_counts = {}
-    for length, count in pairs(input_stats.lengths) do
-        table.insert(length_counts, {length = length, count = count})
-    end
-    table.sort(length_counts, function(a, b) return a.count > b.count end)
-    local fav = length_counts[1] and length_counts[1].length or 0
-    
-    local extra = string.format("您最常输入长度为[%d]的词组", fav)
-    return format_summary("本年", input_stats.yearly, extra)
+	local s = input_stats.yearly
+	if s.count == 0 then return "※ 本年没有任何记录。" end
+	
+	-- 记录最大值
+	local fastest = s.fastest
+	
+	-- 统计各类输入组合的占比
+	local val1 = s.lengths[1] or 0  -- 防止索引不存在时报错，默认0
+	local val2 = (s.lengths[2] or 0) * 2
+	local val3 = 0
+	local total = 0
+	for key, value in pairs(s.lengths) do
+		total = total + key * value  -- 累加所有值
+	end
+	if total == 0 then total = 1 end  -- 防止除以0报错
+	val3 = total - val1 - val2
+	local ratio1 = (val1 / total) * 100
+	local ratio2 = (val2 / total) * 100
+	local ratio3 = (val3 / total) * 100
+	
+	-- 统计码长的占比（分类为：频率最高的3种码长，和其它码长）
+	local codeTable_sorted = {}
+	local totalCodeLen = 0	-- 总码长
+	local totalCodeCnt = 0	-- 总码数
+	local codeTypeCnt = 0	-- 码长的种类数量
+	for k,v in pairs(s.codeLengths) do
+		totalCodeLen = totalCodeLen + v * k
+		totalCodeCnt = totalCodeCnt + v
+		codeTypeCnt = codeTypeCnt + 1
+		table.insert(codeTable_sorted, {clen=k,count=v})
+	end
+	table.sort(codeTable_sorted, function(a,b)
+		return a.count > b.count
+		end)
+	if totalCodeCnt == 0 then totalCodeCnt = 1 end	-- 防止除以0报错
+	local codeTableFirstN = {}
+	local ratioSumOfFirstN = 0
+	for i = 1, 3 do
+		if i <= codeTypeCnt then
+			codeTableFirstN[i] = {codeLen = codeTable_sorted[i].clen, ratio = codeTable_sorted[i].count / totalCodeCnt * 100}
+		else
+			codeTableFirstN[i] = {codeLen = 0, ratio=0}
+		end
+		ratioSumOfFirstN = ratioSumOfFirstN + codeTableFirstN[i].ratio
+	end
+	codeTableFirstN[4] = {codeLen = 0, ratio = 100 - ratioSumOfFirstN}
+	-- 计算平均码长
+	local avgCodeLen = totalCodeLen / total
+	
+	-- 计算平均分速
+	local avgV = tableSum(input_stats.yearly.avgGaps)
+	if avgV > 1 then
+		avgV = tableSum(input_stats.yearly.avgCnts) / avgV * 60
+		if avgV > fastest then fastest = avgV end
+	end
+	
+	strTable[1] = string.format('※ 年统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
+	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
+	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
+	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
+	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
+	if codeTableFirstN[1].ratio > 0 then
+		strTable[11] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[1].ratio), codeTableFirstN[1].codeLen, codeTableFirstN[1].ratio)
+	else
+		strTable[11] = ''
+	end
+	if codeTableFirstN[2].ratio > 0 then
+		strTable[12] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[2].ratio), codeTableFirstN[2].codeLen, codeTableFirstN[2].ratio)
+	else
+		strTable[12] = ''
+	end
+	if codeTableFirstN[3].ratio > 0 then
+		strTable[13] = string.format('%s%s码%.0f％', progressBar_code(codeTableFirstN[3].ratio), codeTableFirstN[3].codeLen, codeTableFirstN[3].ratio)
+	else
+		strTable[13] = ''
+	end
+	if codeTableFirstN[4].ratio > 0 then
+		strTable[14] = string.format('%s其它%.0f％', progressBar_code(codeTableFirstN[4].ratio), codeTableFirstN[4].ratio)
+	else
+		strTable[14] = ''
+	end
+	
+	return table.concat(strTable, '\n')
 end
 
--- 临时统计报告
-local function format_custom_summary(temp_stats)
-    local end_ts = temp_stats.last_slash_time or os.time()
-    local duration_sec = end_ts - temp_stats.start_time
-    local minutes = duration_sec / 60
-    
-    local speed = 0
-    if minutes > 0 then
-        speed = math.floor((temp_stats.length / minutes) * 100) / 100
-    end
-    
-    return string.format(
-        "\n%s\n"..
-        "◉ 开始时间：%s\n"..
-        "◉ 结束时间：%s\n"..
-        "◉ 统计时长：%d分 %d秒\n"..
-        "◉ 输入条数：%d条\n"..
-        "◉ 总字数：%d字\n"..
-        "◉ 平均速度：%.2f 字/分钟\n"..
-        "◉ 最快一分钟输入：%d字\n"..
-        "%s\n",
-        string.rep("─", 14),
-        os.date("%Y-%m-%d %H:%M:%S", temp_stats.start_time),
-        os.date("%Y-%m-%d %H:%M:%S", end_ts),
-        math.floor(minutes), math.floor(duration_sec % 60),
-        temp_stats.count,
-        temp_stats.length,
-        speed,
-        temp_stats.fastest,
-        string.rep("─", 14)
-    )
+-- 显示记录的生字/词
+local function format_shengzi()
+	if input_stats.newWords == nil then
+		return string.format("※ 未发现生字/词记录。")
+	end
+	
+	local tmpTable = {}
+	local newWords = {}
+	local verStr = strTable[#strTable]
+	local cnt = 0
+	local i = 1
+	tmpTable[1] = ""
+	for k, v in pairs(input_stats.newWords) do
+		i = i + 1
+		cnt = #v
+		tmpTable[i] = string.format("%s：%d次，t\204\133 = %0.1fs", k, cnt, tableSum(v)/cnt)
+		table.insert(newWords, k)
+	end
+	tmpTable[1] = string.format("共有 %d 个生字/词：", i - 1)	-- 设置表头
+	
+	tmpTable[i + 1] = splitor
+	tmpTable[i + 2] = table.concat(newWords, '，')
+	tmpTable[i + 3] = splitor
+	tmpTable[i + 4] = verStr
+	
+	if i < 2 then
+		return string.format("※ 未发现生字/词记录。")
+	else
+		return table.concat(tmpTable, '\n')
+	end
 end
 
--- 转换器：处理所有统计命令
+-- 加载保存的统计数据（input_stats.lua）
+local function load_stats_from_lua_file(schema_id)
+	local path = rime_api.get_user_data_dir() .. "/lua/input_stats_"..schema_id..".lua"
+	local ok, result = pcall(function()
+		local env = {}
+		local f = loadfile(path, "t", env)
+		if f then f() end
+		return env.input_stats
+	end)
+	if ok and type(result) == "table" then
+		input_stats = result
+	else
+		-- 保底初始化，防止错误
+		input_stats = {
+			daily = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			weekly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			monthly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			yearly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			daily_max = 0,
+			newWords = {}
+		}
+	end
+end
+
+-- 翻译器：处理统计命令
 local function translator(input, seg, env)
-    if input:sub(1, 1) ~= "/" then return end
-    local summary = ""
-    
-    -- 开始临时统计
-    if input == "/st" then
-        env.pending_start = true
-        yield(Candidate("info", seg.start, seg._end, "", ""))
+	-- 判断是否在连续输入状态下
+	local timeNow = os.time()
+	if timeNow - avgSpdInfo.clickTime > avgSpdInfo.gapThd then	-- 如果距离上次按键超时了，即输入已经中断，这是重新开始的输入行为
+		if avgSpdInfo.commitTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then
+			-- 此时的统计数据是有效
+			update_stats(0, 0, 1)
+		end
+		
+		-- 切换统计状态为未启动状态
+		avgSpdInfo.logSts = 0
+	end
+	if 0 == avgSpdInfo.logSts then	-- 如果当前没有进行统计，则此次按键事件会触发统计启动动作
+		-- 启动平均分速统计
+		avgSpdInfo.logSts = 1
+		-- 清除计时和计数
+		avgSpdInfo.startTime = timeNow
+		avgSpdInfo.commitTime = timeNow
+		avgSpdInfo.count = 0
+	end
+	avgSpdInfo.clickTime = timeNow
+	
+	if input:sub(1, 1) ~= "/" then return end
+	local summary = ""
+	local avgAvailable = 0
+	if avgSpdInfo.commitTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then avgAvailable = 1 end
+	if input == "/01" or input == "/rtj" then
+		if avgAvailable == 1 then	-- 如果此时已经有统计数据，则记录该统计数据
+			update_stats(0, 0, 1)
+		end
+		summary = format_daily_summary()
+	elseif input == "/02" or input == "/ztj" then
+		if avgAvailable == 1 then update_stats(0, 0, 1) end
+		summary = format_weekly_summary()
+	elseif input == "/03" or input == "/ytj" then
+		if avgAvailable == 1 then update_stats(0, 0, 1) end
+		summary = format_monthly_summary()
+	elseif input == "/04" or input == "/ntj" then
+		if avgAvailable == 1 then update_stats(0, 0, 1) end
+		summary = format_yearly_summary()
+	elseif input == "/05" or input == "/sztj" then
+		if avgAvailable == 1 then update_stats(0, 0, 1) end
+		summary = format_shengzi()
+	elseif input == "/008" or input == "/qcsz" then
+		input_stats.newWords = {}
+		summary = "※ 生字词已清空。"
+	elseif input == "/009" or input == "/qctj" then
+		input_stats = {
+			daily = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			weekly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			monthly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			yearly = {count = 0, length = 0, fastest = 0, ts = 0, lengths = {}, codeLengths = {}, avgGaps = {}, avgCnts = {}},
+			daily_max = 0,
+			newWords = {}
+		}
+		save_stats(env.engine.schema.schema_id)
+		summary = "※ 所有统计数据已清空。"
+	end
 
-    -- 结束临时统计并生成报告
-    elseif input == "/en" then
-        if env.is_collecting then
-            env.is_collecting = false
-            local report = format_custom_summary(env.temp_stats)
-            yield(Candidate("stat", seg.start, seg._end, report, "input_stats_summary"))
-        else
-            yield(Candidate("stat", seg.start, seg._end, "※ 当前没有进行中的统计", ""))
-        end
-
-    -- 记录斜杠时间
-    elseif env.is_collecting and input == "/" then
-        env.temp_stats.last_slash_time = os.time()
-        yield(Candidate("info", seg.start, seg._end, "", ""))
-
-    -- 其他统计命令
-    else
-        if input == "/rtj" then
-            summary = string.rep("─", 14) .. "\n" .. format_daily_summary() .. "\n" .. string.rep("─", 14)
-        elseif input == "/ztj" then
-            summary = string.rep("─", 14) .. "\n" .. format_weekly_summary() .. "\n" .. string.rep("─", 14)
-        elseif input == "/ytj" then
-            summary = string.rep("─", 14) .. "\n" .. format_monthly_summary() .. "\n" .. string.rep("─", 14)
-        elseif input == "/ntj" then
-            summary = string.rep("─", 14) .. "\n" .. format_yearly_summary() .. "\n" .. string.rep("─", 14)
-        elseif input == "/tj" then
-            -- 添加方案和平台信息
-            local header = string.format(
-                "◉ 方案：%s\n◉ 平台：%s\n%s\n",
-                schema_name, platform_info, string.rep("─", 14))
-            
-            -- 组合所有统计报告，用横线分隔
-            summary = header ..
-                format_daily_summary() .. "\n" .. string.rep("─", 14) .. "\n" ..
-                format_weekly_summary() .. "\n" .. string.rep("─", 14) .. "\n" ..
-                format_monthly_summary() .. "\n" .. string.rep("─", 14) .. "\n" ..
-                format_yearly_summary() .. "\n" .. string.rep("─", 14)
-        elseif input == "/tjql" then
-            input_stats = {
-                daily = {count = 0, length = 0, fastest = 0, ts = 0},
-                weekly = {count = 0, length = 0, fastest = 0, ts = 0},
-                monthly = {count = 0, length = 0, fastest = 0, ts = 0},
-                yearly = {count = 0, length = 0, fastest = 0, ts = 0},
-                lengths = {},
-                daily_max = 0,
-                recent = {}
-            }
-            save_stats()
-            summary = "※ 所有统计数据已清空。"
-        end
-
-        if summary ~= "" then
-            yield(Candidate("stat", seg.start, seg._end, summary, "input_stats_summary"))
-        end
-    end
-end
-
--- 加载历史统计数据
-local function load_stats_from_lua_file()
-    local path = rime_api.get_user_data_dir() .. "/lua/input_stats.lua"
-    local ok, result = pcall(function()
-        local env = {}
-        local f = loadfile(path, "t", env)
-        if f then f() end
-        return env.input_stats
-    end)
-    if ok and type(result) == "table" then
-        input_stats = result
-    else
-        input_stats = {
-            daily = {count = 0, length = 0, fastest = 0, ts = 0},
-            weekly = {count = 0, length = 0, fastest = 0, ts = 0},
-            monthly = {count = 0, length = 0, fastest = 0, ts = 0},
-            yearly = {count = 0, length = 0, fastest = 0, ts = 0},
-            lengths = {},
-            daily_max = 0,
-            recent = {}
-        }
-    end
+	if summary ~= "" then
+		yield(Candidate("stat", seg.start, seg._end, summary, ""))
+	end
 end
 
 local function init(env)
-    local ctx = env.engine.context
+	local schema_name = env.engine.schema.schema_name or '未知'
+	local ctx = env.engine.context
+	-- 加载指定输入方案的历史统计数据
+	load_stats_from_lua_file(env.engine.schema.schema_id)
+	
+	-- 初始化统计字符串
+	strTable[1] = ''
+	strTable[2] = '📈'..string.rep("─", 13)
+	strTable[3] = ''
+	strTable[4] = ''
+	strTable[5] = ''
+	strTable[6] = '📊'..string.rep("─", 13)
+	strTable[7] = ''
+	strTable[8] = ''
+	strTable[9] = ''
+	strTable[10] = '📊'..string.rep("─", 13)
+	strTable[11] = ''
+	strTable[12] = ''
+	strTable[13] = ''
+	strTable[14] = ''
+	strTable[15] = splitor
+	strTable[16] = '◉ 方案：'..schema_name
+	strTable[17] = '◉ 平台：'..software_name..' '..software_version
+	strTable[18] = splitor
+	strTable[19] = '脚本：₂₀₂₅1212・D'
+	
+	-- 注册提交通知回调
+	env.notifier = env.engine.context.commit_notifier:connect(function(ctx)
+		local commit_text = ctx:get_commit_text()
+		if not commit_text or commit_text == "" then return end
+		
+		-- 如果输入与上屏内容一致，例如编码上屏，则不统计此项
+		if ctx.input == commit_text then return end
+		
+		-- 如果输入是以 / 引导的，则不统计这个输入项
+		if ctx.input:find("^/") then return end
 
-    -- 初始化统计状态
-    env.is_collecting = false
-    env.pending_start = false
-    env.temp_stats = nil
-
-    -- 加载历史数据
-    load_stats_from_lua_file()
-
-    -- 注册提交通知回调
-    ctx.commit_notifier:connect(function()
-        local commit_text = ctx:get_commit_text()
-        if not commit_text then return end
-
-        -- 处理等待开始的状态
-        if env.pending_start and commit_text == "" then
-            env.is_collecting = true
-            env.temp_stats = {
-                count = 0,
-                length = 0,
-                fastest = 0,
-                recent = {},
-                last_slash_time = nil,
-                start_time = os.time()
-            }
-            env.pending_start = false
-        end
-        
-        -- 重置等待状态
-        if env.pending_start and commit_text ~= "" then
-            env.pending_start = false
-        end
-        
-        -- 排除统计命令和报告内容
-        if commit_text == "" or is_summary_command(commit_text) then return end
-        
-        -- 关键过滤：排除以特殊符号开头的文本（如时间、日期候选）
-        if commit_text:match("^[※◉]") then return end
-        
-        -- 排除我们自己生成的统计候选
-        local cand = ctx:get_selected_candidate()
-        if cand and cand.comment == "input_stats_summary" then return end
-
-        -- 计算输入长度
-        local input_length = utf8.len(commit_text) or string.len(commit_text)
-
-        -- 更新全局统计
-        update_stats(input_length)
-        save_stats()
-
-        -- 更新临时统计
-        if env.is_collecting then            
-            env.temp_stats.count = env.temp_stats.count + 1
-            env.temp_stats.length = env.temp_stats.length + input_length
-
-            -- 更新最近一分钟输入速度
-            local ts = os.time()
-            table.insert(env.temp_stats.recent, {ts = ts, len = input_length})
-            local threshold = ts - 60
-            local total = 0
-            local i = 1
-            while i <= #env.temp_stats.recent do
-                if env.temp_stats.recent[i].ts >= threshold then
-                    total = total + env.temp_stats.recent[i].len
-                    i = i + 1
-                else
-                    table.remove(env.temp_stats.recent, i)
-                end
-            end
-            if total > env.temp_stats.fastest then
-                env.temp_stats.fastest = total
-            end
-        end
-    end)
+		-- 如果是标点符号，则不进行统计
+		if commit_text:match("^[！!@#$％^&?,.;？，。；/0123456789]+$") then return end
+		
+		local input_length = utf8.len(commit_text) or string.len(commit_text)
+		-- 统计平均分速
+		if 1 == avgSpdInfo.logSts then	-- 如果当前正在统计中
+			local timeNow = os.time()
+			local delt = timeNow - avgSpdInfo.commitTime
+			
+			-- 更新上屏时间
+			avgSpdInfo.commitTime = timeNow
+			-- 记录输入字数
+			avgSpdInfo.count = avgSpdInfo.count + input_length
+			
+			-- 如果卡壳了(但是间隔时间小于Xs)，记录这个字/词
+			if delt > boggleThd_s then
+				if input_stats.newWords[commit_text] ~= nil then
+					table.insert(input_stats.newWords[commit_text], delt)
+				else
+					input_stats.newWords[commit_text] = {delt}
+				end
+			elseif delt < boggleThd_s then
+				-- 没有卡壳，则消除对该字的记录
+				input_stats.newWords[commit_text] = nil
+			end
+		end
+		
+		-- 上屏统计
+		update_stats(input_length, string.len(ctx.input) + codeLenOffset, 0)
+		save_stats(env.engine.schema.schema_id)
+	end)
 end
-
-return { init = init, func = translator }
+function finit(env)
+	if env.notifier then
+		env.notifier:disconnect()
+		env.notifier = nil
+	end
+end
+return { init = init, fini = finit, func = translator }
