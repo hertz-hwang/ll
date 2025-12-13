@@ -44,6 +44,9 @@ switches:
   - options: [ charset.all, charset.freqly ]
     states: [ 全字集, 仅常用字 ]
     reset: 0
+  - name: emoji
+    states: [ 🈚, 🈶 ]
+    reset: 1
   - name: ivd_map
     states: [ NoIVD, IVD ]
     reset: 0
@@ -85,6 +88,7 @@ engine:
     - lua_translator@*liuli.core_translator@ll
   filters:
     - simplifier
+    - simplifier@emoji
     # 候选去重
     - uniquifier
     # 反查拆分提示
@@ -171,6 +175,11 @@ rev_pinyin:
     - "xform/^/(/"
     - "xform/$/)/"
 
+emoji:
+  opencc_config: emoji.json
+  option_name: emoji
+  tips: all
+
 ivd_map:
   option_name: ivd_map
   opencc_config: moji_map.json
@@ -242,6 +251,10 @@ ll:
       - type: radio
         names: [ charset.all, charset.freqly ]
         states: [ "□全CJK字集: 无过滤", "■常用字集: 过滤非常用字" ]
+    emoji:
+      - type: switch
+        name: emoji
+        states: [ "Emoji: 停用", "Emoji: 启用" ]
     ivd:
       - type: switch
         name: ivd_map

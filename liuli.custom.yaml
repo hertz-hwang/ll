@@ -12,10 +12,11 @@ patch:
   switches/@3/reset: 1 # 普通模式·嵌入編碼
   switches/@4/reset: 0 # 簡潔模式·編碼預測
   switches/@5/reset: 0 # 不過濾·僅常用字
-  switches/@6/reset: 0 # 無IVD聯想·IVD聯想
-  switches/@7/reset: 0 # 中文模式·ASCII模式
-  switches/@8/reset: 0 # 中文標點·西文標點
-  switches/@9/reset: 0 # 半角·全角
+  switches/@6/reset: 0 # emoji 關·開
+  switches/@7/reset: 1 # 無IVD聯想·IVD聯想
+  switches/@8/reset: 0 # 中文模式·ASCII模式
+  switches/@9/reset: 0 # 中文標點·西文標點
+  switches/@10/reset: 0 # 半角·全角
   switches/+:
   key_binder/bindings/+:
   ascii_composer/switch_key/+:
