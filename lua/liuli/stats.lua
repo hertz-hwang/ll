@@ -1,17 +1,17 @@
 -- 卡壳时间门限(单位：s)，当上屏的字/词距离前一次上屏时间大于该门限时，该字/词被记录为生字/词组数据
 local boggleThd_s = 5
 -- 在提交修改时，记录的码长做 + codeLenOffset 处理；如果你每个字需要选字或者空格上屏，则此处的1即表示一个空格的码长
-local codeLenOffset = 1
+local codeLenOffset = 0
 -- 如果你想在平均码长后加以说明，请在这里自定义你的说明内容，可以使用 \n 换行
-local avgCodeLenDesc = '〔含空格〕'
+local avgCodeLenDesc = ''
 -- 定义字词分布进度条填充字符，例如你可以使用 ▉/━/● 来表示
 local progressBarField_word = '▉'
 -- 定义字词分布进度条空白字符，例如你可以使用 ▁/┄/▓ 来表示
-local progressBarEmpty_word = '▁'
+local progressBarEmpty_word = '▓'
 -- 定义码长分布进度条填充字符，例如你可以使用 ▉/━/● 来表示
 local progressBarField_code = '▉'
 -- 定义码长分布进度条空白字符，例如你可以使用 ▁/┄/▓ 来表示
-local progressBarEmpty_code = '▁'
+local progressBarEmpty_code = '▓'
 
 -- 分配一个变量，用于字符串拼接
 local strTable = {}
@@ -286,8 +286,8 @@ local function format_daily_summary()
 	
 	strTable[1] = string.format('※ 日统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
 	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
-	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
-	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[4] = string.format('极速 %.2f，均速 %.2f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.2f%s', avgCodeLen, avgCodeLenDesc)
 	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
 	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
 	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
@@ -375,8 +375,8 @@ local function format_weekly_summary()
 	
 	strTable[1] = string.format('※ 周统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
 	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
-	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
-	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[4] = string.format('极速 %.2f，均速 %.2f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.2f%s', avgCodeLen, avgCodeLenDesc)
 	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
 	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
 	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
@@ -464,8 +464,8 @@ local function format_monthly_summary()
 	
 	strTable[1] = string.format('※ 月统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
 	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
-	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
-	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[4] = string.format('极速 %.2f，均速 %.2f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.2f%s', avgCodeLen, avgCodeLenDesc)
 	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
 	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
 	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
@@ -553,8 +553,8 @@ local function format_yearly_summary()
 	
 	strTable[1] = string.format('※ 年统计@%s', os.date("%Y/%m/%d %H:%M:%S", tBase))
 	strTable[3] = string.format('上屏 %d 次，输入 %d 字', s.count, s.length)
-	strTable[4] = string.format('极速 %.1f，均速 %.1f', fastest, avgV)
-	strTable[5] = string.format('平均码长 %.1f%s', avgCodeLen, avgCodeLenDesc)
+	strTable[4] = string.format('极速 %.2f，均速 %.2f', fastest, avgV)
+	strTable[5] = string.format('平均码长 %.2f%s', avgCodeLen, avgCodeLenDesc)
 	strTable[7] = string.format('%s单字%.0f％', progressBar_word(ratio1), ratio1)
 	strTable[8] = string.format('%s2字%.0f％', progressBar_word(ratio2), ratio2)
 	strTable[9] = string.format('%s>2字%.0f％', progressBar_word(ratio3), ratio3)
