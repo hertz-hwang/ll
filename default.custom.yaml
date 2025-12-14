@@ -4,8 +4,8 @@
 patch:
   schema_list:
     - schema: liuli
-    - schema: liuli3
-    - schema: liuli42
+    #- schema: liuli3
+    #- schema: liuli42
   switcher/save_options:
     - embeded_cands
     - full.word
