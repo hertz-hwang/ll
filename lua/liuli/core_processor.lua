@@ -87,8 +87,17 @@ local function handle_push(env, ctx, ch)
         -- 輸入串分詞列表
         local code_segs, remain = core.get_code_segs(ctx.input)
 
-        -- 純單字模式
-        if env.option[core.switch_names.single_char] and #code_segs == 1 and #remain == 1 then
+        -- 純單三定模式
+        if env.option[core.switch_names.single_char] and #code_segs == 1 and #remain == 0 then
+            local cands = core.query_cand_list(env, core.base_mem, code_segs)
+            if #cands ~= 0 then
+                commit_text(env, ctx, cands[1], remain .. string.char(ch))
+            end
+            return kAccepted
+        end
+
+        -- 五三顶模式
+        if env.option[core.switch_names.single_char_delay] and #code_segs == 1 and #remain == 1 then
             local cands = core.query_cand_list(env, core.base_mem, code_segs)
             if #cands ~= 0 then
                 commit_text(env, ctx, cands[1], remain .. string.char(ch))
@@ -237,6 +246,7 @@ function processor.init(env)
     -- 構造回調函數
     local option_names = {
         [core.switch_names.single_char] = true,
+        [core.switch_names.single_char_delay] = true,
         [core.switch_names.full_char]   = true,
         [core.switch_names.full_off]    = true,
     }
