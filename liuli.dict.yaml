@@ -3,7 +3,7 @@
 
 ---
 name: liuli
-version: v202512152019
+version: v202512152342
 sort: original
 columns:
   - text
@@ -62,6 +62,7 @@ columns:
 铂	adh2
 镪	adh3
 锯	adl1
+镕	adl2
 镲	adm1
 铵	ado1
 锣	adq1
@@ -192,6 +193,7 @@ columns:
 锛	anq1
 铯	ans1
 钲	ant1
+锜	anu1
 铪	anv1
 钟	ao1
 铜	aoa1
@@ -312,7 +314,8 @@ columns:
 锷	ayg1
 铝	ayo1
 钳	ayp1
-龠	ayt1
+龢	ayt1
+龠	ayt2
 靡	ayx1
 八	ayy1
 盖	ayz1
@@ -354,6 +357,7 @@ columns:
 书	bbm1
 彗	bbq1
 崂	bbs1
+鲀	bbt1
 慧	bbv1
 燹	bbx1
 嵘	bby1
@@ -394,7 +398,8 @@ columns:
 鳕	beq1
 鲼	beq2
 邦	ber1
-剀	ber2
+邨	ber2
+剀	ber3
 帮	bes1
 崭	bet1
 炭	bex1
@@ -412,6 +417,7 @@ columns:
 岑	bgd1
 鲤	bgh1
 岭	bgm1
+鲶	bgv1
 叟	bgz1
 表	bh1
 岖	bha1
@@ -533,6 +539,7 @@ columns:
 岽	bsi1
 臾	bsk1
 岜	bsl1
+鲃	bsl2
 鱿	bsm1
 劳	bso1
 鲦	bsy1
@@ -607,7 +614,8 @@ columns:
 崛	bzj1
 貔	bzl1
 嶙	bzo1
-鳞	bzo2
+鳚	bzo2
+鳞	bzo3
 嵝	bzp1
 菠	bzs1
 峄	bzv1
@@ -703,6 +711,7 @@ columns:
 堪	ckh1
 坍	ckj1
 土	ckk1
+鋆	ckl1
 坤	ckn1
 均	ckw1
 亮	ckx1
@@ -737,6 +746,7 @@ columns:
 头	cn1
 亭	cna1
 圪	cnb1
+搿	cnc1
 头	cnf1
 垮	cng1
 艴	cns1
@@ -778,6 +788,7 @@ columns:
 幼	cso1
 垭	csz1
 圻	ct1
+垅	ctl1
 坼	ctm1
 圻	ctn1
 血	cu1
@@ -827,6 +838,7 @@ columns:
 井	cyy1
 温	cyz1
 弗	cz1
+堀	czj1
 墀	czr1
 坡	czs1
 坭	czy1
@@ -836,7 +848,8 @@ columns:
 宪	dae1
 氧	das1
 富	dat1
-麈	dau1
+鹮	dau1
+麈	dau2
 宜	daw1
 家	db1
 皑	dbe1
@@ -1145,6 +1158,7 @@ columns:
 陛	elc1
 轭	elj1
 防	elj2
+雱	elj3
 轵	elr1
 雳	els1
 族	elv1
@@ -1393,6 +1407,7 @@ columns:
 目	fm1
 睽	fma1
 廊	fme1
+醣	fmf1
 酿	fmi1
 目	fmm1
 再	fmn1
@@ -1406,6 +1421,7 @@ columns:
 遭	fnd1
 庆	fnf1
 毵	fng1
+瞭	fni1
 睁	fnj1
 殳	fnn1
 瞻	fno1
@@ -1469,6 +1485,7 @@ columns:
 画	ft1
 廷	ftk1
 庞	ftl1
+眬	ftl2
 画	ftm1
 廨	ftr1
 酥	ftu1
@@ -1516,9 +1533,11 @@ columns:
 鹧	fxu1
 醋	fxw1
 床	fy1
+瞋	fya1
 酐	fyc1
 酣	fyp1
 床	fyq1
+庀	fys1
 酝	fyv1
 酯	fyw1
 韦	fyy1
@@ -1977,6 +1996,7 @@ columns:
 蹬	hmx1
 装	hn1
 虼	hnb1
+跶	hnd1
 蛐	hne1
 奠	hnf1
 跨	hng1
@@ -2022,6 +2042,7 @@ columns:
 螨	hqj2
 蟆	hqk1
 衰	hql1
+蠛	hqm1
 奖	hqn1
 将	hqo1
 蟒	hqq1
@@ -2047,7 +2068,8 @@ columns:
 修	hs1
 蜂	hsb1
 螳	hsc1
-修	hsc2
+蹚	hsc2
+修	hsc3
 兑	hsg1
 爸	hsl1
 跏	hsp1
@@ -2162,6 +2184,7 @@ columns:
 民	ic1
 鬓	icc1
 民	icc2
+髟	icd1
 髦	icg1
 鬟	ich1
 鬈	icj1
@@ -2243,6 +2266,7 @@ columns:
 巩	iid1
 价	iie1
 蛩	iih1
+跫	iih2
 佤	iij1
 瓿	iij2
 銎	iil1
@@ -2443,6 +2467,7 @@ columns:
 伲	izy1
 脸	ja1
 聿	jaa1
+肀	jaa2
 魁	jad1
 舔	jag1
 脯	jah1
@@ -2460,6 +2485,7 @@ columns:
 腈	jbh2
 鲎	jbi1
 歃	jbk1
+泶	jbk2
 竭	jbl1
 腴	jbs1
 肫	jbt1
@@ -2467,6 +2493,7 @@ columns:
 豚	jby1
 两	jc1
 两	jcc1
+肜	jcd1
 肚	jck1
 脬	jcl1
 憩	jcv1
@@ -2487,6 +2514,7 @@ columns:
 腩	jea1
 是	jee1
 肱	jef1
+竑	jef2
 华	jeo1
 邹	jer1
 魅	jet1
@@ -2499,6 +2527,7 @@ columns:
 腑	jfo1
 胎	jfp1
 竣	jfs1
+臁	jfx1
 韪	jfy1
 战	jg1
 胗	jgc1
@@ -2613,6 +2642,7 @@ columns:
 刮	jrj1
 刖	jrj2
 脾	jrk1
+朊	jrl1
 喾	jrp1
 化	jrr1
 月	js1
@@ -2698,6 +2728,7 @@ columns:
 瑜	kar1
 窬	kar2
 匐	kat1
+篯	kat2
 瑞	kb1
 笥	kba1
 畅	kbc1
@@ -2845,6 +2876,7 @@ columns:
 筚	kle2
 珙	kli1
 毋	kll1
+窆	kln1
 篪	klp1
 笕	klw1
 现	klw2
@@ -2858,6 +2890,7 @@ columns:
 篱	kmt1
 璃	kmt2
 窠	kmv1
+簦	kmx1
 匈	kmz1
 答	kn1
 玎	kna1
@@ -2892,6 +2925,7 @@ columns:
 瑙	kpz1
 内	kq1
 箴	kqa1
+箓	kqb1
 瑁	kqf1
 贯	kqh1
 弄	kql1
@@ -2909,6 +2943,7 @@ columns:
 窖	krp1
 箭	krr1
 筛	krs1
+窸	krv1
 簪	krw1
 王	ks1
 篷	ksd1
@@ -2958,8 +2993,10 @@ columns:
 窳	kvv1
 箨	kvv2
 由	kvv3
+箝	kvy1
 玛	kw1
-郇	kwe1
+窣	kwe1
+郇	kwe2
 匀	kwj1
 琨	kwl1
 笃	kwm1
@@ -3159,6 +3196,7 @@ columns:
 妄	lou1
 孢	lov1
 纸	lox1
+榘	loy1
 知	lp1
 亟	lpf1
 绢	lph1
@@ -3199,6 +3237,7 @@ columns:
 缅	lsf1
 绛	lsg1
 练	lsi1
+乇	lsj1
 仄	lsk1
 历	lso1
 绺	lsp1
@@ -3344,6 +3383,7 @@ columns:
 泊	mdh1
 汾	mdj1
 湟	mdk1
+渖	mdk2
 溶	mdl1
 汽	mdm1
 澳	mdn1
@@ -3742,8 +3782,10 @@ columns:
 免	neg1
 殒	nem1
 午	neo1
+祐	nep1
 奔	neq1
 祁	ner1
+郃	ner2
 勉	nes1
 襦	neu1
 祀	new1
@@ -3831,6 +3873,7 @@ columns:
 殃	non1
 牵	nor1
 袍	nov1
+祇	nox1
 吉	np1
 裙	npd1
 补	npg1
@@ -3891,6 +3934,7 @@ columns:
 祸	nva1
 志	nvi1
 政	nvj1
+祕	nvl1
 奢	nvn1
 褚	nvn2
 袢	nvq1
@@ -4342,6 +4386,7 @@ columns:
 嘹	pni1
 喹	pnk1
 飨	pnn1
+咭	pnp1
 唛	pnq1
 咧	pnr1
 哈	pnv1
@@ -4706,6 +4751,7 @@ columns:
 药	ql1
 莼	qlb1
 苁	qlc1
+菸	qlc2
 蒈	qld1
 茱	qle1
 荜	qle2
@@ -4836,6 +4882,7 @@ columns:
 蓰	qth1
 贱	qti1
 葭	qtj1
+葎	qtj2
 翼	qtl1
 茏	qtl2
 苯	qtm1
@@ -4917,7 +4964,8 @@ columns:
 菌	qxt1
 葙	qxu1
 蒽	qxv1
-赕	qxx1
+飚	qxx1
+赕	qxx2
 杀	qy1
 茺	qyd1
 萼	qyg1
@@ -4947,7 +4995,8 @@ columns:
 犋	raa1
 石	raa2
 磋	rai1
-猃	raj1
+硷	raj1
+猃	raj2
 狙	raw1
 考	rb1
 礞	rbb1
@@ -4980,6 +5029,7 @@ columns:
 慈	rcv1
 礅	rcv2
 狒	rcz1
+砩	rcz2
 远	rd1
 狎	rda1
 邀	rdf1
@@ -5088,6 +5138,7 @@ columns:
 砚	rlw2
 猛	rly1
 艋	rly2
+舨	rlz1
 狼	rm1
 塑	rmc1
 逆	rmd1
@@ -5098,6 +5149,7 @@ columns:
 仑	rmm1
 舣	rmq1
 砖	rmr1
+猓	rmv1
 磴	rmx1
 槊	rmy1
 磲	rmy2
@@ -5149,6 +5201,7 @@ columns:
 鹣	rqu1
 獾	rqw1
 兼	rqx1
+矽	rqy1
 到	rr1
 磁	rrc1
 碰	rre1
@@ -5214,6 +5267,7 @@ columns:
 猖	rww1
 礁	rwx1
 猎	rx1
+磺	rxa1
 硌	rxc1
 逖	rxd1
 牺	rxg1
@@ -5295,6 +5349,7 @@ columns:
 面	sff1
 鼐	sfh1
 凸	sfk1
+诶	sfl1
 设	sfn1
 谢	sfo1
 诒	sfp1
@@ -5462,6 +5517,7 @@ columns:
 戬	swg1
 讼	swh1
 试	swi1
+谘	swp1
 晋	swr1
 谯	swx1
 幌	swy1
@@ -5514,6 +5570,7 @@ columns:
 稃	tcl1
 待	tco1
 累	tcp1
+後	tcs1
 徭	tcu1
 秭	tcz1
 近	td1
@@ -5653,6 +5710,7 @@ columns:
 彻	tsj1
 秀	tsn1
 男	tso1
+嬲	tss1
 稽	tsw1
 留	tt1
 遛	ttd1
@@ -5765,6 +5823,7 @@ columns:
 饽	ugl1
 聆	ugm1
 饶	ugs1
+馀	ugt1
 肩	uh1
 饼	uhc1
 鄞	uhe1
@@ -5816,6 +5875,7 @@ columns:
 颢	umg1
 聃	umn1
 髁	umv1
+馃	umv2
 联	umw1
 饰	un1
 耵	una1
@@ -5998,6 +6058,7 @@ columns:
 省	vfm1
 投	vfn1
 抬	vfp1
+拚	vfq1
 挺	vft1
 撇	vfv1
 摭	vfx1
@@ -6069,6 +6130,7 @@ columns:
 拱	vli1
 扼	vlj1
 撅	vlk1
+捱	vlk1
 搋	vlp1
 批	vlq1
 托	vls1
@@ -6130,6 +6192,7 @@ columns:
 摅	vpv1
 操	vpy1
 半	vq1
+摺	vqd1
 赀	vqh1
 扫	vqj1
 摸	vqk1
@@ -6144,6 +6207,7 @@ columns:
 搽	vqy1
 刻	vr1
 拓	vra1
+砦	vra2
 拷	vrb1
 挪	vre1
 搬	vrf1
@@ -6579,7 +6643,8 @@ columns:
 晃	wyf1
 凝	wyi1
 癫	wym1
-疳	wyp1
+甙	wyp1
+疳	wyp2
 杲	wyq1
 檗	wyq2
 集	wyq3
@@ -6775,6 +6840,7 @@ columns:
 昔	xwr1
 鹊	xwu1
 焊	xwy1
+熳	xwz1
 烟	xx1
 烙	xxc1
 辇	xxe1
@@ -7100,6 +7166,7 @@ columns:
 框	yxk1
 杰	yxl1
 柩	yxm1
+颎	yxm2
 非	yxx1
 榧	yxy1
 某	yy1
@@ -7131,6 +7198,7 @@ columns:
 糕	zax1
 精	zb1
 阋	zbd1
+闿	zbe1
 蠡	zbh1
 精	zbh2
 鳌	zbi1
@@ -7253,6 +7321,7 @@ columns:
 娄	zpp1
 问	zpr1
 闫	zps1
+屌	zps2
 荒	zpv1
 粳	zpx1
 赘	zq1
