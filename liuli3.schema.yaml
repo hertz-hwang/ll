@@ -48,7 +48,7 @@ engine:
     - table_translator
     - script_translator@pinyin
     - history_translator
-    - lua_translator@*liuli.stats
+    - lua_translator@*liuli.stats_3
   filters:
     - simplifier@zh_s2t
     - reverse_lookup_filter@reverse_lookup

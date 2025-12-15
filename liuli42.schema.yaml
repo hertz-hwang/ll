@@ -54,7 +54,7 @@ engine:
     - table_translator
     - script_translator@pinyin
     - history_translator
-    - lua_translator@*liuli.stats
+    - lua_translator@*liuli.stats_42
   filters:
     - lua_filter@*c42.assist
     - simplifier@zh_s2t

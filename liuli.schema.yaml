@@ -85,7 +85,7 @@ engine:
     # 反查
     - reverse_lookup_translator@rev_pinyin
     # 统计
-    - lua_translator@*liuli.stats
+    #- lua_translator@*liuli.stats
     # 主翻译器
     - lua_translator@*liuli.core_translator@ll
   filters:
