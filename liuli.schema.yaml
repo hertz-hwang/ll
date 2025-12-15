@@ -71,6 +71,7 @@ engine:
     - selector
     - navigator
     - express_editor
+    - lua_processor@*liuli.stats_73
   segmentors:
     - ascii_segmentor
     - matcher
