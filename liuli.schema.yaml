@@ -29,11 +29,11 @@ switches:
   - options: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ]
     states: [ 注解关, 注解一, 注解二, 注解三, 注解四 ]
     reset: 0
-  - options: [ hwang, single_char, single_char_delay ]
-    states: [ 智能延迟顶, 三定, 五三顶 ]
+  - options: [ hwang, single_char_delay, single_char ]
+    states: [ 智能延迟顶, 五三顶, 三定 ]
     reset: 0
   - options: [ full.word, full.char, full.off ]
-    states: [ 字词, 全单, 三码 ]
+    states: [ 字词, 无词, 无四码 ]
     reset: 0
   - name: embeded_cands
     states: [ 普通, 嵌入 ]
@@ -220,8 +220,8 @@ ll:
   macros:
     help:
       - { type: tip, name: ❖配置中心 }
-      - { type: radio, names: [ hwang, single_char, single_char_delay ], states: [ ■智能延迟顶, □三定, □五三顶 ] }
-      - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词, ☐☑全单, ☐☐三码 ] }
+      - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
+      - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词, ☐☑无词, ☐☐无四码 ] }
       - { type: switch, name: embeded_cands, states: [ ☐嵌入, ☑嵌入 ] }
       - { type: switch, name: completion, states: [ □简洁, ■补全 ] }
       - { type: radio, names: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ], states: [ ☐☐☐☐注解, ☑☐☐☐注解, ☐☑☐☐注解, ☐☐☑☐注解, ☐☐☐☑注解 ] }
@@ -245,7 +245,7 @@ ll:
         names: [ full.word, full.char, full.off ]
         states: [ "☑☑四码字词: 显示所有候选", "☐☑四码全单: 隐藏词语候选", "☐☐仅三码: 隐藏四码候选" ]
     smart:
-      - { type: radio, names: [ hwang, single_char, single_char_delay ], states: [ ■智能延迟顶, □三定, □五三顶 ] }
+      - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
     comp:
       - type: switch
         name: completion
