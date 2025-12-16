@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.words"
-version: v202512161114
+version: v202512161936
 sort: original
 import_tables:
   - liuli.wordsll

@@ -5,11 +5,11 @@ local core = require("liuli.core")
 local schemas = nil
 
 
--- 按命名空間歸類方案配置, 而不是按会話, 以减少内存佔用
+-- 按命名空间归类方案配置, 而不是按会话, 以减少内存占用
 local namespaces = {}
 
 function namespaces:init(env)
-    -- 讀取配置項
+    -- 读取配置项
     if not namespaces:config(env) then
         local config = {}
         config.macros = core.parse_conf_macro_list(env)
@@ -41,7 +41,7 @@ function translator.init(env)
     end
     env.config = namespaces:config(env)
 
-    -- 初始化碼表
+    -- 初始化码表
     if not schemas and Memory then
         local liuli_rev = ReverseLookup and ReverseLookup("liuli.base")
         schemas = {
@@ -58,7 +58,7 @@ function translator.init(env)
         core.word_trie = schemas.liuli_trie
     end
 
-    -- 構造回調函數
+    -- 构造回调函数
     local option_names = {
         [core.switch_names.full_word]  = true,
         [core.switch_names.full_char]  = true,
@@ -69,11 +69,11 @@ function translator.init(env)
         option_names[mapper.option] = true
     end
     local handler = core.get_switch_handler(env, option_names)
-    -- 初始化爲選項實際值, 如果設置了 reset, 則會再次觸發 handler
+    -- 初始化为选项实际值, 如果设置了 reset, 则会再次触发 handler
     for name in pairs(option_names) do
         handler(env.engine.context, name)
     end
-    -- 注册通知回調
+    -- 注册通知回调
     env.engine.context.option_update_notifier:connect(handler)
 end
 
@@ -102,7 +102,7 @@ local function display_comment(comment)
 end
 
 
--- 處理宏
+-- 处理宏
 local function handle_macros(env, ctx, seg, input)
     local name, args = core.get_macro_args(input, namespaces:config(env).funckeys.macro)
     local macro = namespaces:config(env).macros[name]
@@ -117,38 +117,38 @@ local function handle_macros(env, ctx, seg, input)
     end
 end
 
--- 處理單字輸入
+-- 处理单字输入
 local function handle_singlechar(env, ctx, code_segs, remain, seg, input)
     core.input_code = display_input(remain)
 
-    -- 查询最多一百個候選
+    -- 查询最多一百个候选
     local enable_completion = env.option[core.switch_names.completion]
     local entries = core.dict_lookup(env, core.base_mem, remain, 100, enable_completion)
     if #entries == 0 then
         table.insert(entries, { text = "", comment = "" })
     end
 
-    -- 依次送出候選
+    -- 依次送出候选
     for _, entry in ipairs(entries) do
         entry.comment = display_comment(entry.comment)
         local cand = Candidate("table", seg.start, seg._end, entry.text, entry.comment)
         yield(cand)
     end
 
-    -- 唯一候選添加占位
+    -- 唯一候选添加占位
     if #entries == 1 then
         local cand = Candidate("table", seg.start, seg._end, "", "")
         yield(cand)
     end
 end
 
--- 處理含延遲串的編碼
+-- 处理含延迟串的编码
 local function handle_delayed(env, ctx, code_segs, remain, seg, input)
     core.input_code = display_input(remain)
 
-    -- 先查出全串候選列表
+    -- 先查出全串候选列表
     local full_entries = {}
-    -- TODO: 優化智能詞查詢
+    -- TODO: 优化智能词查询
     if #code_segs ~= 0 then
         local full_segs = {}
         for _, seg in ipairs(code_segs) do
@@ -170,14 +170,14 @@ local function handle_delayed(env, ctx, code_segs, remain, seg, input)
         local fullcode_char = env.option[core.switch_names.full_char]
         local entries = core.dict_lookup(env, core.full_mem, input, 50)
         local stashed = {}
-        -- 詞語前置, 單字暫存
+        -- 词语前置, 单字暂存
         for _, entry in ipairs(entries) do
             if utf8.len(entry.text) == 1 then
                 table.insert(stashed, entry)
                 fullcode_cands = fullcode_cands + 1
             else
-                -- 全單模式, 詞語過濾
-                -- 字詞模式, 詞語前置
+                -- 全单模式, 词语过滤
+                -- 字词模式, 词语前置
                 if not fullcode_char then
                     fullcode_count = fullcode_count + 1
                     table.insert(full_entries, entry)
@@ -185,7 +185,7 @@ local function handle_delayed(env, ctx, code_segs, remain, seg, input)
                 end
             end
         end
-        -- 收錄暫存候選
+        -- 收录暂存候选
         for _, entry in ipairs(stashed) do
             fullcode_count = fullcode_count + 1
             table.insert(full_entries, entry)
@@ -196,43 +196,43 @@ local function handle_delayed(env, ctx, code_segs, remain, seg, input)
         end
     end
 
-    -- 查詢分詞串暫存值
+    -- 查询分词串暂存值
     local text_list = core.query_cand_list(env, core.base_mem, code_segs)
     if #text_list ~= 0 then
         core.stashed_text = table.concat(text_list, "")
     end
 
-    -- 查詢活動輸入串候選列表
+    -- 查询活动输入串候选列表
     local enable_completion = env.option[core.switch_names.completion]
     local entries = core.dict_lookup(env, core.base_mem, remain, 100 - #full_entries, enable_completion)
     if #entries == 0 then
-        -- 以空串爲空碼候選
+        -- 以空串为空码候选
         table.insert(entries, { text = "", comment = "" })
     end
 
-    -- 送出候選
+    -- 送出候选
     local cand_count = #entries + #full_entries
     if fullcode_count ~= 0 and #entries ~= 0 then
-        -- abc|a 時, a_ 總是前置
+        -- abc|a 时, a_ 总是前置
         local entry = table.remove(entries, 1)
         entry.comment = display_comment(entry.comment)
         local cand = Candidate("table", seg.start, seg._end, core.stashed_text .. entry.text, entry.comment)
         yield(cand)
     end
     for _, entry in ipairs(full_entries) do
-        -- 全碼候選, 含 abc|a 和 abc|abc 兩類
+        -- 全码候选, 含 abc|a 和 abc|abc 两类
         entry.comment = display_comment(entry.comment)
         local cand = Candidate("table", seg.start, seg._end, entry.text, entry.comment)
         yield(cand)
     end
     for _, entry in ipairs(entries) do
-        -- 單字候選, 含延遲串
+        -- 单字候选, 含延迟串
         entry.comment = display_comment(entry.comment)
         local cand = Candidate("table", seg.start, seg._end, core.stashed_text .. entry.text, entry.comment)
         yield(cand)
     end
 
-    -- 唯一候選添加占位
+    -- 唯一候选添加占位
     if cand_count == 1 then
         local cand = Candidate("table", seg.start, seg._end, "", "")
         yield(cand)
@@ -251,7 +251,7 @@ function translator.func(input, seg, env)
         return
     end
 
-    -- 是否合法琉璃編碼
+    -- 是否合法琉璃编码
     if not core.valid_liuli_input(input) then
         return
     end
@@ -263,10 +263,10 @@ function translator.func(input, seg, env)
     end
 
     if #code_segs == 0 then
-        -- 僅單字
+        -- 仅单字
         handle_singlechar(env, ctx, code_segs, remain, seg, input)
     else
-        -- 延遲頂組合串
+        -- 延迟顶组合串
         handle_delayed(env, ctx, code_segs, remain, seg, input)
     end
 end

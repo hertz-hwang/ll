@@ -1,4 +1,4 @@
--- 将要被返回的過濾器對象
+-- 将要被返回的过滤器对象
 local embeded_cands_filter = {}
 local core = require("liuli.core")
 
@@ -19,15 +19,15 @@ key_binder:
 
 local index_indicators = { "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹", "⁰" }
 
--- 首選/非首選格式定義
--- Stash: 延迟候選; Seq: 候選序號; Code: 編碼; 候選: 候選文本; Comment: 候選提示
-local first_format = "${Stash}[${候選}${Seq}]${Code}${Comment}"
-local next_format = "${Stash}${候選}${Seq}${Comment}"
+-- 首选/非首选格式定义
+-- Stash: 延迟候选; Seq: 候选序号; Code: 编码; 候选: 候选文本; Comment: 候选提示
+local first_format = "${Stash}[${候选}${Seq}]${Code}${Comment}"
+local next_format = "${Stash}${候选}${Seq}${Comment}"
 local separator = " "
 local stash_placeholder = "~"
 
 local function compile_formatter(format)
-    -- "${Stash}[${候選}${Seq}]${Code}${Comment}"
+    -- "${Stash}[${候选}${Seq}]${Code}${Comment}"
     -- => "%s[%s%s]%s%s"
     -- => {"${Stash}", "${...}", "${...}", ...}
     local pattern = "%$%{[^{}]+%}"
@@ -57,12 +57,12 @@ local function compile_formatter(format)
 end
 
 
--- 按命名空間歸類方案配置, 而不是按会話, 以减少内存佔用
+-- 按命名空间归类方案配置, 而不是按会话, 以减少内存占用
 local namespaces = {}
 
 function namespaces:init(env)
     if not namespaces:config(env) then
-        -- 讀取配置項
+        -- 读取配置项
         local config = {}
         config.index_indicators = core.parse_conf_str_list(env, "index_indicators", index_indicators)
         config.first_format = core.parse_conf_str(env, "first_format", first_format)
@@ -87,7 +87,7 @@ function namespaces:config(env)
 end
 
 function embeded_cands_filter.init(env)
-    -- 讀取配置項
+    -- 读取配置项
     local ok = pcall(namespaces.init, namespaces, env)
     if not ok then
         local config = {}
@@ -103,64 +103,64 @@ function embeded_cands_filter.init(env)
         namespaces:set_config(env, config)
     end
 
-    -- 構造回調函數
+    -- 构造回调函数
     local option_names = {
         [core.switch_names.embeded_cands] = true,
     }
     local handler = core.get_switch_handler(env, option_names)
-    -- 初始化爲選項實際值, 如果設置了 reset, 則會再次觸發 handler
+    -- 初始化为选项实际值, 如果设置了 reset, 则会再次触发 handler
     for name in pairs(option_names) do
         handler(env.engine.context, name)
     end
-    -- 注册通知回調
+    -- 注册通知回调
     env.engine.context.option_update_notifier:connect(handler)
 end
 
--- 處理候選文本和延迟串
+-- 处理候选文本和延迟串
 local function render_stashcand(env, seq, stash, text, digested)
     if string.len(stash) ~= 0 and string.match(text, "^" .. stash) then
         if seq == 1 then
-            -- 首選含延迟串, 原樣返回
+            -- 首选含延迟串, 原样返回
             digested = true
             stash, text = stash, string.sub(text, string.len(stash) + 1)
         elseif not digested then
-            -- 首選不含延迟串, 其他候選含延迟串, 標記之
+            -- 首选不含延迟串, 其他候选含延迟串, 标记之
             digested = true
             stash, text = "[" .. stash .. "]", string.sub(text, string.len(stash) + 1)
         else
-            -- 非首個候選, 延迟串標記爲空
+            -- 非首个候选, 延迟串标记为空
             local placeholder = string.gsub(namespaces:config(env).stash_placeholder, "%${Stash}", stash)
             stash, text = "", placeholder .. string.sub(text, string.len(stash) + 1)
         end
     else
-        -- 普通候選, 延迟串標記爲空
+        -- 普通候选, 延迟串标记为空
         stash, text = "", text
     end
     return stash, text, digested
 end
 
--- 渲染提示, 因爲提示經常有可能爲空, 抽取爲函數更易操作
+-- 渲染提示, 因为提示经常有可能为空, 抽取为函数更易操作
 local function render_comment(comment)
     if string.match(comment, "^~") then
-        -- 丟棄以"~"開頭的提示串, 這通常是補全提示
+        -- 丢弃以"~"开头的提示串, 这通常是补全提示
         comment = ""
     else
-        -- 自定義提示串格式
+        -- 自定义提示串格式
         -- comment = "<"..comment..">"
     end
     return comment
 end
 
--- 渲染單個候選項
+-- 渲染单个候选项
 local function render_cand(env, seq, code, stashed, text, comment, digested)
     local formatter
-    -- 選擇渲染格式
+    -- 选择渲染格式
     if seq == 1 then
         formatter = namespaces:config(env).formatter.first
     else
         formatter = namespaces:config(env).formatter.next
     end
-    -- 渲染延迟串與候選文字
+    -- 渲染延迟串与候选文字
     stashed, text, digested = render_stashcand(env, seq, stashed, text, digested)
     if seq ~= 1 and text == "" then
         return "", digested
@@ -171,14 +171,14 @@ local function render_cand(env, seq, code, stashed, text, comment, digested)
         ["${Seq}"] = namespaces:config(env).index_indicators[seq],
         ["${Code}"] = code,
         ["${Stash}"] = stashed,
-        ["${候選}"] = text,
+        ["${候选}"] = text,
         ["${Comment}"] = comment,
     })
     return cand, digested
 end
 
 
--- 過濾器
+-- 过滤器
 function embeded_cands_filter.func(input, env)
     if not env.option[core.switch_names.embeded_cands] then
         for cand in input:iter() do
@@ -187,21 +187,21 @@ function embeded_cands_filter.func(input, env)
         return
     end
 
-    -- 要顯示的候選數量
+    -- 要显示的候选数量
     local page_size = env.engine.schema.page_size
-    -- 暫存當前頁候選, 然后批次送出
+    -- 暂存当前页候选, 然后批次送出
     local page_cands, page_rendered = {}, {}
-    -- 暫存索引, 首選和預編輯文本
+    -- 暂存索引, 首选和预编辑文本
     local index, first_cand, preedit = 0, nil, ""
     local digested = false
 
     local function refresh_preedit()
         first_cand.preedit = table.concat(page_rendered, namespaces:config(env).separator)
-        -- 將暫存的一頁候選批次送出
+        -- 将暂存的一页候选批次送出
         for _, c in ipairs(page_cands) do
             yield(c)
         end
-        -- 清空暫存
+        -- 清空暂存
         first_cand, preedit = nil, ""
         page_cands, page_rendered = {}, {}
         digested = false
@@ -209,23 +209,23 @@ function embeded_cands_filter.func(input, env)
 
     -- 迭代器
     local iter, obj = input:iter()
-    -- 迭代由翻譯器輸入的候選列表
+    -- 迭代由翻译器输入的候选列表
     local next = iter(obj)
     -- local first_stash = true
     while next do
-        -- 頁索引自增, 滿足 1 <= index <= page_size
+        -- 页索引自增, 满足 1 <= index <= page_size
         index = index + 1
-        -- 當前遍歷候選項
+        -- 当前遍历候选项
         local cand = Candidate(next.type, next.start, next._end, next.text, next.comment) -- next
         cand.quality = next.quality
         cand.preedit = next.preedit
 
         if index == 1 then
-            -- 把首選捉出來
+            -- 把首选捉出来
             first_cand = cand:get_genuine()
         end
 
-        -- 活動輸入串
+        -- 活动输入串
         local input_code = ""
         if string.len(core.input_code) == 0 then
             input_code = cand.preedit
@@ -233,7 +233,7 @@ function embeded_cands_filter.func(input, env)
             input_code = core.input_code
         end
 
-        -- 展開 IVD selector
+        -- 展开 IVD selector
         if #input_code == 0 then
             for _, c in utf8.codes(cand.text) do
                 if c >= 0xE0100 and c <= 0xE01FF then
@@ -242,29 +242,29 @@ function embeded_cands_filter.func(input, env)
             end
         end
 
-        -- 帶有暫存串的候選合併同類項
+        -- 带有暂存串的候选合并同类项
         preedit, digested = render_cand(env, index, input_code, core.stashed_text, cand.text, cand.comment, digested)
 
-        -- 存入候選
+        -- 存入候选
         table.insert(page_cands, cand)
         if #preedit ~= 0 then
             table.insert(page_rendered, preedit)
         end
 
-        -- 遍歷完一頁候選後, 刷新預編輯文本
+        -- 遍历完一页候选后, 刷新预编辑文本
         if index == page_size then
             refresh_preedit()
         end
 
-        -- 當前候選處理完畢, 查詢下一個
+        -- 当前候选处理完毕, 查询下一个
         next = iter(obj)
 
-        -- 如果當前暫存候選不足page_size但没有更多候選, 則需要刷新預編輯並送出
+        -- 如果当前暂存候选不足page_size但没有更多候选, 则需要刷新预编辑并送出
         if not next and index < page_size then
             refresh_preedit()
         end
 
-        -- 下一頁, index歸零
+        -- 下一页, index归零
         index = index % page_size
     end
 end

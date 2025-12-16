@@ -2,9 +2,9 @@ local processor = {}
 local core      = require("liuli.core")
 
 
-local kRejected = 0 -- 拒: 不作響應, 由操作系統做默認處理
-local kAccepted = 1 -- 收: 由rime響應該按鍵
-local kNoop     = 2 -- 無: 請下一個processor繼續看
+local kRejected = 0 -- 拒: 不作响应, 由操作系統做默认处理
+local kAccepted = 1 -- 收: 由rime响应该按键
+local kNoop     = 2 -- 无: 请下一个processor继续看
 
 
 local char_a         = string.byte("a") -- 字符: 'a'
@@ -18,11 +18,11 @@ local char_del       = 0x7f             -- 删除
 local char_backspace = 0xff08           -- 退格
 
 
--- 按命名空間歸類方案配置, 而不是按会話, 以减少内存佔用
+-- 按命名空间归类方案配置, 而不是按会话, 以减少内存占用
 local namespaces = {}
 
 function namespaces:init(env)
-    -- 讀取配置項
+    -- 读取配置项
     if not namespaces:config(env) then
         local config = {}
         config.macros = core.parse_conf_macro_list(env)
@@ -42,7 +42,7 @@ function namespaces:config(env)
     return namespaces[env.name_space] and namespaces[env.name_space].config
 end
 
--- 返回被選中的候選的索引, 來自 librime-lua/sample 示例
+-- 返回被选中的候选的索引, 来自 librime-lua/sample 示例
 local function select_index(key, env)
     local ch = key.keycode
     local index = -1
@@ -61,7 +61,7 @@ local function select_index(key, env)
 end
 
 
--- 提交候選文本, 並刷新輸入串
+-- 提交候选文本, 并刷新输入串
 local function commit_text(env, ctx, text, input)
     ctx:clear()
     if #text ~= 0 then
@@ -81,13 +81,13 @@ local function handle_macros(env, ctx, macro, args, idx)
     return kNoop
 end
 
--- 處理頂字
+-- 处理顶字
 local function handle_push(env, ctx, ch)
     if core.valid_liuli_input(ctx.input) then
-        -- 輸入串分詞列表
+        -- 输入串分词列表
         local code_segs, remain = core.get_code_segs(ctx.input)
 
-        -- 純單三定模式
+        -- 纯单三定模式
         if env.option[core.switch_names.single_char] and #code_segs == 1 and #remain == 0 then
             local cands = core.query_cand_list(env, core.base_mem, code_segs)
             if #cands ~= 0 then
@@ -105,7 +105,7 @@ local function handle_push(env, ctx, ch)
             return kAccepted
         end
 
-        -- 智能詞延遲頂
+        -- 智能词延迟顶
         if #remain == 0 and #code_segs > 1 then
             local entries, remain = core.query_cand_list(env, core.base_mem, code_segs)
             if #entries > 1 then
@@ -117,10 +117,10 @@ local function handle_push(env, ctx, ch)
     return kNoop
 end
 
--- 處理空格分號選字
+-- 处理空格分号选字
 local function handle_select(env, ctx, ch, funckeys)
     if core.valid_liuli_input(ctx.input) then
-        -- 輸入串分詞列表
+        -- 输入串分词列表
         local _, remain = core.get_code_segs(ctx.input)
         if string.match(remain, "^[a-z][a-z]?$") then
             if funckeys.primary[ch] then
@@ -142,27 +142,27 @@ local function handle_fullcode(env, ctx, ch)
     if not env.option[core.switch_names.full_off] and #ctx.input == 4 and not string.match(ctx.input, "[^a-z]") then
         local fullcode_char = env.option[core.switch_names.full_char]
         local entries = core.dict_lookup(env, core.full_mem, ctx.input, 50)
-        -- 查找四碼首選
+        -- 查找四码首选
         local first
         for _, entry in ipairs(entries) do
-            -- 是否單字候選
+            -- 是否单字候选
             if utf8.len(entry.text) == 1 then
-                -- 是否啓用單字狀態
+                -- 是否启用单字状态
                 if fullcode_char then
-                    -- 單字模式, 首字上屏
+                    -- 单字模式, 首字上屏
                     first = entry
                     break
                 elseif not first then
-                    -- 非單字模式, 首字暫存
+                    -- 非单字模式, 首字暂存
                     first = entry
                 end
             elseif not fullcode_char then
-                -- 字詞模式, 首詞上屏
+                -- 字词模式, 首词上屏
                 first = entry
                 break
             end
         end
-        -- 上屏暫存的候選
+        -- 上屏暂存的候选
         if first then
             ctx:clear()
             env.engine:commit_text(first.text)
@@ -174,12 +174,12 @@ end
 
 local function handle_break(env, ctx, ch)
     if core.valid_liuli_input(ctx.input) then
-        -- 輸入串分詞列表
+        -- 输入串分词列表
         local code_segs, remain = core.get_code_segs(ctx.input)
         if #remain == 0 then
             remain = table.remove(code_segs)
         end
-        -- 打斷施法
+        -- 打断施法
         if #code_segs ~= 0 then
             local text_list = core.query_cand_list(env, core.base_mem, code_segs)
             commit_text(env, ctx, table.concat(text_list, ""), remain)
@@ -191,7 +191,7 @@ end
 
 local function handle_repeat(env, ctx, ch)
     if core.valid_liuli_input(ctx.input) then
-        -- 查詢當前首選項
+        -- 查询当前首选项
         local code_segs, remain = core.get_code_segs(ctx.input)
         local text_list, _ = core.query_cand_list(env, core.base_mem, code_segs)
         local text = table.concat(text_list, "")
@@ -199,7 +199,7 @@ local function handle_repeat(env, ctx, ch)
             local entries = core.dict_lookup(env, core.base_mem, remain, 1)
             text = text .. (entries[1] and entries[1].text or "")
         end
-        -- 逐個上屏
+        -- 逐个上屏
         ctx:clear()
         for _, c in utf8.codes(text) do
             env.engine:commit_text(utf8.char(c))
@@ -208,20 +208,20 @@ local function handle_repeat(env, ctx, ch)
     return kNoop
 end
 
--- 清理活動串
+-- 清理活动串
 local function handle_clean(env, ctx, ch)
     if not core.valid_liuli_input(ctx.input) then
         return kNoop
     end
 
-    -- 輸入串分詞列表
+    -- 输入串分词列表
     local code_segs, remain = core.get_code_segs(ctx.input)
-    -- 取出活動串
+    -- 取出活动串
     if #remain == 0 then
         remain = table.remove(code_segs)
     end
 
-    -- 回删活動串
+    -- 回删活动串
     ctx:pop_input(#core.input_restore_funckeys(remain))
     return kAccepted
 end
@@ -232,7 +232,7 @@ function processor.init(env)
         env.switcher = Switcher(env.engine)
     end
 
-    -- 讀取配置項
+    -- 读取配置项
     local ok = pcall(namespaces.init, namespaces, env)
     if not ok then
         local config = {}
@@ -243,7 +243,7 @@ function processor.init(env)
     end
     env.config = namespaces:config(env)
 
-    -- 構造回調函數
+    -- 构造回调函数
     local option_names = {
         [core.switch_names.single_char] = true,
         [core.switch_names.single_char_delay] = true,
@@ -254,24 +254,24 @@ function processor.init(env)
         option_names[mapper.option] = true
     end
     local handler = core.get_switch_handler(env, option_names)
-    -- 初始化爲選項實際值, 如果設置了 reset, 則會再次觸發 handler
+    -- 初始化为选项实际值, 如果设置了 reset, 则会再次触发 handler
     for name in pairs(option_names) do
         handler(env.engine.context, name)
     end
-    -- 注册通知回調
+    -- 注册通知回调
     env.engine.context.option_update_notifier:connect(handler)
 end
 
 function processor.func(key_event, env)
     local ctx = env.engine.context
     if #ctx.input == 0 or key_event:release() or key_event:alt() then
-        -- 當前無輸入, 或不是我關注的鍵按下事件, 棄之
+        -- 当前无输入, 或不是我关注的键按下事件, 弃之
         return kNoop
     end
 
     local ch = key_event.keycode
     if key_event:ctrl() then
-        -- ctrl-x 自定義 lua 捷徑
+        -- ctrl-x 自定义 lua 捷径
         local accel = namespaces:config(env).accels[ch]
         if accel then
             local cand = ctx:get_selected_candidate()
@@ -320,19 +320,19 @@ function processor.func(key_event, env)
         res = handle_select(env, ctx, ch, funckeys)
     end
     if res == kNoop and funckeys.fullci[ch] then
-        -- 四碼單字
+        -- 四码单字
         res = handle_fullcode(env, ctx, ch)
     end
     if res == kNoop and funckeys["break"][ch] then
-        -- 打斷施法
+        -- 打断施法
         res = handle_break(env, ctx, ch)
     end
     if res == kNoop and funckeys["repeat"][ch] then
-        -- 重複上屏
+        -- 重复上屏
         res = handle_repeat(env, ctx, ch)
     end
     if res == kNoop and funckeys.clearact[ch] then
-        -- 清除活動編碼
+        -- 清除活动编码
         res = handle_clean(env, ctx, ch)
     end
     return res

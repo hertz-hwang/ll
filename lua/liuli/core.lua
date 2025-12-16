@@ -5,19 +5,19 @@ local core = {}
 -- wiki: https://github.com/hchunhui/librime-lua/wiki/Scripting
 
 
--- 由translator記録輸入串, 傳遞給filter
+-- 由translator记录输入串, 传递给filter
 core.input_code = ''
--- 由translator計算暫存串, 傳遞給filter
+-- 由translator计算暂存串, 传递给filter
 core.stashed_text = ''
--- 由translator初始化基础碼表數據
+-- 由translator初始化基础码表数据
 core.base_mem = nil
--- 由translator構造智能詞前綴樹
+-- 由translator构造智能词前缀树
 core.word_trie = nil
--- 附加詞庫
+-- 附加词库
 core.full_mem = nil
 
 
--- 操作系統類型枚舉
+-- 操作系统类型枚举
 core.os_types = {
     android = "android",
     ios     = "ios",
@@ -27,7 +27,7 @@ core.os_types = {
     unknown = "unknown",
 }
 
--- 當前操作系統平臺
+-- 当前操作系统平台
 -- 定义平台检测函数
 local function detect_platform()
     -- 1. 尝试从 RIME API 获取
@@ -96,7 +96,7 @@ elseif platform == "linux" then
     core.os_name = core.os_types.linux
 end
 
--- 宏類型枚舉
+-- 宏类型枚举
 core.macro_types = {
     tip    = "tip",
     switch = "switch",
@@ -106,7 +106,7 @@ core.macro_types = {
 }
 
 
--- 開關枚舉
+-- 开关枚举
 core.switch_names = {
     single_char   = "single_char",
     single_char_delay = "single_char_delay",
@@ -136,9 +136,9 @@ local funckeys_restorer = {
     ["3"] = " c",
 }
 
----在現有的迭代器上通過 handler 封裝一個新的迭代器
----傳入處理器 handler 須能正確處理傳入迭代器 iterable
----返回的值爲簡易迭代器, 通過 for v in iter() do ... end 形式迭代
+---在现有的迭代器上通过 handler 封装一个新的迭代器
+---传入处理器 handler 须能正确处理传入迭代器 iterable
+---返回的值为简易迭代器, 通过 for v in iter() do ... end 形式迭代
 ---@param iterable function
 ---@param handler function
 ---@return function
@@ -163,7 +163,7 @@ function core.input_restore_funckeys(input)
     return string.gsub(input, "([1-3])", funckeys_restorer)
 end
 
--- 設置開關狀態, 並更新保存的配置值
+-- 设置开关状态, 并更新保存的配置值
 local function set_option(env, ctx, option_name, value)
     ctx:set_option(option_name, value)
     local swt = env.switcher
@@ -175,8 +175,8 @@ local function set_option(env, ctx, option_name, value)
 end
 
 
--- 下文的 new_tip, new_switch, new_radio 等是目前已實現的宏類型
--- 其返回類型統一定義爲:
+-- 下文的 new_tip, new_switch, new_radio 等是目前已实现的宏类型
+-- 其返回类型统一定义为:
 -- {
 --   type = "string",
 --   name = "string",
@@ -184,13 +184,13 @@ end
 --   trigger = function(self, ctx) ... end
 -- }
 -- 其中:
--- type 字段僅起到標識作用
--- name 字段亦非必須
--- display() 爲該宏在候選欄中顯示的效果, 通常 name 非空時直接返回 name 的值
--- trigger() 爲該宏被選中時, 上屏的文本内容, 返回空卽不上屏
+-- type 字段仅起到标识作用
+-- name 字段亦非必须
+-- display() 为该宏在候选栏中显示的效果, 通常 name 非空时直接返回 name 的值
+-- trigger() 为该宏被选中时, 上屏的文本内容, 返回空即不上屏
 
----提示語或快捷短語
----顯示爲 name, 上屏爲 text
+---提示语或快捷短语
+---显示为 name, 上屏为 text
 ---@param name string
 local function new_tip(name, text)
     local tip = {
@@ -212,9 +212,9 @@ local function new_tip(name, text)
     return tip
 end
 
----開關
----顯示 name 開關當前的狀態, 並在選中切換狀態
----states 分别指定開關狀態爲 開 和 關 時的顯示效果
+---开关
+---显示 name 开关当前的状态, 并在选中切换状态
+---states 分别指定开关状态为 开 和 关 时的显示效果
 ---@param name string
 ---@param states table
 local function new_switch(name, states)
@@ -244,9 +244,9 @@ local function new_switch(name, states)
     return switch
 end
 
----單選
----顯示一組 names 開關當前的狀態, 並在選中切換關閉當前開啓項, 並打開下一項
----states 指定各組開關的 name 和當前開啓的開關時的顯示效果
+---单选
+---显示一组 names 开关当前的状态, 并在选中切换关闭当前开启项, 并打开下一项
+---states 指定各组开关的 name 和当前开启的开关时的显示效果
 ---@param states table
 local function new_radio(states)
     local radio = {
@@ -269,23 +269,23 @@ local function new_radio(states)
         for i, op in ipairs(self.states) do
             local value = ctx:get_option(op.name)
             if value then
-                -- 關閉當前選項, 開啓下一選項
+                -- 关闭当前选项, 开启下一选项
                 set_option(env, ctx, op.name, not value)
                 set_option(env, ctx, self.states[i % #self.states + 1].name, value)
                 return
             end
         end
-        -- 全都没開, 那就開一下第一個吧
+        -- 全都没开, 那就开一下第一个吧
         set_option(env, ctx, self.states[1].name, true)
     end
 
     return radio
 end
 
----Shell 命令, 僅支持 Linux/Mac 系統, 其他平臺可通過下文提供的 eval 宏自行擴展
----name 非空時顯示其值, 爲空则顯示實時的 cmd 執行結果
----cmd 爲待執行的命令内容
----text 爲 true 時, 命令執行結果上屏, 否则僅執行
+---Shell 命令, 仅支持 Linux/Mac 系统, 其他平台可通过下文提供的 eval 宏自行扩展
+---name 非空时显示其值, 为空则显示实时的 cmd 执行结果
+---cmd 为待执行的命令内容
+---text 为 true 时, 命令执行结果上屏, 否则仅执行
 ---@param name string
 ---@param cmd string
 ---@param text boolean
@@ -333,11 +333,11 @@ local function new_shell(name, cmd, text)
     return shell
 end
 
----Evaluate 宏, 執行給定的 lua 表達式
----name 非空時顯示其值, 否则顯示實時調用結果
----expr 必須 return 一個值, 其類型可以是 string, function 或 table
----返回 function 時, 該 function 接受一個 table 參數, 返回 string
----返回 table 時, 該 table 成員方法 peek 和 eval 接受 self 和 table 參數, 返回 string, 分别指定顯示效果和上屏文本
+---Evaluate 宏, 执行给定的 lua 表达式
+---name 非空时显示其值, 否则显示实时调用结果
+---expr 必须 return 一个值, 其类型可以是 string, function 或 table
+---返回 function 时, 该 function 接受一个 table 参数, 返回 string
+---返回 table 时, 该 table 成员方法 peek 和 eval 接受 self 和 table 参数, 返回 string, 分别指定显示效果和上屏文本
 ---@param name string
 ---@param expr string
 local function new_eval(name, expr)
@@ -395,7 +395,7 @@ local function new_eval(name, expr)
 end
 
 
----Evaluate 捷徑, 執行給定的 lua 表達式
+---Evaluate 捷径, 执行给定的 lua 表达式
 local function new_accel_eval(expr)
     local f = load(expr)
     if not f then
@@ -438,7 +438,7 @@ local function new_accel_eval(expr)
 end
 
 
----字符過濾器
+---字符过滤器
 ---@param option_name string
 ---@param mapper_expr string
 local function new_mapper(option_name, mapper_expr)
@@ -485,13 +485,13 @@ function core.get_macro_args(input, keylist)
     return string.match(input, pattern) or "", args
 end
 
--- 從方案配置中讀取布爾值
+-- 从方案配置中读取布尔值
 function core.parse_conf_bool(env, path)
     local value = env.engine.schema.config:get_bool(env.name_space .. "/" .. path)
     return value and true or false
 end
 
--- 從方案配置中讀取字符串
+-- 从方案配置中读取字符串
 function core.parse_conf_str(env, path, default)
     local str = env.engine.schema.config:get_string(env.name_space .. "/" .. path)
     if not str and default and #default ~= 0 then
@@ -500,7 +500,7 @@ function core.parse_conf_str(env, path, default)
     return str
 end
 
--- 從方案配置中讀取字符串列表
+-- 从方案配置中读取字符串列表
 function core.parse_conf_str_list(env, path, default)
     local list = {}
     local conf_list = env.engine.schema.config:get_list(env.name_space .. "/" .. path)
@@ -514,7 +514,7 @@ function core.parse_conf_str_list(env, path, default)
     return list
 end
 
--- 從方案配置中讀取宏配置
+-- 从方案配置中读取宏配置
 function core.parse_conf_macro_list(env)
     local macros = {}
     local macro_map = env.engine.schema.config:get_map(env.name_space .. "/macros")
@@ -601,7 +601,7 @@ function core.parse_conf_macro_list(env)
     return macros
 end
 
--- 從方案配置中讀取過濾器列表
+-- 从方案配置中读取过滤器列表
 function core.parse_conf_mapper_list(env)
     local mappers = {}
     local mapper_list = env.engine.schema.config:get_list(env.name_space .. "/mappers")
@@ -620,7 +620,7 @@ function core.parse_conf_mapper_list(env)
     return mappers
 end
 
--- 從方案配置中讀取功能鍵配置
+-- 从方案配置中读取功能键配置
 function core.parse_conf_funckeys(env)
     local funckeys = {
         macro      = {},
@@ -644,7 +644,7 @@ function core.parse_conf_funckeys(env)
     return funckeys
 end
 
--- 從方案配置中讀取宏配置
+-- 从方案配置中读取宏配置
 function core.parse_conf_accel_list(env)
     local accel = {}
     local accel_list = env.engine.schema.config:get_list(env.name_space .. "/accel") or { size = 0 }
@@ -664,7 +664,7 @@ function core.parse_conf_accel_list(env)
     return accel
 end
 
--- 構造智能詞前綴树
+-- 构造智能词前缀树
 function core.gen_smart_trie(base_rev, db_name)
     local result = {
         base_rev  = base_rev,
@@ -672,10 +672,10 @@ function core.gen_smart_trie(base_rev, db_name)
         dict_path = rime_api.get_user_data_dir() .. "/" .. db_name .. ".txt",
     }
 
-    -- 獲取db對象
+    -- 获取db对象
     function result:db()
         if not self.userdb then
-            -- 使用 pcall 嘗試兩種 LevelDb 傳參方式
+            -- 使用 pcall 尝试两种 LevelDb 传参方式
             local ok
             ok, self.userdb = pcall(LevelDb, db_name)
             if not ok then
@@ -688,7 +688,7 @@ function core.gen_smart_trie(base_rev, db_name)
         return self.userdb
     end
 
-    -- 查詢對應的智能候選詞
+    -- 查询对应的智能候选词
     function result:query(code, first_chars, count)
         local words = {}
         if #code == 0 then
@@ -697,7 +697,7 @@ function core.gen_smart_trie(base_rev, db_name)
         if type(code) == "table" then
             local segs = code
             code = table.concat(code)
-            -- 末位單字簡碼補空格
+            -- 末位单字简码补空格
             if string.match(segs[#segs], "^[a-z][a-z]?$") then
                 code = code .. "1"
             end
@@ -706,7 +706,7 @@ function core.gen_smart_trie(base_rev, db_name)
             local prefix = string.format(":%s:", code)
             local accessor = self:db():query(prefix)
             local weights = {}
-            -- 最多返回 count 個結果
+            -- 最多返回 count 个结果
             count = count or 1
             local index = 0
             for key, value in accessor:iter() do
@@ -714,15 +714,15 @@ function core.gen_smart_trie(base_rev, db_name)
                     break
                 end
                 index = index + 1
-                -- 查得詞條和權重
+                -- 查得词条和权重
                 local word = string.sub(key, #prefix + 1, -1)
                 local weight = tonumber(value)
                 table.insert(words, word)
                 weights[word] = weight
             end
-            -- 按詞條權重降序排
+            -- 按词条权重降序排
             table.sort(words, function(a, b) return weights[a] > weights[b] end)
-            -- 過濾與單字首選相同的唯一候選詞
+            -- 过滤与单字首选相同的唯一候选词
             if #words == 1 and words[1] == table.concat(first_chars or {}) then
                 table.remove(words)
             end
@@ -730,20 +730,20 @@ function core.gen_smart_trie(base_rev, db_name)
         return words
     end
 
-    -- 更新詞條記录
+    -- 更新词条记录
     function result:update(code, word, weight)
         if self:db() then
-            -- insert { ":jgarjk:時間" -> weight }
+            -- insert { ":jgarjk:时间" -> weight }
             local key = string.format(":%s:%s", code, word)
             local value = tostring(weight or 0)
             self:db():update(key, value)
         end
     end
 
-    -- 删除詞條記录
+    -- 删除词条记录
     function result:delete(code, word)
         if self:db() then
-            -- delete ":jgarjk:時間"
+            -- delete ":jgarjk:时间"
             local key = string.format(":%s:%s", code, word)
             self:db():erase(key)
         end
@@ -764,12 +764,12 @@ function core.gen_smart_trie(base_rev, db_name)
         end
     end
 
-    -- 從字典文件讀取詞條, 录入到 leveldb 中
+    -- 从字典文件读取词条, 录入到 leveldb 中
     function result:load_dict()
         if not self.base_rev then
             return "cannot open reverse db"
         elseif self:db() then
-            -- 試圖打開文件
+            -- 试图打开文件
             local file, err = io.open(self.dict_path, "r")
             if not file then
                 return err
@@ -777,26 +777,26 @@ function core.gen_smart_trie(base_rev, db_name)
             local weight = os.time()
             for line in file:lines() do
                 local chars = {}
-                -- "時間軸" => ["時:jga", "間:rjk", "軸:rpb"]
+                -- "时间轴" => ["时:jga", "间:rjk", "轴:rpb"]
                 for _, c in utf8.codes(line) do
                     local char = utf8.char(c)
                     local code = core.rev_lookup(self.base_rev, char)
                     if #code == 0 then
-                        -- 反查失敗, 下一個
+                        -- 反查失败, 下一个
                         break
                     end
                     table.insert(chars, { char = char, code = code })
                 end
                 -- 1 <= i <= n-1; i+1 <= j <= n
                 -- (i, j): (1, 2) -> (1, 3) -> (2, 3)
-                -- "時間", "時間軸", "間軸"
+                -- "时间", "时间轴", "间轴"
                 for i = 1, #chars - 1, 1 do
                     local code, word = chars[i].code, chars[i].char
                     for j = i + 1, #chars, 1 do
-                        -- 連字成詞
+                        -- 连字成词
                         code = code .. chars[j].code
                         word = word .. chars[j].char
-                        -- insert: { "jgarjk:時間" -> weight }
+                        -- insert: { "jgarjk:时间" -> weight }
                         self:update(code, word, weight)
                     end
                 end
@@ -809,7 +809,7 @@ function core.gen_smart_trie(base_rev, db_name)
         end
     end
 
-    -- 用户字典爲空時, 尝試加載詞典
+    -- 用户字典为空时, 尝试加载词典
     if result:db() then
         local accessor = result:db():query(":")
         local empty = true
@@ -824,13 +824,13 @@ function core.gen_smart_trie(base_rev, db_name)
     return result
 end
 
--- 是否合法琉璃分詞串
+-- 是否合法琉璃分词串
 function core.valid_liuli_input(input)
-    -- 輸入串完全由 [a-z_] 構成, 且不以 [_] 開頭
+    -- 输入串完全由 [a-z_] 构成, 且不以 [_] 开头
     return string.match(input, "^[a-z ]*$") and not string.match(input, "^[ ]")
 end
 
--- 構造開關變更回調函數
+-- 构造开关变更回调函数
 ---@param option_names table
 function core.get_switch_handler(env, option_names)
     env.option = env.option or {}
@@ -841,16 +841,16 @@ function core.get_switch_handler(env, option_names)
             name_set[name] = true
         end
     end
-    -- 返回通知回調, 當改變選項值時更新暫存的值
+    -- 返回通知回调, 当改变选项值时更新暂存的值
     ---@param name string
     return function(ctx, name)
         if name_set[name] then
             option[name] = ctx:get_option(name)
             if option[name] == nil then
-                -- 當選項不存在時默認爲啟用狀態
+                -- 当选项不存在时默认为启用状态
                 option[name] = true
             end
-            -- 刷新, 使 lua 組件讀取最新開關狀態
+            -- 刷新, 使 lua 组件读取最新开关状态
             ctx:refresh_non_confirmed_composition()
         end
     end
@@ -879,7 +879,7 @@ function core.get_code_segs(input)
     return code_segs, input
 end
 
--- 根据字符反查最短編碼
+-- 根据字符反查最短编码
 function core.rev_lookup(rev, char)
     local result = ""
     if not rev then
@@ -906,7 +906,7 @@ function core.rev_lookup(rev, char)
 end
 
 -- 查询编码对应候选列表
--- "dkd" -> ["南", "電"]
+-- "dkd" -> ["南", "电"]
 function core.dict_lookup(env, mem, code, count, comp)
     -- 是否补全编码
     count = count or 1
@@ -916,14 +916,14 @@ function core.dict_lookup(env, mem, code, count, comp)
         return result
     end
     if mem:dict_lookup(code, comp, 100) then
-        -- 封裝初始迭代器
+        -- 封装初始迭代器
         local iterator = wrap_iterator(mem, function(iter, yield)
             for entry in iter:iter_dict() do
                 yield(entry)
             end
         end)
         if #env.config.mappers ~= 0 then
-            -- 使用方案定義的映射器對迭代器層層包裝
+            -- 使用方案定义的映射器对迭代器层层包装
             for _, mapper in pairs(env.config.mappers) do
                 iterator = wrap_iterator(iterator, function(iter, yield)
                     mapper(iter, env, yield)
@@ -931,7 +931,7 @@ function core.dict_lookup(env, mem, code, count, comp)
             end
         end
 
-        -- 根據 entry.text 聚合去重
+        -- 根据 entry.text 聚合去重
         local res_set = {}
         local index = 1
         for entry in iterator() do
@@ -939,11 +939,11 @@ function core.dict_lookup(env, mem, code, count, comp)
                 break
             end
 
-            -- 剩餘編碼大於一, 則不收
+            -- 剩余编码大于一, 则不收
             if entry.remaining_code_length <= 1 then
                 local exist = res_set[entry.text]
                 if not exist then
-                    -- 候選去重, 但未完成編碼提示取有
+                    -- 候选去重, 但未完成编码提示取有
                     res_set[entry.text] = entry
                     table.insert(result, entry)
                     index = index + 1
@@ -956,7 +956,7 @@ function core.dict_lookup(env, mem, code, count, comp)
     return result
 end
 
--- 查詢分詞首選列表
+-- 查询分词首选列表
 function core.query_first_cand_list(env, mem, code_segs)
     local cand_list = {}
     for _, code in ipairs(code_segs) do
@@ -966,9 +966,9 @@ function core.query_first_cand_list(env, mem, code_segs)
     return cand_list
 end
 
--- 最大匹配查詢分詞候選列表
--- ["dkd", "qgx", "fvt"] -> ["電動", "杨"]
--- ["dkd", "qgx"]        -> ["南", "動"]
+-- 最大匹配查询分词候选列表
+-- ["dkd", "qgx", "fvt"] -> ["电动", "杨"]
+-- ["dkd", "qgx"]        -> ["南", "动"]
 function core.query_cand_list(env, mem, code_segs, skipfull)
     local index = 1
     local cand_list = {}
@@ -980,7 +980,7 @@ function core.query_cand_list(env, mem, code_segs, skipfull)
                 -- continue
             else
                 code = table.concat(code_segs, "", index, viewport)
-                -- TODO: 優化智能詞查詢
+                -- TODO: 优化智能词查询
                 local entries = {}
                 if index == viewport then
                     entries = core.dict_lookup(env, mem, code)
@@ -996,12 +996,12 @@ function core.query_cand_list(env, mem, code_segs, skipfull)
                     end
                 end
                 if entries[1] then
-                    -- 當前viewport有候選, 擇之並進入下一輪
+                    -- 当前viewport有候选, 择之并进入下一轮
                     table.insert(cand_list, entries[1].text)
                     index = viewport + 1
                     break
                 elseif viewport == index then
-                    -- 最小viewport無候選, 以空串作爲候選
+                    -- 最小viewport无候选, 以空串作为候选
                     table.insert(cand_list, "")
                     index = viewport + 1
                     break
@@ -1009,10 +1009,10 @@ function core.query_cand_list(env, mem, code_segs, skipfull)
             end
         end
     end
-    -- 返回候選字列表及末候選編碼
+    -- 返回候选字列表及末候选编码
     return cand_list, code
 end
 
--- 導出爲全局模块
+-- 导出为全局模块
 LlCore = core
 return core
