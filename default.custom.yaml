@@ -13,3 +13,5 @@ patch:
     - charset.all
     - charset.freqly
     - single_char
+    - single_char_delay
+    - hwang

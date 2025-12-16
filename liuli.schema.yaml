@@ -31,6 +31,7 @@ switches:
     reset: 0
   - options: [ hwang, single_char_delay, single_char ]
     states: [ 智能延迟顶, 五三顶, 三定 ]
+    abbrev: [七, 五, 三]
     reset: 0
   - options: [ full.word, full.char, full.off ]
     states: [ 字词, 无词, 无四码 ]
@@ -42,7 +43,7 @@ switches:
     states: [ 简洁, 预测 ]
     reset: 0
   - options: [ charset.all, charset.freqly ]
-    states: [ 全字集, 仅常用字 ]
+    states: [ 全字集, 常用字 ]
     reset: 0
   - name: emoji
     states: [ 🈚, 🈶 ]
