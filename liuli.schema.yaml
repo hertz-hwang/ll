@@ -34,7 +34,7 @@ switches:
     abbrev: [七, 五, 三]
     reset: 0
   - options: [ full.word, full.char, full.off ]
-    states: [ 字词, 无词, 无四码 ]
+    states: [ 字词同出, 禁出词组, 禁出四码 ]
     reset: 0
   - name: embeded_cands
     states: [ 普通, 嵌入 ]
@@ -222,7 +222,7 @@ ll:
     help:
       - { type: tip, name: ❖配置中心 }
       - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
-      - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词, ☐☑无词, ☐☐无四码 ] }
+      - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词同出, ☐☑禁出词组, ☐☐禁出四码 ] }
       - { type: switch, name: embeded_cands, states: [ ☐嵌入, ☑嵌入 ] }
       - { type: switch, name: completion, states: [ □简洁, ■补全 ] }
       - { type: radio, names: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ], states: [ ☐☐☐☐注解, ☑☐☐☐注解, ☐☑☐☐注解, ☐☐☑☐注解, ☐☐☐☑注解 ] }
@@ -244,7 +244,7 @@ ll:
     full:
       - type: radio
         names: [ full.word, full.char, full.off ]
-        states: [ "☑☑四码字词: 显示所有候选", "☐☑四码全单: 隐藏词语候选", "☐☐仅三码: 隐藏四码候选" ]
+        states: [ "☑☑字词同出: 显示所有候选", "☐☑禁出词组: 隐藏词语候选", "☐☐禁出四码: 隐藏四码候选" ]
     smart:
       - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
     comp:
