@@ -130,6 +130,9 @@ embeded_cands:
 
 punctuator:
   import_preset: symbols
+  half_shape:
+    __append:
+      '\': '、'
 
 key_binder:
   #  import_preset: default
