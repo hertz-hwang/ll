@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.full"
-version: v202512170852
+version: v202512170938
 sort: original
 columns:
   - text
@@ -1962,6 +1962,7 @@ columns:
 𨍄	baay
 䡭	babc
 𱈌	babc
+𮑓	babk
 𦦂	babq
 𲒫	babr
 𘙿	bacb
@@ -1979,6 +1980,7 @@ columns:
 㞳	badn
 𣁮	badp
 𪂓	badw
+𱽽	baeh
 𲍏	baei
 𱛥	baen
 𧱀	baey
@@ -2011,6 +2013,7 @@ columns:
 嵛	bahr
 貐	bahr
 崳	bahr
+蕍	bahr
 輸	bahr
 𧱬	bahr
 豧	bahy
@@ -2086,6 +2089,7 @@ columns:
 𧴚	barw
 𪩚	barw
 𡺊	basf
+𫈭	bash
 鲜	basi
 𨋽	basm
 㟄	basn
@@ -2108,6 +2112,7 @@ columns:
 㠖	bawj
 嶬	bawj
 轙	bawj
+𮑲	bawj
 岨	bawn
 𭖍	bawn
 豠	bawy
@@ -2124,7 +2129,9 @@ columns:
 𡿐	bayx
 𡻘	bayz
 𦼬	bayz
+𧁔	bayz
 𳄍	bayz
+𦻈	bazn
 𳎕	bazn
 嵢	bazp
 𡷬	bbab
@@ -2219,6 +2226,7 @@ columns:
 𫟋	bbfa
 㠓	bbfb
 𡽶	bbfn
+𮒎	bbfv
 與	bbga
 𦏜	bbga
 轝	bbgb
@@ -2293,6 +2301,7 @@ columns:
 𥃖	bbhy
 鲭	bbhz
 崝	bbhz
+蔳	bbhz
 輤	bbhz
 𡸺	bbhz
 𡓚	bbic
@@ -2316,10 +2325,13 @@ columns:
 汖	bbkn
 𡵰	bbkn
 𨌂	bbks
+𦼻	bbkv
+𧂙	bbkx
 𦥸	bble
 齃	bblf
 𡾀	bblg
 鲺	bblh
+䔽	bblh
 輵	bblm
 嵑	bbln
 𦦲	bblr
@@ -2377,6 +2389,7 @@ columns:
 𡺵	bbru
 𡻀	bbsb
 𢁃	bbse
+𦺇	bbsh
 𨍛	bbsh
 𬶡	bbsh
 𭖪	bbsh
@@ -2394,6 +2407,7 @@ columns:
 嶃	bbtn
 嶄	bbtn
 𡶁	bbtn
+𦾶	bbtn
 𧴃	bbtn
 𡽒	bbtt
 豘	bbty
@@ -2408,6 +2422,7 @@ columns:
 𲍙	bbuv
 𢜎	bbvi
 𨎥	bbvi
+𬟉	bbvi
 𣷜	bbvj
 𫿘	bbvj
 𪬇	bbvl
@@ -2460,6 +2475,7 @@ columns:
 𡼈	bcao
 鲮	bcas
 崚	bcas
+蔆	bcas
 輘	bcas
 𡹃	bcas
 𭖩	bcas
@@ -2488,6 +2504,7 @@ columns:
 嵠	bccn
 豯	bccn
 貕	bccn
+𬞥	bccn
 𳎠	bccn
 幽	bccp
 𭖞	bccp
@@ -2517,11 +2534,13 @@ columns:
 𘆌	bcfb
 䡕	bcfk
 𡶽	bcfk
+𦴸	bcfk
 𡼍	bcfl
 𡺗	bcfm
 毀	bcfn
 𡢕	bcfo
 𰹗	bcfo
+𦹻	bcfu
 𥌝	bcfx
 𥽂	bcfz
 𡻆	bcge
@@ -2533,6 +2552,7 @@ columns:
 𡾽	bchw
 䝖	bchy
 𦞩	bchz
+薃	bcih
 𱈋	bcii
 𠮸	bcim
 嵩	bcin
@@ -2577,12 +2597,17 @@ columns:
 崞	bclg
 㟊	bclg
 𡥆	bclg
+𦷰	bclg
 𫲯	bclg
+𮶱	bclg
 𱇲	bclg
 𳎜	bclg
 轖	bclp
 𨐂	bcls
 𰶨	bclw
+𧅐	bclx
+𦶷	bcmd
+䓑	bcmh
 𨎘	bcml
 𨊻	bcmm
 岍	bcmn
@@ -2603,6 +2628,7 @@ columns:
 𮱫	bcon
 㟎	bcou
 𡚽	bcou
+𦷪	bcou
 𭗤	bcpd
 𮮷	bcpf
 轅	bcph
@@ -2697,6 +2723,7 @@ columns:
 𡾢	bdbv
 𨏥	bdbv
 𱮦	bdbw
+䕪	bdca
 嶧	bdca
 𲑹	bdcd
 𨏙	bdch
@@ -2717,6 +2744,7 @@ columns:
 鶂	bddw
 峵	bdef
 𨌆	bdef
+𲽍	bdeh
 𬈛	bdek
 㟲	bden
 㟶	bden
@@ -2739,6 +2767,7 @@ columns:
 辿	bdfn
 迍	bdft
 𡺟	bdfu
+𮶵	bdfu
 逐	bdfy
 𦥥	bdgl
 䑔	bdgp
@@ -2746,8 +2775,10 @@ columns:
 𮝅	bdgp
 𱇑	bdgp
 𱛐	bdgp
+𱽫	bdgp
 𫻻	bdgw
 𧱠	bdgy
+萡	bdhh
 𳀃	bdhh
 鲌	bdhi
 𫏴	bdhm
@@ -2763,6 +2794,7 @@ columns:
 兒	bdiq
 𖿳	bdiq
 𧡎	bdiu
+𦰛	bdjh
 𫚍	bdji
 𨋂	bdjm
 岎	bdjn
@@ -2775,6 +2807,7 @@ columns:
 𪩅	bdks
 𨋠	bdkx
 𮙩	bdkx
+蘫	bdky
 轞	bdky
 𡽳	bdky
 𡽾	bdky
@@ -2782,6 +2815,7 @@ columns:
 嵱	bdla
 𫚦	bdla
 𫶎	bdla
+𰲆	bdla
 𩓻	bdld
 𲊲	bdld
 𡥲	bdlg
@@ -2804,6 +2838,7 @@ columns:
 𡼂	bdon
 𪩏	bdon
 峖	bdou
+𦴴	bdou
 𨋴	bdou
 𩽾	bdou
 𫵻	bdou
@@ -2859,6 +2894,7 @@ columns:
 𰻣	bdvt
 𨛛	bdvy
 𪩐	bdwf
+𮒒	bdwh
 𱌅	bdwi
 𣴝	bdwj
 𨋫	bdwj
@@ -2891,8 +2927,8 @@ columns:
 𲝵	bdyo
 𧱍	bdyq
 𫶀	bdyq
-岮	bdys
 䡐	bdys
+岮	bdys
 𬶍	bdys
 𮙪	bdys
 㠑	bdyx
@@ -2900,6 +2936,7 @@ columns:
 𱜓	bdzb
 𧱲	bdzc
 𪖴	bdzc
+𰰸	bdzh
 㠗	bdzn
 𨋦	bdzn
 𫝳	bdzn
@@ -2914,6 +2951,7 @@ columns:
 𲞀	beay
 𗘈	bebm
 𘲣	bebm
+𫈲	beck
 𡺿	becs
 𡻴	becs
 𡾯	becv
@@ -2930,6 +2968,7 @@ columns:
 𗘔	beeh
 𰶭	beeh
 𗘕	beff
+䓷	befh
 䡌	befi
 𡵓	befi
 𡵦	befi
@@ -2977,6 +3016,7 @@ columns:
 𫶣	bekf
 𭗯	bekf
 𡴾	bekn
+𭹬	beks
 凯	bekx
 𩑓	beld
 𬶦	belg
@@ -3023,6 +3063,7 @@ columns:
 嶫	bere
 𨏨	bere
 𨞳	berf
+𫉗	berh
 剀	berj
 𲝞	berl
 𨛩	berm
@@ -3042,6 +3083,7 @@ columns:
 𠃥	betm
 崭	betn
 𡶎	betn
+𬞋	betn
 𗘛	betq
 𨎿	bety
 𫶘	bety
@@ -3101,11 +3143,13 @@ columns:
 繋	bfcp
 𡵮	bfcp
 𦀥	bfcp
+𦯫	bfcp
 𨋇	bfcp
 𲏌	bfcp
 𢾰	bfcv
 𨓒	bfdf
 𮞹	bfdf
+𦵩	bfdh
 𨋍	bfdi
 𭀛	bfdi
 𰎍	bfdi
@@ -3125,9 +3169,12 @@ columns:
 嵾	bffc
 𡼊	bffc
 𡽭	bffc
+𮒌	bffc
 𳄎	bffc
 鼻	bfff
 𡼶	bffg
+𧁑	bffg
+𧀉	bffi
 𫡧	bffi
 𬺴	bffk
 𣪭	bffn
@@ -3184,6 +3231,8 @@ columns:
 㟥	bfnc
 𫶅	bfnc
 𡹊	bfnf
+莈	bfnh
+𦸼	bfni
 軗	bfnm
 輽	bfnt
 嶆	bfnw
@@ -3195,6 +3244,7 @@ columns:
 𪩑	bfnz
 𧱖	bfof
 𧳔	bfof
+𦰚	bfoh
 𨌮	bfom
 𲝨	bfom
 岆	bfon
@@ -3209,6 +3259,7 @@ columns:
 嶠	bfpp
 轎	bfpp
 鲐	bfpr
+菭	bfpr
 軩	bfpr
 𰀼	bfpr
 輺	bfpt
@@ -3323,9 +3374,11 @@ columns:
 𱈈	bgfu
 𗈵	bgfy
 㟞	bggw
+䔐	bggw
 輚	bggw
 𡸚	bggw
 𬶠	bghd
+𮑔	bghd
 𘨸	bghg
 𗈹	bghh
 𘙩	bghh
@@ -3344,6 +3397,8 @@ columns:
 𮱤	bgjf
 𡸛	bgkc
 𣢽	bgkc
+𧀌	bgkc
+𦲾	bgkh
 𱇜	bgki
 𭧑	bgkl
 厾	bgkm
@@ -3378,6 +3433,7 @@ columns:
 𮹗	bgmu
 𧴡	bgnm
 𨍮	bgnm
+𬟣	bgnm
 𱆎	bgnq
 𱈖	bgnq
 𡬯	bgof
@@ -3432,6 +3488,7 @@ columns:
 峣	bgse
 𰎔	bgse
 𲍑	bgse
+𡒎	bgtc
 䶑	bgth
 𨏡	bgth
 𲞈	bgth
@@ -3440,6 +3497,7 @@ columns:
 𗈫	bgto
 𗈬	bgto
 𱜍	bgtt
+蒤	bgtu
 𡷣	bgtu
 𡸂	bgtu
 𨌎	bgtu
@@ -3597,8 +3655,10 @@ columns:
 𨍨	bhby
 𦈇	bhcc
 𩇕	bhcd
+𧁕	bhce
 靜	bhcj
 𫏷	bhck
+蓱	bhcm
 軿	bhcm
 𧳉	bhcm
 𰁀	bhcm
@@ -3621,6 +3681,7 @@ columns:
 𡸝	bheo
 郬	bher
 𧳕	bhey
+𦯻	bhfh
 𲨽	bhfk
 𰥙	bhfm
 㞵	bhfn
@@ -3638,18 +3699,22 @@ columns:
 𫕼	bhhd
 𧒢	bhhh
 𧴎	bhhh
+𫊉	bhhh
 蟸	bhhk
 𧋜	bhhk
 𬠤	bhhk
 𲀋	bhhk
+𦶼	bhhl
 𫶡	bhhl
 𠃡	bhhu
 𪖑	bhhu
 𫏲	bhhu
+𮎷	bhhu
 𲝄	bhhu
 𨌳	bhhz
 𮝢	bhhz
 𬰗	bhib
+𦶵	bhig
 𭚤	bhii
 表	bhip
 𫚪	bhip
@@ -3658,6 +3723,7 @@ columns:
 靚	bhiu
 𮸭	bhje
 𰎦	bhkc
+𮶫	bhkh
 𦥤	bhkl
 𩇣	bhkl
 萤	bhkm
@@ -3670,6 +3736,7 @@ columns:
 𩓨	bhld
 𩓳	bhld
 𫖨	bhld
+鿊	bhlh
 𨊺	bhlm
 𭖇	bhln
 𲝇	bhln
@@ -3711,10 +3778,12 @@ columns:
 鿷	bhri
 𠝜	bhrj
 𰎗	bhrj
+𦷟	bhrk
 𲩨	bhrk
 𨍑	bhrm
 𡺈	bhrn
 𡺞	bhrn
+𧁄	bhrr
 嶒	bhrw
 𡼳	bhrw
 𧲅	bhrw
@@ -3725,6 +3794,7 @@ columns:
 𫚛	bhsg
 𱛯	bhsg
 𡺱	bhss
+𧀝	bhsy
 𲝽	bhsy
 𠮍	bhsz
 𢅢	bhsz
@@ -3788,6 +3858,7 @@ columns:
 青	bhzp
 ⻘	bhzp
 𬹰	biaf
+𦹃	biah
 𬶜	biai
 㟝	bian
 𭗚	biao
@@ -3805,11 +3876,13 @@ columns:
 𡶗	bicn
 𠝦	bicr
 𨗿	bidf
+𫇼	bidh
 軓	bidm
 䒮	bidm
 㞩	bidn
 𧳤	bids
 𡴉	bidt
+𫊓	bidw
 𱑐	bied
 𬶇	biei
 岕	bien
@@ -3821,6 +3894,7 @@ columns:
 䥣	bifl
 𤴝	bifm
 毁	bifn
+𦴷	bifu
 𲧁	bify
 𲣼	bigh
 𘲦	bigm
@@ -3851,6 +3925,7 @@ columns:
 鲫	bijf
 齀	bijf
 𡸎	bijf
+蒞	bijk
 𡸏	bijk
 𤭔	bijm
 𨋐	bijm
@@ -3930,6 +4005,7 @@ columns:
 𪶂	biuk
 峴	biun
 𡷹	biun
+𦶒	biur
 茳	bivh
 懇	bivi
 𢡆	bivi
@@ -3947,6 +4023,7 @@ columns:
 巀	biwg
 𡾃	biwg
 𬶌	biwl
+𮏠	biwl
 𮱧	biwl
 㟭	biwr
 𨍌	biwr
@@ -3957,10 +4034,12 @@ columns:
 豤	bixy
 貇	bixy
 貅	biyq
+𦸂	biyq
 𳂇	biyq
 𳎒	biys
 𥂞	biyz
 𭾒	biyz
+葏	bjah
 峍	bjan
 𡷏	bjan
 貄	bjay
@@ -3969,10 +4048,12 @@ columns:
 洯	bjbk
 𦦈	bjbq
 𢹫	bjcb
+𦻄	bjcd
 𪅸	bjcd
 挈	bjcj
 𡊷	bjck
 𡎊	bjck
+𫮤	bjck
 絜	bjcp
 𨍹	bjdm
 嵬	bjdn
@@ -3983,6 +4064,7 @@ columns:
 𩳏	bjdy
 𡿞	bjdz
 𦴮	bjee
+𦽷	bjee
 鳀	bjei
 崼	bjen
 𪩃	bjen
@@ -4015,6 +4097,7 @@ columns:
 𧍙	bjhk
 𪘂	bjhm
 齧	bjhx
+萿	bjih
 㼤	bjij
 𡾵	bjij
 𤮞	bjij
@@ -4031,8 +4114,10 @@ columns:
 崩	bjjs
 輣	bjjs
 𡹔	bjjs
+𬞉	bjjs
 𰜆	bjjs
 𬶚	bjjz
+𦲷	bjkh
 䲞	bjki
 𨋢	bjkm
 岦	bjkn
@@ -4079,10 +4164,12 @@ columns:
 𬶤	bjos
 𮙫	bjos
 㛃	bjou
+𦻟	bjpe
 𘲯	bjpm
 貂	bjpr
 岧	bjpr
 岹	bjpr
+菬	bjpr
 軺	bjpr
 𪖠	bjpr
 𫩬	bjpr
@@ -4117,6 +4204,7 @@ columns:
 𰹝	bjur
 恝	bjvi
 𭖷	bjvi
+𲼻	bjvi
 齂	bjwj
 𧳙	bjwj
 𡶏	bjwn
@@ -4124,25 +4212,30 @@ columns:
 𧰹	bjwy
 㗉	bjxc
 𪖚	bjxf
+𮏝	bjxh
 鲇	bjxi
 𤋒	bjxl
 岾	bjxn
 𧲸	bjxy
 𭗌	bjyp
 栔	bjyq
+𮏿	bjyq
 鱽	bjzi
 𠜥	bjzm
 屶	bjzn
 𧰱	bjzn
 𨋁	bjzn
+𮏟	bjzn
 㓞	bjzp
 𭃌	bjzp
 𪖢	bkaf
+𲼿	bkah
 鲑	bkai
 𫵽	bkak
 𡷅	bkan
 𡾮	bkas
 𭗴	bkas
+𦶊	bkbi
 𪖗	bkcf
 𡺹	bkcj
 𡻸	bkck
@@ -4166,9 +4259,11 @@ columns:
 𮱱	bkfd
 𧲌	bkfh
 𡵺	bkfi
+𦴵	bkfi
 𧰴	bkfi
 𨊵	bkfi
 𪖙	bkfi
+𱽬	bkfi
 豾	bkfk
 岯	bkfk
 𠂏	bkfk
@@ -4190,6 +4285,7 @@ columns:
 𰀷	bkhu
 𲞊	bkil
 𧡁	bkiu
+𮒐	bkiu
 𮙤	bkiu
 崆	bkiv
 𡹝	bkiv
@@ -4222,6 +4318,7 @@ columns:
 𬶄	bkms
 𰹋	bkms
 𰎡	bknf
+𮑰	bknh
 𨋙	bknm
 𡼪	bknv
 崶	bkof
@@ -4249,6 +4346,7 @@ columns:
 𨎳	bksb
 𡘱	bksf
 軖	bksm
+𦺌	bkss
 鲯	bkti
 𳎣	bktm
 䡳	bktn
@@ -4256,7 +4354,9 @@ columns:
 𱈒	bktn
 䡘	bkty
 𨌨	bkuq
+𬞇	bkuq
 𱛵	bkuq
+𫈜	bkvh
 鲉	bkvi
 𫺸	bkvi
 𢽃	bkvj
@@ -4268,6 +4368,7 @@ columns:
 𦥪	bkvq
 𧲹	bkvy
 峋	bkwr
+𦴥	bkwr
 𨋮	bkwr
 𨏗	bkwr
 𨎣	bkxc
@@ -4282,6 +4383,7 @@ columns:
 𡷃	bkyv
 𡾙	bkyy
 𱈚	bkyy
+𫉙	bkzc
 𱇽	bkzc
 𡼿	bkzj
 𮱦	bkzn
@@ -4353,6 +4455,7 @@ columns:
 𗉜	blfy
 𗉐	blgb
 𗉞	blgb
+虃	blgf
 𗉝	blgf
 𗗣	blgf
 𗗤	blgf
@@ -4402,6 +4505,7 @@ columns:
 𲏑	blhu
 𗉖	blib
 𡹻	blig
+葓	blih
 𲍎	blii
 𫶟	blik
 輁	blim
@@ -4411,11 +4515,13 @@ columns:
 𨍖	bljf
 𭖆	bljf
 𱛉	bljf
+𫈊	bljh
 鲂	blji
 𡺮	bljs
 𡶨	bljy
 崖	blka
 崕	blka
+𦹹	blka
 嶔	blkc
 𡺏	blkc
 𡼲	blkc
@@ -4448,6 +4554,9 @@ columns:
 𘥒	blou
 𗴊	bloy
 𡹪	blpf
+𲼾	blpf
+𦻭	blpm
+𧁛	blpx
 𡽐	blqc
 𱇒	blqi
 𢍒	blql
@@ -4482,6 +4591,7 @@ columns:
 𗉩	bltg
 㠣	blth
 轣	blth
+𧄻	blth
 𧴠	blth
 𪗁	blth
 𗉙	bltl
@@ -4525,6 +4635,7 @@ columns:
 𗉯	blxf
 𗉰	blxh
 軼	blxm
+𦳸	blxs
 𭗧	blyb
 岸	blyc
 㟁	blyc
@@ -4730,6 +4841,7 @@ columns:
 剢	bmrj
 𡺢	bmrj
 𦥆	bmrn
+𦮟	bmsk
 𘲪	bmsm
 𘲫	bmsm
 𳎓	bmsm
@@ -4784,6 +4896,7 @@ columns:
 𡼃	bmzo
 𭽴	bmzs
 𩾆	bmzy
+𦭑	bnah
 𳎑	bnai
 𘲹	bnam
 𨊡	bnam
@@ -4816,6 +4929,7 @@ columns:
 㞫	bndn
 𦥧	bndq
 峓	bndz
+𦳂	bndz
 𧱅	bndz
 𱇧	bndz
 𫏿	bneb
@@ -4848,6 +4962,8 @@ columns:
 䝤	bnhi
 嶛	bnhi
 轑	bnhi
+𧀪	bnhi
+𧃉	bnhx
 𨋎	bnig
 𡻯	bnii
 𧴅	bnii
@@ -4876,9 +4992,11 @@ columns:
 嶦	bnlo
 𨎻	bnlo
 𲝰	bnml
+𦮛	bnms
 𧰫	bnms
 𪖓	bnms
 𭖃	bnms
+𦻂	bnnh
 山	bnnn
 ⼭	bnnn
 𘮝	bnnn
@@ -4900,6 +5018,7 @@ columns:
 𨎰	bnqu
 峛	bnrj
 峢	bnrj
+𦷫	bnsh
 𪖫	bnsh
 艳	bnsl
 𦫱	bnsl
@@ -4925,6 +5044,7 @@ columns:
 𳎚	bnur
 𡼋	bnuv
 䶎	bnvf
+𫈰	bnvh
 鿵	bnvi
 𫚗	bnvi
 𬧵	bnvj
@@ -5016,6 +5136,7 @@ columns:
 𧲽	bocy
 𧲾	bocy
 𨖇	bodf
+莐	bodi
 𦥟	bodi
 𨋄	bodi
 𭖉	bodi
@@ -5082,6 +5203,7 @@ columns:
 岐	boin
 𨋹	boiq
 𱆛	bojd
+𫉣	bojs
 𬶞	bojs
 𦦬	bojw
 𡾴	bokc
@@ -5096,7 +5218,9 @@ columns:
 𱛧	bolg
 𭕃	bolk
 岻	boms
+䓜	boms
 軧	boms
+𦽘	bomy
 岟	bonf
 軮	bonf
 𧲱	bonf
@@ -5114,6 +5238,7 @@ columns:
 𬶹	bopo
 𘒸	bopq
 𡶝	bopr
+𦵙	bopr
 𬛺	bopr
 𘧏	bops
 𡸍	bopz
@@ -5143,10 +5268,12 @@ columns:
 𗳨	botm
 𡹦	botn
 𬸍	bouc
+𦭰	bouh
 𘣀	boum
 𡚴	boun
 𮱅	bouq
 䶌	bovf
+萢	bovh
 鲍	bovi
 𪫷	bovi
 𫾳	bovj
@@ -5161,11 +5288,13 @@ columns:
 崏	bowr
 𨌲	bowr
 𬺫	bowz
+䓋	boxh
 𘫀	boxj
 焘	boxl
 𘞎	boxl
 軝	boxm
 㞴	boxn
+蕖	boyq
 嵥	boyq
 𱼵	boyy
 𥂤	boyz
@@ -5187,6 +5316,7 @@ columns:
 𗘴	bpbr
 𗴂	bpbv
 𗶢	bpbx
+𧃡	bpby
 𧲋	bpby
 𧴘	bpby
 𨎶	bpby
@@ -5262,10 +5392,13 @@ columns:
 𘘢	bpkq
 𡷘	bpkr
 𘨵	bpkx
+𬟚	bplx
+𧄩	bpme
 䡠	bpml
 𡻖	bpml
 𣺪	bpml
 𧳷	bpml
+薻	bpmv
 轈	bpmv
 𡻝	bpmv
 𮝟	bpmz
@@ -5345,6 +5478,7 @@ columns:
 𭖈	bpvn
 𭗟	bpwa
 嶉	bpwf
+蓅	bpwh
 𳎙	bpwi
 𭻋	bpwl
 鳍	bpwr
@@ -5380,6 +5514,7 @@ columns:
 𰹕	bpzp
 嵅	bqak
 輱	bqak
+𦺘	bqak
 𬹎	bqap
 鳡	bqav
 轗	bqav
@@ -5393,6 +5528,7 @@ columns:
 㟤	bqbk
 𡸮	bqbk
 𮬠	bqbk
+𲼮	bqbk
 轕	bqbl
 嶱	bqbl
 𗱑	bqbl
@@ -5472,6 +5608,7 @@ columns:
 嵺	bqgc
 轇	bqgc
 𡻪	bqgc
+𦾷	bqgc
 𪖷	bqgc
 𗗵	bqgf
 𰶫	bqgm
@@ -5520,9 +5657,11 @@ columns:
 𗲋	bqiq
 𳂉	bqiy
 𬥊	bqjc
+𮶷	bqjc
 𡶟	bqjf
 𬶎	bqjf
 𰹏	bqjf
+𰰻	bqjh
 𪩒	bqjk
 𱎀	bqjm
 𰗆	bqjs
@@ -5553,6 +5692,7 @@ columns:
 𱂤	bqmg
 岚	bqmn
 𬶯	bqmv
+𦶜	bqnh
 𱇬	bqni
 㟷	bqnv
 𨎕	bqnv
@@ -5636,6 +5776,7 @@ columns:
 𗲑	bqos
 𘙂	bqos
 𡹙	bqos
+𧄢	bqos
 𫚡	bqos
 𘘤	bqou
 𘨶	bqou
@@ -5657,8 +5798,11 @@ columns:
 𘙞	bqoy
 𘙧	bqoy
 𘜏	bqoy
+蓡	bqoz
+薓	bqoz
 𨍅	bqoz
 𪖧	bqoz
+𮑵	bqoz
 𗲪	bqpb
 𗱒	bqph
 𗲐	bqpm
@@ -5816,6 +5960,7 @@ columns:
 岩	bran
 𡶌	bran
 砉	brap
+𦲍	bray
 鲓	brbi
 𣸐	brbk
 𨎓	brbm
@@ -5825,6 +5970,7 @@ columns:
 𗗜	brbq
 嵫	brcc
 𫚤	brcc
+𲼽	brcc
 𗗖	brcf
 𗘞	brcg
 𗗡	brch
@@ -5866,6 +6012,7 @@ columns:
 𗘟	brho
 𗘠	brhp
 𗗗	brhr
+𦺍	brhr
 𗗢	brhy
 𲝭	bris
 𡾖	brjd
@@ -5913,6 +6060,7 @@ columns:
 𭗢	bror
 𭉠	brpo
 峼	brpr
+𦶡	brpr
 𨌒	brpr
 𬶔	brpr
 𲝾	brqi
@@ -5921,6 +6069,7 @@ columns:
 鳒	brqx
 嵰	brqx
 𪖳	brqx
+𮶶	brqx
 𧴏	brrg
 𗗝	brrh
 剨	brrj
@@ -6041,6 +6190,7 @@ columns:
 𲍓	bslb
 𮨡	bsld
 𡥐	bslg
+𮏍	bslh
 鲃	bsli
 𣲯	bslk
 𡶍	bslm
@@ -6170,6 +6320,7 @@ columns:
 𧳊	btjy
 𭄇	btjz
 𣣗	btkc
+𰰼	btkh
 𣲉	btkk
 𢌚	btkn
 𪨢	btkn
@@ -6196,6 +6347,7 @@ columns:
 𡶜	btms
 𲍘	btnb
 𱌓	btnf
+䓅	btnh
 𪵮	btnk
 𣂰	btnl
 斬	btnm
@@ -6219,6 +6371,7 @@ columns:
 𠼃	btpr
 𱜁	btqb
 鼽	btqf
+𦯊	btqi
 𰹖	btqj
 軌	btqm
 磛	btra
@@ -6226,6 +6379,7 @@ columns:
 𧱷	btrh
 峲	btrj
 𡸉	btrj
+𫉃	btrj
 𰶮	btrn
 𡽜	btro
 𲻎	btsa
@@ -6250,6 +6404,7 @@ columns:
 𡾋	bttt
 𲂧	bttt
 嵧	btty
+𦽾	btty
 𧳽	btty
 𨍸	btty
 𫶌	btty
@@ -6277,7 +6432,9 @@ columns:
 𱰤	btym
 𡶚	btyn
 𫜺	btyn
+蒅	btyq
 槧	btyq
+𧃾	btyy
 𡿑	btzo
 𦓞	buah
 輳	buak
@@ -6297,6 +6454,7 @@ columns:
 𲍭	buct
 遄	budf
 𬨺	budf
+𮶥	budh
 䡎	budm
 𡻮	budv
 䳪	budw
@@ -6328,12 +6486,14 @@ columns:
 輀	buim
 峏	buin
 耑	buin
+蔋	buiz
 𡹧	buiz
 𩾈	buiz
 𪩆	bujf
 輰	bujl
 䑗	bujl
 崵	bujl
+蕩	bujl
 𮋟	bujz
 歂	bukc
 𣤑	bukc
@@ -6350,6 +6510,7 @@ columns:
 颛	bumg
 𡽏	bune
 輭	bunf
+𦺾	bunf
 𪖭	buof
 鲊	buoi
 𨋘	buom
@@ -6395,6 +6556,7 @@ columns:
 𮝠	buty
 𧴓	buui
 𨎪	buui
+𫉰	buul
 𰭭	buuo
 䝕	buuu
 𨏴	buuu
@@ -6423,6 +6585,7 @@ columns:
 𱛸	buwr
 𣖃	buyq
 𫶊	buyz
+𬞫	buyz
 䝒	buzb
 𡽨	buzb
 𲄾	buzb
@@ -6470,6 +6633,7 @@ columns:
 𗱁	bvhy
 𗱄	bvhy
 𗳱	bvhy
+𦯹	bvih
 𢗨	bvik
 惠	bvim
 𨊳	bvim
@@ -6511,8 +6675,11 @@ columns:
 𣲦	bvmk
 𠃣	bvmm
 𡵯	bvmn
+𦼥	bvnh
 𡺐	bvnn
 豬	bvny
+𦴢	bvoh
+䓾	bvou
 𱙊	bvou
 𨐾	bvov
 𗱆	bvox
@@ -6580,6 +6747,7 @@ columns:
 嵵	bwco
 𡻄	bwco
 𪨬	bwcp
+𫈞	bwcp
 𱇢	bwcp
 𧲀	bwcr
 𤌑	bwcx
@@ -6589,6 +6757,7 @@ columns:
 𨓂	bwdf
 𨓬	bwdf
 𭗝	bwdf
+𱽼	bwdh
 𡷋	bwdi
 𠨨	bwdj
 𡶴	bwdn
@@ -6609,8 +6778,10 @@ columns:
 屿	bwen
 𱛇	bwen
 𡺾	bweo
+𱾫	bweo
 𭗮	bwey
 𣍒	bwfc
+𦹏	bwfh
 𨏛	bwfh
 𨌴	bwfm
 崔	bwfn
@@ -6800,6 +6971,7 @@ columns:
 𲝦	bwxj
 嶕	bwxl
 嶣	bwxl
+𧀡	bwxl
 𨏅	bwxm
 𨎹	bwxt
 𨎺	bwxt
@@ -6809,6 +6981,7 @@ columns:
 𭗰	bwyi
 㠍	bwyq
 㠎	bwyq
+𫊋	bwyq
 𮝨	bwyq
 𰹔	bwyq
 𨏸	bwyt
@@ -6818,8 +6991,11 @@ columns:
 𡾧	bwyz
 𮍱	bwza
 𨎡	bwzg
+𫉯	bwzn
+𮑮	bwzn
 𡽉	bwzp
 𮱲	bwzp
+𱾿	bwzp
 𦦼	bwzq
 𤿽	bwzs
 𥽳	bwzu
@@ -6884,6 +7060,7 @@ columns:
 𘪋	bxfo
 𘒐	bxfq
 𰎢	bxfy
+𦵜	bxgh
 𘒅	bxgl
 𧟢	bxgm
 𳄆	bxgm
@@ -6907,12 +7084,15 @@ columns:
 𗉊	bxhq
 𘒇	bxhq
 𘒏	bxhq
+𦲉	bxhu
 鲽	bxhy
 𗈻	bxhy
 𡺑	bxhy
+𦻜	bxhy
 𨍕	bxhy
 𮮶	bxif
 𱛙	bxig
+𫇻	bxih
 甒	bxij
 𭺤	bxij
 颽	bxil
@@ -7017,7 +7197,9 @@ columns:
 貙	bxpy
 𧱙	bxpy
 𧳛	bxpy
+𰲉	bxpy
 鄳	bxqe
+藫	bxqf
 𱈓	bxqf
 𧔱	bxqh
 𧕧	bxqh
@@ -7035,15 +7217,19 @@ columns:
 𘒗	bxro
 𗉃	bxrq
 𘒜	bxry
+𦰪	bxsk
 𱇠	bxsk
 䝡	bxsl
+𦿭	bxsl
 𧱼	bxsl
 𠢬	bxso
 𱜀	bxso
 𢅊	bxsu
+薀	bxsy
 轀	bxsy
 𘒕	bxtb
 鳔	bxth
+薸	bxth
 㟽	bxth
 𗲩	bxth
 𧴋	bxth
@@ -7082,6 +7268,7 @@ columns:
 𡹖	bxxl
 𣶷	bxxl
 𤈹	bxxl
+𦸁	bxxl
 𨌹	bxxl
 𲝩	bxxl
 㠝	bxxm
@@ -7101,6 +7288,7 @@ columns:
 𨏍	bxxy
 㟳	bxyq
 𘒉	bxyq
+𦽼	bxyq
 𨍫	bxyq
 𬐳	bxyz
 𪨾	bxzn
@@ -7149,6 +7337,7 @@ columns:
 崿	bygi
 㟧	bygi
 𳄏	bygl
+𦶶	bygp
 𧴊	bygv
 𲏓	byhd
 𧲃	byhf
@@ -7177,6 +7366,7 @@ columns:
 巗	bylv
 𧴣	bylv
 𣞣	byly
+𦱈	byms
 𧲷	byms
 𡹟	byod
 𲝤	byod
@@ -7188,6 +7378,7 @@ columns:
 𫠐	bypi
 𡶑	bypn
 𨌙	bypv
+莯	byqh
 𫠏	byqi
 荣	byqm
 𡵬	byqn
@@ -7211,6 +7402,7 @@ columns:
 嵖	byuw
 齄	byuw
 𰶪	byuw
+𮶤	byvh
 転	byvm
 𨊪	byvm
 𨏦	bywf
@@ -7223,10 +7415,12 @@ columns:
 𮬜	bywr
 𲝑	bywr
 𳄐	bywr
+𦸪	byxh
 鲱	byxi
 輫	byxm
 𱎇	byxm
 豣	byyc
+𦺁	byyq
 𡾡	byyw
 豸	byyy
 豕	byyy
@@ -7264,6 +7458,7 @@ columns:
 𪩋	bzdj
 𡼇	bzds
 𮬵	bzdw
+𫊁	bzer
 𭗑	bzer
 𧢨	bzfi
 𩙞	bzfi
@@ -7281,6 +7476,7 @@ columns:
 𡺷	bzfs
 𤬡	bzfv
 𤐫	bzfx
+𮶹	bzgh
 𧱢	bzgm
 𨋌	bzgm
 𡷕	bzgo
@@ -7345,6 +7541,7 @@ columns:
 𡼵	bzoo
 𧲂	bzoo
 𪌨	bzoo
+蔢	bzou
 𡢗	bzou
 𫧮	bzpg
 𱈆	bzpi
@@ -7361,6 +7558,7 @@ columns:
 𧳴	bzql
 𡴶	bzrn
 𫶉	bzrn
+𲼼	bzrq
 𪖞	bzsf
 菠	bzsh
 鲏	bzsi
@@ -7381,15 +7579,18 @@ columns:
 𲝝	bzuf
 𰎰	bzug
 䡯	bzvi
+𦿞	bzvi
 峄	bzvl
 𨎞	bzvm
 㟼	bzvn
 㠂	bzvn
+𲽘	bzwf
 𦦷	bzwt
 𱛏	bzxn
 𤬟	bzxv
 㞾	bzys
 䝚	bzys
+𦰫	bzys
 𨋗	bzys
 𪖩	bzyz
 𪾙	bzyz
@@ -9451,8 +9652,10 @@ columns:
 𫮗	cjmw
 𣑧	cjmy
 𬋨	cjna
+𱪀	cjnb
 𪣱	cjng
 𤔊	cjnx
+𤄗	cjnz
 𱨱	cjnz
 𡐁	cjoa
 塝	cjol
@@ -10148,6 +10351,7 @@ columns:
 𦀏	cmvj
 𭠰	cmvj
 堁	cmvk
+𣼦	cmvl
 𰉨	cmvl
 𢇄	cmvm
 𦀛	cmvm
@@ -10936,6 +11140,7 @@ columns:
 𦅶	cqbl
 𗨥	cqbm
 𗫭	cqbm
+𲩺	cqbm
 𗣆	cqbo
 𗣉	cqbo
 𗣴	cqbo
@@ -12514,6 +12719,7 @@ columns:
 𩫛	cwle
 𰠄	cwle
 𤮩	cwli
+𱪔	cwll
 𥾐	cwlp
 堒	cwlq
 緄	cwlq
@@ -12649,6 +12855,7 @@ columns:
 𧹟	cxdy
 𧹵	cxdz
 𮷑	cxem
+滭	cxeo
 郝	cxer
 𨞲	cxer
 䞕	cxeu
@@ -17444,6 +17651,7 @@ columns:
 䨝	ebhz
 𮸨	ebhz
 𰺉	ebhz
+𳀬	ebil
 𩇀	ebip
 𨸑	ebir
 隉	ebiv
@@ -19302,7 +19510,6 @@ columns:
 𣯻	eqmg
 歕	eqmk
 賁	eqml
-𳀬	eqml
 鼖	eqmo
 𮮪	eqmo
 翸	eqmq
@@ -56749,14 +56956,12 @@ columns:
 液	mwim
 雟	mwip
 𧵻	mwiv
-𱪀	mwjb
 涐	mwje
 𬉭	mwjg
 賜	mwjl
 𧶕	mwjl
 𣸬	mwjp
 𣷠	mwjs
-𤄗	mwjz
 𣳩	mwkc
 𪶻	mwkh
 𲂠	mwki
@@ -56782,7 +56987,6 @@ columns:
 𰛊	mwme
 𱨠	mwmj
 𧷰	mwml
-𣼦	mwmv
 滻	mwnc
 𣲫	mwne
 𰜧	mwnp
@@ -56793,7 +56997,6 @@ columns:
 汴	mwpg
 澭	mwpw
 𩏨	mwpw
-𲩺	mwqb
 𱨇	mwqj
 滃	mwqu
 䪚	mwqu
@@ -56815,14 +57018,12 @@ columns:
 𱦀	mwve
 滧	mwvj
 鿌	mwwi
-𱪔	mwwl
 𧶧	mwwr
 𩎿	mwwr
 关	mwww
 𲪼	mwwz
 𪇶	mwxd
 𲫀	mwxd
-滭	mwxe
 韠	mwxe
 𱩚	mwxg
 潐	mwxl
@@ -66584,6 +66785,7 @@ columns:
 嗆	pazp
 皻	pazs
 𫪕	pbae
+𲗑	pbah
 呞	pbak
 𦒽	pbak
 𗛕	pbao
@@ -66704,6 +66906,7 @@ columns:
 𠹙	pbjc
 𠿯	pbjd
 𠽭	pbje
+𲕤	pbjf
 嘣	pbjj
 𭌰	pbjm
 喫	pbjn
@@ -69691,9 +69894,7 @@ columns:
 𠮽	pqlr
 𱒈	pqlr
 𭋇	pqlv
-𲗑	pqma
 𡂠	pqme
-𲕤	pqmj
 𲞜	pqmn
 𠲌	pqms
 𡃻	pqmx
@@ -71960,7 +72161,6 @@ columns:
 𲽿	qcfc
 𦽁	qcfi
 䒱	qcfk
-蕩	qcfl
 𦲻	qcfu
 𦷺	qcfu
 蒸	qcfx
@@ -74161,228 +74361,79 @@ columns:
 𲽁	qlzo
 𧆀	qlzw
 𦴪	qlzy
-𮑓	qmab
 𪆴	qmad
-𱽽	qmae
 葵	qmak
 𬝢	qmak
 𬞂	qmak
 𧀞	qmaq
-蕍	qmar
 葼	qmas
 翪	qmas
-𫈭	qmas
 𬸮	qmau
-𮑲	qmaw
-𧁔	qmay
-𦻈	qmaz
-蔳	qmbh
 𢑘	qmbk
 𦭔	qmbk
 葦	qmbl
-䔽	qmbl
 𮶭	qmbn
-𦺇	qmbs
-𦾶	qmbt
-𦼻	qmbv
 𫊈	qmbv
-𬟉	qmbv
-𮒎	qmbv
-𧂙	qmbx
 𭛙	qmcd
-𦴸	qmcf
-𦹻	qmcf
-薃	qmci
 𡋊	qmck
 𦱬	qmck
-𦷰	qmcl
-𮶱	qmcl
-䓑	qmcm
-𦶷	qmcm
 𫈴	qmcm
-𬞥	qmcn
 𰒳	qmcn
-𦷪	qmco
-蔆	qmcs
 𧅅	qmcx
-𧅐	qmcx
-䕪	qmda
-𲽍	qmde
 蕟	qmdf
 𦷴	qmdf
 𨗨	qmdf
 𬝿	qmdf
-𱽫	qmdg
-萡	qmdh
-𦰛	qmdj
 𦫶	qmdl
-𰲆	qmdl
 𦸹	qmdm
-𦴴	qmdo
-𮶵	qmdu
 𧄞	qmdw
 𪇭	qmdw
-𮒒	qmdw
-蘫	qmdy
-𰰸	qmdz
-𫈲	qmec
-䓷	qmef
-𭹬	qmek
 蔡	qmel
-𫉗	qmer
 𬪝	qmer
-𬞋	qmet
-𦯫	qmfc
-𮒌	qmfc
-𦵩	qmfd
-𧁑	qmfg
-𦸼	qmfi
-𧀉	qmfi
 𦭩	qmfk
 蓎	qmfl
-莈	qmfn
 𦳠	qmfn
-𦰚	qmfo
-菭	qmfp
 𦱗	qmfw
-𡒎	qmgc
 𦬥	qmge
 𦽒	qmge
-䔐	qmgg
-𮑔	qmgh
-𦲾	qmgk
-𧀌	qmgk
 鿒	qmgl
-𬟣	qmgm
 颐	qmgn
-蒤	qmgt
 𰒮	qmgu
 𢨝	qmgw
-蓱	qmhc
-𧁕	qmhe
-𦯻	qmhf
-𦶼	qmhh
-𫊉	qmhh
-𮎷	qmhh
-𦶵	qmhi
 𬡄	qmhi
-𮶫	qmhk
-鿊	qmhl
-𦷟	qmhr
-𧁄	qmhr
-𧀝	qmhy
-𦹃	qmia
-𫇼	qmid
-𫊓	qmid
 蓈	qmie
 𪤼	qmie
-𦴷	qmif
 蓢	qmij
-蒞	qmij
-𦶒	qmiu
-𮏠	qmiw
 莨	qmix
-𦸂	qmiy
-葏	qmja
-𦻄	qmjc
-𫮤	qmjc
-𦻟	qmje
-𦽷	qmje
-萿	qmji
-𬞉	qmjj
-𦲷	qmjk
-菬	qmjp
-𲼻	qmjv
-𮏝	qmjx
-𮏿	qmjy
-𮏟	qmjz
-𲼿	qmka
-𦶊	qmkb
-𦴵	qmkf
 𮒿	qmkf
-𱽬	qmkf
-𮑰	qmkh
-𮒐	qmki
 茉	qmkl
-𦺌	qmks
-𬞇	qmku
-𫈜	qmkv
-𦴥	qmkw
 蒍	qmkx
-𫉙	qmkz
-虃	qmlf
-𲼾	qmlf
 𲒡	qmlg
-𧄻	qmlh
-葓	qmli
 𧴾	qmli
-𫈊	qmlj
-𦹹	qmlk
 𦮷	qmll
-𦻭	qmlm
 𮐧	qmlq
-𦳸	qmls
 𦷡	qmlv
-𧁛	qmlx
 风	qmmm
 𦴬	qmmm
 蘡	qmmo
 𦮙	qmmo
 𘭨	qmms
-𦮟	qmms
 𦻤	qmmw
-𦭑	qmna
-𦳂	qmnd
-𧀪	qmni
 苒	qmnl
-𦮛	qmnm
-𦻂	qmnn
-𦷫	qmns
 𦐘	qmnu
-𫈰	qmnv
-𧃉	qmnx
 𧄎	qmoc
-莐	qmod
 薣	qmoi
 𦼽	qmoi
-𫉣	qmoj
-䓜	qmom
-𦵙	qmop
-𦭰	qmou
-萢	qmov
-䓋	qmox
-蕖	qmoy
-𦽘	qmoy
-𧄩	qmpe
-薻	qmpm
 𮏇	qmpv
-蓅	qmpw
-𬟚	qmpx
-𧃡	qmpy
-𦺘	qmqa
-𲼮	qmqb
-𦾷	qmqc
 𩎮	qmqi
 𮶝	qmqi
-𮶷	qmqj
-𰰻	qmqj
 𦻪	qmql
 𦯂	qmqm
-𦶜	qmqn
-𧄢	qmqs
-蓡	qmqz
-薓	qmqz
-𮑵	qmqz
-𦲍	qmra
 𦷦	qmra
-𲼽	qmrc
 萴	qmrj
 𦬏	qmrl
 𦽞	qmrl
-𦶡	qmrp
-𦺍	qmrr
 䔳	qmrx
-𮶶	qmrx
 戍	qmsb
 𫈍	qmsc
 𦱞	qmsh
@@ -74392,83 +74443,32 @@ columns:
 𘭧	qmsl
 𘭩	qmsl
 𢌭	qmsl
-𮏍	qmsl
 𧹑	qmsm
 𫇭	qmsm
 䕒	qmsp
 𤼱	qmsp
 𧅯	qmtd
 蓠	qmtk
-𰰼	qmtk
-䓅	qmtn
 𦹱	qmtn
-𦯊	qmtq
-𫉃	qmtr
-𦽾	qmtt
 蘺	qmtw
 㒿	qmtw
-蒅	qmty
-𧃾	qmty
 𫉻	qmua
 𦾾	qmud
-𮶥	qmud
-𦺾	qmun
-𫉰	qmuu
 𧀼	qmuv
 𧃎	qmuv
-𬞫	qmuy
-蔋	qmuz
 𧅬	qmvh
-𦯹	qmvi
 荍	qmvj
 菓	qmvl
-𦼥	qmvn
-䓾	qmvo
-𦴢	qmvo
-𫈞	qmwc
-𱽼	qmwd
-𱾫	qmwe
-𦹏	qmwf
 𩁞	qmwf
 𦾍	qmwi
 𧀩	qmwl
-𱾿	qmwp
-𧀡	qmwx
 𧄧	qmwy
-𫊋	qmwy
-𫉯	qmwz
-𮑮	qmwz
 𦹨	qmxc
-𦵜	qmxg
 𦽬	qmxg
-𦲉	qmxh
-𫇻	qmxi
-𦿭	qmxl
 𧃛	qmxm
 䔲	qmxn
-藫	qmxq
-𦰪	qmxs
-薸	qmxt
-𦸁	qmxx
-薀	qmxy
-𦻜	qmxy
-𦽼	qmxy
-𰲉	qmxy
-𦶶	qmyg
-𦱈	qmym
-莯	qmyq
 𦱭	qmyq
-𮶤	qmyv
-𦸪	qmyx
-𦺁	qmyy
-𫊁	qmze
-𮶹	qmzh
 𮎢	qmzn
-蔢	qmzo
-𲼼	qmzq
-𦿞	qmzv
-𲽘	qmzw
-𦰫	qmzy
 𮑑	qnah
 𮑱	qnah
 𩼥	qnak
@@ -91014,6 +91014,7 @@ columns:
 攪	vbii
 㩭	vbil
 𢩨	vbil
+𲢘	vbil
 𫚖	vbio
 揑	vbiv
 𢲞	vbjc
@@ -93070,7 +93071,6 @@ columns:
 𢶬	vqmb
 攃	vqme
 𢳑	vqmi
-𲢘	vqml
 𢵵	vqmv
 𢹘	vqnc
 𫛒	vqnd
@@ -103066,6 +103066,7 @@ columns:
 棈	ybhz
 檓	ybif
 𪴤	ybii
+𲧌	ybij
 㰒	ybil
 𣛄	ybil
 㕺	ybio
@@ -105904,7 +105905,6 @@ columns:
 𨳹	yqlz
 𬄲	yqma
 櫒	yqme
-𲧌	yqmj
 枫	yqmq
 𪳰	yqmv
 𣔰	yqnd
