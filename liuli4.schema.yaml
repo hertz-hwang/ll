@@ -1,0 +1,137 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: liuli4
+  name: 字词版·琉璃
+  version: beta
+  author:
+    - 荒
+  description: |
+    💎琉璃·字词
+  dependencies:
+    - liuli.pinyin
+
+switches:
+  - name: embeded_cands
+    states: [ ☐嵌入, ☑嵌入 ]
+    reset: 0
+  - name: ascii_mode
+    reset: 0
+    states: [中, 英]
+  - name: full_shape
+    reset: 0
+    states: [半, 全]
+  - name: zh_s2t
+    reset: 0
+    states: [简, 繁]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@extra
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator@pinyin
+    - history_translator
+  filters:
+    - simplifier@zh_s2t
+    - reverse_lookup_filter@reverse_lookup
+    - lua_filter@*liuli.embeded_cands@embeded_cands
+    - uniquifier
+
+speller:
+  alphabet: "abcdefghjiklmnopqrstuvwxyz;"
+  initials: "abcdefghijklmnopqrstuvwxyz;"
+  max_code_length: 4
+  auto_select: true
+  auto_clear: manual
+  auto_select_pattern: ^;\w+$   # |^[a-z]{4}$
+  algebra:
+    - xform/\d$/$1/
+
+translator:
+  dictionary: liuli4
+  enable_sentence: false
+  enable_user_dict: false
+  enable_completion: false
+  enable_encoder: false
+
+extra:
+  tag: extra
+  prefix: "`"
+  tips: "〔反查〕"
+
+pinyin:
+  tag: extra
+  dictionary: liuli.pinyin
+  enable_user_dict: false
+  initial_quality: 1
+
+reverse_lookup:
+  dictionary: liuli4
+  overwrite_comment: true
+  comment_format:
+    - "xform/~//"
+    - xform/\d//
+  tags: [extra]
+
+history:
+  tag: history
+  input: "z"
+  size: 3
+  initial_quality: -1
+
+zh_s2t:
+  opencc_config: s2t.json
+  option_name: zh_s2t
+
+# 嵌入候選的顯示配置
+# 默認顯示效果爲:
+# 💎 琉 »璃« [kmt] ~篱² ~籓³
+embeded_cands:
+  index_indicators: [ ¹, ², ³, ⁴, ⁵, ⁶, ⁷, ⁸, ⁹, ⁰ ]       # 嵌入候選的序號顯示格式
+  first_format: "${Stash}[${候選}${Seq}]${Code}${Comment}" # 首選的渲染格式
+  next_format: "${Stash}${候選}${Seq}${Comment}"           # 非首選的渲染格式
+  separator: " "                                           # 候選之間的分隔符
+  stash_placeholder: "~"                                   # 非首選的延遲串占位符, 支持 ${Stash} 變量
+
+punctuator:
+  import_preset: symbols
+  half_shape:
+    __append:
+      '\': '、'
+
+key_binder:
+  #  import_preset: default
+  bindings:
+    - { when: has_menu, accept: space, send: space }                          # 有候选时空格选中
+    - { when: composing, accept: space, send: Escape }                        # 无候选(空码）时空格清屏编码
+    - { when: paging, accept: minus, send: Page_Up }                          # ※ 减号翻䈎用
+    - { when: has_menu, accept: equal, send: Page_Down }                      # ※ 等号翻䈎用
+    - { when: has_menu, accept: semicolon, send: KP_2 }
+    - { when: has_menu, accept: apostrophe, send: KP_3 }
+    - { when: has_menu, accept: 9, send: KP_2 }
+    - { when: has_menu, accept: 8, send: KP_3 }
+    - { when: has_menu, accept: 7, send: KP_4 }
+    - { when: has_menu, accept: 6, send: KP_5 }
+
+recognizer:
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    history: '^z$'
+    extra: '^`[a-z]*$'
