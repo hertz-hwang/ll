@@ -59,7 +59,7 @@ speller:
   initials: "abcdefghijklmnopqrstuvwxyz;"
   max_code_length: 4
   auto_select: true
-  auto_clear: manual
+  auto_clear: max_length
   auto_select_pattern: ^;\w+$   # |^[a-z]{4}$
   algebra:
     - xform/\d$/$1/
