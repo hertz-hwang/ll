@@ -66,12 +66,13 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: "abcdefghjiklmnopqrstuvwxyz;"
-  initials: "abcdefghijklmnopqrstuvwxyz;"
+  alphabet: "abcdefghjiklmnopqrstuvwxyz;'"
+  initials: "abcdefghijklmnopqrstuvwxyz;'"
   auto_select: true
   auto_select_pattern: ^;\w+$
   algebra:
     - xform/\d$/$1/
+    - xform/([a-z][a-z][a-z][a-z])/'$1/
   popping:
     - when_not: popping_method
       match: "[a-z][a-z][a-z]"
