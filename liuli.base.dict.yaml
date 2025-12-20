@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512192226
+version: v202512201130
 sort: original
 import_tables:
 columns:
