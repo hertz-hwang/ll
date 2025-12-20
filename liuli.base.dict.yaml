@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512201130
+version: v202512201414
 sort: original
 import_tables:
 columns:
@@ -89,8 +89,6 @@ columns:
 ·	y2	100000	y2
 机	y3	50000	y3
 长	z1	1000000	z1
-|	z2	100000	z2
-间	z3	50000	z3
 具	aa1	77391	aa1
 羴	aaa	2
 钭	aad	7
@@ -21700,7 +21698,7 @@ columns:
 阇	zvn	90
 阂	zvp	204
 敖	zvv	534
-间	zw1	50000	zw1
+间	zw1	175499	zw1
 粹	zwe	2260
 难	zwf	61658
 闶	zwk	4
@@ -21708,7 +21706,7 @@ columns:
 闯	zwm	2059
 骜	zwm	95
 阘	zwq	1
-间	zwr	10	z3
+间	zwr	10	zw1
 闹	zws	6486
 阊	zww	32
 长	zx1	1000000	zx1
