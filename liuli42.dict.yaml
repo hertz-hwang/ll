@@ -6,10 +6,10 @@ name: liuli42
 version: v202512201130
 sort: original
 import_tables:
-  #- liuli_1_code
-  - liuli.base
-  - liuli.wordsll
-  - liuli.full
+  - liuli.base      #GBK
+  - liuli_1_code    #快符补充
+  - liuli.wordsll   #词
+  - liuli.full      #字全码
 columns:
   - text
   - code
