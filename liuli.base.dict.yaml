@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512221649
+version: v202512221709
 sort: original
 import_tables:
 columns:
@@ -21765,3 +21765,5 @@ columns:
 —	i2	90000
 ：‘	q2	90000
 …	s2	90000
+
+大语言模型	llm2	100
