@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.full"
-version: v202512220921
+version: v202512221150
 sort: original
 columns:
   - text
@@ -3028,8 +3028,8 @@ columns:
 𰷃	beml
 鱾	beni
 𨊲	benm
-屺	benn
 岂	benn
+屺	benn
 𪩂	beoa
 𫡫	beoa
 𫑢	beog
@@ -5842,8 +5842,8 @@ columns:
 𗲭	bqrh
 𘜖	bqrh
 𘜙	bqrh
-鲗	bqrj
 刿	bqrj
+鲗	bqrj
 𰎖	bqrj
 𘟣	bqrk
 𘫫	bqrk
@@ -9987,8 +9987,8 @@ columns:
 𡎆	clef
 𦁷	clef
 𲙮	cleo
-郛	cler
 郭	cler
+郛	cler
 𦃛	cler
 𲆒	cler
 絑	clet
@@ -12082,8 +12082,8 @@ columns:
 縫	csbd
 𭢊	csbd
 𡭐	csbo
-綘	csbp
 埄	csbp
+綘	csbp
 𰓵	csbp
 𦓝	csbu
 終	cscd
@@ -20491,8 +20491,8 @@ columns:
 𩆻	eyxt
 𨼝	eyyq
 𮦖	eyyv
-斉	eyyy
 齐	eyyy
+斉	eyyy
 𩅣	eyyy
 𩅐	eyzf
 𮦗	eyzr
@@ -21028,8 +21028,8 @@ columns:
 𨉬	fcna
 𮩠	fcnf
 𰼔	fcnp
-庤	fcof
 酹	fcof
+庤	fcof
 𱳉	fcom
 𫸇	fcpa
 𢇝	fcpi
@@ -22121,8 +22121,8 @@ columns:
 𬑈	fihm
 𥄰	fiht
 醑	fihz
-厶	fiii
 广	fiii
+厶	fiii
 ⼛	fiii
 ⼴	fiii
 𘡈	fiii
@@ -25972,8 +25972,8 @@ columns:
 𭜏	geys
 𪒝	geyv
 𦎯	gfaf
-悛	gfas
 黢	gfas
+悛	gfas
 𩰺	gfas
 𭯚	gfas
 𗁩	gfbc
@@ -33252,8 +33252,8 @@ columns:
 𧋨	husk
 𬧊	huso
 𨆩	hutd
-蹁	hute
 蝙	hute
+蹁	hute
 斒	hute
 牑	hute
 𣂶	hutn
@@ -41888,8 +41888,8 @@ columns:
 𥶬	kbbx
 𥷟	kbby
 𥮢	kbcc
-玚	kbcd
 畅	kbcd
+玚	kbcd
 𥵓	kbcf
 𥸃	kbcf
 𱯪	kbcf
@@ -43505,8 +43505,8 @@ columns:
 𥧁	khpv
 𮴨	khpv
 𮆺	khpy
-鱥	khqh
 篑	khqh
+鱥	khqh
 𪻺	khqh
 𳂬	khqh
 簑	khql
@@ -44873,8 +44873,8 @@ columns:
 瑍	knin
 𥱫	knis
 竀	kniu
-琤	knja
 筝	knja
+琤	knja
 䱢	knja
 㓘	knjg
 𤥔	knjg
@@ -45483,8 +45483,8 @@ columns:
 𤨳	kqah
 𬵦	kqah
 𱝖	kqai
-瑊	kqak
 箴	kqak
+瑊	kqak
 鰔	kqak
 𩼬	kqao
 𩼺	kqap
@@ -48001,8 +48001,8 @@ columns:
 鋝	lcof
 𠓫	lcoh
 𫨛	lcop
-鋖	lcou
 绥	lcou
+鋖	lcou
 鋲	lcou
 𠪔	lcoz
 系	lcpb
@@ -68629,8 +68629,8 @@ columns:
 𠻩	pkdw
 𳎹	pkdw
 𠶥	pkdz
-吥	pker
 郢	pker
+吥	pker
 𬪣	pker
 𠾮	pkfa
 𩸇	pkfa
@@ -80335,8 +80335,8 @@ columns:
 𲭭	rpro
 𠼑	rprp
 𭌳	rprp
-吿	rprs
 告	rprs
+吿	rprs
 𤘘	rprs
 𠳅	rpru
 𥖊	rpsf
@@ -81540,8 +81540,8 @@ columns:
 𫚟	rwkb
 𩸡	rwkk
 𥓯	rwkl
-犺	rwkx
 航	rwkx
+犺	rwkx
 牨	rwkx
 砊	rwkx
 犦	rwlb
@@ -95069,8 +95069,8 @@ columns:
 㾇	wfmh
 𠖻	wfmj
 𥃰	wfmw
-骖	wfnc
 瘆	wfnc
+骖	wfnc
 𰄁	wfnc
 𬆨	wfnf
 疫	wfnh
@@ -95285,8 +95285,8 @@ columns:
 𤷇	wgpf
 𬏼	wgph
 𘱛	wgpj
-曱	wgpr
 晗	wgpr
+曱	wgpr
 甴	wgpr
 𭧪	wgpr
 𭼒	wgpr
@@ -95616,8 +95616,8 @@ columns:
 𬡭	wiph
 𲄅	wiph
 𢻣	wipo
-痦	wipr
 晤	wipr
+痦	wipr
 㓏	wipr
 𠗐	wipr
 𮥼	wipr
@@ -98245,8 +98245,8 @@ columns:
 𬏺	wyby
 𤴲	wych
 𫘛	wycm
-旰	wycr
 旱	wycr
+旰	wycr
 𳄠	wydf
 𭼔	wydh
 㓍	wydi
@@ -100665,8 +100665,8 @@ columns:
 觏	xmlw
 𱂴	xmmg
 𭶘	xmml
-匚	xmmm
 夫	xmmm
+匚	xmmm
 匸	xmmm
 ⼕	xmmm
 ⼖	xmmm
@@ -102834,8 +102834,8 @@ columns:
 𬗁	xzuv
 𱹥	xzuz
 辤	xzvc
-熜	xzvi
 焖	xzvi
+熜	xzvi
 驄	xzvi
 𭵶	xzvl
 𰞇	xzvl
@@ -103934,8 +103934,8 @@ columns:
 𨳪	yfsu
 𩇱	yfsu
 橿	yftf
-梃	yftk
 閮	yftk
+梃	yftk
 𬃞	yftn
 𨕹	yfud
 𣐅	yfuq
@@ -104673,8 +104673,8 @@ columns:
 𮤢	ykix
 𭬬	ykiy
 𬅚	ykjd
-棬	ykjf
 闂	ykjf
+棬	ykjf
 𮫔	ykjf
 𣙫	ykjk
 𣙭	ykjp
@@ -108538,8 +108538,8 @@ columns:
 𢀯	zlhi
 𡰹	zlhl
 𡰼	zlhu
-粠	zlic
 粪	zlic
+粠	zlic
 𬮢	zlii
 𡱒	zlik
 𭽥	zlis
