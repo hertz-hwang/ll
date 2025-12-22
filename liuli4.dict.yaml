@@ -3,13 +3,13 @@
 
 ---
 name: liuli4
-version: v202512221712
+version: v202512221714
 sort: original
 import_tables:
-  - liuli_1_code
-  - liuli
-  - liuli.wordsll
-  - liuli.full
+  - liuli.base      #GBK
+  - liuli_1_code    #快符补充
+  - liuli.wordsll   #词
+  - liuli.full      #字全码
 columns:
   - text
   - code
