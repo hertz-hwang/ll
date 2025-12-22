@@ -4,7 +4,7 @@
 
 ---
 name: "liuli.symbols"
-version: v202512221150
+version: v202512221642
 sort: original
 columns:
   - text
@@ -1354,7 +1354,6 @@ columns:
 Ꝡ	VY
 ʬ	ww
 # 上標
-⁰	sb
 ¹	sb
 ²	sb
 ³	sb
@@ -1364,6 +1363,7 @@ columns:
 ⁷	sb
 ⁸	sb
 ⁹	sb
+⁰	sb
 ˜	sb
 ⁺	sb
 ⁻	sb
@@ -1471,7 +1471,6 @@ columns:
 ᶽ	sb
 ᶼ	sb
 # 下標
-₀	xb
 ₁	xb
 ₂	xb
 ₃	xb
@@ -1481,6 +1480,7 @@ columns:
 ₇	xb
 ₈	xb
 ₉	xb
+₀	xb
 ₊	xb
 ₋	xb
 ₌	xb
