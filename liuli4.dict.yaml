@@ -3,7 +3,7 @@
 
 ---
 name: liuli4
-version: v202512251152
+version: v202512251530
 sort: original
 import_tables:
   - liuli.base      #GBK
