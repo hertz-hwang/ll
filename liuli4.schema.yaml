@@ -10,7 +10,7 @@ schema:
   description: |
     💎琉璃·字词
   dependencies:
-    - liuli.pinyin
+    - liuli.moran
 
 switches:
   - name: embeded_cands
@@ -46,7 +46,7 @@ engine:
   translators:
     - punct_translator
     - table_translator
-    - script_translator@pinyin
+    - script_translator@moran
     - history_translator
   filters:
     - simplifier@zh_s2t
@@ -76,9 +76,9 @@ extra:
   prefix: "`"
   tips: "〔反查〕"
 
-pinyin:
+moran:
   tag: extra
-  dictionary: liuli.pinyin
+  dictionary: liuli.moran
   enable_user_dict: false
   initial_quality: 1
 

@@ -192,7 +192,7 @@ patch:
   #   - punct_translator
   #   - table_translator@symbols
   #   - history_translator@history
-  #   - reverse_lookup_translator@rev_pinyin
+  #   - reverse_lookup_translator@rev_moran
   #   - lua_translator@liuli_core_translator@ll
   # engine/filters:
   #   - simplifier

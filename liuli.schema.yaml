@@ -16,8 +16,8 @@ schema:
     它融合了现代输入法的先进技术与传统汉字文化的精髓，力求在输入速度与准确性之间达到最佳平衡。
     无论是日常交流还是专业写作，琉璃方案都能助您轻松表达思想，畅游文字的海洋。  ——By DeepSeek
   dependencies:
-    # 拼音, 用于反查
-    - liuli.pinyin
+    # 魔然, 用于反查
+    - liuli.moran
     # 基础码表
     - liuli.base
     # 全码词库
@@ -85,7 +85,7 @@ engine:
     # 上次上屏历史
     - history_translator@history
     # 反查
-    - reverse_lookup_translator@rev_pinyin
+    - reverse_lookup_translator@rev_moran
     # 主翻译器
     - lua_translator@*liuli.core_translator@ll
   filters:
@@ -125,7 +125,7 @@ division.lv1:
     - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($1)/
     - xform/.*\(([^()]*)\)$/($1)/
     - xlit/\{\}/\⟨\⟩/
-  tags: [ abc, rev_pinyin ]
+  tags: [ abc, rev_moran ]
 
 # 拆分編碼提示
 division.lv2:
@@ -134,7 +134,7 @@ division.lv2:
   comment_format:
     - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($2)/
     - xform/.*\(([^()]*)\)$/($1)/
-  tags: [ abc, rev_pinyin ]
+  tags: [ abc, rev_moran ]
 
 # 讀音提示
 division.lv3:
@@ -144,7 +144,7 @@ division.lv3:
     - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($3)/
     - xform/.*\(([^()]*)\)$/($1)/
     - xlit/_/,/
-  tags: [ abc, rev_pinyin ]
+  tags: [ abc, rev_moran ]
 
 # 字集提示
 division.lv4:
@@ -153,7 +153,7 @@ division.lv4:
   comment_format:
     - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($4)/
     - xform/.*\(([^()]*)\)$/($1)/
-  tags: [ abc, rev_pinyin ]
+  tags: [ abc, rev_moran ]
 
 # 部件拆分及編碼提示, 反查时顯示
 rev_div:
@@ -164,13 +164,13 @@ rev_div:
   comment_format:
     - xform/\(([^,]*),([^,]*),([^,]*),([^,]*)\)/($1·$2)/
     - xlit/\{\}/\⟨\⟩/
-  tags: [ rev_pinyin ]
+  tags: [ rev_moran ]
 
 # 拼音反查
-rev_pinyin:
-  tag: rev_pinyin
+rev_moran:
+  tag: rev_moran
   prefix: "`"
-  dictionary: liuli.pinyin
+  dictionary: liuli.moran
   preedit_format:
     - xform/^`//
   comment_format:
@@ -308,7 +308,7 @@ recognizer:
     # 特殊符號
     symbols: "^/([0-9]0?|[A-Za-z]+)$"
     # 拼音反查模式
-    rev_pinyin: "^`[a-z]+$"
+    rev_moran: "^`[a-z]+$"
     # 單獨反引號
     grave: "^`$"
 
