@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202512280024
+version: v202512280026
 sort: original
 import_tables:
 columns:
@@ -21590,6 +21590,7 @@ columns:
 粔	zoc	1
 遴	zod	303
 鄰	zoe	0
+难	zof	50000	zof
 对	zof	15	zo1
 籿	zof	0
 亃	zoh	0
