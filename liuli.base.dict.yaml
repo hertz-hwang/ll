@@ -3,8 +3,8 @@
 
 ---
 name: "liuli.base"
-version: v202512280016
-sort: by_weight
+version: v202512280021
+sort: original
 import_tables:
 columns:
   - text
@@ -89,6 +89,7 @@ columns:
 ·	y2	100000	y2
 机	y3	50000	y3
 长	z1	1000000	z1
+间	z3	50000	z3
 具	aa1	77391	aa1
 羴	aaa	2
 钭	aad	7
@@ -21581,8 +21582,8 @@ columns:
 屍	zny	0
 阉	znz	185
 阄	znz	25
+难	zo1	9999999999	zo1
 对	zo1	314068	zo1
-间	zo2	9999999999	zo2
 粡	zoa	22
 皹	zob	1
 粔	zoc	1
@@ -21699,15 +21700,15 @@ columns:
 阇	zvn	90
 阂	zvp	204
 敖	zvv	534
-间	zw1	9999999999	zw1
+间	zw1	50000	zw1
 粹	zwe	2260
-难	zwf	15	zof1
+难	zwf	15	zo1
 闶	zwk	4
 粇	zwk	0
 闯	zwm	2059
 骜	zwm	95
 阘	zwq	1
-间	zwr	15	zo2
+间	zwr	15	z3
 闹	zws	6486
 阊	zww	32
 长	zx1	1000000	zx1
@@ -21761,7 +21762,6 @@ columns:
 敠	zzv	0
 敪	zzv	0
 桑	zzy	15	zz1
-难	zof1	9999999999	zof1
 ‘	f2	90000
 ’	g2	90000
 —	i2	90000
