@@ -3,10 +3,10 @@
 
 ---
 name: liuli4
-version: v202512280953
+version: v202512281025
 sort: original
 import_tables:
-  - liuli.base      #GBK
+  - liuli           #GBK
   - liuli_1_code    #快符补充
   - liuli.wordsll   #词
   - liuli.full      #字全码
