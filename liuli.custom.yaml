@@ -104,7 +104,7 @@ patch:
         text: "1012245282"
       - type: shell
         name: 💎琉璃
-        cmd: url="https://hertz-hwang.github.io/hao/gen-liuli.html" &&
+        cmd: url="https://hertz-hwang.github.io/hao/Introduction-liuli.html" &&
           type open && open "${url}" ||
           type xdg-open && xdg-open "${url}" ||
           echo "${url}"
