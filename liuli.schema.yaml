@@ -202,16 +202,40 @@ ll:
     # under linux, cat /usr/include/X11/keysymdef.h
     # or visit: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/include/X11/keysymdef.h
     # frequently used:
-    # - functional keys: escape: 0xff1b; return: 0xff0d; tabular: 0xff09;
-    # - ascii characters: space: 0x20; semicolon: 0x3b; slash: 0x2f; grave: 0x60 「': 0x27」;
+    # - functional keys: escape: 0xff1b; return: 0xff0d; tabular: 0xff09; CapsLock: 0xffe5;
+    #define XK_BackSpace                     0xff08  /* U+0008 BACKSPACE */
+    #define XK_Tab                           0xff09  /* U+0009 CHARACTER TABULATION */
+    #define XK_Linefeed                      0xff0a  /* U+000A LINE FEED */
+    #define XK_Clear                         0xff0b  /* U+000B LINE TABULATION */
+    #define XK_Return                        0xff0d  /* U+000D CARRIAGE RETURN */
+    #define XK_Pause                         0xff13  /* Pause, hold */
+    #define XK_Scroll_Lock                   0xff14
+    #define XK_Sys_Req                       0xff15
+    #define XK_Escape                        0xff1b  /* U+001B ESCAPE */
+    #define XK_Delete                        0xffff  /* U+007F DELETE */
+    #define XK_Shift_L                       0xffe1  /* Left shift */
+    #define XK_Shift_R                       0xffe2  /* Right shift */
+    #define XK_Control_L                     0xffe3  /* Left control */
+    #define XK_Control_R                     0xffe4  /* Right control */
+    #define XK_Caps_Lock                     0xffe5  /* Caps lock */
+    #define XK_Shift_Lock                    0xffe6  /* Shift lock */
+    #define XK_Meta_L                        0xffe7  /* Left meta */
+    #define XK_Meta_R                        0xffe8  /* Right meta */
+    #define XK_Alt_L                         0xffe9  /* Left alt */
+    #define XK_Alt_R                         0xffea  /* Right alt */
+    #define XK_Super_L                       0xffeb  /* Left super */
+    #define XK_Super_R                       0xffec  /* Right super */
+    #define XK_Hyper_L                       0xffed  /* Left hyper */
+    #define XK_Hyper_R                       0xffee  /* Right hyper */
+    # - ascii characters: space: 0x20; semicolon: 0x3b; slash: 0x2f; grave: 0x60; ': 0x27; [: 0x5b; ]: 0x5d;
     macro: [ 0x2f ]      # 以這些字符開頭, 則認爲是宏調用
     primary: [ 0x20 ]    # 首要簡碼鍵
     secondary: [ 0x3b ]  # 次要簡碼鍵
-    tertiary: []         # 次次簡碼鍵
+    tertiary: [ 0x27 ]   # 次次簡碼鍵
     fullci: [ 0xff09 ]   # 碼長爲四時, 輸入此串上屏首選
     break: [ 0xff09 ]    # 打斷施法
     repeat: [ 0x60 ]     # 重複上屏
-    clearact: [ 0xff0d ] # 清除活動編碼
+    clearact: [ 0xff0d, 0xff1b ] # 清除活動編碼
   mappers:
     # 常用字過濾器
     - option_name: charset.freqly
@@ -295,7 +319,7 @@ key_binder:
     - { when: has_menu, accept: 7, send: 4 }
     - { when: has_menu, accept: 6, send: 5 }
     # 拆分提示
-    - { when: has_menu, accept: "/", toggle: division.off }
+    - { when: has_menu, accept: "Control+Shift+C", toggle: division.off }
     # 字集切換
     - { when: has_menu, accept: "0", toggle: charset.all }
     # 内嵌候選開關
