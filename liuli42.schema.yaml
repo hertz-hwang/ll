@@ -31,11 +31,11 @@ switches:
 engine:
   processors:
     - ascii_composer
-    - lua_processor@*liuli-lutai.key_binder
+    - lua_processor@*liulilutai.key_binder
     - key_binder
     - lua_processor@*liuli.popping
     - recognizer
-    - lua_processor@*liuli-c42.encoder
+    - lua_processor@*liulic42.encoder
     - speller
     - punctuator
     - selector
@@ -56,13 +56,13 @@ engine:
     - history_translator
     - lua_translator@*liuli.stats_2
   filters:
-    - lua_filter@*liuli-c42.assist
+    - lua_filter@*liulic42.assist
     - simplifier@zh_s2t
     - reverse_lookup_filter@reverse_lookup
-    - lua_filter@*liuli-c42.predictor
+    - lua_filter@*liulic42.predictor
     - lua_filter@*liuli.embeded_cands@embeded_cands
-    - lua_filter@*liuli-c42.select_comment
-    - lua_filter@*liuli-c42.assembly
+    - lua_filter@*liulic42.select_comment
+    - lua_filter@*liulic42.assembly
     - uniquifier
 
 speller:

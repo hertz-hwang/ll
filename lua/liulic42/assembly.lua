@@ -5,7 +5,7 @@ function this.init(env)
   this.lookup_tags = { "extra" }
   ---@type { string : string }
   this.radicals = {}
-  local path = rime_api.get_user_data_dir() .. "/lua/liuli-c42/assembly.txt"
+  local path = rime_api.get_user_data_dir() .. "/lua/liulic42/assembly.txt"
   local file = io.open(path, "r")
   if not file then
     return

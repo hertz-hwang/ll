@@ -10,6 +10,6 @@ install_files: >-
   liuli.smart.txt
   liuli42.import.txt
   lua/liuli/*
-  lua/liuli-c42/*
-  lua/liuli-lutai/*
+  lua/liulic42/*
+  lua/liulilutai/*
   opencc/*

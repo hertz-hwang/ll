@@ -1,7 +1,7 @@
 -- 按键绑定处理器
 -- 目前仅处理空格，在四码时用于选二重
 
-local c42 = require "liuli-c42.c42"
+local c42 = require "liulic42.c42"
 
 local this = {}
 

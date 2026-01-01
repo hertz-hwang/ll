@@ -1,6 +1,6 @@
 -- 辅助翻译器
 
-local c42 = require "liuli-c42.c42"
+local c42 = require "liulic42.c42"
 local this = {}
 
 ---@class AssistEnv: Env
