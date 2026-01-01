@@ -9,5 +9,7 @@ install_files: >-
   liuli*.yaml
   liuli.smart.txt
   liuli42.import.txt
-  lua/*
+  lua/liuli/*
+  lua/c42/*
+  lua/lutai/*
   opencc/*
