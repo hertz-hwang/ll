@@ -1,0 +1,13 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: rime-ll
+  description: >-
+    琉璃(七三顶)。
+
+install_files: >-
+  liuli*.yaml
+  liuli.smart.txt
+  liuli42.import.txt
+  lua/*
+  opencc/*
