@@ -1,0 +1,66 @@
+       │========   Q   ========│       │========   W   ========│       │========   E   ========│       │========   R   ========│       │========   T   ========│
+       │贝   Qh│艹   Ql│廾   Ql│       │日   Wr│   Wr│冫   Wj│       │十   Eo│   Eo│   Eo│       │刂   Rj│   Rj│   Rj│       │禾   Tu│   Tu│   Tu│
+       │丱   Ql│⻀   Ql│卄   Ql│       │   Wj│   Wj│   Wj│       │阝   Er│车   Ep│   Ep│       │   Rj│   Rj│   Rj│       │斤   Tn│   Tn│田   Ty│
+       │⺿   Ql│𫡃   Ql│󰓯   Ql│       │   Wj│我   Wj│隹   Wf│       │己   En│   En│雨   Er│       │牛   Rs│牜   Rs│   Rs│       │彳   To│角   Tj│廴   Tk│
+       │   Ql│   Ql│㐅   Qi│       │马   Wm│   Wm│弋   Wl│       │   Er│行   Ef│业   Ej│       │犬   Ro│犭   Ro│至   Rn│       │本   Tm│下   Tk│󰷣   Tk│
+       │𘱌   Qi│乂   Qi│乄   Qi│       │   Wl│交   Wa│疒   Wh│       │   Ez│巳   Ew│未   Et│       │石   Ra│䒑   Rc│   Rc│       │示   Th│⺬   Th│𱍐   Th│
+       │夕   Qy│彐   Qj│   Qj│       │亠   Ww│与   We│公   Wh│       │兔   Eg│   Eg│   Eg│       │󰦙   Rc│元   Rl│   Ro│       │册   Te│   Te│冊   Te│
+       │   Qj│𬺹   Qj│戉   Qb│       │产   Wd│另   Wv│象   Wp│       │员   Em│已   Ek│齐   Ey│       │   Rh│耂   Rh│才   Ru│       │𠕁   Te│󱼬   Te│戋   Ti│
+       │戊   Qb│   Qb│早   Qf│       │辟   Wu│尹   Wn│黾   Wi│       │斉   Ey│   El│肉   Eu│       │无   Ri│舟   Rg│仑   Rm│       │禸   Tk│   Tk│九   Tq│
+       │莫   Qk│风   Qm│羽   Qu│       │特殊折Wa│       │       │       │       │       │       │       │旡   Rh│   Rh│   Rh│       │   Th│   Th│卯   Tp│
+
+       │========   Y   ========│       │========   U   ========│       │========   I   ========│       │========   O   ========│       │========   P   ========│
+       │木   Yq│朩   Yq│   Yq│       │可   Ur│旦   Uw│耳   Ua│       │亻   Iu│   Iu│工   Iv│       │寸   Of│女   Ou│   Ou│       │口   Pr│   Pr│   Pr│
+       │   Yq│㝳   Yq│𣎳   Yq│       │而   Ui│上   Ux│用   Uf│       │小   Ig│   Ig│   Ig│       │冂   Od│冖   Od│   Od│       │〇   Pr│   Pr│更   Px│
+       │匕   Ys│   Ys│   Ys│       │   Uf│乍   Uo│走   Us│       │   Ig│   Ig│𡭔   Ig│       │   Od│   Od│   Od│       │卜   Pg│   Pg│川   Pv│
+       │   Ys│云   Yv│   Yv│       │户   Ud│㠯   Uv│   Uv│       │艮   Ix│   Ix│介   Ie│       │   Od│中   Og│𘯉   Og│       │   Pv│   Pv│巛   Pv│
+       │𠫓   Yv│   Yv│󰂫   Yv│       │𮍌   Uv│景   Uk│   Ux│       │咅   Ia│平   Ih│五   Is│       │言   Ok│古   Ob│定   Ot│       │巜   Pv│   Pv│𘠸   Pv│
+       │   Yv│吕   Yo│吅   Yo│       │   Ux│肖   Ug│饣   Uu│       │爻   Iq│   Iq│㓁   Ie│       │包   Ov│支   Oi│氏   Ox│       │   Pv│   Pv│   Pv│
+       │   Yo│直   Yd│皿   Yz│       │缶   Uq│   Uq│革   Ue│       │󰈯   Ie│   Ie│󰛟   Ie│       │北   Ow│   Ow│执   Or│       │三   Ps│老   Pf│虎   Pt│
+       │非   Yx│干   Yc│   Yc│       │鸟   Uc│   Uc│   Ud│       │󰏖   Ie│   If│疋   If│       │巨   Oc│丸   Oh│   Oh│       │虍   Pt│   Pt│𮓗   Pt│
+       │𘠨   Yc│甘   Yp│   Yp│       │𡗗   Ud│   Ud│󲕅   Ud│       │   If│   If│民   Ic│       │舛   Oo│耒   Oa│夹   Oz│       │㐬   Pw│百   Pi│卅   Pa│
+
+       │========   A   ========│       │========   S   ========│       │========   D   ========│       │========   F   ========│       │========   G   ========│
+       │   Ak│   Ak│𠮛   Ak│       │讠   Sc│力   So│   So│       │白   Dh│辶   Df│宀   Dx│       │一   Fk│厶   Fi│   Fi│       │   Go│丨   Gp│戈   Gw│
+       │   Ar│羊   As│   As│       │人   Sk│巾   Su│   Su│       │儿   Di│多   Ds│弓   Dz│       │你   Fl│目   Fm│   Fm│       │戈无一Gw│   Gw│忄   Gi│
+       │   As│   As│   As│       │兄   Sg│夂   Sp│夊   Sp│       │𢎜   Dz│分   Dj│四   Dd│       │广   Fi│   Fi│殳   Fn│       │   Gi│⺗   Gi│   Gi│
+       │⺶   As│八   Ay│   Ay│       │尢   Se│兀   Se│丌   Se│       │罒   Dd│   Dd│   Dn│       │壬   Fu│𡈼   Fu│首   Fq│       │󰍒   Gi│㣺   Gi│󳖶   Gi│
+       │且   Aw│   Aw│钅   Al│       │   Se│󰘆   Se│尚   Sa│       │   Dn│   Dn│亲   Dk│       │身   Fa│㐆   Fa│酉   Fd│       │里   Gh│去   Gk│㐄   Gh│
+       │主   Au│万   Ai│成三 Ai│       │   Sa│龸   Sa│巴   Sl│       │居   Dl│原   De│气   Dm│       │韦   Fy│夭   Fo│㡀   Fn│       │   Gh│   Gh│   Gh│
+       │先   Ae│亼   Af│亽   Af│       │母   Sh│发   Sd│夬   Sf│       │   Dx│臣   Dn│   Dn│       │       │       │       │       │𫝀   Gh│󰆃   Gh│今   Gd│
+       │天   Ak│友   Am│斗   Ad│       │面   Sf│七   Sj│   Sj│       │甲   Da│鹿   Do│   Do│       │       │       │       │       │   Gl│   Gl│   Gl│
+       │予   An│太   Al│甫   Ah│       │   Sj│   Sj│   Sj│       │   Do│   Dm│   Dm│       │       │       │       │       │   Gl│   Gl│󰀣   Gl│
+
+       │========   H   ========│       │========   J   ========│       │========   K   ========│       │========   L   ========│
+       │   Hz│   Hz│   Hz│       │是   Je│月   Js│   Js│       │勹   Kl│   Kl│   Kl│       │子   Lg│纟   Li│   Li│
+       │   Hz│文   Hf│丷   Hd│       │円   Js│兴   Jp│   Jp│       │不   Ke│王   Ks│   Ks│       │丿   Lb│了   Ld│𠄏   Ld│
+       │衣   Hi│   Hi│   Hi│       │   Jp│   Jp│𰃮   Jp│       │   Ks│竹   Kh│   Kh│       │见   Lw│矢   Lv│方   Lj│
+       │   Hi│   Hi│   Hi│       │󰅄   Jp│   Jp│卩   Jf│       │   Kh│欠   Kc│几   Kx│       │厂   Ls│   Ls│只   Lr│
+       │二   Ht│来   He│片   Hw│       │㔾   Jf│   Jf│   Jf│       │   Kx│   Kx│其   Kt│       │共   Li│比   Lq│   Lq│
+       │丬   Hw│   Hw│   Hw│       │卪   Jf│𭅲   Jf│刀   Jz│       │内   Kq│穴   Kg│由   Kv│       │从   Lc│   Lc│仌   Lc│
+       │爿   Hw│   Hw│   Hw│       │   Jz│聿   Ja│   Ja│       │申   Kn│龹   Kb│   Kb│       │谷   La│   La│亡   Lm│
+       │   Hw│   Hw│止   Hl│       │   Ja│   Ja│⺺   Ja│       │󰄾   Kb│󰃳   Kb│󲼶   Kb│       │入   Lh│金   Lu│   Lu│
+       │   Hl│龰   Hl│   Hl│       │   Ja│   Ja│肀   Ja│       │圭   Ka│   Kd│󰔔   Kd│       │釒   Lu│   Lu│頁   Ld│
+
+       │========   Z   ========│       │========   X   ========│       │========   C   ========│       │========   V   ========│       │========   B   ========│
+       │又   Zn│   Zn│龴   Zn│       │火   Xl│灬   Xl│   Xl│       │土   Ck│   Ck│   Cd│       │扌   Vl│   Vl│𰀁   Vl│       │丰   Bp│龶   Bp│   Bp│
+       │   Zn│门   Zi│米   Zc│       │   Xl│   Xl│也   Xi│       │彡   Cd│⺀   Cd│   Cd│       │𘠩   Vl│   Vl│   Vl│       │丯   Bp│乛   Bm│豕   By│
+       │   Zc│𠂭   Zc│󱹐   Zc│       │囗   Xt│西   Xg│覀   Xg│       │   Cd│   Cd│󲻝   Cd│       │󲟎   Vl│󱣣   Vl│心   Vi│       │乑   By│   By│豸   By│
+       │󳦲   Zc│尸   Zk│   Zk│       │襾   Xg│各   Xc│相   Xu│       │𰀪   Cd│开   Cm│   Cm│       │攵   Vj│攴   Vj│者   Vn│       │𬺻   By│   By│𧰧   By│
+       │   Zk│   Zk│   Zk│       │夫   Xm│甬   Xd│匚   Xm│       │手   Cj│龵   Cj│   Cj│       │此   Vo│及   Vk│亥   Vp│       │𬺷   By│水   Bk│氺   Bk│
+       │   Zk│   Zk│   Zk│       │   Xm│   Xm│匸   Xm│       │   Cj│   Cj│自   Cv│       │求   Vu│少   Vm│亦   Va│       │   Bk│   Bk│   Bk│
+       │皮   Zs│   Zs│娄   Zp│       │   Xm│   Xm│𠥓   Xm│       │糸   Cp│幺   Cp│糹   Cp│       │   Va│辛   Vc│   Vc│       │   Bk│   Bk│丂   Bi│
+       │长   Zx│电   Zf│   Zf│       │廿   Xj│龷   Xj│   Xj│       │高   Ci│   Ci│   Ci│       │半   Vq│瓜   Vw│呙   Va│       │   Bi│   Bi│山   Bn│
+       │   Zf│󰂊   Zf│双   Zg│       │   Xj│   Xb│󰘀   Xb│       │   Ci│󰂗   Ci│󰂘   Ci│       │童   Vs│       │       │       │   Bn│臼   Bq│   Bq│
+
+       │========   N   ========│       │========   M   ========│
+       │大   Nf│   Nf│   Nc│       │丶   Ms│氵   Me│页   Mg│
+       │   Nc│生   Nc│合   Nv│       │果   Mv│关   Mw│祭   Me│
+       │礻   Nq│衤   Nq│正   Nt│       │   Me│   Me│癶   Me│
+       │   Na│   Na│   Na│       │   Me│   Me│凵   Md│
+       │   Na│京   Nl│士   Nx│       │丩   Md│   Md│𠙴   Md│
+       │之   Nd│歹   Nr│歺   Nr│       │𠂈   Md│专   Mr│凶   Mz│
+       │   Nr│丁   Na│   Na│       │㐫   Mz│壴   Mt│冉   Mn│
+       │句   Nw│食   Nn│飠   Nn│       │唐   Mf│末   Mk│屮   Mr│
+       │⻞   Nn│   Nn│𩙿   Nn│       │䶹   Mr│   Mr│貝   Ml│
+
