@@ -254,15 +254,15 @@ local function convert_text_to_image(os_name)
     -- 命令序列
     local cmds = {}
     local copy_cmd = "wl-copy -o <%s"
-    local pango_cmd = "pango-view --font='ChaiPUA-0.2.7, LXGW WenKai GB Screen, Plangothic P1, Plangothic P2' --dpi=256 -qo %s %s"
+    local pango_cmd = "pango-view --font='ChaiPUA-0.2.7, PingFang SC, Plangothic P1, Plangothic P2' --dpi=256 -qo %s %s"
     if os_name == LlCore.os_types.mac then
         copy_cmd = "/usr/local/bin/impbcopy %s"
-        pango_cmd = "/opt/homebrew/bin/pango-view --font='ChaiPUA-0.2.7, LXGW WenKai GB Screen, Plangothic P1, Plangothic P2' --dpi=256 -qo %s %s"
+        pango_cmd = "/opt/homebrew/bin/pango-view --font='ChaiPUA-0.2.7, PingFang SC, Plangothic P1, Plangothic P2' --dpi=256 -qo %s %s"
     elseif os_name == LlCore.os_types.windows then
         filename_txt = os.getenv("TEMP") .. "\\liuli_capture.txt"
         filename_png = os.getenv("TEMP") .. "\\liuli_capture.png"
         copy_cmd = 'powershell -command "Add-Type -AssemblyName System.Windows.Forms; $img = [System.Drawing.Image]::FromFile(\'%s\'); [System.Windows.Forms.Clipboard]::SetImage($img)"'
-        pango_cmd = 'pango-view --font="ChaiPUA-0.2.7, LXGW WenKai GB Screen, Plangothic P1, Plangothic P2" --dpi=256 -qo %s %s'
+        pango_cmd = 'pango-view --font="ChaiPUA-0.2.7, PingFang SC, Plangothic P1, Plangothic P2" --dpi=256 -qo %s %s'
     end
 
     -- 渲染到 png 文件中
