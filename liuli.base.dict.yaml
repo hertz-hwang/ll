@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202601040838
+version: v202601040853
 sort: original
 import_tables:
 columns:
@@ -12012,12 +12012,12 @@ columns:
 餶	nuv	0
 袒	nuw	200
 褴	nuy	47
-政	nv1	107809	nv1
+合	nv1	180534	nv1
 祸	nva	3079
 奲	nvg	0
 志	nvi	34106
 覟	nvi	0
-政	nvj	15	nv1
+政	nvj	107809
 敂	nvj	0
 敆	nvj	0
 衱	nvk	1
@@ -12030,7 +12030,7 @@ columns:
 奒	nvp	0
 袢	nvq	20
 殏	nvu	1
-合	nvv	180534
+合	nvv	15	nv1
 复	nw1	64479	nw1
 餃	nwa	0
 襮	nwb	1
