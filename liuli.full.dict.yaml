@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.full"
-version: v202601040853
+version: v202601052142
 sort: original
 columns:
   - text
@@ -2920,7 +2920,6 @@ columns:
 𡺀	bdxc
 𨍇	bdxc
 𲝻	bdxd
-𡼌	bdxe
 𡾌	bdxl
 𡿃	bdxl
 𡽆	bdya
@@ -2967,6 +2966,7 @@ columns:
 䝐	beeh
 𗘔	beeh
 𰶭	beeh
+𡼌	beew
 𗘕	beff
 䓷	befh
 䡌	befi
@@ -17042,22 +17042,6 @@ columns:
 𱚐	dwzn
 麡	dwzp
 䍤	dwzp
-𡺶	dxab
-𪧦	dxab
-𬈡	dxab
-𰍐	dxac
-𥈽	dxaf
-𡩱	dxag
-𢞝	dxag
-𦞫	dxah
-𰍉	dxal
-𰙶	dxan
-𠹟	dxap
-𮋐	dxaq
-𢄏	dxas
-𪧔	dxas
-𡫪	dxav
-𡨄	dxay
 𰣆	dxca
 𡍯	dxcc
 𦊲	dxcd
@@ -17659,6 +17643,8 @@ columns:
 𨻱	ebjj
 𳉖	ebkc
 𳀙	ebkf
+𪧦	ebkl
+𬈡	ebkl
 阥	ebkr
 𩂍	ebkr
 𧗲	ebks
@@ -17685,6 +17671,7 @@ columns:
 𲏕	ebmt
 㽔	ebnc
 𧗣	ebnf
+𡺶	ebnl
 㞯	ebnn
 𫐅	ebnp
 𡵒	ebnw
@@ -17747,6 +17734,7 @@ columns:
 𨽐	ecdd
 𨸪	ecdi
 寒	ecdl
+𰍐	ecdl
 𨽤	ecdm
 𨼛	ecdn
 𩁺	ecdr
@@ -17947,7 +17935,6 @@ columns:
 𪂕	edwr
 𳉨	edwr
 𩿲	edwt
-𨼭	edxe
 𣄦	edxl
 𨺦	edxz
 𭔴	edyo
@@ -17976,6 +17963,7 @@ columns:
 𠦄	eeeo
 𩇌	eeeo
 𮷛	eeep
+𨼭	eeew
 䧀	eefi
 𨽕	eeft
 𩇐	eefw
@@ -18145,6 +18133,7 @@ columns:
 𧮯	efla
 𩔽	efld
 𩆹	efmh
+𥈽	efml
 𥃭	efmo
 𮦋	efmr
 𫕨	efnc
@@ -18251,6 +18240,8 @@ columns:
 䧉	eghr
 䨷	eghv
 𨼪	egif
+𡩱	egil
+𢞝	egil
 𩄭	egip
 雩	egir
 隂	egis
@@ -18513,6 +18504,7 @@ columns:
 䀁	ehyz
 𬐰	ehyz
 𱢺	ehzc
+𦞫	ehzl
 有	ehzo
 𲌦	ehzo
 𩂎	ehzr
@@ -18827,6 +18819,7 @@ columns:
 階	eldh
 𦞉	eldh
 𩅧	eldh
+𰍉	eldl
 䪱	eldn
 𬰄	eldr
 𩑵	eldt
@@ -18878,6 +18871,7 @@ columns:
 𨼁	ellc
 𨼦	ellc
 𨻘	elli
+𡨄	elll
 𤲷	ellt
 𢾶	ellv
 𲎏	ellz
@@ -19187,6 +19181,7 @@ columns:
 𰮣	ensl
 𧗪	entf
 𢕥	enth
+𰙶	entl
 阷	entr
 𰮖	entu
 㫌	entz
@@ -19423,6 +19418,7 @@ columns:
 𨺑	epqf
 𩂝	epqi
 𬀈	epqi
+𠹟	eprl
 𠮯	eprn
 右	epro
 𘭎	epro
@@ -19554,6 +19550,7 @@ columns:
 𱐵	eqts
 𢞨	eqtv
 𢡘	eqtv
+𮋐	equl
 䨒	equr
 𨐉	equz
 𢼷	eqvj
@@ -19717,6 +19714,7 @@ columns:
 𲉰	esnr
 𨺛	esnt
 𭄤	esof
+𪧔	esol
 勋	esom
 㔹	esoo
 阞	esor
@@ -19732,6 +19730,7 @@ columns:
 𠧁	esty
 𨼴	esty
 𲀛	esuf
+𢄏	esul
 布	esuo
 斾	esuz
 𫝓	eswj
@@ -20122,6 +20121,7 @@ columns:
 𮦾	ewhz
 𰴔	ewiu
 轼	ewiv
+𡫪	ewiv
 𪈑	ewjd
 𧗠	ewjf
 𩃮	ewjl
@@ -35495,7 +35495,6 @@ columns:
 鵖	idwx
 𲑟	idwz
 𬾼	idxc
-𠎾	idxe
 𭂂	idxj
 儦	idxl
 𱃐	idxl
@@ -35535,6 +35534,7 @@ columns:
 㓁	ieee
 𩙇	ieeh
 僎	ieel
+𠎾	ieew
 値	iefh
 𠆽	iefi
 𩖢	iefi
@@ -48336,7 +48336,6 @@ columns:
 𨪤	ldww
 𮣏	ldwy
 𫒴	ldxc
-𨭙	ldxe
 𬬕	ldxh
 鑣	ldxl
 𨯄	ldxl
@@ -48389,6 +48388,7 @@ columns:
 𦈝	leel
 𱻶	leep
 邾	leer
+𨭙	leew
 𡬉	lefc
 遁	lefd
 鶞	lefd
@@ -62919,7 +62919,6 @@ columns:
 𠖜	odxc
 𮘨	odxc
 𲛟	odxc
-𧬯	odxe
 𦔩	odxl
 𲫷	odxl
 𠖦	odxt
@@ -62963,6 +62962,7 @@ columns:
 𡢀	oeel
 郓	oeer
 𦞍	oeeu
+𧬯	oeew
 𮱀	oefu
 冤	oegd
 嫮	oegi
@@ -82380,7 +82380,6 @@ columns:
 𫖁	sdwj
 𢄦	sdwu
 𲞵	sdxd
-𰶋	sdxe
 𰟊	sdxl
 𳌔	sdxt
 𫍡	sdys
@@ -82403,6 +82402,7 @@ columns:
 𘭴	seee
 𰶇	seeh
 𬤥	seel
+𰶋	seew
 𰅎	sefo
 𰶀	segi
 𬤯	sehb
@@ -91410,7 +91410,6 @@ columns:
 𭢫	vdwy
 揢	vdxc
 㨮	vdxd
-𢶊	vdxe
 𰓩	vdxi
 㩠	vdxl
 𢹷	vdxl
@@ -91453,6 +91452,7 @@ columns:
 𢸷	veed
 撱	veeh
 撰	veel
+𢶊	veew
 𢫱	vefl
 摴	vegi
 𢶋	vegk
