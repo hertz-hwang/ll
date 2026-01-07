@@ -56,8 +56,8 @@ patch:
     - xform/\)\(/,/
   # 自定義功能鍵
   ll/funckeys/+:
-    clearact/+: [ 0x2f ]
-    tertiary/+: [ 0x27 ]
+    #clearact/+: [ 0x2f ]
+    #tertiary/+: [ 0x27 ]
   # 自定義宏
   # 先为宏命名, 如 *mymacro*, 则將其添加到 *macros* 下,
   # 再在 *mymacro* 下添加若干候選宏, 每個候選宏都需指定一個 *type*.
