@@ -72,7 +72,6 @@ engine:
     - selector
     - navigator
     - express_editor
-    - lua_processor@*liuli.stats_3
   segmentors:
     - ascii_segmentor
     - matcher
@@ -88,6 +87,7 @@ engine:
     - reverse_lookup_translator@rev_moran
     # 主翻译器
     - lua_translator@*liuli.core_translator@ll
+    - lua_translator@*liuli.stats_3
   filters:
     - simplifier
     - simplifier@emoji
