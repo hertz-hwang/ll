@@ -245,6 +245,28 @@ function custom.librime_dist_info()
     end
 end
 
+---查询 琉璃 版本
+function custom.ll_version()
+    return function(args, env)  -- 添加 env 参数
+        if not env or not env.engine or not env.engine.schema then
+            return "无法获取琉璃版本信息"
+        end
+        
+        local schema = env.engine.schema
+        local config = schema.config
+        if not config then
+            return "无法获取配置文件"
+        end
+        
+        local version = config:get_string("schema/version")
+        if version and version ~= "" then
+            return string.format("琉璃版本: [%s]", version)
+        else
+            return "琉璃版本: [未知]"
+        end
+    end
+end
+
 ---文本渲染为图像
 ---文本写入到 txt 文件, 后将 txt 渲染为 png, 再将 png 内容拷贝到剪贴板, 然后删除文件
 local function convert_text_to_image(os_name)
