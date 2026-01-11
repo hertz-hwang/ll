@@ -247,23 +247,55 @@ end
 
 ---查询 琉璃 版本
 function custom.ll_version()
-    return function(args, env)  -- 添加 env 参数
-        if not env or not env.engine or not env.engine.schema then
-            return "无法获取琉璃版本信息"
+    return function(args, env)
+        local function safe_get_version()
+            local ok, result = pcall(function()
+                -- 方法1: 从env.engine.schema获取
+                if env and env.engine and env.engine.schema then
+                    local schema = env.engine.schema
+                    if schema and schema.config then
+                        local version = schema.config:get_string("schema/version")
+                        local schema_name = schema.config:get_string("schema/name")
+                        if version and version ~= "" then
+                            return string.format("%s版本: [%s]", schema_name or "琉璃", version)
+                        end
+                    end
+                end
+                
+                -- 方法2: 尝试从当前上下文中获取
+                if env and env.engine and env.engine.context then
+                    local context = env.engine.context
+                    local schema = context.schema
+                    if schema and schema.config then
+                        local version = schema.config:get_string("schema/version")
+                        local schema_name = schema.config:get_string("schema/name")
+                        if version and version ~= "" then
+                            return string.format("%s版本: [%s]", schema_name or "琉璃", version)
+                        end
+                    end
+                end
+                
+                return nil
+            end)
+            
+            if ok then
+                return result
+            end
+            return nil
         end
         
-        local schema = env.engine.schema
-        local config = schema.config
-        if not config then
-            return "无法获取配置文件"
+        local version_info = safe_get_version()
+        if version_info then
+            return version_info
         end
         
-        local version = config:get_string("schema/version")
-        if version and version ~= "" then
-            return string.format("琉璃版本: [%s]", version)
-        else
-            return "琉璃版本: [未知]"
+        -- 尝试获取schema名称
+        local schema_name = "琉璃"
+        if env and env.engine and env.engine.schema_id then
+            schema_name = env.engine.schema_id
         end
+        
+        return string.format("%s版本: [无法获取版本号]", schema_name)
     end
 end
 
