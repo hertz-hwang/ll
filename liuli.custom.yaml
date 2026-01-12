@@ -149,7 +149,7 @@ patch:
         expr: return require("liuli.custom").librime_dist_info()
     ver:
       - type: eval
-        expr: return require("liuli.custom").ll_version
+        expr: return require("liuli.custom").ll_version()
   # 自定義捷徑
   # 在有輸入框的條件下, 按 `Ctrl` 組合鍵觸發
   ll/accel/+:
