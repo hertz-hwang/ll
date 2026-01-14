@@ -29,8 +29,8 @@ patch:
     Eisu_toggle: clear
   recognizer/patterns/+:
     macro_calc: "^/calc(/[a-zA-Z0-9\\+\\-\\*\\(\\)\\^\\.%]*)*$"
-    macro_smart: "^/(addsmart|delsmart)(/[a-zA-Z0-9]*)*$"
-    macro_unicode: "^/uni(/[a-zA-Z0-9]*)*$"
+    macro_smart: "^/(addsmart|delsmart|a|d)(/[a-zA-Z0-9]*)*$"
+    macro_unicode: "^/(uni|u)(/[a-zA-Z0-9]*)*$"
   punctuator/half_shape/+:
     '<': '《'
     '>': '》'
@@ -134,11 +134,23 @@ patch:
       - type: eval
         hijack: true
         expr: return require("liuli.custom").add_smart()
+    a:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").add_smart()
     delsmart:
       - type: eval
         hijack: true
         expr: return require("liuli.custom").del_smart()
+    d:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").del_smart()
     uni:
+      - type: eval
+        hijack: true
+        expr: return require("liuli.custom").unicode()
+    u:
       - type: eval
         hijack: true
         expr: return require("liuli.custom").unicode()
