@@ -3,11 +3,11 @@
 
 ---
 name: liuli3
-version: v202601140946
+version: v202601142210
 sort: original
 import_tables:
-  - liuli
   - liuli_1_code
+  - liuli
 columns:
   - text
   - code

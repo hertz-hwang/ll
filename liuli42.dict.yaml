@@ -6,8 +6,8 @@ name: liuli42
 version: v202512201130
 sort: original
 import_tables:
-  - liuli           #GBK
   - liuli_1_code    #快符补充
+  - liuli           #GBK
   - liuli.wordsll   #词
   - liuli.full      #字全码
 columns:
