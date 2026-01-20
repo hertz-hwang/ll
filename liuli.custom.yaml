@@ -177,6 +177,9 @@ patch:
       type: eval
       expr: return require("liuli.custom").commit_embeded()
   menu/page_size: 5 # Change number of candidates
+  style/font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
+  style/comment_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
+  style/label_font_face: "ChaiPUA-0.2.7, 苹方-简, 思源黑体, 遍黑体P1, 遍黑体P1, Jigmo, Jigmo2, Jigmo3"
   # style/layout/margin_x: -1 # Hide candidates bar
   # style/horizontal: true
   # style/inline_preedit: false
