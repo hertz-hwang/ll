@@ -108,6 +108,7 @@ core.macro_types = {
 
 -- 开关枚举
 core.switch_names = {
+    sentence      = "sentence",
     single_char   = "single_char",
     single_char_delay = "single_char_delay",
     full_word     = "full.word",

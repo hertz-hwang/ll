@@ -4,7 +4,7 @@
 schema:
   schema_id: liuli
   name: 💎·琉璃
-  version: v202601201603
+  version: v202601201945
   author:
     - 宇浩
     - 阿吉
@@ -29,8 +29,8 @@ switches:
   - options: [ division.off, division.lv1, division.lv2, division.lv3, division.lv4 ]
     states: [ 注解关, 注解一, 注解二, 注解三, 注解四 ]
     reset: 0
-  - options: [ hwang, single_char_delay, single_char ]
-    states: [ 智能延迟顶, 五三顶, 三定 ]
+  - options: [ hwang, sentence, single_char_delay, single_char ]
+    states: [ 智能延迟顶, 整句, 五三顶, 三定 ]
     abbrev: [七, 五, 三]
     reset: 0
   - options: [ full.word, full.char, full.off ]
@@ -243,7 +243,7 @@ ll:
   macros:
     help:
       - { type: tip, name: ❖配置中心 }
-      - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
+      - { type: radio, names: [ hwang, sentence, single_char_delay, single_char ], states: [ ■智能延迟顶, □整句, □五三顶, □三定 ] }
       - { type: radio, names: [ full.word, full.char, full.off ], states: [ ☑☑字词同出, ☐☑禁出词组, ☐☐禁出四码 ] }
       - { type: switch, name: embeded_cands, states: [ ☐嵌入, ☑嵌入 ] }
       - { type: switch, name: completion, states: [ □简洁, ■补全 ] }
@@ -268,7 +268,7 @@ ll:
         names: [ full.word, full.char, full.off ]
         states: [ "☑☑字词同出: 显示所有候选", "☐☑禁出词组: 隐藏词语候选", "☐☐禁出四码: 隐藏四码候选" ]
     smart:
-      - { type: radio, names: [ hwang, single_char_delay, single_char ], states: [ ■智能延迟顶, □五三顶, □三定 ] }
+      - { type: radio, names: [ hwang, sentence, single_char_delay, single_char ], states: [ ■智能延迟顶, □整句, □五三顶, □三定 ] }
     comp:
       - type: switch
         name: completion
