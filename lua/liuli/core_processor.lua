@@ -92,34 +92,25 @@ local function handle_push(env, ctx, ch)
         local input = ctx.input
         -- 检查是否应该进入整句处理
         if is_sentence_mode(env) then
-            -- 在整句模式下，我们处理整个输入串
-            if #input > 0 then
-                -- 获取当前输入串对应的候选
-                local entries = core.dict_lookup(env, core.base_mem, input, 1)
+            -- 在整句模式下，将字符追加到输入串
+            ctx:push_input(string.char(ch))
+            
+            -- 查询当前输入串的候选
+            if #ctx.input > 0 then
+                local entries = core.dict_lookup(env, core.base_mem, ctx.input, 1)
                 if #entries > 0 then
-                    -- 如果有候选，显示第一个候选
                     local cand = entries[1]
-                    -- 这里我们需要创建一个composition来显示候选
-                    -- 注意：我们不能直接上屏，需要用户确认
-                    
-                    -- 这里我们尝试通过修改preedit来显示候选
+                    -- 创建一个composition来显示候选
                     local composition = ctx.composition
                     if composition:empty() then
-                        -- 如果没有composition，创建一个
                         ctx.composition:insert(0, cand.text)
                     else
-                        -- 更新现有的composition
                         local segment = composition:back()
                         segment.text = cand.text
-                        segment.prompt = input
+                        segment.prompt = ctx.input
                     end
-                    
-                    -- 返回接受，表示我们已经处理了这个按键
-                    return kAccepted
                 end
             end
-            -- 返回接受，但不清空输入
-            ctx:push_input(string.char(ch))
             return kAccepted
         end
 
