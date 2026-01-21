@@ -3,7 +3,7 @@
 
 ---
 name: "liuli.base"
-version: v202601202015
+version: v202601211017
 sort: original
 import_tables:
 columns:
@@ -8384,6 +8384,7 @@ columns:
 遱	kod	0
 魫	kod	0
 鷜	kod	0
+𰻝	kod	0
 珲	koe	78
 封	kof	15	ko1
 氀	kog	11
