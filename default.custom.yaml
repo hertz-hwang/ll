@@ -1,0 +1,18 @@
+# Rime default custom settings
+# encoding: utf-8
+
+patch:
+  schema_list:
+    - schema: liuli3
+    - schema: liuli4
+    - schema: liuli42
+  switcher/save_options:
+    - embeded_cands
+    - full.word
+    - full.char
+    - full.off
+    - charset.all
+    - charset.freqly
+    - single_char
+    - single_char_delay
+    - hwang

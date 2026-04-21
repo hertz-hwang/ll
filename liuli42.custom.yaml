@@ -1,0 +1,11 @@
+patch:
+  schema/name: 💎琉璃·四二
+
+  ascii_composer/switch_key/+:
+    # 左Shift上屏编码  右Shift上屏候选
+    Shift_L: commit_code
+    Shift_R: commit_text
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: clear
+    Eisu_toggle: clear
